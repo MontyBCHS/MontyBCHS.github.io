@@ -1,0 +1,691 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>S10 UC Ch2 Test</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">SCIENCE 10</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="./S10_UA_Ch1.html">Unit A Chemistry - Chapter 1</a>
+			<a href="./S10_UA_Ch2.html">Unit A Chemistry - Chapter 2</a>
+			<a href="./S10_UA_Ch3.html">Unit A Chemistry - Chapter 3</a>
+			<a href="./S10_UB_Ch1.html">Unit B Physics - Chapter 1</a>
+			<a href="./S10_UB_Ch2.html">Unit B Physics - Chapter 2</a>
+			<a href="./S10_UB_Ch3.html">Unit B Physics - Chapter 3</a>
+			<a href="./S10_UC_Ch1.html">Unit C Biology - Chapter 1</a>
+			<a href="./S10_UC_Ch2.html" class="active">Unit C Biology - Chapter 2</a>
+			<a href="./S10_UC_Ch3.html">Unit C Biology - Chapter 3</a>
+			<a href="./S10_UD_Ch1.html">Unit D Climate - Chapter 1</a>
+			<a href="./S10_UD_Ch2.html">Unit D Climate - Chapter 2</a>
+			<a href="./S10_UD_Ch3.html">Unit D Climate - Chapter 3</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 S10Cbg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit C:  Cycling of Matter in Living Systems</h2></div>
+	 
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+			<h1>SCIENCE 10</h1>
+			<h1>Program of Studies</h1>
+			<h1>Unit C:  Cycling of Matter in Living Systems (Nature of Science Emphasis) </h1>
+			<strong>Overview: </strong> The fundamental unit of life, the cell, is an example of an efficient open system comprised of a cell membrane and organelles that carry out the basic functions of all living organisms.  Students will learn that technological advancements in microscopy have enhanced the study of cells and cellular processes.  The understanding of life processes at the cellular level can also be applied to multicellular organisms.
+
+			<h2>Links to Science </h2>
+			The following science concepts are related to the content of Unit C.
+			<ul>
+				<li>life processes, and structure of plants - Grade 7 Science, Unit B:  Plants for Food and Fibre </li>
+				<li>organisms, cells, system organs, tissues - Grade 8 Science, Unit B:  Cells and Systems  </li>
+			</ul>
+
+			<strong> Focusing Questions:</strong>
+			<ul>
+				<li>How did the cell theory replace the concept of “spontaneous generation” and revolutionize the study of life sciences?  </li>
+				<li>How do single-celled organisms carry out life functions? </li>
+				<li>How do plants use specialized cells and processes to accomplish the same functions as a single cell, but on a larger scale? </li>
+				<li>How does imaging technology further our understanding of the structure and function of cells? </li>
+			 </ul>
+
+			<h2>Key Concepts </h2>
+			The following concepts are developed in this unit and may also be addressed in other units at other grade/course levels.  The intended level and scope of treatment is defined by the outcomes below.
+			<ul>
+				<li>microscopy and the emergence of cell theory </li>
+				<li>cellular structures and functions, and technological applications </li>
+				<li>active and passive transport of matter </li>
+				<li>relationship between cell size and shape, and surface area to volume ratio </li>
+				<li>use of explanatory and visual models in science </li>
+				<li>cell specialization in multicellular organisms; i.e., plants </li>
+				<li>mechanisms of transport, gas exchange, and environmental response in multicellular organisms; i.e., plants </li>
+			</ul>
+
+			<h2>Outcomes for Science, Technology and Society (STS) and Knowledge </h2>
+			Students will: 
+				<div class="indent"> 
+				<ol>
+					<li>Explain the relationship between developments in imaging technology and the current understanding of the cell </li>
+						<ul>
+							<li>trace the development of the cell theory:  all living things are made up of one or more cells and the materials produced by these, cells are functional units of life, and all cells come from pre-existing cells 
+							<div class="i_indent">(e.g., from Aristotle to Hooke, Pasteur, Brown, and Schwann and Schleiden; recognize that there are sub-cellular particles, such as viruses and prions, which have some characteristics of living cells) </div> </li>
+							<li>describe how advancements in knowledge of cell structure and function have been enhanced and are increasing as a direct result of developments in microscope technology and staining techniques 
+							<div class="i_indent">(e.g., electron microscope, confocal laser scanning microscope [CLSM]) </div> </li>
+							<li>identify areas of cell research at the molecular level 
+							<div class="i_indent">(e.g., DNA and gene mapping, transport across cell membranes) </div> </li>
+						 </ul>
+
+					<li>Describe the function of cell organelles and structures in a cell, in terms of life processes, and use models to explain these processes and their applications </li>
+						<ul>
+							<li>compare passive transport of matter by diffusion and osmosis with active transport in terms of the particle model of matter, concentration gradients, equilibrium and protein carrier molecules 
+							<div class="i_indent">(e.g., particle model of matter and fluid-mosaic model) </div> </li>
+							<li>use models to explain and visualize complex processes like diffusion and osmosis, endo- and exocytosis, and the role of cell membrane in these processes </li>
+							<li>describe the cell as a functioning open system that acquires nutrients, excretes waste, and exchanges matter and energy </li>
+							<li>identify the structure and describe, in general terms, the function of the cell membrane, nucleus, lysosome, vacuole, mitochondrion, endoplasmic reticulum, Golgi apparatus, ribosomes, chloroplast and cell wall, where present, of plant and animal cells </li>
+							<li>compare the structure, chemical composition and function of plant and animal cells, and describe the complementary nature of the structure and function of plant and animal cells </li>
+							<li>describe the role of the cell membrane in maintaining equilibrium while exchanging matter </li>
+							<li>describe how knowledge about semi-permeable membranes, diffusion and osmosis is applied in various contexts 
+							<div class="i_indent">(e.g., attachment of HIV drugs to cells and liposomes, diffusion of protein hormones into cells, staining of cells, desalination of sea water, peritoneal or mechanical dialysis, separation of bacteria from viruses, purification of water, cheese making, use of honey as an antibacterial agent and berries as a preservative agent by traditional First Nations communities) </div> </li>
+							<li>describe cell size and shape as they relate to surface area to volume ratio, and explain how that ratio limits cell size 
+							<div class="i_indent">(e.g., compare nerve cells and blood cells in animals, or plant root hair cells and chloroplast-containing cells on the surface of leaves) </div> </li>
+						</ul>
+
+					<li>Analyze plants as an example of a multicellular organism with specialized structures at the cellular, tissue and system levels </li>
+						<ul>
+							<li>explain why, when a single-celled organism or colony of single-celled organisms reaches a certain size, it requires a multicellular level of organization, and relate this to the specialization of cells, tissues and systems in plants </li>
+							<li>describe how the cells of the leaf system have a variety of specialized structures and functions; i.e., epidermis including guard cells, palisade tissue cells, spongy tissue cells, and phloem and xylem vascular tissue cells to support the process of photosynthesis </li>
+							<li>explain and investigate the transport system in plants; i.e., xylem and phloem tissues and the processes of transpiration, including the cohesion a nd adhesion properties of water, turgor pressure and osmosis; diffusion, active transport and root pressure in root hairs </li>
+							<li>explain and investigate the gas exchange system in plants; i.e., lenticels, guard cells, stomata and the process of diffusion </li>
+							<li>explain and investigate phototropism and gravitropism as examples of control systems in plants </li>
+							<li>trace the development of theories of phototropism and gravitropism 
+							<div class="i_indent">(e.g., from Darwin and Boysen-Jensen to Went) </div> </li>
+						 </ul>
+					</ol>
+				</div>
+
+
+					<h3>Skill Outcomes </h3>
+					(focus on scientific inquiry) <br>
+					Initiating and Planning <br>
+					Students will:<br>
+					Ask questions about observed relationships, and plan investigations of questions, ideas, problems and issues <br>
+					<ul>
+						<li>define and delimit problems to facilitate investigation <br>
+						<div class="i_indent">(e.g., how do plants adjust to accommodate different environmental conditions such as varying levels of light and fertilizer) </div> </li>
+						<li>design an experiment, identifying and controlling major variables <br>
+						<div class="i_indent">(e.g., design an investigation to determine the effect of CO<sub>2</sub>(g) concentration on the number of chloroplasts found in an aquatic plant cell) </div> </li>
+						<li>state a prediction and a hypothesis based on available evidence and background information <br>
+						<div class="i_indent">(e.g., hypothesize how biochemical interconversions of starch and glucose might regulate the turgor pressure of cells; hypothesize the direction of root and plant growth of a bean plant growing on a rotating turntable, and predict the effects of varying RPMs on the angle of growth) </div> </li>
+						<li>identify the theoretical basis of an investigation, and develop a prediction and a hypothesis that are consistent with the theoretical basis <br>
+						<div class="i_indent">(e.g., use the particle theory to hypothesize how the rate of diffusion is affected by varying particle size, and then predict the rates of diffusion of a sucrose solution and a starch solution when placed into dialysis tubing in a beaker of water) </div> </li>
+						<li>formulate operational definitions of major variables <br>
+						<div class="i_indent">(e.g., define concentration gradient, equilibrium) </div> </li>
+					</ul>
+					<br>
+					Performing and Recording <br>
+					Students will: <br>
+					Conduct investigations into relationships between and among observable variables, and use a broad range of tools and techniques to gather and record data and information 
+					<ul>
+						<li>carry out procedures, controlling the major variables and adapting or extending procedures <br>
+						<div class="i_indent">(e.g., perform an experiment to determine the effect of tonicity on plasmolysis and deplasmolysis in plant cells, such as staminal hairs or aquatic leaf cells, identify variables that do affect plasmolysis, such as the amount of light and heat, and control these variables) </div> </li>
+						<li>use instruments effectively and accurately for collecting data <br>
+						<div class="i_indent">(e.g., use a microscope to observe movement of water in plants; prepare wet mounts of tissue from flowering plants, and observe cellular structures specific to plant and animal cells; stain cells to make them visible) </div> </li>
+						<li>estimate quantities <br>
+						<div class="i_indent">(e.g., compare sizes of various types of cells under the microscope; calculate magnification, field of view and scale) </div> </li>
+						<li>compile and organize data, using appropriate formats and data treatments to facilitate interpretation of the data <br>
+						<div class="i_indent">(e.g., organize data obtained from measuring daily temperature and bloom dates of plant species, such as aspen, poplar, common purple lilac and crocus to determine a relationship between the two variables) </div> </li>
+						<li>use library and electronic research tools to collect information on a given topic <br>
+						<div class="i_indent">(e.g., upload and download text, image, audio and video files on emerging technologies for studying cells) </div> </li>
+						<li>select and integrate information from various print and electronic sources or from several parts of the same source <br>
+						<div class="i_indent">(e.g., create electronic documents containing multiple links, or summarize articles based on the scientific principles and/or technological developments) </div> </li>
+					</ul>
+						<br>
+					Analyzing and Interpreting <br>
+					Students will: <br>
+					Analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+					<ul>
+						<li>compile and display, by hand or computer, evidence and information in a variety of formats, 
+						including diagrams, flow charts, tables, graphs and scatterplots <br>
+						<div class="i_indent">(e.g., collect data on the number of stomata per unit area on various plant leaves that grow in areas of differing humidity, and compile this data in a spreadsheet and graph it to determine whether there is a relationship between the variables) </div> </li>
+						<li>interpret patterns and trends in data, and infer or calculate linear and nonlinear relationships among variables <br>
+						<div class="i_indent">(e.g., compare the surface area to volume ratio of various cells, and relate the findings to the function of each cell; trace ingredients in modern medicines to their traditional 
+							counterparts) </div> </li>
+						<li>state a conclusion based on experimental data, and explain how evidence gathered supports or refutes the initial hypothesis <br>
+						<div class="i_indent">(e.g., observe and record macroscopic and microscopic changes in a growing plant for evidence of differentiation) </div> </li>
+						<li>explain how data support or refute a hypothesis or prediction </li>
+						<li>construct and test a prototype of a device or system, and troubleshoot problems as they arise <br>
+						<div class="indent">(e.g., create a model of a cell to illustrate a certain function, for example, use a balloon and tape to represent a guard cell) </div> </li>
+						<li>identify new questions or problems that arise from what was learned <br>
+						<div class="i_indent">(e.g., determine the purpose of cellular structures from observations of fresh and prepared materials, using dissecting and compound microscopes, or micrographs) </div> </li>
+					</ul>
+					  <br>
+					Communication and Teamwork <br>
+					Students will: <br>
+					Work as members of a team in addressing problems, and apply the skills and conventions of science in communicating information and ideas and in assessing results <br>
+					<ul>
+						<li>communicate questions, ideas and intentions; and receive, interpret, understand, support and respond to the ideas of others <br>
+						<div class="i_indent">(e.g., describe cytoplasmic streaming in a single-celled organism, and communicate an inference about similar movement in the cells of a multicellular organism) </div> </li>
+						<li>select and use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate ideas, plans and results <br>
+						<div class="i_indent">(e.g., draw analogies between division of labour in cells and in communities; record and explain the movement of water in plants) </div> </li>
+					</ul>
+
+
+					<h3>Attitude Outcomes </h3>
+					Interest in Science <br>
+					Students will be encouraged to:<br>
+					<div class="indent">Show interest in science-related questions and issues, and confidently pursue personal interests and career possibilities within science-related fields </div>
+					<div class="i_indent">(e.g., apply concepts learned in the classroom to everyday phenomena related to cells and multicellular organisms; investigate careers in fields, such as botany, forestry, horticulture, cytology, genetics and health care) </div>
+						<br>
+					Mutual Respect <br>
+					Students will be encouraged to: <br>
+					<div class="indent">Appreciate that scientific understanding evolves from the interaction of ideas involving people with different views and backgrounds </div>
+					<div class="i_indent">(e.g., value the roles and contributions of men and women from many cultures in using science and technology to further our understanding of the cell and of living systems, recognize and appreciate the contributions of the traditional knowledge of Aboriginal peoples to science and technology) </div>
+						<br>
+					Scientific Inquiry <br>
+					Students will be encouraged to: <br>
+					<div class="indent">Seek and apply evidence when evaluating alternative approaches to investigations, problems and 
+					issues </div>
+					<div class="i_indent">(e.g., recognize that traditional Aboriginal cultures employed the principles of scientific inquiry through observation and experimentation to solve a variety of unique challenges) </div>
+						<br>
+					Collaboration <br>
+					Students will be encouraged to: <br>
+					<div class="indent">Work collaboratively in planning and carrying out investigations, as well as in generating and evaluating ideas </div>
+					<div class="i_indent">(e.g., assume responsibility for their share of the work in preparing for investigations, gathering and recording data; consider alternative approaches suggested by group members) </div>
+						<br>
+					Stewardship <br>
+					Students will be encouraged to: <br>
+					<div class="indent">Demonstrate sensitivity and responsibility in pursuing a balance between the needs of humans and a sustainable environment </div>
+					<div class="i_indent">(e.g., show care and respect for all forms of life; evaluate the impact on the environment of personal choices, as well as the choices scientists make when carrying out an investigation) </div>
+						<br>
+					Safety <br>
+					Students will be encouraged to: <br>
+					<div class="indent">Show concern for safety in planning, carrying out and reviewing activities </div>
+					<div class="i_indent">(e.g., demonstrate concern for self and others in planning and carrying out experimental activities; select safe methods of collecting evidence and solving problems) </div>
+
+						<br>
+
+					<h3>Links to Mathematics </h3>
+					The  following mathematics outcomes are related to the content of Unit C but are not considered prerequisites. 
+					<div class="indent">	
+						<ul>
+							<li>Concept Mathematics Course, Strand and Specific Outcome </li>
+							<li>Data Analysis and Collection - Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3 </li>
+							<li>Measurement and Unit Conversions - Mathematics 10C, Measurement,Specific Outcomes 1, 2 and 3; Mathematics 10-3, Measurement, Specific Outcome 1; Mathematics 20-3, Algebra, Specific Outcome 3; Mathematics 30-3, Measurement, Specific Outcome 1 </li>
+							<li>Rate, Ratio and Proportion - Grade 8 Mathematics, Number, Specific Outcomes 4 and 5 </li>
+							<li>Graph Analysis - Grade 9 Mathematics, Patterns and Relations (Patterns), Specific Outcome 2;
+					Mathematics10C, Relations and Functions,  Specific Outcomes 1 and 4; Mathematics 20-3, Statistics,  Specific Outcome 1 </li> 
+							<li>Solving Equations - Mathematics 20-3, Algebra, Specific Outcome 1</li>
+							<li>Scale Diagrams - Grade 9 Mathematics, Shape and Space (Transformations), Specific Outcome 4; Mathematics 20-2, Measurement, Specific Outcomes 2 and 3; Mathematics 20-3, Geometry , Specific Outcome 2 </li>
+						  </ul>
+					</div>
+
+
+				<br>
+				<br>
+	</div>
+                <h2>Unit Focus Questions</h2>
+                <ol>
+                    <li>How did the cell theory replace the concept of “spontaneous generation” and revolutionize the study of life sciences? </li>
+                    <li>How do single-celled organisms carry out life functions? </li>
+                    <li>How do plants use specialized cells and processes to accomplish the same functions as a single cell, but on a larger scale? </li>
+                    <li>How does imaging technology further our understanding of the structure and function of cells? </li>
+                </ol>
+		  <br>
+	</div>
+		
+
+<!--  ***********************************************************************************************************   -->
+
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<div class="S10Cbg"><h1 class="S10Cbg secTitle">Chapter C2.0 Living Systems are dependent upon the functioning of cell structures and organelles</h1> </div>     
+	<div class="S10Cc">
+        <h2>Key Concepts:</h2>
+        <ul>
+            <li>Cellular structures and functions and technological applications. </li>
+            <li>Active and passive transport of matter </li>
+            <li>Relationships between cell size and shape, and surface to volume ratio </li>
+            <li>Use of explanatory and visual models in science. </li>
+        </ul>
+        
+        <h2>Learning Outcomes:</h2>
+        <ul>
+            <li>Compare passive transport of matter by diffusion and osmosis with active transport in terms of the particle model of matter, concentration gradients, equilibrium, and protein carrier molecules. </li>
+            <li>Use models to explain and visualize complex processes like diffusion and osmosis endo- and exocytosis, and the role of the cell membrane in these processes. </li>
+            <li>Describe the cell as a functioning open system that acquires nutrients, excretes waste, and exchanges matter and energy. </li>
+            <li>Identify the structure and describe, in general terms, the function of the cell membrane, nucleus, lysosome, vacuole, mitochondrion, endoplasmic reticulum, Golgi apparatus, ribosomes, chloroplast, and cell wall, where present, of plant and animal cells. </li>
+            <li>Compare the structure, chemical composition, and function of plant and animal cells, and describe the complementary nature of the structure and function of plant and animal cells. </li>
+            <li>Describe the role of the cell membrane in maintaining equilibrium while exchanging matter. </li>
+            <li>Describe how knowledge about semi-permeable membranes, diffusion, and osmosis is applied. </li>
+            <li>Describe cell size and shape as they relate to surface area to volume ratio, and explain how that ratio limits cell size. </li>
+        </ul>
+		<br>
+		<br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	 <h2 class="S10Cbg secTitle">C2.1  The Cell as an Efficient, Open System</h2>
+<b>Life Processes </b>carried out by cells/organisms. <br>
+<ul>
+	<li>Intake of nutrients </li>
+	<li>Movement </li>
+	<li>Growth </li>
+	<li>Response to stimuli </li>
+	<li>Exchange of gases </li>
+	<li>Waste removal </li>
+	<li>Reproduction </li>
+ </ul>
+ 
+<h3 class="S10Cc">Parts of the Cell </h3>
+ 
+ <table border="1" cellpadding="5" cellspacing="5">
+ 	<tr>
+    	<th><b>Organelle</b></th><th><b>Function</b></th><th><b>Location</b></th>
+    </tr>
+    <tr>
+    	<td> Cell Membrane</td><td>Protective barrier for the cell. Allows the transport of materials in and out of the cell</td><td>Oustide edge of the cell</td>
+     </tr>
+     <tr>
+     	<td>Nucleus</td><td>Contains DNA. Directs all cellular activities</td><td>Large sphere in teh middle of the cell</td>
+     </tr>
+     <tr>
+     	<td>Cytoplasm</td><td>Gel-like substance inside the cell membrane. Contains the nutrients required by the cell to carry on the life processes. </td><td>Everything inside the cell that is not an organelle. </td>
+      </tr>
+      <tr>
+      	<td>Cell Wall</td><td>A rigid frame that provides strength and support. </td><td>Around the outside of the cell membrane.  Only in plant cells. </td>
+      </tr>
+      <tr>
+      	<td>Chloroplasts</td><td>Found in plants and some protists. Contain chlorophyll (green) and is where photosynthesis occurs. </td><td>Green ovals located in plant cells.</td>
+       </tr>
+       <tr>
+       	 <td>Vacuoles and vesicles </td><td>Membrane bound structures that store nutrients, products of secretion and fats. Vesicles transport materials through the cell. </td><td>Clear ovals in plant cells </td>
+       </tr>
+       <tr>
+       	  <td>Endoplasmic Reticulum </td><td>A series of interconnected small tubes that branch from the nucleus. Rough endoplasmic reticulum has ribosomes attached to it and is associated with protein synthesis. Smooth endoplasmic reticulum is associated with fat and oil production. </td><td>Located around the nucleus.  Rough is beside the nucleus, and the smooth is further away. </td>
+        </tr>
+        <tr>
+        	<td>Ribosomes </td><td>Where amino acids are assembled into proteins through protein synthesis. </td><td>Dense granuals attahced to the endoplasmic reticulum.  It is the rough on the rought endoplasmic reticulum. </td>
+        </tr>
+        <tr>
+        	<td>Lysomes </td><td>Membrane bound sacs containing enzymes. Where digestion takes place in the cell. </td><td>Small oval sacs. </td>
+        </tr>    
+        <tr>
+        	<td>Golgi Apparatus </td><td>Receives substances from the endoplasmic reticulum and packages them for transport out of the cell. </td><td> Flat, disc-shaped sacs. Looks like ER but not near the nucleus </td>
+         </tr>
+         <tr>
+         	 <td>Mitochondria </td><td>Where cellular respiration, chemical energy from sugars is converted into energy the cell can use, takes place. </td><td> Rod-like structures. Ovals with stripes. </td>
+         </tr>
+ </table>
+ <br>
+ <h3 class="S10Cc">Test you knowledge of the cell. </h3>
+ <a href="http://mrstevemontgomery.weebly.com/animal-cell.html
+" title="Animal Cell" target="_blank">Label an Animal cell</a>  Drag the label onto that part of the cell.  If it is incorrect the label won't stick. <br>
+
+ <a href="http://mrstevemontgomery.weebly.com/plant-cell.html
+" title="Plant Cell" target="_blank">Label a Plant cell</a>  Drag the label onto that part of the cell.  If it is incorrect the label won't stick. <br>
+ 
+ <br>
+<h3 class="S10Cc">The Chemical Composition of Cell Structures </h3>
+<ul>
+	<li>Lipids - fats and oils. </li>
+	<li>Carbohydrates - sugars, starches and cellulose. </li>
+	<li>Protein - muscle fibres. </li>
+	<li>Nucleic acids - such as DNA. </li>
+</ul>
+
+<h3 class="S10Cc">Equilibrium </h3>
+A state of balance between opposing actions. The cell must have an equilibrium between the flow of materials into and out of the cell.  If the flow in is larger the cell will expand and explode.  If the flow out is larger then the cell will deflate and implode.
+
+The cell membrane is referred to as a plasma membrane, consists of a phospholipid bilayer.  This is a double layer of lipids that each have a phosphate group attached.  The phosphates face out into the watery fluids.  The lipids face towards each other in the inner part of the membrane. <br>
+
+<h3 class="S10Cc">Fluid-mosaic model </h3>
+The proteins are the framework for the fluid-like lipids. Each part of the membrane has a role to play in allowing the exchange of nutrients, gases and wastes in and out of the cell. <br>
+<br>
+<br>
+          
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="S10Cbg secTitle">C2.2  The Role of the Cell Membrane in Transport  </h2>
+       <h3 class="S10Cc">The Particle Model of Matter </h3>
+<ol>
+	<li>All matter is made of particles. </li>
+	<li>The particles are constantly moving. </li>
+	<li>The particles are attracted to one another or are bonded together. </li>
+	<li>Particles have spaces between them.  Smaller spaces in solids and larger spaces in gases. </li>
+</ol>
+
+<span class="def">Diffusion </span>- Diffusion is the spontaneous movement of particles from an area of higher concentration to an area of lower concentration. <br>
+
+<h3 class="S10Cc">Rate of Diffusion</h3>
+The speed at which things diffuse depends on three factors:
+<ol>
+	<li>The larger the concentration gradient (difference), the faster the diffusion will occur. </li>
+    <li>The smaller the molecule the faster it will diffuse. </li>
+	<li>The hotter the molecule the more kinetic energy it has, and the faster it moves. </li>
+</ol>
+
+<span class="def">Solution </span> - A material dissolved in a liquid. (salt water)
+<ul>
+	<li><b>Solvent </b> - The substance that dissolves one or more solutes in a solution. (water) </li>
+	<li><b>Solute </b>- The material dissolved in the solution. (salt) </li>
+    <img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/solution_orig.png
+" width="250" height="400" alt="solution"/>
+</ul>
+
+<span class="def">Concentration gradient </span> - Difference within a given area between the highest and lowest concentration of a particular chemical substance. <br>
+<img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/concentration-gradiant_orig.png
+" width="500" height="300" alt="concentration gradiant"/> <br>
+<h3 class="S10Cc">Passive Transport </h3>
+When chemicals diffuse from one area to another.  Requires no energy input by the cell to occur.
+Selectively permeable
+Allows selected materials to pass through. <br>
+
+<span class="def">Semi-permeable </span>- Allows some materials to pass through.  Extremely small filter. <br>
+
+<h3 class="S10Cc">Osmosis </h3>
+The specific case of diffusion of water from one area to another. <br>
+When osmosis occurs in cells one of three conditions will exist:
+<ul>
+	<li><span class="def">Isotonic </span>- When the cell has the same concentration as the solution around it.  The flow into the cell and out of the cell are the same. This is the normal healthy condition for the cell. </li>
+	<li><span class="def">Hypertonic </span>- When the solution around the cell has a higher concentration of solutes than the insides of the cell. Water flows out of the cell to dilute the solution.  This dehydrates the cell and the organism feels thirsty. </li>
+	<li><span class="def">Hypotonic </span>- When the solution around the cell has a lower concentration of solutes than the insides of the cell. Water flow into the cell to dilute the concentration of solutes.  Causes the cell to expand and over-hydrate and the organism feels the need to urinate. </li>
+ </ul>
+
+<h3 class="S10Cc">Facilitated Diffusion </h3>
+When the cell helps the materials to diffuse quicker. <br>
+
+<h3 class="S10Cc">Diffusion </h3>
+Channel proteins create openings in the cell membrane which allow molecules to diffuse across the cell membrane. <br>
+
+<h3 class="S10Cc">Facilitated diffusion </h3>
+Carrier proteins attach to larger molecules and change shape to physically transport the molecules across the cell membrane. <br>
+
+<h3 class="S10Cc">Active Transport </h3>
+Movement of molecules or ions across a membrane against a concentration gradient. <br>
+Requires energy input from the cell (ATP). <br>
+The energy for active transport comes from adenosine triphosphate (ATP).  A series of chemical reactions occurs in the mitochondria to produce ATP.<br>
+
+<h3 class="S10Cc">Endocytosis and Exocytosis </h3>
+<span class="def">Endocytosis </span>- Intake of particles or molecules by formation of a vesicle (vacuole)from the cell membrane.<br>
+<span class="def">Exocytosis </span>- Release of molecules from a vesicle that fuses with the cell membrane to export the molecules from the cell.<br>
+
+<br>
+<br>
+
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="S10Cbg secTitle">C2.3  Applications of Cellular Transport in Industry and Medicine </h2>
+	<h3 class="S10Cc">Membrane Technologies </h3>
+	Industrial use of synthetics to mimic the action of membranes <br>
+	<span class="def">Recognition Proteins </span>- Protein molecules protruding from cells that allow communication between cells. <br>
+
+	<h3 class="S10Cc">Receptor Proteins </h3>
+	Specialized molecules on the surface of the cell to which messenger molecules from other cells can bind.
+	Especially important for cell to cell communication for immune system responses. <br>
+
+	<h3 class="S10Cc">Membrane Proteins and Disease </h3>
+	Many diseases (viruses and bacteria) attach themselves to recognition proteins on the surface of the cells.
+	Scientists hope to understand how the diseases attach to the recognition proteins.  By understanding the how diseases attach to the proteins scientists can block the disease preventing its spread. <br>
+
+	<h3 class="S10Cc">Synthetic Membrane Technology </h3>
+	Synthetic membranes allow for the filtering of extremely small particles.  Peritoneal dialysis uses semi-permeable membranes to filter wastes out of the blood for people with kidney problems.  Their blood is pumped out of the body, filtered by a membrane and pumped back in. <br>
+
+	 Reverse Osmosis is a method for cleaning water.  Dirty water is forced through a membrane which filters out even the smallest impurities at the atomic level.  It is called reverse osmosis because the water is forced in the opposite direction of normal osmosis diffusion. <br>
+	<br>
+	<br>    
+
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section14" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section15"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="S10Cbg secTitle">C2.4 Is Bigger Better? </h2>
+	<h3 class="S10Cc">The Ratio of Surface Area to Volume </h3>
+	<img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/cell-size_1_orig.gif
+	" width="275" height="200" alt="Cell SA to Volume ratio"/> <br>
+	Surface Area = 6 &times;Side<sup>2</sup> <br>
+	Volume = length &middot; width &middot; height  <br>
+	Ratio = surface area / volume
+	<table width="80%" border="1" cellspacing="1" cellpadding="1">
+	  <tbody>
+		<tr>
+		  <th scope="col">&nbsp;Side Length<br>(cm)</th>
+		  <th scope="col">&nbsp;Surface Area<br>(cm<sup>2</sup>)</th>
+		  <th scope="col">&nbsp;Number of Cubes</th>
+		  <th scope="col">&nbsp;Total Surface Area<br>(cm<sup>2</sup>)</th>
+		  <th scope="col">&nbsp;Volume<br>(cm<sup>3</sup></th>
+		  <th scope="col">&nbsp;SA/Vol Ratio<br>(cm<sup>2</sup>/(cm<sup>3</sup>)</th>
+		</tr>
+		<tr>
+		  <td>&nbsp;16</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;1</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		</tr>
+		<tr>
+		  <td>&nbsp;8</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;8</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		</tr>
+		<tr>
+		  <td>&nbsp;4</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		</tr>
+		<tr>
+		  <td>&nbsp;2</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		</tr>
+	  </tbody>
+	</table>
+	 <br>
+	 <ol>
+		<li>What happens to the total surface area as the cubes get smaller and smaller? </li>
+		<li>What happens to the total volume? </li>
+		<li>What happens to the ratio of surface area to volume as the cube lengths get smaller? </li>
+		<li>What does this mean about diffusion in cells as they get smaller?</li>
+		<li>What does this mean about diffusion in cells as they get larger?</li>
+	 </ol>
+	<h3 class="S10Cc">The Size and Shape of Organisms </h3>
+	Even though organisms range in size from 25 m long whales to 0.001 m insects, all have groups of cells to perform functions.
+	The size of the cells in all organisms is similar to maximize the diffusion of materials throughout the cell.  Cells are generally elliptical or rectangularal prism in shape. <br>
+	 <br>
+	<h3 class="S10Cc">Maximizing Potential </h3>
+	The more surface area per volume the cell has then the more easily the cell can to adapt to changing conditions.  
+	This is why even large organisms are made of small cells.<br>
+
+	When the cell runs low on nutrients it slows the synthesis of new materials from the nutrients.  
+	When the cell has lots of nutrients is speeds up the synthesis of new materials.
+	When the cell runs low on oxygen it slows its rate of respiration.
+	When the cell is surrounded by wastes, it slows down and stops making wastes.
+	When the cell has lots of oxygen it speeds up its rate of respiration.
+	When the cell has lots of energy and nutrients it replicates forming two cells. <br>
+
+	Cancer is a an example of a non homeostatic cell.  Cancer cells grow at an uncontrolled rate and ignore the body’s signals to stop replicating.  This mass of cells will form a tumor.  Cancerous tumors damage surrounding tissue by building up nutrients, generating wastes, and pushing healthy cells out of the way.  <br>
+	Sections of tumors can break away and travel through the bloodstream and start new tumors in different locations.  This is why cancer is sometimes very difficult to stop.  Although the metabolic activity of cancer cells ensures the cells survival, the organism cannot maintain homeostasis and dies. <br>
+	 <br>
+	<br>
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Science 10 <br>
+			Program of Studies <br>
+	    <img src="./AlbertaEdLogo.png" width="159" height="75" alt=""/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/index.cfm?locator=PS38Uw&PMDbSiteId=2621&PMDbSolutionId=25862&PMDbSubSolutionId=&PMDbCategoryId=25879&PMDbSubCategoryId=26225&PMDbSubjectAreaId=&PMDbProgramId=46628&gclid=CjwKCAiAx8KQBhAGEiwAD3EiPyhuOXoPKYfgJY5MIoaVRWwwqvqFDb49cfy6JcYeLKmU2qMp6sio4xoCXfIQAvD_BwE">Addison Wesley Science 10 Textbook <br>
+	  <img src="./Science10Cvr.png" width="169" height="223" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+	</div>
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>

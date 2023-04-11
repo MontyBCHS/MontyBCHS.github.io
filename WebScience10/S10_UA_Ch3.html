@@ -1,0 +1,714 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>S10 UA Ch3 Test</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">SCIENCE 10</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="./S10_UA_Ch1.html">Unit A Chemistry - Chapter 1</a>
+			<a href="./S10_UA_Ch2.html">Unit A Chemistry - Chapter 2</a>
+			<a href="./S10_UA_Ch3.html" class="active">Unit A Chemistry - Chapter 3</a>
+			<a href="./S10_UB_Ch1.html">Unit B Physics - Chapter 1</a>
+			<a href="./S10_UB_Ch2.html">Unit B Physics - Chapter 2</a>
+			<a href="./S10_UB_Ch3.html">Unit B Physics - Chapter 3</a>
+			<a href="./S10_UC_Ch1.html">Unit C Biology - Chapter 1</a>
+			<a href="./S10_UC_Ch2.html">Unit C Biology - Chapter 2</a>
+			<a href="./S10_UC_Ch3.html">Unit C Biology - Chapter 3</a>
+			<a href="./S10_UD_Ch1.html">Unit D Climate - Chapter 1</a>
+			<a href="./S10_UD_Ch2.html">Unit D Climate - Chapter 2</a>
+			<a href="./S10_UD_Ch3.html">Unit D Climate - Chapter 3</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 S10Abg">
+	<div class="unitTitle"><h2 class="unitTitle">UNIT A: ENERGY AND MATTER IN CHEMICAL CHANGE</h2></div>
+	 
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h1>SCIENCE 10</h1>
+  <h1>Program of Studies</h1>
+  <h1>SCIENCE 10</h1>
+					<h1>Program of Studies</h1>
+					<h1>Unit A:  Energy and Matter in Chemical Change (Nature of Science Emphasis)</h1>
+					<strong>Overview:</strong> Chemical changes involve energy and transformations of matter.  A knowledge of the underlying structure of matter and the basic chemical species is important in understanding chemical changes.  As students explore the properties of molecular and ionic compounds, including acids and bases, they begin to appreciate the need for a classification scheme and a system of nomenclature. Students classify, name compounds and write balanced chemical equations to represent chemical changes.  As well, students are introduced to the law of conservation of mass and the mole concept. 
+
+					<h2>Links to Science</h2>
+					The following science concepts are related to the content of Unit A.
+					<strong>Concepts</strong>
+
+					<ul>
+						<li>particle model of matter - Grade 7 Science, Unit C: Heat and Temperature </li>
+						<li>WHMIS symbols, pure substances, mixtures and solutions - Grade 8 Science, Unit A: Mix and Flow of Matter</li>
+						<li>reactants, products, conservation of mass, periodic table, elements, compounds, atomic theory, chemical nomenclature -  Grade 9 Science, Unit B:  Matter and Chemical Change</li>
+						<li>acids and bases  - Grade 9 Science, Unit C: Environmental Chemistry </li>
+					</ul>
+					<strong>Focusing Questions: </strong>
+					 <ul>
+						<li>How has knowledge of the structure of matter led to other scientific advancements? </li>
+						<li>How do elements combine? </li>
+						<li>Can these combinations be classified and the products be predicted and quantified? </li>
+						<li>Why do scientists classify chemical change, follow guidelines for nomenclature and represent chemical change with equations? </li>
+					 </ul>
+
+					<h2>Key Concepts</h2>
+					The following concepts are developed in this unit and may also be addressed in other units at other grade/course levels.  The intended level and scope of treatment is defined by the outcomes below.
+					<ul>
+						<li>how chemical substances meet human needs </li>
+						<li>Workplace Hazardous Materials Information System (WHMIS) and safe practices </li>
+						<li>International Union of Pure and Applied Chemistry (IUPAC) nomenclature, ionic and molecular compounds, acids and bases </li>
+						<li>evidence of chemical change </li>
+						<li>role and need for classification of chemical change </li>
+						<li>writing and balancing equations </li>
+						<li>law of conservation of mass and the mole concept </li>
+					 </ul>
+					<h2>Outcomes for Science, Technology and Society (STS) and Knowledge </h2>
+
+					Students will:
+					<ol>
+						<li>1. Describe the basic particles that make up the underlying structure of matter, and investigate related technologies </li>
+						<div class="indent">
+						  <ul>
+							<li>identify historical examples of how humans worked with chemical substances to meet their basic needs 
+							<div class="i_indent">(e.g., how precontact First Nations communities used biotic and abiotic materials to meet their needs) </div> </li>
+							<li>outline the role of evidence in the development of the atomic model consisting of protons and neutrons (nucleons) and electrons; i.e., Dalton, Thomson, Rutherford, Bohr </li>
+							<li>identify examples of chemistry-based careers in the community  
+							<div class="i_indent">(e.g., chemical engineering, cosmetology, food processing)</div> </li>
+					   </ul> 
+					</div>
+					<br>
+
+					<li>Explain, using the periodic table, how elements combine to form compounds, and follow IUPAC guidelines for naming ionic compounds and simple molecular compounds </li>
+					<div class="indent">
+					   <ul>
+						<li>illustrate an awareness of WHMIS guidelines, and demonstrate safe practices in the handling, storage and disposal of chemicals in the laboratory and at home </li>
+						<li>explain the importance of and need for the IUPAC system of naming compounds, in terms of the work that scientists do and the need to communicate clearly and precisely </li>
+						<li>explain, using the periodic table, how and why elements combine to form compounds in specific ratios </li>
+						<li>predict formulas and write names for ionic and molecular compounds and common acids  
+						<div class="i_indent">(e.g., sulfuric, hydrochloric, nitric, ethanoic) , using a periodic table, a table of ions and IUPAC rules </div> </li>
+						<li>classify ionic and molecular compounds, acids and bases on the basis of their properties;  i.e., conductivity, pH, solubility, state </li>
+						<li>predict whether an ionic compound is relatively soluble in water, using a solubility chart  </li>
+						<li>relate the molecular structure of simple substances to their properties 
+						<div class="i_indent">(e.g., describe how the properties of water are due to the polar nature of water molecules, and relate this property to the transfer of energy in physical and living systems) </div> </li>
+						<li>outline the issues related to personal and societal use of potentially toxic or hazardous compounds 
+						<div class="i_indnet">(e.g., health hazards due to excessive consumption of alcohol and nicotine; exposure to toxic substances; environmental concerns related to the handling, storage and disposal of heavy metals, strong acids, flammable gases, volatile liquids) </div> </li>
+					  </ul>
+					</div>    
+					<br>   
+				<li>Identify and classify chemical changes, and write word and balanced chemical equations for significant chemical reactions, as applications of Lavoisier’s law of conservation of mass </li>
+					<div class="indent">
+					  <ul>
+						<li>provide examples of household, commercial and industrial processes that use chemical reactions to produce useful substances and energy 
+						<div class="i_indent">(e.g., baking powder in baking, combustion of fuels, electrolysis of water into H<sub>2(g)</sub> and O<sub>2(g)</sub>)</div> </li>
+						<li>identify chemical reactions that are significant in societies 
+						<div class="i_indent">(e.g., reactions that maintain living systems, such as photosynthesis and respiration; reactions that have an impact on the environment, such as combustion reactions and decomposition of waste materials) </div> </li>
+						<li>describe the evidence for chemical changes; i.e., energy change, formation of a gas or precipitate, colour or odour change, change in temperature </li>
+						<li>differentiate between endothermic and exothermic chemical reactions <div class="i_indent">(e.g.,combustion of gasoline and other natural and synthetic fuels, photosynthesis) </div></li>
+						<li>classify and identify categories of chemical reactions; i.e., formation (synthesis), decomposition, hydrocarbon combustion, single replacement, double replacement  </li>
+						<li>translate word equations to balanced chemical equations and vice versa for chemical reactions that occur in living and nonliving systems </li>
+						<li>predict the products of formation (synthesis) and decomposition, single and double replacement, and hydrocarbon combustion chemical reactions, when given the reactants </li>
+						<li>define the mole as the amount of an element containing 6.02 × 10<sup>23</sup> atoms (Avogadro’s number) and apply the concept to calculate quantities of substances made of other chemical species (e.g., determine the quantity of water that contains 6.02 × 10<sup>23</sup> molecules of H<sub>2</sub>O) </li> 
+						<li>interpret balanced chemical equations in terms of moles of chemical species, and relate the mole concept to the law of conservation of mass	</li>
+					  </ul>
+				   </div>
+				</ol>
+
+
+				<h3>Skill Outcomes</h3>
+				(focus on scientific inquiry)<br>
+				<br>
+				<h3>Initiating and Planning</h3>
+
+				Students will: <br>
+				Ask questions about observed relationships, and plan investigations of questions, ideas, problems and issues
+				  <div class="indent">
+					  <ul>
+						  <li>define and delimit problems to facilitate investigation </li>
+						  <li>design an experiment, identifying and controlling major variables 
+						  <div class="i_indent">(e.g., design an experiment to differentiate between categories of matter, such as acids, bases and neutral solutions, and identify manipulated and responding variables) </div> </li>
+						  <li>state a prediction and a hypothesis based on available evidence and background information 
+						  <div class="i_indent">(e.g., state a hypothesis about what happens to baking soda during baking) </div> </li>
+						  <li>evaluate and select appropriate instruments for collecting evidence and appropriate processes for problem solving, inquiring and decision making 
+							<div class="i_indent">(e.g., list appropriate technology for classifying compounds, such as litmus paper or conductivity tester) </div> </li>
+					  </ul>
+				  </div>
+
+				<h3>Performing and Recording </h3>
+				Students will: <br>
+				Conduct investigations into relationships between and among observable variables, and use a broad range of tools and techniques to gather and record data and information 
+					<div class="indent">
+						<ul>
+							<li>carry out procedures, controlling the major variables and adapting or extending procedures
+							<div class="i_indent">(e.g., when performing an experiment to illustrate conservation of mass, demonstrate an understanding of closed and open systems and control for loss or gain of matter during a chemical change) </div> </li>
+							<li>use library and electronic research tools to collect information on a given topic 
+							<div class="i_indent">(e.g., information on compounds we use and their toxicity, using standard references, such as the Merck Index, as well as Internet searches) </div> </li>
+							<li>select and integrate information from various print and electronic sources or from several parts of the same source 
+							<div class="i_indent">(e.g., collect information on research into subatomic matter, research how pre-contact First Nations communities used available materials such as brain tissue for tanning hides) </div> </li>
+							<li>demonstrate a knowledge of WHMIS standards by selecting and applying proper techniques for the handling and disposal of laboratory materials 
+							<div class="i_indent">(e.g., recognize and use Material Safety Data Sheets [MSDS] information) </div> </li>
+							<li>select and use apparatus, technology and materials safely 
+							<div class="i_indent">(e.g., use equipment, such as Bunsen burners, electronic balances, laboratory glassware, electronic probes and calculators correctly and safely) </div> </li>
+						</ul>
+					</div>
+
+				<h3>Analyzing and Interpreting</h3>
+				Students will: <br>
+				Analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+					<div class="indent">
+						<ul>
+							<li>describe and apply classification systems and nomenclature used in the sciences 
+							<div class="i_indent">(e.g., investigate periodicity in the periodic table, classify matter, and name elements and compounds based on IUPAC guidelines) </div> </li>
+							<li>apply and assess alternative theoretical models for interpreting knowledge in a given field  
+							<div class="i_indent">(e.g., compare models for the structure of the atom) </div> </li>
+							<li>compare theoretical and empirical values and account for discrepancies 
+							<div class="i_indent">(e.g., measure the mass of a chemical reaction system before and after a change, and account for any discrepancies) </div> </li>
+							<li>identify and explain sources of error and uncertainty in measurement, and express results in a form that acknowledges the degree of uncertainty 
+							<div class="i_indent">(e.g., measure and record the mass of a material, use significant digits appropriately) </div> </li>
+							<li>identify new questions or problems that arise from what was learned 
+							<div class="i_indent">(e.g., how did ancient peoples discover how to separate metals from their ores?; evaluate the traditional Aboriginal method for determining alkaline properties of substances) </div> </li>
+						</ul>
+					</div>
+
+				<h3>Communication and Teamwork </h3>
+				Students will:<br>
+				Work as members of a team in addressing problems, and apply the skills and conventions of science in communicating information and ideas and in assessing results <br>
+					<div class="indent">
+						<ul>
+							<li>communicate questions, ideas and intentions; and receive, interpret, understand, support and 
+				respond to the ideas of others 
+							<div class="i_indent">(e.g., use appropriate communication technology to elicit feedback from others) </div> </li>
+							<li>represent large and small numbers using appropriate scientific notation </li>
+							<li>select and use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate ideas, plans and results 
+							<div class="i_indent">(e.g., use appropriate Système international (SI) units, and IUPAC nomenclature)</div></li>
+						</ul>
+				   </div>
+
+
+				<h3>Attitude Outcomes </h3>
+				Interest in Science <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Show interest in science-related questions and issues, and confidently pursue personal interests and career possibilities within science-related fields </div>
+				<div class="i_indent">(e.g., apply concepts learned in the classroom to the everyday use of chemicals; show interest in a broad scope of chemistry-related careers) </div>
+					<br>
+				Mutual Respect <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Appreciate that scientific understanding evolves from the interaction of ideas involving people with different views and backgrounds </div>
+				<div class="i_indent">(e.g., recognize the contributions of Canadians to contemporary knowledge of the structure of matter; show awareness of and respect for traditional Aboriginal knowledge about the use of biotic and abiotic materials) </div>
+					<br>
+				Scientific Inquiry <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Seek and apply evidence when evaluating alternative approaches to investigations, problems and issues </div>
+				<div class="i_indent">(e.g., evaluate inferences and conclusions based on particles of matter that cannot be observed directly) </div>
+					<br>
+				Collaboration <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Work collaboratively in planning and carrying out investigations, as well as in generating and evaluating ideas </div>
+				<div class="i_indent">(e.g., contribute to group work willingly, assume a variety of roles and accept responsibility for any problems that arise) </div>
+					<br>
+				Stewardship <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Demonstrate sensitivity and responsibility in pursuing a balance between the needs of humans and a sustainable environment </div>
+				<div class="i_indent">(e.g., recognize that environmental consequences may arise from the development, use and disposal of chemical materials) </div>
+					<br>
+				Safety <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Show concern for safety in planning, carrying out and reviewing activities </div>
+				<div class="i_indent">(e.g., acknowledge the need for regulations to govern the storage, handling and disposal of potentially hazardous materials in the school laboratory and at home or in the workplace) </div>
+					<br>
+
+
+				<h3>Links to Mathematics </h3>
+				The following mathematics outcomes are related to the content of Unit A but are not considered 
+				prerequisites. <br>
+
+					<ul>
+						<li>Data Collection and Analysis - Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3 </li>
+						<li>Measurement and Unit Conversions - Mathematics 10C, Measurement,Specific Outcome 2; Mathematics 10-3, Measurement, Specific Outcome 1;Mathematics 20-3, Algebra, Specific Outcome 3; Mathematics 30-3, Measurement, Specific Outcome 1 </li>
+						<li>Ratio and Proportions - Grade 8 Mathematics, Number, Specific Outcomes 3, 4 and 5 </li>
+						<li>Graph Analysis - Mathematics10C, Relations and Functions, Specific Outcomes 1 and 4;Mathematics 20-3, Statistics, Specific Outcome 1 </li>
+						<li>Powers - Mathematics10C, Algebra and Number, Specific Outcome 3 </li>
+					 </ul>
+				<br>
+				<br>
+	</div>
+             <h2>Unit Focus Questions</h2>
+            <ol>
+            	<li>How has knowledge of the structure of matter led to other scientific advancements?</li>
+                <li>How do elements combine? Can these combinations be classified and the products be predicted and quantified? </li>
+                <li>Why do scientists classify chemical change, follow guidelines for nomenclature and represent chemical change with equations? </li>
+            </ol>
+		  <br>
+	</div>
+		
+
+<!--  ***********************************************************************************************************   -->
+
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<div class="S10Abg"><h1 class="S10Abg secTitle">A3.0 Chemical change is a process that involves recombining atoms and energy flows</h1> </div>     
+	<div class="S10Ac">
+	<h2>Key Concepts</h2>
+        In this section, you will learn about the following key concepts:
+          <ul>
+            <li>Chemical substances and human needs </li>
+            <li>Evidence for chemical change </li>
+            <li>Role and need for classification of chemical change </li>
+            <li>Writing and balancing equations </li>
+            <li>Law of conservation of mass </li>
+            <li>The mole concept </li>
+          </ul>
+        <h2>Learning Outcomes </h2>
+        When you have completed this section, you will be able to:
+          <ul>
+            <li>Provide examples of household, commercial and industrial processes that use chemical reactions, and identify chemical reactions that are significant in our society.</li>
+            <li>Describe evidence of chemical change </li>
+            <li>Differentiate between endothermic and exothermic chemical reactions </li>
+            <li>Translate word equations to balanced chemical equations and vice versa </li>
+            <li>Classify chemical reactions into categories, including formation, decomposition, hydrocarbon combustion, single replacement and double replacement </li>
+            <li>Starting with the reactants, predict the products of formation, decomposition, hydrocarbon combustion, single replacement and double replacement reactions. </li>
+            <li>Define the mole and use Avogadro’s number (6.02x10<sup>23</sup>) to relate numbers of particles in a substance to the quantity of substance </li>
+            <li>Interpret balanced chemical equations in terms of moles of chemical species, and relate the mole concept to the law of conservation of mass. </li>
+          </ul>   
+		
+
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="S10Abg secTitle">A3.1  Important Examples of Chemical Change</h2>
+	     
+<span class="def">Reactant</span> – substance that reacts in a chemical reaction to form another substance or substances <br>
+<span class="def">Product</span> –new substance produced in a chemical reaction <br>
+ <br>
+<h3 class="S10Ac">Reactions That Form Gases </h3>
+ <br>
+<h3 class="S10Ac">Reactions That Form Solids </h3>
+ <br>
+<h3 class="S10Ac">Showing States in Chemical Formulas </h3>
+<i>Elements </i>  
+   <ul>
+	<li>Metals are solid, except for mercury, which is a liquid </li>
+	<li>Most of the diatomic elements are gases: H<sub>2</sub> (g),N<sub>2</sub> (g), O<sub>2</sub> (g), F<sub>2</sub> (g), and Cl<sub>2</sub> (g).  </li>
+	<li>Bromine is a liquid and iodine is a solid:  Br<sub>2</sub> (l) and I<sub>2</sub> (s). </li>
+	<li>Sulfur, phosphorus, and carbon are solids </li>
+   </ul>
+ <br>
+<i>Compounds </i>
+   <ul>
+	<li>All ionic compounds are solid at room temperature. </li>
+	<li>An ionic compound that is very soluble is shown as aqueous when it is dissolved in water.  An ionic compound that is slightly soluble is usually shown as a solid, even when it’s in water.</li>
+ 	<li>Molecular compounds are very difficult to predict.  The smaller the molecules are, the more they tend to be gases.  The larger they are, the more they tend to be liquids and then solids. </li>
+   </ul>
+ <br>
+<h3 class="S10Ac">Energy Changes </h3>
+<i>Exothermic Reactions </i>  <br>
+<span class="def">Exothermic reaction </span> – a chemical reaction that releases energy, usually in the form of heat, light, or electricity
+ <br>
+<span class="def">Combustion </span>– exothermic chemical reaction that occurs when oxygen reacts quickly with a substance to form a new substance or substances; burning <br>
+ <br>
+<i>Endothermic Reactions </i> <br>
+<span class="def">Endothermic reaction </span>– a chemical reaction that is energy absorbing <br>
+<span class="ex">Ex. </span> <span class="example">barium hydroxide octahydrate + ammonium thiocyanate + energy &rarr; barium thiocyanate + ammonia + water </span><br>
+ <br>
+<h3 class="S10Ac">Biochemical Reactions </h3>
+<span class="def">Photosynthesis </span>– how plants convert sunlight to chemical energy <br>
+<span class="def">ie. </span> <span class="example">energy + carbon dioxide + water &rarr; glucose + oxygen </span><br>
+<span class="def">CO<sub>2</sub> (g) + H<sub>2</sub>O (l) &rarr; C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (aq) + 6 O<sub>2</sub> (g)</span> <br>
+ <br>
+<span class="def">Cellular respiration </span> – how animals convert chemical energy into movement <br>
+ <span class="def">ie.</span> <span class="example">glucose + oxygen &rarr; energy + carbon dioxide + water </span><br>
+ <span class="def">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (aq) + 6 O<sub>2</sub> (g) &rarr; CO<sub>2</sub> (g) + H<sub>2</sub>O (l)</span> <br>
+ <br>
+<h3 class="S10Ac">Characteristics of Chemical Reactions </h3>
+All reactions involve the production of new substances with their own characteristic properties, including:  state at room temperature, melting point, colour, and density <br>
+All reactions involve the flow of energy, detected as a change in temperature during the reaction  <br> 
+ <br>
+When new substances form in chemical reactions sometimes changes of state can be observed:  bubbles indicate a gas, precipitates indicate a solid <br>
+ <br>
+All chemical reactions are consistent with the law of conservation of mass  <br>
+ <br>
+<h3 class="S10Ac">Conservation of Mass </h3>
+<span class="def">Law of conservation of mass </span> – total mass of the reactants in a chemical reaction equals the total mass of the products <br>
+ <br>
+Atoms cannot be created nor destroyed during a chemical reaction, they are simply rearranged into different molecules and sometimes different states.  <br>
+ <br>
+<span class="ex">Ex. </span>
+	<span class="example">  When wood burns, the glucose in the wood reacts with the oxygen in air and produces carbon dioxide and water vapor, which are released into the air.  If you were to take a large air tight container and burn the wood, the mass of the air and wood, before burning would be the same as the mass of the ashes, and smoke, after burning. </span><br> 
+ <br>
+ <br>
+          
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="S10Abg secTitle">A3.2  Writing Chemical Equations </h2>
+         <span class="def">Chemical equation </span>– record of a chemical reaction using chemical symbols and formulas, shorthand way of showing the results of a chemical reaction
+ <br>
+A chemical equation is very similar to a mathematical equation.  The number of each type of atom must be the same on the left and right side of the arrow.  It also includes the state of each compound.  <br>
+ <br>
+<h3 class="S10Ac">Symbolizing Chemical Change </h3>
+To write a chemical equation you require the following: <br>
+<ul>
+	<li>Careful observation </li>
+	<li>Knowledge of what substances are present at the start of the reaction </li>
+	<li>The ability to analyze the materials produced by the reaction </li>
+</ul>
+ <br>
+<h3 class="S10Ac">Writing Word Equations </h3>
+The reactants placed on the left side, and the products are placed on the right side of the arrow.  A plus sign is placed between the names. <br>
+ <br>
+<h3 class="S10Ac">Writing Balanced Formula Equations </h3>
+<span class="def">Formula equation </span>– chemical equation that uses the chemical formulas of reactants and products in a chemical reaction <br>
+<span class="def">Skeleton equation </span>– formula equation showing the identity of each substance involved in a chemical reaction; does not show the correct proportions of the reactants and the products <br>
+Keep the most complicated compound on the reactant side at one and balance all of the compounds
+ <br>
+Balance the number of elemental molecules. <br>
+<span class="ex">Ex. </span> What is the balanced equation for the reaction between hydrogen and oxygen that forms water? <br>
+	<div class="example">
+    	<table width="400" border="0">
+  <tbody>
+    <tr>
+      <td style="color:orangered;text-align:left;">&nbsp;Word equation:</td>
+      <td style="color:orangered;text-align:right;">&nbsp;hydrogen + oxygen</td>
+      <td style="color:orangered;text-align:center;">&nbsp;&rarr;</td>
+      <td style="color:orangered;text-align:left;">&nbsp;water</td>
+    </tr>
+    <tr>
+      <td style="color:orangered;text-align:left;">&nbsp;Skeleton equation:</td>
+      <td style="color:orangered;text-align:right;">&nbsp;H<sub>2</sub> + O<sub>2</sub></td>
+      <td style="color:orangered;text-align:center;">&nbsp;&rarr;</td>
+      <td style="color:orangered;text-align:left;">&nbsp;H<sub>2</sub>O</td>
+    </tr>
+    <tr>
+      <td style="color:orangered;text-align:left;">&nbsp;Balanced equation:</td>
+      <td style="color:orangered;text-align:right;">&nbsp;2H<sub>2</sub> + O<sub>2</sub></td>
+      <td style="color:orangered;text-align:center;">&nbsp;&rarr;</td>
+      <td style="color:orangered;text-align:left;">&nbsp;2H<sub>2</sub>O</td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+ <br>
+Try practice problem 1 on page 89 <br>
+practice problem 1 on page 89 <br>
+ <br>
+ <br>
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="S10Abg secTitle">A3.3  Five Common Types of Chemical Reactions </h2>
+	<h3 class="S10Ac">Formation Reactions </h3>
+<span class="def">Formation reaction </span>– chemical reaction in which two elements combine to form a compound; also known as a synthesis reaction <br>
+ <br>
+<span class="def">Synthesis reaction </span>– chemical reaction in which two elements combine to form a compound; also known as a formation reaction <br>
+<span class="ex">Ex. </span> <br>
+<div class="indent">
+   <div class="example">
+	carbon + oxygen &rarr; carbon dioxide <br>
+	C (s) + O<sub>2</sub> (g) &rarr; CO<sub>2</sub> (g) <br>
+	<br>
+	hydrogen + oxygen &rarr; water <br>
+	H<sub>2</sub> (g) + O<sub>2</sub> (g) &rarr; H<sub>2</sub>O (g) <br>
+   </div>
+</div>
+ <br>
+<h3 class="S10Ac">Decomposition Reactions </h3>
+<span class="def">Decomposition reaction </span>– chemical reaction in which a compound breaks apart into its elements  <br>
+<span class="ex">Ex. </span>  When electricity runs through water the water molecule breaks into hydrogen gas and oxygen gas. <br>
+<div class="indent">
+    <span class="example"> water &rarr; hydrogen + oxygen </span><br>
+	<span class="example"> 2 H<sub>2</sub>O (l) &rarr; 2 H<sub>2</sub> (g) + O<sub>2</sub> (g) </span> <br>
+</div>
+ <br>
+<h3 class="S10Ac">Hydrocarbon Combustion</h3>
+<span class="def">Hydrocarbons </span>– compound that contains hydrogen and carbon; common hydrocarbons include the main components of gasoline and many plastics <br>
+<span class="ex">Ex. </span> 
+<div class="indent">
+	<div class="example">
+    	When methane, natural gas, is combusted, it forms carbon dioxide and water vapour. <br>
+		methane + oxygen &rarr; carbon dioxide + water <br>
+		CH<sub>4</sub> (g) + 2 O<sub>2</sub> (g) &rarr; CO<sub>2</sub> + 2 H<sub>2</sub>O (g) <br>
+    </div>
+</div>
+ <br>
+<h3 class="S10Ac">Single Replacement Reactions </h3>
+<span class="def">Single replacement reaction </span>– chemical reaction in which a reactive element reacts with an ionic compound <br>
+ <br>
+<span class="ex">Ex. </span>
+<div class="indent">
+	<div class="example">When sodium is added to water it produces sodium hydroxide and hydrogen. <br>
+	sodium + water &rarr; sodium hydroxide + hydrogen <br>
+	2 Na (s) + 2 H<sub>2</sub>O (l) &rarr; 2 NaOH (aq) + H<sub>2</sub> (g)
+	</div>
+</div>
+ <br>
+
+<h3 class="S10Ac">Double Replacement Reactions </h3>
+<span class="def">Double replacement reaction </span>– chemical reaction between two ionic compounds in solution that often results in the formation of a least one precipitate. <br>
+  <br>
+<span class="ex">Ex. </span>
+<div class="indent">
+	<div class="example">When an acid is added to a base it produces a salt and water <br>
+	hydrochloric acid + sodium hydroxide &rarr; sodium chloride + water <br>
+	HCl (aq) + NaOH (aq) &rarr; NaCl (aq) + H<sub>2</sub>O (l) <br>
+	<br>
+	iron (II) sulfide + hydrochloric acid &rarr; hydrogen sulfide + iron (II) chloride <br>
+	FeS (aq) + HCl (aq) &rarr; H<sub>2</sub>S (s) + FeCl<sub>2</sub> (aq) <br>
+	
+    </div>
+</div>
+ <br>
+<h3 class="S10Ac">Predicting the Products of Chemical Reactions </h3>
+ <br>
+ <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section14" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section15"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="S10Abg secTitle">A3.4  The Mole </h2>
+<h3 class="S10Ac">Avogadro’s Number and the Mole </h3>
+<span class="def">Mole </span>– quantity that chemists use to measure elements and compounds; symbol; mol; Avogadro’s number is the number of particles in a mole. <br>
+<span class="def">Avogadro’s number </span>– number of atoms in 1 mole; approximately 6.02&times;10<sup>23</sup>; symbol N<sub>A</sub> <br>
+ <br>
+<h3 class="S10Ac">Molar Mass </h3>
+
+<span class="def">Molar mass </span>– mass of one mole of a substance <br>
+
+<span class="def">Atomic molar mass </span>– average molar mass of an element’s atoms, including those of all the element’s different isotopes.
+ 
+Chemists had to choose an element to be the standard for the conversion from atomic mass unit to grams.  Since, carbon-12 is relatively easy to make 100% pure it was chosen.  Carbon 12 has 6 protons and 6 neutrons so it has an atomic mass of 12 units.  A mole of carbon 12 atoms has a mass of 12 grams. <br>
+ <br>
+The masses on the periodic table are weighted average mass for a mole of material.  They are not exact, carbon is 12.01 because there are different forms of carbon, isotopes, so they took average samples. <br>
+
+ 
+<span class="ex">Ex. </span>  How much does two moles of hydrogen chloride mass? <br>
+<div class="indent">
+	<div class="example">
+    	hydrogen chloride is HCl <br>
+        H has a mass of 1.01 g/mol <br>
+        Cl has a mass of 35.45 g/mol <br>
+        HCl has a mass of 1.01 + 35.45 = 36.46 g/mol <br>
+        2 HCl has a mass of 2 mol &times; 36.46 g/mol = 72.92 g <br>
+	</div>
+</div>
+ <br>
+<span class="ex">Ex. </span>  How many moles of water is in a 200g sample? <br>
+<div class="indent">
+	<div class="example">
+    	water is H<sub>2</sub>O <br>
+        H has a mass of 1.01 g/mol <br>
+        O has a mass of 16.00 g/mol <br>
+        H<sub>2</sub>O has a mass of 18.02 g/mol <br>
+        200 g &divide; 18.02 g/mol = 11.1 mole of water <br>
+    </div>
+</div>
+ <br>
+<span class="ex">Ex. </span> What is the mass of 10 moles of sodium chloride? <br>
+<div class="indent">
+	<div class="example">
+    	sodium chloride is NaCl <br>
+        Na has a mass of 22.99 g/mol <br>
+        Cl has a mass of 35.45 g/mol <br>
+        NaCl has a mass of 58.44 g/mol <br>
+        10 moles of NaCl has a mass of 684.4 g <br>
+    </div>
+</div>
+ <br>
+<span class="ex">Ex. </span> How many moles are in 2000 g of nitrogen gas? <br>
+<div class="indent">
+	<div class="example">
+    	nitrogen gas is N<sub>2</sub> <br>
+        N has a mass of 14.01 g/mol <br>
+        N<sub>2</sub> has a mass of 28.02 g/mol <br>
+        2000 g &divide; 28.02 g/mol = 111.0 <br>
+	</div>
+ </div>
+ <br>
+<h3 class="S10Ac">The Mole Concept and the Law of Conservation of Mass </h3>
+The mole concept and the law of conservation of mass allows chemists to predict the mass of substance produced.  <br>
+<span class="ex">Ex. </span> the equation of the decomposition of water is <br>
+<div class="indent">
+	<div class="example">
+ 		water &rarr; hydrogen + oxygen <br>
+ 		2H<sub>2</sub>O &rarr; 2H<sub>2</sub> + O<sub>2</sub> <br>
+ 		2 moles of water will produce 2 moles of hydrogen gas and 1 mole of oxygen gas <br>
+		36.04 g of water produces 4.04 g of hydrogen and 32 g of oxygen <br>
+    </div>
+ </div>
+ <br>
+ <br>
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Science 10 <br>
+			Program of Studies <br>
+	    <img src="./AlbertaEdLogo.png" width="159" height="75" alt=""/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/index.cfm?locator=PS38Uw&PMDbSiteId=2621&PMDbSolutionId=25862&PMDbSubSolutionId=&PMDbCategoryId=25879&PMDbSubCategoryId=26225&PMDbSubjectAreaId=&PMDbProgramId=46628&gclid=CjwKCAiAx8KQBhAGEiwAD3EiPyhuOXoPKYfgJY5MIoaVRWwwqvqFDb49cfy6JcYeLKmU2qMp6sio4xoCXfIQAvD_BwE">Addison Wesley Science 10 Textbook <br>
+	  <img src="./Science10Cvr.png" width="169" height="223" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+	</div>
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>

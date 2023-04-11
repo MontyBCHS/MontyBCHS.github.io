@@ -1,0 +1,714 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>S10 UB Ch1 Test</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">SCIENCE 10</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="./S10_UA_Ch1.html" class="active">Unit A Chemistry - Chapter 1</a>
+			<a href="./S10_UA_Ch2.html">Unit A Chemistry - Chapter 2</a>
+			<a href="./S10_UA_Ch3.html">Unit A Chemistry - Chapter 3</a>
+			<a href="./S10-UB_Ch1.html">Unit B Physics - Chapter 1</a>
+			<a href="./S10_UB_Ch2.html">Unit B Physics - Chapter 2</a>
+			<a href="./S10_UB_Ch3.html">Unit B Physics - Chapter 3</a>
+			<a href="./S10_UC_Ch1.html">Unit C Biology - Chapter 1</a>
+			<a href="./S10_UC_Ch2.html">Unit C Biology - Chapter 2</a>
+			<a href="./S10_UC_Ch3.html">Unit C Biology - Chapter 3</a>
+			<a href="./S10_UD_Ch1.html">Unit D Climate - Chapter 1</a>
+			<a href="./S10_UD_Ch2.html">Unit D Climate - Chapter 2</a>
+			<a href="./S10_UD_Ch3.html">Unit D Climate - Chapter 3</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 S10Abg">
+	<div class="unitTitle"><h2 class="unitTitle">UNIT A: ENERGY AND MATTER IN CHEMICAL CHANGE</h2></div>
+	 
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h1>SCIENCE 10</h1>
+  <h1>Program of Studies</h1>
+  <h1>SCIENCE 10</h1>
+					<h1>Program of Studies</h1>
+					<h1>Unit A:  Energy and Matter in Chemical Change (Nature of Science Emphasis)</h1>
+					<strong>Overview:</strong> Chemical changes involve energy and transformations of matter.  A knowledge of the underlying structure of matter and the basic chemical species is important in understanding chemical changes.  As students explore the properties of molecular and ionic compounds, including acids and bases, they begin to appreciate the need for a classification scheme and a system of nomenclature. Students classify, name compounds and write balanced chemical equations to represent chemical changes.  As well, students are introduced to the law of conservation of mass and the mole concept. 
+
+					<h2>Links to Science</h2>
+					The following science concepts are related to the content of Unit A.
+					<strong>Concepts</strong>
+
+					<ul>
+						<li>particle model of matter - Grade 7 Science, Unit C: Heat and Temperature </li>
+						<li>WHMIS symbols, pure substances, mixtures and solutions - Grade 8 Science, Unit A: Mix and Flow of Matter</li>
+						<li>reactants, products, conservation of mass, periodic table, elements, compounds, atomic theory, chemical nomenclature -  Grade 9 Science, Unit B:  Matter and Chemical Change</li>
+						<li>acids and bases  - Grade 9 Science, Unit C: Environmental Chemistry </li>
+					</ul>
+					<strong>Focusing Questions: </strong>
+					 <ul>
+						<li>How has knowledge of the structure of matter led to other scientific advancements? </li>
+						<li>How do elements combine? </li>
+						<li>Can these combinations be classified and the products be predicted and quantified? </li>
+						<li>Why do scientists classify chemical change, follow guidelines for nomenclature and represent chemical change with equations? </li>
+					 </ul>
+
+					<h2>Key Concepts</h2>
+					The following concepts are developed in this unit and may also be addressed in other units at other grade/course levels.  The intended level and scope of treatment is defined by the outcomes below.
+					<ul>
+						<li>how chemical substances meet human needs </li>
+						<li>Workplace Hazardous Materials Information System (WHMIS) and safe practices </li>
+						<li>International Union of Pure and Applied Chemistry (IUPAC) nomenclature, ionic and molecular compounds, acids and bases </li>
+						<li>evidence of chemical change </li>
+						<li>role and need for classification of chemical change </li>
+						<li>writing and balancing equations </li>
+						<li>law of conservation of mass and the mole concept </li>
+					 </ul>
+					<h2>Outcomes for Science, Technology and Society (STS) and Knowledge </h2>
+
+					Students will:
+					<ol>
+						<li>1. Describe the basic particles that make up the underlying structure of matter, and investigate related technologies </li>
+						<div class="indent">
+						  <ul>
+							<li>identify historical examples of how humans worked with chemical substances to meet their basic needs 
+							<div class="i_indent">(e.g., how precontact First Nations communities used biotic and abiotic materials to meet their needs) </div> </li>
+							<li>outline the role of evidence in the development of the atomic model consisting of protons and neutrons (nucleons) and electrons; i.e., Dalton, Thomson, Rutherford, Bohr </li>
+							<li>identify examples of chemistry-based careers in the community  
+							<div class="i_indent">(e.g., chemical engineering, cosmetology, food processing)</div> </li>
+					   </ul> 
+					</div>
+					<br>
+
+					<li>Explain, using the periodic table, how elements combine to form compounds, and follow IUPAC guidelines for naming ionic compounds and simple molecular compounds </li>
+					<div class="indent">
+					   <ul>
+						<li>illustrate an awareness of WHMIS guidelines, and demonstrate safe practices in the handling, storage and disposal of chemicals in the laboratory and at home </li>
+						<li>explain the importance of and need for the IUPAC system of naming compounds, in terms of the work that scientists do and the need to communicate clearly and precisely </li>
+						<li>explain, using the periodic table, how and why elements combine to form compounds in specific ratios </li>
+						<li>predict formulas and write names for ionic and molecular compounds and common acids  
+						<div class="i_indent">(e.g., sulfuric, hydrochloric, nitric, ethanoic) , using a periodic table, a table of ions and IUPAC rules </div> </li>
+						<li>classify ionic and molecular compounds, acids and bases on the basis of their properties;  i.e., conductivity, pH, solubility, state </li>
+						<li>predict whether an ionic compound is relatively soluble in water, using a solubility chart  </li>
+						<li>relate the molecular structure of simple substances to their properties 
+						<div class="i_indent">(e.g., describe how the properties of water are due to the polar nature of water molecules, and relate this property to the transfer of energy in physical and living systems) </div> </li>
+						<li>outline the issues related to personal and societal use of potentially toxic or hazardous compounds 
+						<div class="i_indnet">(e.g., health hazards due to excessive consumption of alcohol and nicotine; exposure to toxic substances; environmental concerns related to the handling, storage and disposal of heavy metals, strong acids, flammable gases, volatile liquids) </div> </li>
+					  </ul>
+					</div>    
+					<br>   
+				<li>Identify and classify chemical changes, and write word and balanced chemical equations for significant chemical reactions, as applications of Lavoisier’s law of conservation of mass </li>
+					<div class="indent">
+					  <ul>
+						<li>provide examples of household, commercial and industrial processes that use chemical reactions to produce useful substances and energy 
+						<div class="i_indent">(e.g., baking powder in baking, combustion of fuels, electrolysis of water into H<sub>2(g)</sub> and O<sub>2(g)</sub>)</div> </li>
+						<li>identify chemical reactions that are significant in societies 
+						<div class="i_indent">(e.g., reactions that maintain living systems, such as photosynthesis and respiration; reactions that have an impact on the environment, such as combustion reactions and decomposition of waste materials) </div> </li>
+						<li>describe the evidence for chemical changes; i.e., energy change, formation of a gas or precipitate, colour or odour change, change in temperature </li>
+						<li>differentiate between endothermic and exothermic chemical reactions <div class="i_indent">(e.g.,combustion of gasoline and other natural and synthetic fuels, photosynthesis) </div></li>
+						<li>classify and identify categories of chemical reactions; i.e., formation (synthesis), decomposition, hydrocarbon combustion, single replacement, double replacement  </li>
+						<li>translate word equations to balanced chemical equations and vice versa for chemical reactions that occur in living and nonliving systems </li>
+						<li>predict the products of formation (synthesis) and decomposition, single and double replacement, and hydrocarbon combustion chemical reactions, when given the reactants </li>
+						<li>define the mole as the amount of an element containing 6.02 × 10<sup>23</sup> atoms (Avogadro’s number) and apply the concept to calculate quantities of substances made of other chemical species (e.g., determine the quantity of water that contains 6.02 × 10<sup>23</sup> molecules of H<sub>2</sub>O) </li> 
+						<li>interpret balanced chemical equations in terms of moles of chemical species, and relate the mole concept to the law of conservation of mass	</li>
+					  </ul>
+				   </div>
+				</ol>
+
+
+				<h3>Skill Outcomes</h3>
+				(focus on scientific inquiry)<br>
+				<br>
+				<h3>Initiating and Planning</h3>
+
+				Students will: <br>
+				Ask questions about observed relationships, and plan investigations of questions, ideas, problems and issues
+				  <div class="indent">
+					  <ul>
+						  <li>define and delimit problems to facilitate investigation </li>
+						  <li>design an experiment, identifying and controlling major variables 
+						  <div class="i_indent">(e.g., design an experiment to differentiate between categories of matter, such as acids, bases and neutral solutions, and identify manipulated and responding variables) </div> </li>
+						  <li>state a prediction and a hypothesis based on available evidence and background information 
+						  <div class="i_indent">(e.g., state a hypothesis about what happens to baking soda during baking) </div> </li>
+						  <li>evaluate and select appropriate instruments for collecting evidence and appropriate processes for problem solving, inquiring and decision making 
+							<div class="i_indent">(e.g., list appropriate technology for classifying compounds, such as litmus paper or conductivity tester) </div> </li>
+					  </ul>
+				  </div>
+
+				<h3>Performing and Recording </h3>
+				Students will: <br>
+				Conduct investigations into relationships between and among observable variables, and use a broad range of tools and techniques to gather and record data and information 
+					<div class="indent">
+						<ul>
+							<li>carry out procedures, controlling the major variables and adapting or extending procedures
+							<div class="i_indent">(e.g., when performing an experiment to illustrate conservation of mass, demonstrate an understanding of closed and open systems and control for loss or gain of matter during a chemical change) </div> </li>
+							<li>use library and electronic research tools to collect information on a given topic 
+							<div class="i_indent">(e.g., information on compounds we use and their toxicity, using standard references, such as the Merck Index, as well as Internet searches) </div> </li>
+							<li>select and integrate information from various print and electronic sources or from several parts of the same source 
+							<div class="i_indent">(e.g., collect information on research into subatomic matter, research how pre-contact First Nations communities used available materials such as brain tissue for tanning hides) </div> </li>
+							<li>demonstrate a knowledge of WHMIS standards by selecting and applying proper techniques for the handling and disposal of laboratory materials 
+							<div class="i_indent">(e.g., recognize and use Material Safety Data Sheets [MSDS] information) </div> </li>
+							<li>select and use apparatus, technology and materials safely 
+							<div class="i_indent">(e.g., use equipment, such as Bunsen burners, electronic balances, laboratory glassware, electronic probes and calculators correctly and safely) </div> </li>
+						</ul>
+					</div>
+
+				<h3>Analyzing and Interpreting</h3>
+				Students will: <br>
+				Analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+					<div class="indent">
+						<ul>
+							<li>describe and apply classification systems and nomenclature used in the sciences 
+							<div class="i_indent">(e.g., investigate periodicity in the periodic table, classify matter, and name elements and compounds based on IUPAC guidelines) </div> </li>
+							<li>apply and assess alternative theoretical models for interpreting knowledge in a given field  
+							<div class="i_indent">(e.g., compare models for the structure of the atom) </div> </li>
+							<li>compare theoretical and empirical values and account for discrepancies 
+							<div class="i_indent">(e.g., measure the mass of a chemical reaction system before and after a change, and account for any discrepancies) </div> </li>
+							<li>identify and explain sources of error and uncertainty in measurement, and express results in a form that acknowledges the degree of uncertainty 
+							<div class="i_indent">(e.g., measure and record the mass of a material, use significant digits appropriately) </div> </li>
+							<li>identify new questions or problems that arise from what was learned 
+							<div class="i_indent">(e.g., how did ancient peoples discover how to separate metals from their ores?; evaluate the traditional Aboriginal method for determining alkaline properties of substances) </div> </li>
+						</ul>
+					</div>
+
+				<h3>Communication and Teamwork </h3>
+				Students will:<br>
+				Work as members of a team in addressing problems, and apply the skills and conventions of science in communicating information and ideas and in assessing results <br>
+					<div class="indent">
+						<ul>
+							<li>communicate questions, ideas and intentions; and receive, interpret, understand, support and 
+				respond to the ideas of others 
+							<div class="i_indent">(e.g., use appropriate communication technology to elicit feedback from others) </div> </li>
+							<li>represent large and small numbers using appropriate scientific notation </li>
+							<li>select and use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate ideas, plans and results 
+							<div class="i_indent">(e.g., use appropriate Système international (SI) units, and IUPAC nomenclature)</div></li>
+						</ul>
+				   </div>
+
+
+				<h3>Attitude Outcomes </h3>
+				Interest in Science <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Show interest in science-related questions and issues, and confidently pursue personal interests and career possibilities within science-related fields </div>
+				<div class="i_indent">(e.g., apply concepts learned in the classroom to the everyday use of chemicals; show interest in a broad scope of chemistry-related careers) </div>
+					<br>
+				Mutual Respect <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Appreciate that scientific understanding evolves from the interaction of ideas involving people with different views and backgrounds </div>
+				<div class="i_indent">(e.g., recognize the contributions of Canadians to contemporary knowledge of the structure of matter; show awareness of and respect for traditional Aboriginal knowledge about the use of biotic and abiotic materials) </div>
+					<br>
+				Scientific Inquiry <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Seek and apply evidence when evaluating alternative approaches to investigations, problems and issues </div>
+				<div class="i_indent">(e.g., evaluate inferences and conclusions based on particles of matter that cannot be observed directly) </div>
+					<br>
+				Collaboration <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Work collaboratively in planning and carrying out investigations, as well as in generating and evaluating ideas </div>
+				<div class="i_indent">(e.g., contribute to group work willingly, assume a variety of roles and accept responsibility for any problems that arise) </div>
+					<br>
+				Stewardship <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Demonstrate sensitivity and responsibility in pursuing a balance between the needs of humans and a sustainable environment </div>
+				<div class="i_indent">(e.g., recognize that environmental consequences may arise from the development, use and disposal of chemical materials) </div>
+					<br>
+				Safety <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Show concern for safety in planning, carrying out and reviewing activities </div>
+				<div class="i_indent">(e.g., acknowledge the need for regulations to govern the storage, handling and disposal of potentially hazardous materials in the school laboratory and at home or in the workplace) </div>
+					<br>
+
+
+				<h3>Links to Mathematics </h3>
+				The following mathematics outcomes are related to the content of Unit A but are not considered 
+				prerequisites. <br>
+
+					<ul>
+						<li>Data Collection and Analysis - Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3 </li>
+						<li>Measurement and Unit Conversions - Mathematics 10C, Measurement,Specific Outcome 2; Mathematics 10-3, Measurement, Specific Outcome 1;Mathematics 20-3, Algebra, Specific Outcome 3; Mathematics 30-3, Measurement, Specific Outcome 1 </li>
+						<li>Ratio and Proportions - Grade 8 Mathematics, Number, Specific Outcomes 3, 4 and 5 </li>
+						<li>Graph Analysis - Mathematics10C, Relations and Functions, Specific Outcomes 1 and 4;Mathematics 20-3, Statistics, Specific Outcome 1 </li>
+						<li>Powers - Mathematics10C, Algebra and Number, Specific Outcome 3 </li>
+					 </ul>
+				<br>
+				<br>
+	</div>
+             <h2>Unit Focus Questions</h2>
+            <ol>
+            	<li>How has knowledge of the structure of matter led to other scientific advancements?</li>
+                <li>How do elements combine? Can these combinations be classified and the products be predicted and quantified? </li>
+                <li>Why do scientists classify chemical change, follow guidelines for nomenclature and represent chemical change with equations? </li>
+            </ol>
+		  <br>
+	</div>
+		
+
+<!--  ***********************************************************************************************************   -->
+
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<div class="S10Abg"><h1 class="S10Abg secTitle">Chapter A1.0  The understanding that particles make up the underlying structure of matter has led to advancements in technology</h1> </div>     
+	<div class="S10Ac">
+		<h2>Key Concepts</h2>
+                 <ul>
+                     <li>Workplace Hazardous Materials Information System (WHIMIS) and safe practices  </li>
+                     <li>Evidence of chemical change </li>
+                     <li>How chemical substances meet human needs </li>
+                 </ul>
+                                
+                 <h2>Learning Outcomes</h2>
+                    <ul>
+                        <li>Illustrate an awareness WHMIS guidelines, and demonstrate safe pracitices guidelines, and demonstrate safe practices in handling, storing, and disposing of chemicals in the laboratory and at home. </li>
+                        <li>Provide examples of how early humans worked with chemical substances to meet their basic needs </li>
+                        <li>Outline the role of evidence in the development of the atomic model consisting of nucleons (protons and neutrons) and electrons through the work of Dalton, Thomson, Rutherford, and Bohr. </li>
+                        <li>Describe evidence for chemical change. </li>
+                    </ul>
+		  <br>
+	</div>
+		
+
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="S10Abg secTitle">A1.1  Safety in the Laboratory</h2>
+          <h3 class="S10Ac">Understanding the Rules </h3>
+<ol>
+	<li>Read all written instructions carefully before doing an activity. </li>
+	<li>Listen to all instructions and follow them carefully. </li>
+	<li>Wash your hands thoroughly after each activity and after handling chemicals. </li>
+	<li>Wear safety goggles, gloves, or an apron as required. </li>
+	<li>Think before you touch.  Equipment may be hot and substances may be dangerous. </li>
+	<li>Never pour liquids into containers held in your hand.  Place a test tube in a rack before pouring substances into it. </li>
+	<li>Clean up any spilled substances immediately as instructed by your teacher. </li>
+	<li>Never look into test tubes or containers from the top.  Always look in through the side. </li>
+	<li>Never use cracked or broken glassware.  Make sure you follow your teacher's instructions when getting rid of broken glass. </li>
+	<li>Label any container you put chemicals in. </li>
+	<li>Report all accidents and spills immediately to your teacher. </li>
+	<li>Read the WHMIS safety symbols on any chemical you will be using and make sure that you understand all the symbols. </li> 
+	<li>Always carry things carefully! </li>
+</ol>
+
+<div class="indent"><div class="example">
+	Wine merchant William Sokolin had paid $30 for a 1787 bottle of  Chateau Margaux once owned by Thomas Jefferson. He presented it before a group of 300 wine collectors at Manhattan's Four Seasons restaurant in 1989, hoping that one of them might offer $519 000 for it. Before bidders could get out their checkbooks, he dropped the bottle and broke it. <br>
+	<i>Source: S. Roberts (2 May 2015) New York Times retrieved from: https://www.nytimes.com/2015/05/03/nyregion/william-sokolin-wine-seller-who-broke-famed-bottle-dies-at-85.html?_r=0 </i><br>
+</div> </div>
+ <br>
+<h3 class="S10Ac">Safety Hazard Symbols </h3>
+WHMIS <br>
+Workplace Hazardous Materials Information System is used to indicate hazards. Required training at worksites involving chemicals. Workers and employers share responsibility. <br>
+
+<table width="100%" border="1">
+  <caption>
+    WHIMIS pictographs
+  </caption>
+  <tbody>
+    <tr>
+      <th scope="col">&nbsp;Name&nbsp;</th>
+      <th scope="col">&nbsp;Pictograph&nbsp;</th>
+      <th scope="col">&nbsp;Description&nbsp;</th>
+    </tr>
+    <tr>
+      <td>&nbsp;Flammable (inflammable)</td>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/WHIMIS-Flammable.png" width="150" height="150" alt=""/></td>
+      <td>&nbsp;These materials can burn. Keep them away from heat sources and flames.</td>
+    </tr>
+    <tr>
+      <td>&nbsp;Oxidizing material</td>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/WHIMIS-Oxidizer.png" width="150" height="150" alt=""/></td>
+      <td>&nbsp;These materials will release oxygen and help combustion.  Should NOT be stored with flammables.</td>
+    </tr>
+    <tr>
+      <td>&nbsp;Compressed gas</td>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/WHIMIS-CompressedGas.png" width="150" height="150" alt=""/></td>
+      <td>&nbsp;These need to be stored upright because damage can cause the tank to fly as a very high speed projectile. </td>
+    </tr>
+    <tr>
+      <td>&nbsp;Corrosive</td>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/WHIMIS-Corrosive.png" width="150" height="150" alt=""/></td>
+      <td>&nbsp;Mostly acids or bases that will react corrosively with flesh and metals.  Wear gloves, lab coat (apron), proper footwear and respirator if there are strong fumes; depending on the strength of the corrosive.</td>
+    </tr>
+    <tr>
+      <td>&nbsp;Explosives</td>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/WHIMIS-Explosive.png" width="150" height="150" alt=""/></td>
+      <td>&nbsp;These materials can explode or are extremly sensitive and react quickly. Generally require specific training.</td>
+    </tr>
+    <tr>
+      <td>&nbsp;Poisonous </td>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/WHIMIS-Poisonous.png" width="150" height="150" alt=""/></td>
+      <td>&nbsp;Depending on the source it can be poisonous by ingesting (eating or drinking); inhalation (breathing) or contact.  Don't eat or drink, use a mask and gloves as appropriate.</td>
+    </tr>
+    <tr>
+    	<td>Health effect </td>
+        <td><img src="./S10_UA_Chem_Ch1/WHIMIS-HealthEffect.png" width="150" height="150" alt=""/></td>
+        <td>These materials can affect your respiratory system or can affect a specific organ.  Check MSDS for details.  Use an appropriate mask. </td>
+    </tr>
+    <tr>
+      <td>&nbsp;Acute Toxic effect</td>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/WHIMIS-AcuteToxicity.png" width="150" height="150" alt=""/></td>
+      <td>&nbsp;These materials cause a variety of poisonous or negative health effects.  Chech the MSDS for details.</td>
+    </tr>
+    <tr>
+      <td>&nbsp;Biohazardous infectious</td>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/WHIMIS-Biohazardous.png
+" width="150" height="150" alt=""/></td>
+      <td>&nbsp;Commonly seen in hospitals with waste.  These materials can spread disease due to bodily fluids.  Use gloves and look out for sharps (needles, scapel blades, broken glass, etc...)</td>
+    </tr>
+    <tr>
+      <td>&nbsp;Enviromental hazard</td>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/WHIMIS-Environment.png
+" width="150" height="150" alt=""/> </td>
+      <td>&nbsp;These materials can negatively affect nature.  For example: small amounts of crude oil will poison thousands of litres of water for fish and other animals. These materials must be conained and disposed of according the local legislation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="S10Ac">Material Safety Data Sheets (MSDS) </h3>
+MSDS contain safety and chemical information that is useful for the chemical's users and for first responders and hazardous cleanup teams.  The MSDS must be stored in an easy to access location where ever they are stored.  That includes during transportation.  Some of the information they conatin are:
+<ul>
+	<li>Protective Clothing symbols </li>
+	<li>Chemical Name and formula </li>
+	<li>Synonym - other slang or common names or short forms </li>
+	<li>Emergency numbers for dealing with large spills </li>
+	<li>Emergency procedures for: contact with skin or eyes, ingestion, inhalation etc... </li>
+</ul>
+The Most Important Safety Feature is YOU!!! <br>
+You are responsible for your safety and actions.  Only you can protect yourself from other people's accidents hurting you. <br>
+ <br>
+<h3 class="S10Ac">Environmental Safety </h3>
+Always dispose of chemicals properly.  Whatever you pour down the drain goes into our waterways.  Most wastewater and water treatment plants are not designed to remove chemicals, so those chemicals will pass into our drinking water system. <br>
+ <br>
+ <br>
+          
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="S10Abg secTitle">A1.2  Properties and Classification of Matter </h2>
+         <h3 class="S10Ac">Properties Used to Classify Substances </h3>
+<span class="def">Physical properties </span>- properties that describe the physical appearance and composition of a substance. Ie. what you can see and physically determine.<br>
+<ul>
+	<li><span class="def">Boiling point or condensing point </span>- the temperature that the material changes state from liquid to vapour or vice versa. <span class="ex">Ex.</span> <span class="example">Water boils at 100<sup>o</sup>C. </span> </li>
+	<li><span class="def">Melting point or freezing point </span>- the temperature that the material changes state from solid to liquid or vice versa.  <span class="ex">Ex.</span> <span class="example">  Water freezes at 0<sup>o</sup>C. </span> </li>
+	<li><span class="def">Malleability </span>- the ability to beat or roll the material into a flat sheet. 	<span class="ex">Ex.</span> <span class="example">  Aluminum is very malleable (aluminum foil) whereas glass is not malleable. </span></li>
+	<li><span class="def">Ductility </span>- the ability to stretch a material without breaking. <span class="ex">Ex.</span> <span class="example">  copper is very ductile, whereas concrete is not. </span></li>
+	<li> <span class="def">Colour </span>- the color <span class="ex">Ex.</span> <span class="example"> water is colourless, gold is yellow, aluminium is silver.</span></li>
+	<li><span class="def">State </span>- whether the material is a solid, liquid, or gas, normally at room temperature. <br>
+	<span class="ex">Ex.</span> <span class="example">nitrogen is a gas, water is a liquid and iron is a solid.</span></li>
+	<li><span class="def">Solubility </span> - whether the material dissolves normally in water. <span class="ex">Ex.</span> <span class="example">  Sugar has a high solubility in water (you can dissolve a lot),  wood has a very low solubility in water (wood doesn't dissolve).</span> </li>
+	<li><span class="def">Crystal formation </span>- the shape of the crystalline structure of the material.  	<span class="ex">Ex.</span> <span class="example">  Water ice forms hexagonal (6 sided) crystals (snowflakes), sodium chloride (table salt) forms cubic crystals. </span></li>
+	<li><span class="def">Conductivity </span>- how well the material allows heat or electricity to pass through it.  <span class="ex">Ex.</span> <span class="example"> Copper has a high conductivity, plastic has a low conductivity. </span></li>
+	<li><span class="def">Magnetism </span>- how well the object holds a magnetic field.  <span class="ex">Ex.</span> <span class="example"> Iron, cobalt and nickel can be magnetic, aluminum cannot be magnetic. </span></li>
+</ul>
+ <br>
+
+<h3 class="S10Ac">Chemical Properties </h3>
+<span class="def">Chemical properties </span>- properties that describe the reactivity of a substance. Ie. results from quick and easy chemical reaction tests.<br>
+<ul>
+	<li><span class="def">Ability to burn </span>- whether or not the material will combust. <span class="ex">Ex.</span> <span class="example"> Oil burns, whereas sand does not. </span></li>
+	<li><span class="def">Flash point </span>- temperature at which the material spontaneously combusts. 	<span class="ex">Ex.</span> <span class="example"> Gasoline has a lower flash point than diesel fuel. </span></li>
+	<li><span class="def">Reaction with water </span>- whether or not the material will dissolve or corrode in water. <span class="ex">Ex.</span> <span class="example">sugar dissolves in water, iron corrodes in water</span></li>
+	<li><span class="def">Reaction with acids and bases </span>- whether or not the material will corrode or form a gas. <span class="ex">Ex.</span> <span class="example"> Magnesium creates hydrogen gas bubbles in acid.  Iron will corrode in acid.  </span></li>
+	<li><span class="def">Reaction to heat </span>- whether the material will melt or decompose when heated. 	<span class="ex">Ex.</span> <span class="example"> Mozzarella cheese melts when heated, malachite (green copper ore, Cu(OH)<sub>2</sub>&middot; CuCO<sub>3</sub>) decomposes into copper (II) oxide (copper metal), carbon dioxide and water during ore processing. </span> </li>
+	<li><span class="def">Reaction to chemical indicators </span>- chemical indicators are chemicals that change colour due to a chemical reaction and are used to identify materials. <span class="ex">Ex.</span> <span class="example">Litmus paper turns red with acids and blue with bases. </span></li>
+</ul>
+ <br>
+
+<h3 class="S10Ac">Pure Substances and Mixtures </h3>
+<span class="def">Pure substance </span>- substance in which all the particles are the same.  <span class="ex">Ex.</span> <span class="example">  Pure gold is 99.999% gold atoms. </span><br>
+<span class="def">Mixture </span>- combination of pure substances.  <span class="ex">Ex.</span> <span class="example">  Air is a mixture of 79% nitrogen gas, 19% oxygen gas, 2% carbon dioxide.</span> <br>
+<span class="def">Mechanical mixture </span>- Mixture in which the different substances are visible.  <span class="ex">Ex.</span> <span class="example">  Marbles in sand.</span> <br>
+<span class="def">Heterogeneous mixture </span>- Mixture in which the different substances are visible. <br>
+<span class="def">Suspension </span>- Mechanical mixture in which the components are in different states.  <span class="ex">Ex.</span> <span class="example"> Milk. </span><br>
+<span class="def">Colloid </span>- Mechanical mixture in which the suspended substance cannot be easily separated from the other substances in the mixture. <br>
+<span class="def">Homogeneous mixture </span>- Mixture in which the different substances are not visible. <br>
+<span class="def">Solutions </span>- Mixture in which the separate components are not visible. <span class="ex">Ex.</span> <span class="example"> salt water, you can only see the water, the salt is dissolved and invisible. </span> <br>
+
+<h3 class="S10Ac">Chemical Reactions </h3>
+<span class="def">Chemical reaction </span>- process that occurs when a substance or substances react to form a different substance or substances <br>
+<br>
+<h3 class="S10Ac">Recognizing Chemical Reactions </h3>
+In a chemical reaction atoms change what they are bound to.  When carbon burns it chemically reacts with oxygen to produce carbon dioxide.  The single carbon atom reacts with a pair of oxygen atoms that are bound together.  The carbon binds onto the two oxygen atoms to form a three atom molecule. <br>
+ <br>
+There are some indicators that a chemical reaction occurred:
+<ul>
+	<li>The substance changed colour. <span class="ex">Ex.</span> <span class="example">Rusting iron changes from a silver colour to red. </span></li>
+	<li>The substance changed state. <span class="ex">Ex.</span> <span class="example">Burning wood releases smoke and gases. </span></li>
+	<li>Bubbles showed the release of a gas.  <span class="ex">Ex.</span> <span class="example">Sodium in water releases bubbles. </span></li>
+	<li>The substance changed temperature.  <span class="ex">Ex.</span> <span class="example">Cold pack gets cold when the chemicals are mixed. </span></li>
+	<li>A new substance is formed. <span class="ex">Ex.</span> <span class="example">Nylon plastic is made by mixing two clear colourless liquids. </span></li>
+</ul>
+<br>
+<br>
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="S10Abg secTitle">A1.3  Developing Ideas about Matter </h2>
+	<h3 class="S10Ac">Food Chemistry </h3>
+		  <em>Heating and Freezing. </em><br>
+Heating sterilizes food products by killing the bacteria that causes food to rot.  Cooking meat kills the bacteria on the surface.  
+Hamburger must be thoroughly cooked because bacteria could be on all of the ground surfaces.  Steaks only need to be surface cooked because there is no internal bacteria that is dangerous. 
+
+Lots of restaurant will not serve steak blue rare for safety reasons.  Only eat steak tartar at a good quality restaurant.  DO NOT make your own!
+
+Freezing does not kill bacteria, but it freezes all of the water that the bacteria need to break down the food.  The bacteria simply wait until the food is defrosted.  Food can be preserved for multiple years by freezing. <br>
+ <br>
+<em>Salting </em><br>
+The salt is used to dehydrate the food by putting the food cells in a hypotonic situation.  The bacteria are also dehydrated and killed.  This was used before freezing became practical in the 1900s. <br>
+ <br>
+<em>Fermentation and Pickling </em><br>
+Pickling uses bacteria called lactobacilli to convert sugar into lactic acid that prevents the growth of bacteria that cause food to rot and decay. Fermenting is best known for producing alcohol from sugars. <br>
+ <br>
+<em>Metallurgy - an Early Branch of Chemistry </em><br>
+Early civilizations discovered that they could make tools out of metal deposits found on the ground.  As early as 4000 B.C. copper was the initial metal commonly used.  Copper was used because it is soft and easy to make into tools with just rocks and wood to work with.  As copper technology improved people discovered that mixing copper with  other metals would produce different metal alloys. <br>
+
+Mixing copper with tin produced a metal alloy called bronze which was stronger and more rigid than pure copper.   This led to the bronze age around 2500 B.C.  With stronger and better tools, different cultures experimented with different metals, alloys, mining and refining techniques. <br>
+
+The iron age started around 1200 BC. when smelting processes were developed.  Smelting is heating iron ore (iron mixed with rock) to melt and separate the iron.  Since iron is much stronger than bronze it became a new preferred metal for things like armour and weapons.  <br>
+<br>
+<br>
+<h3 class="S10Ac">Aristotle's Description of Matter </h3>
+Around 400 B.C. Aristotle, a Greek philosopher, believed that all matter was composed of the four elements: fire, earth, water and air.  <br>
+Democritus, another Greek, proposed that matter was made up of tiny particles that could not be divided into smaller pieces.  He called the particles atomos which is Greek for invisible. <br>
+ However, the philosophers did not attempt to test their ideas by systematic experimentation.  They preferred to observe nature and derive theories from observations. <br>
+ <br>
+ <span class="ex">Ex.</span><span class="example">Tree = Fire, Water, EarthDried Wood = Fire, EarthAshes = Earth </span><br>
+ <br>
+<em>Alchemy </em><br>
+With the fall of the Greek and Roman empires, chemistry was carried out by a group called alchemists.  
+Alchemy was a combination of science, magic and tricks.  Alchemists are famous for trying to get rich by trying to change lead and other metals into gold.  
+Alchemists discovered many important facts and developed better equipment, but did not cooperate so ideas didn't spread.  The same work was repeated over and over by different alchemists.  Towards the 1500s the study of alchemy led to chemistry. <br>
+ <br>
+<em>Developing Hypotheses about Matter </em><br>
+As chemistry was developed into a systematic experimental based science, theories developed about what matter is made of.  Democritus' ideas were the foundation for models of the atom.  
+Over time different experiments have some more and more details of the atom, and theories have adjusted accordingly. <br>
+ <br>
+ <table width="100%" border="1">
+  <caption>
+	  <h3 class="S10Ac">Models of the Atom</h3>
+  </caption>
+  <tbody>
+    <tr>
+      <td colspan="2">&nbsp;<b>John Dalton Model</b></td>
+    </tr>
+    <tr>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/Atom-Dalton.png
+" width="250" height="250" alt="Dalton - Model of the Atom - Billiard Ball"/></td>
+      <td>&nbsp;John Dalton was an English chemist who based his model of the atom on experiments he did in combining elements. His theory of the atom was: All matter is made of small, indivisible particles called atoms
+<ul>
+	<li>All the atoms of an element are identical in properties such as size and mass.</li>
+	<li>Atoms of different elements have different properties. </li>
+	<li>Atoms of different elements can combine in specific fixed ratios to form new substances </li>
+</ul></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;<b>J.J. Thomson Model</b></td>
+    </tr>
+    <tr>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/Atom-Thomson.png
+" width="250" height="250" alt="Thomson - Model of the Atom - Plum Pudding"/></td>
+      <td>&nbsp;JJ Thomson was an English physicist who discovered a very tiny particle called the electron.  He showed that a beam of electrons can be generated from any material. He measured the properties of the electron by using magnetic and electric fields. This is sometimes called the raison bun or plum pudding model. The raisons (plums) are the negative electrons embedded in the positive dough (pudding). <br>
+<ul>
+	<li>An atom is a solid sphere of positive charge (red).</li>
+	<li>Electrons are embedded in the positively charged sphere (black). </li>
+</ul></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;<b>Ernest Rutherford Model</b></td>
+    </tr>
+    <tr>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/Atom-Rutherford.gif" width="250" height="250" alt="Rutherford - Model of the Atom - Planetary"/></td>
+      <td>&nbsp;Rutherford, while working at McGill University in Montreal, performed experiments with radioactive particles.  He used radioactive polonium to shoot sub atomic high speed alpha particles at a very thin piece of gold foil.  He expected the alpha particles to go zipping in between the Dalton atoms.  Instead a few atoms were deflected. From his experiment he proposed a new model of the atom. This is sometimes called the planetary model (the electrons are like the planets going in circles around the nucleus, the sun).
+	<ul>
+	<li>An atom is mostly empty space. </li>
+	<li>The mass of an atom is located in the tiny dense center called a nucleus (red). </li>
+	<li>The nucleus contains protons which are positively charged. </li>
+	<li>The negatively charged electrons orbit around the outside edge of the atom (black). </li>
+	</ul>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;<b>Neils Bohr Model</b></td>
+    </tr>
+    <tr>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/Atom-Bohr.gif" width="250" height="250" alt="Bohr - Model of the Atom - Electron orbital shells"/></td>
+      <td>&nbsp;Neils Bohr was a Danish physicist.  He examined the light emitted from elemental gases when electricity is run through the gas.  The Rutherford model did not explain why these elemental gases give of very specific colours of lights.  Bohr proposed that the orbiting electrons in the Rutherford model can only orbit in specific locations, called energy levels or shells. When electrons gained electrical energy they jumped up shell levels, and then fell down releasing energy in the form of light.  This is the most commonly used model in movies and animations. <br>
+<ul>
+	<li>The electrons in an atom have specific orbits called energy levels (black circles).</li>
+</ul></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;<b>The Quantum Mechanical Model of the Atom </b></td>
+    </tr>
+    <tr>
+      <td>&nbsp;<img src="./S10_UA_Chem_Ch1/Atom-Wave.png" width="250" height="250" alt="Wave Mechanical - Model of the Atom - Electron orbital clouds"/></td>
+      <td>&nbsp;<ul>
+	<li>Electrons are too small to measure their momentum at any given instant. ie. we can't measure the position accurately enough. </li>
+	<li>The electrons are located somewhere within an orbit described as a statistical cloud of probability (black circles).</li>
+    <li>The electrons move in waves, and the wavelength dictacts the location of each electron cloud (what Bohr called shell levels) around the nucleus.</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
+
+ <br>
+
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="Images/Alberta-Education-Logo.png">Alberta Science 10 <br>
+			Program of Studies <br>
+	    <img src="./AlbertaEdLogo.png" width="159" height="75" alt=""/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/index.cfm?locator=PS38Uw&PMDbSiteId=2621&PMDbSolutionId=25862&PMDbSubSolutionId=&PMDbCategoryId=25879&PMDbSubCategoryId=26225&PMDbSubjectAreaId=&PMDbProgramId=46628&gclid=CjwKCAiAx8KQBhAGEiwAD3EiPyhuOXoPKYfgJY5MIoaVRWwwqvqFDb49cfy6JcYeLKmU2qMp6sio4xoCXfIQAvD_BwE">Addison Wesley Science 10 Textbook <br>
+	  <img src="./Science10Cvr.png" width="169" height="223" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+	</div>
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>

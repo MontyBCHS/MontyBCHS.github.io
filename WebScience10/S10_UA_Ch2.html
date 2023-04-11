@@ -1,0 +1,975 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>S10 UB Ch2 Test</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">SCIENCE 10</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="./S10_UA_Ch1.html">Unit A Chemistry - Chapter 1</a>
+			<a href="./S10_UA_Ch2.html" class="active">Unit A Chemistry - Chapter 2</a>
+			<a href="./S10_UA_Ch3.html">Unit A Chemistry - Chapter 3</a>
+			<a href="./S10_UB_Ch1.html">Unit B Physics - Chapter 1</a>
+			<a href="./S10_UB_Ch2.html">Unit B Physics - Chapter 2</a>
+			<a href="./S10_UB_Ch3.html">Unit B Physics - Chapter 3</a>
+			<a href="./S10_UC_Ch1.html">Unit C Biology - Chapter 1</a>
+			<a href="./S10_UC_Ch2.html">Unit C Biology - Chapter 2</a>
+			<a href="./S10_UC_Ch3.html">Unit C Biology - Chapter 3</a>
+			<a href="./S10_UD_Ch1.html">Unit D Climate - Chapter 1</a>
+			<a href="./S10_UD_Ch2.html">Unit D Climate - Chapter 2</a>
+			<a href="./S10_UD_Ch3.html">Unit D Climate - Chapter 3</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 S10Abg">
+	<div class="unitTitle"><h2 class="unitTitle">UNIT A: ENERGY AND MATTER IN CHEMICAL CHANGE</h2></div>
+	 
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h1>SCIENCE 10</h1>
+  <h1>Program of Studies</h1>
+  <h1>SCIENCE 10</h1>
+					<h1>Program of Studies</h1>
+					<h1>Unit A:  Energy and Matter in Chemical Change (Nature of Science Emphasis)</h1>
+					<strong>Overview:</strong> Chemical changes involve energy and transformations of matter.  A knowledge of the underlying structure of matter and the basic chemical species is important in understanding chemical changes.  As students explore the properties of molecular and ionic compounds, including acids and bases, they begin to appreciate the need for a classification scheme and a system of nomenclature. Students classify, name compounds and write balanced chemical equations to represent chemical changes.  As well, students are introduced to the law of conservation of mass and the mole concept. 
+
+					<h2>Links to Science</h2>
+					The following science concepts are related to the content of Unit A.
+					<strong>Concepts</strong>
+
+					<ul>
+						<li>particle model of matter - Grade 7 Science, Unit C: Heat and Temperature </li>
+						<li>WHMIS symbols, pure substances, mixtures and solutions - Grade 8 Science, Unit A: Mix and Flow of Matter</li>
+						<li>reactants, products, conservation of mass, periodic table, elements, compounds, atomic theory, chemical nomenclature -  Grade 9 Science, Unit B:  Matter and Chemical Change</li>
+						<li>acids and bases  - Grade 9 Science, Unit C: Environmental Chemistry </li>
+					</ul>
+					<strong>Focusing Questions: </strong>
+					 <ul>
+						<li>How has knowledge of the structure of matter led to other scientific advancements? </li>
+						<li>How do elements combine? </li>
+						<li>Can these combinations be classified and the products be predicted and quantified? </li>
+						<li>Why do scientists classify chemical change, follow guidelines for nomenclature and represent chemical change with equations? </li>
+					 </ul>
+
+					<h2>Key Concepts</h2>
+					The following concepts are developed in this unit and may also be addressed in other units at other grade/course levels.  The intended level and scope of treatment is defined by the outcomes below.
+					<ul>
+						<li>how chemical substances meet human needs </li>
+						<li>Workplace Hazardous Materials Information System (WHMIS) and safe practices </li>
+						<li>International Union of Pure and Applied Chemistry (IUPAC) nomenclature, ionic and molecular compounds, acids and bases </li>
+						<li>evidence of chemical change </li>
+						<li>role and need for classification of chemical change </li>
+						<li>writing and balancing equations </li>
+						<li>law of conservation of mass and the mole concept </li>
+					 </ul>
+					<h2>Outcomes for Science, Technology and Society (STS) and Knowledge </h2>
+
+					Students will:
+					<ol>
+						<li>1. Describe the basic particles that make up the underlying structure of matter, and investigate related technologies </li>
+						<div class="indent">
+						  <ul>
+							<li>identify historical examples of how humans worked with chemical substances to meet their basic needs 
+							<div class="i_indent">(e.g., how precontact First Nations communities used biotic and abiotic materials to meet their needs) </div> </li>
+							<li>outline the role of evidence in the development of the atomic model consisting of protons and neutrons (nucleons) and electrons; i.e., Dalton, Thomson, Rutherford, Bohr </li>
+							<li>identify examples of chemistry-based careers in the community  
+							<div class="i_indent">(e.g., chemical engineering, cosmetology, food processing)</div> </li>
+					   </ul> 
+					</div>
+					<br>
+
+					<li>Explain, using the periodic table, how elements combine to form compounds, and follow IUPAC guidelines for naming ionic compounds and simple molecular compounds </li>
+					<div class="indent">
+					   <ul>
+						<li>illustrate an awareness of WHMIS guidelines, and demonstrate safe practices in the handling, storage and disposal of chemicals in the laboratory and at home </li>
+						<li>explain the importance of and need for the IUPAC system of naming compounds, in terms of the work that scientists do and the need to communicate clearly and precisely </li>
+						<li>explain, using the periodic table, how and why elements combine to form compounds in specific ratios </li>
+						<li>predict formulas and write names for ionic and molecular compounds and common acids  
+						<div class="i_indent">(e.g., sulfuric, hydrochloric, nitric, ethanoic) , using a periodic table, a table of ions and IUPAC rules </div> </li>
+						<li>classify ionic and molecular compounds, acids and bases on the basis of their properties;  i.e., conductivity, pH, solubility, state </li>
+						<li>predict whether an ionic compound is relatively soluble in water, using a solubility chart  </li>
+						<li>relate the molecular structure of simple substances to their properties 
+						<div class="i_indent">(e.g., describe how the properties of water are due to the polar nature of water molecules, and relate this property to the transfer of energy in physical and living systems) </div> </li>
+						<li>outline the issues related to personal and societal use of potentially toxic or hazardous compounds 
+						<div class="i_indnet">(e.g., health hazards due to excessive consumption of alcohol and nicotine; exposure to toxic substances; environmental concerns related to the handling, storage and disposal of heavy metals, strong acids, flammable gases, volatile liquids) </div> </li>
+					  </ul>
+					</div>    
+					<br>   
+				<li>Identify and classify chemical changes, and write word and balanced chemical equations for significant chemical reactions, as applications of Lavoisier’s law of conservation of mass </li>
+					<div class="indent">
+					  <ul>
+						<li>provide examples of household, commercial and industrial processes that use chemical reactions to produce useful substances and energy 
+						<div class="i_indent">(e.g., baking powder in baking, combustion of fuels, electrolysis of water into H<sub>2(g)</sub> and O<sub>2(g)</sub>)</div> </li>
+						<li>identify chemical reactions that are significant in societies 
+						<div class="i_indent">(e.g., reactions that maintain living systems, such as photosynthesis and respiration; reactions that have an impact on the environment, such as combustion reactions and decomposition of waste materials) </div> </li>
+						<li>describe the evidence for chemical changes; i.e., energy change, formation of a gas or precipitate, colour or odour change, change in temperature </li>
+						<li>differentiate between endothermic and exothermic chemical reactions <div class="i_indent">(e.g.,combustion of gasoline and other natural and synthetic fuels, photosynthesis) </div></li>
+						<li>classify and identify categories of chemical reactions; i.e., formation (synthesis), decomposition, hydrocarbon combustion, single replacement, double replacement  </li>
+						<li>translate word equations to balanced chemical equations and vice versa for chemical reactions that occur in living and nonliving systems </li>
+						<li>predict the products of formation (synthesis) and decomposition, single and double replacement, and hydrocarbon combustion chemical reactions, when given the reactants </li>
+						<li>define the mole as the amount of an element containing 6.02 × 10<sup>23</sup> atoms (Avogadro’s number) and apply the concept to calculate quantities of substances made of other chemical species (e.g., determine the quantity of water that contains 6.02 × 10<sup>23</sup> molecules of H<sub>2</sub>O) </li> 
+						<li>interpret balanced chemical equations in terms of moles of chemical species, and relate the mole concept to the law of conservation of mass	</li>
+					  </ul>
+				   </div>
+				</ol>
+
+
+				<h3>Skill Outcomes</h3>
+				(focus on scientific inquiry)<br>
+				<br>
+				<h3>Initiating and Planning</h3>
+
+				Students will: <br>
+				Ask questions about observed relationships, and plan investigations of questions, ideas, problems and issues
+				  <div class="indent">
+					  <ul>
+						  <li>define and delimit problems to facilitate investigation </li>
+						  <li>design an experiment, identifying and controlling major variables 
+						  <div class="i_indent">(e.g., design an experiment to differentiate between categories of matter, such as acids, bases and neutral solutions, and identify manipulated and responding variables) </div> </li>
+						  <li>state a prediction and a hypothesis based on available evidence and background information 
+						  <div class="i_indent">(e.g., state a hypothesis about what happens to baking soda during baking) </div> </li>
+						  <li>evaluate and select appropriate instruments for collecting evidence and appropriate processes for problem solving, inquiring and decision making 
+							<div class="i_indent">(e.g., list appropriate technology for classifying compounds, such as litmus paper or conductivity tester) </div> </li>
+					  </ul>
+				  </div>
+
+				<h3>Performing and Recording </h3>
+				Students will: <br>
+				Conduct investigations into relationships between and among observable variables, and use a broad range of tools and techniques to gather and record data and information 
+					<div class="indent">
+						<ul>
+							<li>carry out procedures, controlling the major variables and adapting or extending procedures
+							<div class="i_indent">(e.g., when performing an experiment to illustrate conservation of mass, demonstrate an understanding of closed and open systems and control for loss or gain of matter during a chemical change) </div> </li>
+							<li>use library and electronic research tools to collect information on a given topic 
+							<div class="i_indent">(e.g., information on compounds we use and their toxicity, using standard references, such as the Merck Index, as well as Internet searches) </div> </li>
+							<li>select and integrate information from various print and electronic sources or from several parts of the same source 
+							<div class="i_indent">(e.g., collect information on research into subatomic matter, research how pre-contact First Nations communities used available materials such as brain tissue for tanning hides) </div> </li>
+							<li>demonstrate a knowledge of WHMIS standards by selecting and applying proper techniques for the handling and disposal of laboratory materials 
+							<div class="i_indent">(e.g., recognize and use Material Safety Data Sheets [MSDS] information) </div> </li>
+							<li>select and use apparatus, technology and materials safely 
+							<div class="i_indent">(e.g., use equipment, such as Bunsen burners, electronic balances, laboratory glassware, electronic probes and calculators correctly and safely) </div> </li>
+						</ul>
+					</div>
+
+				<h3>Analyzing and Interpreting</h3>
+				Students will: <br>
+				Analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+					<div class="indent">
+						<ul>
+							<li>describe and apply classification systems and nomenclature used in the sciences 
+							<div class="i_indent">(e.g., investigate periodicity in the periodic table, classify matter, and name elements and compounds based on IUPAC guidelines) </div> </li>
+							<li>apply and assess alternative theoretical models for interpreting knowledge in a given field  
+							<div class="i_indent">(e.g., compare models for the structure of the atom) </div> </li>
+							<li>compare theoretical and empirical values and account for discrepancies 
+							<div class="i_indent">(e.g., measure the mass of a chemical reaction system before and after a change, and account for any discrepancies) </div> </li>
+							<li>identify and explain sources of error and uncertainty in measurement, and express results in a form that acknowledges the degree of uncertainty 
+							<div class="i_indent">(e.g., measure and record the mass of a material, use significant digits appropriately) </div> </li>
+							<li>identify new questions or problems that arise from what was learned 
+							<div class="i_indent">(e.g., how did ancient peoples discover how to separate metals from their ores?; evaluate the traditional Aboriginal method for determining alkaline properties of substances) </div> </li>
+						</ul>
+					</div>
+
+				<h3>Communication and Teamwork </h3>
+				Students will:<br>
+				Work as members of a team in addressing problems, and apply the skills and conventions of science in communicating information and ideas and in assessing results <br>
+					<div class="indent">
+						<ul>
+							<li>communicate questions, ideas and intentions; and receive, interpret, understand, support and 
+				respond to the ideas of others 
+							<div class="i_indent">(e.g., use appropriate communication technology to elicit feedback from others) </div> </li>
+							<li>represent large and small numbers using appropriate scientific notation </li>
+							<li>select and use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate ideas, plans and results 
+							<div class="i_indent">(e.g., use appropriate Système international (SI) units, and IUPAC nomenclature)</div></li>
+						</ul>
+				   </div>
+
+
+				<h3>Attitude Outcomes </h3>
+				Interest in Science <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Show interest in science-related questions and issues, and confidently pursue personal interests and career possibilities within science-related fields </div>
+				<div class="i_indent">(e.g., apply concepts learned in the classroom to the everyday use of chemicals; show interest in a broad scope of chemistry-related careers) </div>
+					<br>
+				Mutual Respect <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Appreciate that scientific understanding evolves from the interaction of ideas involving people with different views and backgrounds </div>
+				<div class="i_indent">(e.g., recognize the contributions of Canadians to contemporary knowledge of the structure of matter; show awareness of and respect for traditional Aboriginal knowledge about the use of biotic and abiotic materials) </div>
+					<br>
+				Scientific Inquiry <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Seek and apply evidence when evaluating alternative approaches to investigations, problems and issues </div>
+				<div class="i_indent">(e.g., evaluate inferences and conclusions based on particles of matter that cannot be observed directly) </div>
+					<br>
+				Collaboration <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Work collaboratively in planning and carrying out investigations, as well as in generating and evaluating ideas </div>
+				<div class="i_indent">(e.g., contribute to group work willingly, assume a variety of roles and accept responsibility for any problems that arise) </div>
+					<br>
+				Stewardship <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Demonstrate sensitivity and responsibility in pursuing a balance between the needs of humans and a sustainable environment </div>
+				<div class="i_indent">(e.g., recognize that environmental consequences may arise from the development, use and disposal of chemical materials) </div>
+					<br>
+				Safety <br>
+				Students will be encouraged to: <br>
+				<div class="indent">Show concern for safety in planning, carrying out and reviewing activities </div>
+				<div class="i_indent">(e.g., acknowledge the need for regulations to govern the storage, handling and disposal of potentially hazardous materials in the school laboratory and at home or in the workplace) </div>
+					<br>
+
+
+				<h3>Links to Mathematics </h3>
+				The following mathematics outcomes are related to the content of Unit A but are not considered 
+				prerequisites. <br>
+
+					<ul>
+						<li>Data Collection and Analysis - Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3 </li>
+						<li>Measurement and Unit Conversions - Mathematics 10C, Measurement,Specific Outcome 2; Mathematics 10-3, Measurement, Specific Outcome 1;Mathematics 20-3, Algebra, Specific Outcome 3; Mathematics 30-3, Measurement, Specific Outcome 1 </li>
+						<li>Ratio and Proportions - Grade 8 Mathematics, Number, Specific Outcomes 3, 4 and 5 </li>
+						<li>Graph Analysis - Mathematics10C, Relations and Functions, Specific Outcomes 1 and 4;Mathematics 20-3, Statistics, Specific Outcome 1 </li>
+						<li>Powers - Mathematics10C, Algebra and Number, Specific Outcome 3 </li>
+					 </ul>
+				<br>
+				<br>
+	</div>
+             <h2>Unit Focus Questions</h2>
+            <ol>
+            	<li>How has knowledge of the structure of matter led to other scientific advancements?</li>
+                <li>How do elements combine? Can these combinations be classified and the products be predicted and quantified? </li>
+                <li>Why do scientists classify chemical change, follow guidelines for nomenclature and represent chemical change with equations? </li>
+            </ol>
+		  <br>
+	</div>
+		
+
+<!--  ***********************************************************************************************************   -->
+
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<div class="S10Abg"><h1 class="S10Abg secTitle">Chapter A2.0 Elements combine to form many substances, each with its own set of properties</h1> </div>     
+	<div class="S10Ac">
+	<h2>Key Concepts </h2>
+		In this section you will learn about the following key concepts:
+		<ul>
+			<li>Chemical substances and human needs </li>
+			<li>International Union of Pure and Applied Chemistry(IUPAC) nomenclature, ionic and molecular compounds, acids and bases. </li>
+		</ul>
+
+		<h2>Learning Outcomes </h2>
+		When you have completed this section, you will be able to:
+		<ul>
+			<li>Explain how and why element combine to form compounds in specific ratios, with reference to the periodic table </li>
+            <li>Explain the importance of the IUPAC system of naming compounds </li>
+            <li>Predict formulas and write names for ionic and molecule compounds and common acids </li>
+            <li>Classify ionic and molecular compounds and acids and bases on the basis of these properties: conductivity; pH, solubility, and state </li>
+            <li>Predict whether an ionic compound is soluble in water, by consulting a solubility chart. </li>
+            <li>Relate the molecular structure of simple substances to their properties </li>
+            <li>Outline issues related to personal and societal uses of potentially toxic or hazardous compounds </li>
+            <li>Provide examples of chemistry-based careers in your community. </li>
+		</ul>
+	</div>
+		
+
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="S10Abg secTitle">A2.1  The Periodic Table and Atomic Structure</h2>
+	<h3 class="S10Ac">The Elements </h3>
+	There are about 90 naturally occurring elements and another 25 synthetic (man-made) elements.  Based on their properties all elements are divided into three classes:  metals, non-metals and metalloids. <br>
+	 <br>
+	 <img src="S10_UA_Chem_Ch2/PeriodicTableMetalsNonMetals.png" width="768" height="483" alt="Periodic Table"/> <br>
+	 <em>Metals </em> <br>
+	 <ul>
+		<li>conduct heat and electricity easily</li>
+		<li>silver/grey or yellow/gold in colour </li>
+		<li>shiney </li>
+		<li><span class="def">malleable </span>- can be beaten or rolled into sheets without crumbling </li>
+		<li><span class="def">ductile </span> - can be stretched into a wire </li>
+		<li>solids at room temperature except for mercury which is a liquid </li>
+	</ul>
+	 <br>
+	<em>Non-metals </em><br>
+	<ul>
+		<li>Non-conductors - will not allow electrons to move easily</li>
+		<li>Only 17 elements </li>
+		<li>They are not similar to each other </li>
+		<li>Multiple colours </li>
+		<li>Reactivity varies </li>
+		<li>State varies (solid, liquid or gas)</li>
+	</ul>
+	 <br>
+	<em>Metalloids </em><br>
+	<ul>
+		<li><span class="ex">Ex.</span><span class="example"> Silicon, boron and arsenic </span></li>
+		<li>Semi-conductors - will allow some electrons to flow but are resistive.</li>
+		<li>Located between the metals and non-metals </li>
+		<li>Properties vary </li>
+	</ul>
+	 <br>
+
+	<h3 class="S10Ac">The Periodic Table </h3>
+	Organizes elements based on their properties.  Metals are on the left, non-metals on the upper right and metalloid are in between. <br>
+	<span class="def">Periods </span>- Each horizontal row is called a period. <br>
+	<span class="def">Groups </span>- Each vertical column is called a group or family.  Groups tend to behave the same way.
+	<ul>
+		<li>Group one is called the alkali metals.  They are all soft, shiny, silver coloured and very reactive with water. </li>
+		<li>Group two is called the alkaline-earth metals.  They are shiny and silver but not as soft as the alkali metals.  They are less reactive than group one. </li>
+		<li> Group 18 is called the noble gases.  They are very non-reactive and gaseous. </li>
+		<li>Group 17 is called the halogens.  These elements are poisonous and react readily with the alkali metals to form ionic salts. </li>
+	 </ul>
+	<img src="S10_UA_Chem_Ch2/PeriodicTableGroups.png" width="768" height="500" alt="Periodic Table with groups"/> <br>
+	 <h3 class="S10Ac">Atomic Theory </h3>
+	The smallest stable particle is called an atom.  Atoms are extremely small, about 10<sup>-10</sup> m across. <br>
+
+	<em>Subatomic Particles </em><br>
+	Sub, means small.  Subatomic, means smaller than an atom. <br>
+	Atoms are made of three subatomic particles  electrons (negatively charged), protons (positively charged) and neutrons (no charge).  All the protons and neutrons are clustered in the nucleus at the center of the atom.  The nucleus is extremely small but makes up 99.9% of the atom's mass <br>
+	 <br>
+	<em>Energy Levels </em><br>
+		The electrons are grouped in energy levels.  Each energy level is a large distance from the nucleus and makes up 99.9% of the atom's volume.   Electrons are normally found in the energy levels closest to the nucleus. <br>
+	 <br>
+	<h3 class="S10Ac">Atomic Number </h3>
+	<img src="S10_UA_Chem_Ch2/PeriodTableAtomicNumber.png" width="919" height="474" alt="Atomic number"/> <br>
+	<span class="def">Atomic number </span>- number of protons in a atom;  can be used to specify an element.
+	Each element has a unique number of protons.  It is the number of protons that dictates what element the atom is. <br>
+	 <br>
+	<h3 class="S10Ac">Mass Number and Atomic Molar Mass </h3>
+	<span class="def">Atomic molar mass </span>- average molar mass of an element's atoms, including those of all the element’s different isotopes. <br>
+	<span class="def">Isotopes </span>- atoms of the same element containing different numbers of neutrons. 
+	The number of neutrons can be calculated from the isotope's atomic mass and the atomic number. <br>
+	# neutrons = isotope mass - atomic number <br>
+	<span class="ex">Ex. </span> How many neutrons does carbon-14 have? <br>
+	<div class="indent">
+		<img src="S10_UA_Chem_Ch2/CarbonPeriodicTable.png" width="201" height="228" alt="Carbon"/>
+		<div class="example">
+			carbon has an atomic number of 6 <br>
+			carbon-14 has a mass of 14 <br>
+			The mass - atomic number is 14 - 6 = 8 protons <br>
+			carbon 14 has 6 protons and 8 protons for a total mass of 14. <br>
+		</div>
+	 </div> <!-- end indent -->
+	 <br>
+	<h3 class="S10Ac">Formation of Ions </h3>
+	<span class="def">Ion </span>- electrically charged atom; occurs by losing (positive) or gaining (negative) electrons. <br>
+	<span class="def">Ionization </span>-  process of an atom gaining or losing electrons. <br>
+	<span class="def">Cations </span>- positively charged ion. <br>
+	<span class="def">Anions </span>- negatively charged ion. <br>
+	 <br>
+	<h3 class="S10Ac">Elements Combine to Form Compounds </h3>
+	<span class="def">Valence electrons </span>- electron in the outermost energy level of an atom. <br>
+	For metals like lithium and beryllium it is easier to lose all their valence electrons and become cations than to gain enough electrons to fill their outer valence level with 8 electrons. <br>
+	<img src="S10_UA_Chem_Ch2/LithiumValenceElectron.png" width="550" height="400" alt="lithium with one valence electron"/> <img src="S10_UA_Chem_Ch2/BerylliumValenceElectron.png" width="550" height="400" alt="Beryllium with two valence electrons"/> <br>
+	For non-metals like oxygen and flourine it is easier to gain valence electron level to eight electrons (octet rule) and become anions than go lose enough electrons to empty their outer valence level. <br>
+	<img src="S10_UA_Chem_Ch2/OxygenValenceElectron.png" width="550" height="400" alt="Oxygen with 6 valence electrons"/> <img src="S10_UA_Chem_Ch2/FluorineValenceElectron.png" width="550" height="400" alt="Flourine with 7 valence electrons"/> <br> 
+	<span class="def">Compound </span>- chemical combination of two or more elements in a specific ratio. <br>
+	 <br>
+	<h3 class="S10Ac">The Octet Rule </h3>
+	<span class="def">Octet rule </span>- atoms bond in such a way as to have eight electrons in the valence energy level; also called the rule of eight. 
+	Atoms on the left side of the periodic table will lose electrons to become stable.
+	Atoms on the right side of the periodic table will gain electrons to become stable. <br>
+	 <br>
+	 <br>
+          
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="S10Abg secTitle">A2.2   Naming Ionic and Molecular Compounds </h2>
+         <h3 class="S10Ac">Ionic Compounds </h3>
+	<span class="def">Crystal lattice </span>- organized array of ions. <br>
+	<span class="def">Formula unit </span>- smallest amount of an ionic compound with the composition shown by the chemical formula; number of positive and negative ions in the smallest whole-number ratio that results in a neutral unit in the crystal lattice of a compound. <br>
+	<span class="def">Ionic bond </span>- type of bond formed when electrons transfer between metals and non-metals. 
+	Most ionic compounds are called salts.  Table salt is sodium chloride, road salt is calcium chloride. <br>
+	Ionic compounds dissolve in water and then can carry an electrical current.  This is how our nervous system conducts electrical signals. <br>
+	 <br>
+	<h3 class="S10Ac">Naming Ionic Compounds </h3>
+	<ol>
+		<li>Name the cation first by using the element's name (usually the metal) </li>
+		<li>Name the anion second by using the first part of the element's name and changing the last part to "-ide" (usually the non-metal) </li>
+	</ol>
+	 <br>
+	<h3 class="S10Ac">Formulae for Ionic Compounds </h3>
+	When calculating the ratio of compounds for the formula unit, the total charge of the formula unit must be zero.  The charges on one element must balance the charges on the other element. <br>
+	 <br>
+	<span class="ex">Ex.</span>  What is the formula unit when lithium and nitrogen are combined. <br>
+	<div class="indent">
+		<div class="example">
+			Lithium Li<sup>+</sup> loses one electron to become 1 positive <br>
+			Nitrogen N<sup>3-</sup> gains three electrons to become 3 negative <br>
+			To balance the 3 negative charge on the nitrogen requires 3 lithium atoms <br>
+			Formula unit = Li<sub>3</sub>N(s) <br>
+			The nitrogen steals the electrons from the lithium and the opposite electric charges hold them together with electrostatic attraction.<br>
+			<img src="S10_UA_Chem_Ch2/LithiumNitride.png" width="550" height="400" alt="lithium nitride"/> <br>
+		</div>
+	 </div> <!-- end indent -->
+	 <br>
+	<span class="ex">Ex. </span> What is the formula unit when beryllium and phosphorus are combined <br> 
+	<div class="indent">
+		<div class="example">
+			Beryllium Be<sup>2+</sup> loses two electrons to become 2 positive <br>
+			Phosphorus P<sup>3-</sup> gains three electrons to become 3 negative <br>
+			The three charge on the phosphorus cannot be divided by the 2 charge on the beryllium.  Try two phosphorus
+			The six charge on the two phosphorus atoms requires 3 beryllium atoms <br>
+			Formula unit = Be<sub>3</sub>P<sub>2</sub> <br> 
+		</div>
+	</div> <!-- end indent -->
+	<br>
+	<h3 class="S10Ac">Compounds with Multivalent Elements </h3>
+	<span class="def">Multivalent </span>- element with more than one stable ion,  charge indicated with roman numerals in brackets
+	Some metals have more than one stable ion.  For example:  Iron can be Fe<sup>2+</sup> or Fe<sup>3+</sup>, Vanadium can be V<sup>5+</sup> or V<sup>4+</sup>. 
+	Most common valence charge is on top. <br>
+	The multivalent metals are located in families 3 to 12. When in a compound the valence is indicated using roman numerals in brackets after the multivalent element. The valence on top is the more common ionic charge.
+	 <br>
+	<span class="ex">Ex.</span> 
+	<div class="indent">
+		<div class="example">
+			Fe<sup>3+</sup> and O<sup>2-</sup> is Fe<sub>2</sub>O<sub>3</sub> and is called iron (III) oxide. This is the more common form.<br>
+			Fe<sup>2+</sup> and O<sup>2-</sup> is FeO and is called iron (II) oxide. <br>
+			V<sup>5+</sup> and Ge<sup>4-</sup> is V<sub>4</sub>Ge<sub>5</sub> and is called vanadium (V) germanide. This is the more common form. <br>
+			V<sup>4+</sup> and Ge<sup>4-</sup> is VGe and is called vanadium (IV) germanide. <br>
+		</div>
+	</div> <!-- end indent -->
+	 <br>
+	<h3 class="S10Ac">Polyatomic Ions </h3>
+	<span class="def">Polyatomic ions </span>- ion made up of several non-metallic atoms joined together.  Treat them as a single ion
+	Table above the periodic table shows the polyatomic ions. <br>
+
+	A sulfate ion SO<sub>4</sub><sup>2-</sup>, acts like a single atom with a two negative charge. <br>
+	 <br>
+	<em>Suffixes for polyatomic ions </em><br>
+	Some polyatomic ion have the similar combinations of atoms but with different charges and names. <br> 
+	"-ate"  means more oxygen atoms <br>
+	"-ite"   means less oxygen atoms <br> 
+	<span class="ex">Ex. </span>
+	<div class="indent">
+		<div class="example">
+			nitrate is NO<sub>3</sub><sup>-</sup> and nitrite is NO<sub>2</sub><sup>-</sup> <br>
+			sulfate is SO<sub>4</sub><sup>2-</sup> and sulfite is SO<sub>3</sub><sup>2-</sup> <br>
+		</div>
+	</div> <!-- end indent -->
+	 <br>
+	<em>Naming Compounds Containing Polyatomic Ions </em><br>
+	When you have more than two elements in an ionic compound look up the parts in the table.  Use the names given in the table. <br> 
+	 <br>
+	<h3 class="S10Ac">Writing Formulas for Compounds Containing Polyatomic Ions </h3>
+	Treat the polyatomic just like a regular ion.  The only difference is that if there is more than one of the polyatomic ion, then the polyatomic ion must be placed in brackets to show that there is more than on ion present. <br>
+	 <br>
+	<span class="ex">Ex.</span>  What is the formula of cobalt (III) permanganate?
+	<div class="indent">
+		<div class="example">
+			Cobalt (III) Co<sup>3+</sup> has a positive three charge <br>
+			Permanganate MnO<sub>4</sub><sup>-</sup> has a negative one charge <br>
+			It will take three permaganates to balance the cobalt (III) <br>
+			 <br>
+			Formula unit = Co(MNO<sub>4</sub>)<sub>3</sub> <br> 
+		</div>
+	</div> <!-- end indent -->
+	 <br>
+	<span class="ex">Ex.</span>  What is the formula of calcium borate
+	<div class="indent">
+		<div class="example">
+			Calcium Ca<sup>2+</sup> has a positive two charge <br>
+			Borate BO<sub>3</sub><sup>2-</sup> has a negative three charge <br>
+			To balance the charges it will take 3 calcium atoms and 2 borate ions. <br>
+			 <br>
+			Formula unit = Ca<sub>3</sub>(BO<sub>3</sub>)<sub>2</sub><br>
+		</div>
+	</div> <!-- end indent -->
+	 <br>
+	<h3 class="S10Ac">Molecular Compounds </h3>
+	<span class="def">Molecule </span>- group of non-metallic atoms bound together by covalent bonds; can be made up of atoms of the same element or atoms of different elements. <br>
+	It can have two or more atoms of the same element or two or more atoms of different elements. 
+
+	Any solid will melt if you the temperature is high enough.  IF you want to melt salt, all you have to do is turn up your oven.  Sugar, being an organic compound melts at a much lower temperature 365 <sup>o</sup>F.  
+	Salt, being a mineral, is inorganic.  Inorganic compounds require more energy (in this case, heat) to break apart.  And by the way, salt is the only rock that humans can eat. <br>
+	 <br>
+	<span class="def">Sharing Electrons </span>- Covalent Bonds <br>
+	<span class="def">Covalent bond </span>- bond formed when non-metallic atoms share electrons; atoms in a molecule are bound together by covalent bonds. <br>
+	 <br>
+	<h3 class="S10Ac">Molecular Elements </h3>
+	<span class="def">Molecular element </span>- element that forms molecules made up only of its own atoms. <br>
+	<span class="def">Diatomic </span>- molecule composed of two atoms of the same element <br>
+	Diatomic elements end in "gens", hydrogen H<sub>2</sub>, nitrogen N<sub>2</sub>, oxygen<sub>2</sub>, and halogens. <br>
+	 <br>
+	<h3 class="S10Ac">Molecular Compounds That Do Not Contain Hydrogen </h3>
+	Molecular compounds are made from non-metals.  Due to the geometry of single, double and triple covalent bonding there are many ways in which the atoms can bond together to form molecules.  We use prefix to indicate the number of atoms of each element. The variations are unpredictable so you will have to research each individually.<br>
+	<table width="200" border="5">
+	  <tbody>
+		<tr>
+		  <th scope="col" style="text-align:center;">&nbsp;Number of Atoms&nbsp;</th>
+		  <th scope="col" style="text-align:center;">&nbsp;Prefix&nbsp;</th>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">&nbsp;1</td>
+		  <td style="text-align:center;">&nbsp;mono</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">&nbsp;2</td>
+		  <td style="text-align:center;">&nbsp;di</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">&nbsp;3</td>
+		  <td style="text-align:center;">&nbsp;tri</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">&nbsp;4</td>
+		  <td style="text-align:center;">&nbsp;tetra</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">&nbsp;5</td>
+		  <td style="text-align:center;">&nbsp;penta</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">&nbsp;6</td>
+		  <td style="text-align:center;">&nbsp;hexa</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">&nbsp;7</td>
+		  <td style="text-align:center;">&nbsp;hepta</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">&nbsp;8</td>
+		  <td style="text-align:center;">&nbsp;ennea (nona)</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">&nbsp;10</td>
+		  <td style="text-align:center;">&nbsp;deca</td>
+		</tr>
+	  </tbody>
+	</table> <br>
+
+	Prefix + first element  prefix + second element ending in "ide" <br>
+	When the first prefix is mono it is normally dropped for simplicity <br>
+	<span class="ex">Ex. </span>
+	<div class="indent">	
+		<div class="example">
+			CO is carbon monoxide <br>
+			<img src="S10_UA_Chem_Ch2/CarbonMonoxide.png" width="550" height="300" alt="carbon monoxide covalent triple bonding"/> <br>
+			CO<sub>2</sub> is carbon dioxide <br>
+			<img src="S10_UA_Chem_Ch2/CarbonDioxide.png" width="550" height="300" alt="carbon dioxide covalent double bonding"/> <br>
+			NO is nitrogen monoxide <br>
+			NO<sub>2</sub> is nitrogen dioxide <br>
+			N<sub>2</sub>O<sub>3</sub> is dinitrogen trioxide <br>
+			N<sub>4</sub>O is tetranitrogen monoxide <br>
+
+		</div>
+	 </div> <!-- end indent -->
+	<h3 class="S10Ac">Molecular Compounds That Contain Hydrogen </h3>
+	Molecular compound that contain hydrogen often have a specific name (H<sub>2</sub>O is water) because they are extremely common, so their common name is their official name.  Otherwise, the naming is the same.
+	H<sub>2</sub>O is officially water but dihydrogen monoxide is the same. 
+	 <br>
+	 <br>
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="S10Abg secTitle">A2.3  Properties and Classification of Ionic and Molecular Compounds </h2>
+	<span class="def">Bonding animation </span><br>
+
+
+<h3 class="S10Ac">Identifying Ionic Compounds </h3>
+Always a metal (+) and a non-metal (-) ion <br>
+ <br>
+<h3 class="S10Ac">Properties of Ionic Compounds </h3>
+<em>High melting point </em> <br>
+Ionic compounds are solids at room temperature because of their high melting points (170 <sup>o</sup>C +) <br>
+ <br>
+<em>Retention of Crystal Shape </em> <br>
+Whatever size of particle is taken, the same distinctive crystal shape will be maintained with flat faces. <br>
+ <br>
+<em>Solubility in Water </em><br>
+<span class="def">Polar </span>- description of an object that has a positive electric charge at one end and a negative charge at the other; water molecules are slightly polar. <br>
+Due to the polar nature of water, ionic materials will dissolve in water and the ions will dissociate (separate).  <br>
+ <br>
+<em>Conductivity in solution </em><br>
+<span class="def">Electrolytes </span>- solution that conducts electricity; ionic compounds are excellent electrolytes <br>
+ <br> 
+Pure water is a non-conductor.  Most tap water has large numbers of ions dissolved in it.  The ions, due to their electrical charge, are very good conductors.  Hence, water with ions in it (salt water, tap water) is a fairly good conductor.  Our body uses electrolytes (gaterade, powerade) to send electrical signals through the nervous system. <br>
+ <br>
+<h3 class="S10Ac">Solubility of Ionic Compounds </h3>
+Not all ionic compounds dissolve as well as others.  You can dissolve more salt in hot water than cold water.  
+A substance that does not dissolve well is called slightly soluble, whereas a substance that does dissolve well is called highly soluble. <br>
+Find the table on page 10 of your data booklet. <br>
+ <br>
+<span class="def">Precipitate </span>- solid with low solubility that forms from a solution. <br>
+<span class="def">Precipitation </span>- (in solutions) process of forming a solid from a solution. <br>
+ <br>
+To remove ions from a solution, you need a substance to form a non-soluble form of the ion you want to remove. The ions will react and form a solid that will settle out or be filtered of the solution. <br>
+ <br>
+<h3 class="S10Ac">Properties of Molecular Compounds </h3>
+<span class="def">Covalent bonds </span>- bond formed when non-metallic atoms share electrons; atoms in a molecule are bound together by covalent bonds. <br>
+Each group of atoms that form a molecule are bound together by very strong covalent bonds.  However, the bonds between each molecule is very weak.  It requires a lot of energy to separate the atoms from each other in a molecule, however, it is relatively simple to remove molecules from each other.  <br>
+Molecular compounds have low boiling points and most of the smaller molecules are gaseous at room temperature.  The larger molecules are liquid or solid at room temperature but easily change to a gas. <br>
+<br> 
+<span class="ex">Ex. </span> 
+<div class="example">
+	<ul>
+    	<li>Methane CH<sub>4</sub> is a gas (natural gas) </li>
+		<li>Ethane C<sub>2</sub>H<sub>6</sub> is a gas </li>	
+		<li>Propane C<sub>3</sub>H<sub>8</sub> is a gas (gas bar-b-que) </li>
+		<li>Butane C<sub>4</sub>H<sub>10</sub> is a gas (lighter fuel) </li>
+		<li>Hexane C<sub>6</sub>H<sub>14</sub> is a liquid </li>
+		<li>Heptane C<sub>7</sub>H<sub>14</sub>  is a liquid </li>
+		<li>Octane C<sub>8</sub>H<sub>18</sub> is a liquid (gasoline) </li>
+    </ul>
+	As you can see, the smaller molecules are gases, the medium sized molecules are liquids and the larger molecules form solids (wax) <br>
+ </div>
+ <br>
+<span class="def">Special Properties of Water </span><br>
+Water is an unusual molecule because it is a bent shape and the electrons are not quite equally shared (due to hydrogen behaving like a metal).  As a result of the molecular geometry and the unequal distribution of electrons, water has a slightly positively charged side, and a slightly negatively charged side.  
+Water behaves like a molecular compound and an ionic compound. <br>
+ <br>
+Water has a high boiling point compared to molecular compounds but low compared to ionic compounds.  It forms crystals when frozen (six sided snowflakes). See <a href="http://snowcrystals.com">Snow Crystals.com</a> for examples of snowflake photographs. <br>
+Due to its unusual properties it is critical to life.  It holds most of the heat energy on the planet's surface.  It allows our body to chemically react with ionic and molecular compounds.  Without water's properties life would never exist on Earth. <br>
+ <br>
+<em>Formation of Ice </em><br>
+As water molecules cool and lose energy, the molecules spread out into a hexagonal formation.  The positive side of one molecule moves closer to the negative side of the adjacent molecule.  Due to this alignment ice is less dense than water so it will float on water.  All other solids sink in their liquid form. <br>
+ <br>
+ <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section14" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section15"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="S10Abg secTitle">A2.4  Acids and Bases </h2>
+	<span class="def">Bonding animation </span><br>
+<span class="def">Acid </span>- substance that produces hydrogen ions (H+) when dissolved in water; compound that dissolves in water to form a solution with a pH lower than 7 <br>
+ 
+<span class="def">Base </span>- substance that produces hydroxide ions (OH<sup>-</sup>) in water; compound that dissolves in water to form a solution with a pH greater than 7 <br>
+<span class="def">pH </span>- measure of the number of hydrogen ions (H<sup>+</sup>)in a solution; indicates how acidic or basic a substance is. <br>
+<img src="S10_UA_Chem_Ch2/pHScale.png" width="800" height="200" alt="pH Scale"/> <br>
+<h3 class="S10Ac">Acids and Bases in Your Body </h3>
+<span class="def">Buffer </span>- substance that keeps the pH of a solution nearly constant despite the addition of a small amount of acid or base <br>
+ <br>
+<h3 class="S10Ac">Properties of Acids and Bases </h3>
+<span class="def">Acids </span>
+<ul>
+	<li>ionic compounds that are soluble </li>
+	<li>have H which forms H<sup>+</sup> ions in solution (left side) </li>
+    <span class="ex">Ex.</span> <span class="example"> HCl - hydrogen chloride as solid hydrochloric acid as solution which dissociates into H<sup>+</sup> and Cl<sup>-</sup> ions. </span> 
+   	<li>not slippery to touch </li>
+	<li>react with metals to form hydrogen gas </li>
+	<li>Sour tasting </li>
+    <span class="ex">Ex.</span> <span class="example">lemons - citric acid, vinegar - acetic acid </span> 
+	<li>See page 12 in data booklet </li>
+	<li>pH less than 7 </li>
+	<li>turn litmus red </li>
+	<li>conduct electricity in solution </li>
+</ul>
+ <br> 
+<span class="def">Bases </span>
+<ul>
+	<li>Ionic compound that is very soluble </li>
+	<li>Bitter tasting (soap) </li>
+	<li>Feel slippery (bleach, soap, ammonia cleaner) </li>
+	<li>Does not react with metals </li>
+	<li>Have hydroxide (OH) which dissolves to OH<sup>-</sup></li>
+	<span class="ex">Ex. </span> 
+	<span class="example"> KOH - potassium hydroxide as a solid in water it dissociates into K<sup>+</sup> and OH<sup>+</sup> ions. </span> 
+	<li>Taste bitter (do not taste in lab) </li>
+	<li>pH greater than 7 </li>
+ </ul>
+ <br>
+<h3 class="S10Ac">Indicators </h3>
+<span class="def">Indicator </span>- a substance that change colour at a specific pH <br>
+Litmus paper is used to test if a solution is acidic or basic.  If acidic the litmus paper turns red, it basic the litmus paper turns blue. <br>
+<span class="def">Universal indicator </span>- mixture of several indicators that change colour as the acidity of a solution changes <br>
+ <br>
+<h3 class="S10Ac">The pH Scale </h3>
+<span class="def">Neutral </span>- description of a substance that is neither acidic nor basic; solution with a pH of 7 <br>
+The pH scale measures the number of hydrogen and hydronium ions in a solution.  The scale goes from 1 (very acidic) lots of hydrogen ions, up to 7 (neutral) equal number of hydrogen and hydronium ions cancel each other out to water, up to 14 (very basic) lots of hydronium ions.
+Every increase of 1 on the pH scale changes the number of hydrogen/hydronium ions by a factor of 10 (times 10). <br>
+ <br>
+<h3 class="S10Ac">Naming Acids </h3>
+In general acids have one or more hydrogen atoms at the start of the chemical formula. <br>
+<span class="ex">Ex. </span>
+<div class="indent">
+	<div class="example">
+    	hydrochloric acid - HCl (aq) <br>
+        sulfuric acid - H<sub>2S</sub>O<sub>4</sub> (aq) <br>
+	    nitric acid - HNO<sub>3</sub> (aq) <br>
+	    phosphoric acid - H<sub>3</sub>PO<sub>4</sub> (aq) <br>
+ 	</div>
+</div>  <!-- end indent -->
+ <br>
+<h3 class="S10Ac">Recognizing Bases by Their Formulas </h3>
+In general bases have a hydronium (OH) at the end of the chemical formula. <br>
+<span class="ex">Ex.</span>
+<div class="indent">
+	<div class="example">
+    	sodium hydroxide - NaOH (s) <br>
+	    potassium hydroxide - KOH (s) <br>
+      	ammonium hydroxide - NH<sub>4</sub>OH (s) <br>
+      	calcium hydroxide - Ca(OH)<sub>2</sub> (s) <br>
+	</div>
+</div> <!-- end indent -->
+  <br>
+<h3 class="S10Ac">Acids and Bases in the Home </h3>
+ <br> 
+<h3 class="S10Ac">Neutralization </h3>
+<span class="def">Neutralization </span>- process in which acids and bases react with each other so that the H+ ion and the OH- ion react with each other to make a single water molecule.  Both acidic and basic properties disappear. <br>
+You must be careful when neutralizing a reaction because it can heat up quickly and continues to heat even after you stop adding material. <br>
+<table width="600" border="0">
+  <tbody>
+    <tr>
+      <th style="color:green;text-align:right;" scope="col">&nbsp;acid + base</th>
+      <th style="color:green;text-align:center;" tscope="col">&rarr;</th>
+      <th style="color:green;text-align:left;" scope="col">&nbsp;salt + water</th>
+    </tr>
+    <tr>
+      <td style="color:orangered;text-align:right;">&nbsp;hydrogen chloride + potassium hydroxide<br>HCl + KOH</td>
+      <td style="color:orangered;text-align:center;">&rarr; <br>&rarr;</td>
+      <td style="color:orangered;text-align:left;">&nbsp;potassium chloride + water<br>KCl + H<sub>2</sub>O</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="color:orangered;text-align:right;">&nbsp;sulphuric acid + sodium hydroxide<br>H<sub>2</sub>SO<sub>4</sub> + 2NaOH</td>
+      <td style="color:orangered;text-align:center;">&rarr; <br>&rarr;</td>
+      <td style="color:orangered;text-align:left;">&nbsp;sodium sulfate + water<br>Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="color:orangered;text-align:right;">&nbsp;hydrogen bromic acid + lithium hydroxide<br>HBr + LiOH</td>
+      <td style="color:orangered;text-align:center;">&rarr; <br>&rarr;</td>
+      <td style="color:orangered;text-align:left;">&nbsp;lithium bromide + water<br>LiBr + H<sub>2</sub>O</td>
+    </tr>
+  </tbody>
+</table>
+ <br>
+ <br>
+				  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section15" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section16"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="S10Abg secTitle">A2.5  Our Chemical Society </h2>
+	Our society uses an incredible number of chemicals.  Since the development of synthetic (man made) materials about 100 years ago, the number of chemicals and their uses has expanded enormously.  However, with the great benefits come large consequences. <br>
+ <br>
+<h3 class="S10Ac">Issues Related to Chemicals </h3>
+Scientists and engineers are responsible for a chemical from “cradle to grave”.  Which means that they must consider all of the hazards from manufacturing, including byproducts, to the use, intended and unintentional, and finally to safe permanent disposal. <br>
+ <br>
+<em>Environmental Effects </em><br>
+Sometimes the environmental effects are overlooked.  Chlorofluorocarbons (CFC) were developed to be a safe replacement for the propellant gases used in aerosol cans.  They were tested on rats, rabbits, human tissue samples, fish, and plants with absolutely no side effects. <br>
+ <br>
+However, when CFC drift high up into the atmosphere (50 to 100 km) the high energy UV light causes the chemically stable CFCs to undergo a chemical reaction which releases a chlorine ion. The chlorine ion and UV light cause a further chemical reaction that changes ozone (three atoms of oxygen, O<sub>3</sub>) into diatomic oxygen (O<sub>2</sub>). <br>  
+Ozone absorbs UV light so that it can not get to the surface of the Earth and cause cancer.  With the hole in the ozone layer more and more UV light gets to the surface and causes skin cancer.
+This was a completely unexpected result. <br>
+ <br>
+<h3 class="S10Ac">Health Concerns </h3>
+Some chemicals have some significant impact on our bodies and health.
+Psychological addiction is when a person enjoys the feeling so intensely that they want to have it again.  Psychological addiction tends to be extremely long term, the person may stop but they will forever be tempted to start again. 
+ <br>
+Illegal drug producers (growers and chemists) have been using chemistry to "improve" the physical and psychological addictiveness of their products. <br>
+ <br>
+<em>Alcohol </em> <br>
+Alcohols are a class of chemical with a carbon chain linked to a hydroxide.  Ethanol (C<sub>2</sub>H<sub>5</sub>OH) is the only "safe" one to drink because although poisonous, the body can break it down and you can have a relatively high concentration in you body without suffering permanent effects.  Methanol (methyl alcohol, wood alcohol, CH<sub>3</sub>OH) is a possible product of "home brew/moonshine" or improper brewing conditions.  Even in small quantities (10 mL) of methanol causes permanent blindness and 100 mL is fatal (<a href="https://en.wikipedia.org/wiki/Methanol_toxicity">Wikipedia - Methanol toxicity</a>). Ethanol can cause both physical and psychological addiction. <br>
+ <br>
+<em>Nicotine </em><br>
+Nicotine is a highly addictive drug that is in cigarettes, cigars and chewing tobacco.  Nicotine is only one of many toxic chemical released into the body by tobacco products.  <br>
+ <br>
+Smokers have higher probability of many dangerous health conditions.  See the following for statistics <a href="https://www.cdc.gov/tobacco/data_statistics/fact_sheets/health_effects/effects_cig_smoking/">CDC Smoking and Tabacco use</a>. <br>
+For these reasons, most governments in Canada are slowly reducing the locations that people are able to smoke. <br>
+ <br>
+<h3 class="S10Ac">Benzene - A Regulated Substance </h3>
+Benzene is a very toxic substance that is classified as a regulated substance, which means that you must take safety training to use it, have special equipment to transport limited quantities, and it must be contained to production until destruction. <br>
+We are kept safe from benzene by:
+<ul>
+	<li>Understanding the properties of materials </li>
+	<li>Careful and clever design and process engineering </li>
+	<li>Placing personal safety and environmental protection as the to priority </li>
+	<li>Effective regulations </li>
+</ul>
+
+
+ <br>
+ <br>
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Science 10 <br>
+			Program of Studies <br>
+	    <img src="./AlbertaEdLogo.png" width="159" height="75" alt=""/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/index.cfm?locator=PS38Uw&PMDbSiteId=2621&PMDbSolutionId=25862&PMDbSubSolutionId=&PMDbCategoryId=25879&PMDbSubCategoryId=26225&PMDbSubjectAreaId=&PMDbProgramId=46628&gclid=CjwKCAiAx8KQBhAGEiwAD3EiPyhuOXoPKYfgJY5MIoaVRWwwqvqFDb49cfy6JcYeLKmU2qMp6sio4xoCXfIQAvD_BwE">Addison Wesley Science 10 Textbook <br>
+	  <img src="./Science10Cvr.png" width="169" height="223" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+	</div>
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>

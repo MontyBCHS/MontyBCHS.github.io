@@ -1,0 +1,769 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>S10 UD Ch2 Test</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">SCIENCE 10</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="./S10_UA_Ch1.html">Unit A Chemistry - Chapter 1</a>
+			<a href="./S10_UA_Ch2.html">Unit A Chemistry - Chapter 2</a>
+			<a href="./S10_UA_Ch3.html">Unit A Chemistry - Chapter 3</a>
+			<a href="./S10_UB_Ch1.html">Unit B Physics - Chapter 1</a>
+			<a href="./S10_UB_Ch2.html">Unit B Physics - Chapter 2</a>
+			<a href="./S10_UB_Ch3.html">Unit B Physics - Chapter 3</a>
+			<a href="./S10_UC_Ch1.html">Unit C Biology - Chapter 1</a>
+			<a href="./S10_UC_Ch2.html">Unit C Biology - Chapter 2</a>
+			<a href="./S10_UC_Ch3.html">Unit C Biology - Chapter 3</a>
+			<a href="./S10_UD_Ch1.html">Unit D Climate - Chapter 1</a>
+			<a href="./S10_UD_Ch2.html" class="active">Unit D Climate - Chapter 2</a>
+			<a href="./S10_UD_Ch3.html">Unit D Climate - Chapter 3</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 S10Dbg">
+	<div class="unitTitle"><h2 class="unitTitle">UNIT D:  Energy Flow in Global Systems</h2></div>
+	 
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+			<h1>SCIENCE 10</h1>
+				<h1>Program of Studies</h1>
+				<h1>Unit D: Energy Flow in Global Systems (Social and Environmental Contexts Emphasis) </h1>
+				<strong>Overview: </strong> Solar energy sustains life and drives the global climate systems on Earth.  Without solar energy there would be no heat or precipitation and, therefore, no life on Earth. Students will gain an understanding that the absorption and transfer of thermal energy at and near Earth’s surface results in a variety of climate zones with characteristic weather patterns and biomes. Climatic factors largely determine the flora and fauna found in each of the world’s major biomes. The United Nations Intergovernmental Panel on Climate Change has stated that the balance of evidence suggests a human influence on global climate. Scientists from various fields are studying this relationship to determine the potential impact on biomes
+
+				<h2>Links to Science </h2>
+				The following science concepts are related to the content of Unit D.
+				<ul>
+					<li>environmental monitoring, environmental impacts, energy flow, environmental management - Grade 7 Science, Unit A: Interactions and Ecosystems </li>
+					<li>thermal energy, change of state, heat transfer - Grade 7 Science, Unit C: Heat and Temperature </li>
+					<li>climate, glaciers and icecaps - Grade 8 Science, Unit E: Freshwater and Saltwater Systems </li>
+					<li>biological diversity, habitat diversity - Grade 9 Science, Unit A: Biological Diversity </li>
+				</ul>
+
+				<strong> Focusing Questions:</strong>
+				<ul>
+					<li>Are there relationships between solar energy, global energy transfer processes, climate and biomes? </li>
+					<li>What evidence suggests our climate may be changing more rapidly than living species can adapt?</li>
+					<li>Is human activity causing climate change? </li>
+					<li>How can we reduce our impact on the biosphere and on global climate, while still meeting human needs? </li>
+				 </ul>
+
+				<h2>Key Concepts </h2>
+				The following concepts are developed in this unit and may also be addressed in other units at other grade/course levels.  The intended level and scope of treatment is defined by the outcomes below.
+				<ul>
+					<li>social and environmental contexts for investigating climate change </li>
+					<li>solar radiation budget </li>
+					<li>climate zones, transfer of thermal energy by the hydrosphere and the atmosphere </li>
+					<li>hydrologic cycle and phase change </li>
+					<li>relationship between biomes, solar energy and climate </li>
+					<li>human activity and climate change </li>
+				</ul>
+
+				<h2>Outcomes for Science, Technology and Society (STS) and Knowledge </h2>
+				Students will: 
+				<div class="indent"> 
+				<ol>
+					<li>Describe how the relationships among input solar energy, output terrestrial energy and energy flowwithin the biosphere affect the lives of humans and other species </li>
+					<ul>
+						<li>explain how climate affects the lives of people and other species, and explain the need to investigate climate change
+						<div class="i_indent">(e.g., describe the responses of human and other species to extreme climatic conditions; describe housing designs, animal habitats, clothing and fur in conditions of extreme heat, cold, dryness or humidity, wind)</div> </li>
+						<li>identify the Sun as the source of all energy on Earth </li>
+						<li>analyze, in general terms, the net radiation budget, using per cent; i.e., solar energy input, terrestrial energy output, net radiant energy </li>
+						<li>describe the major characte ristics of the atmosphere, the hydrosphere and the lithosphere, and explain their relationship to Earth’s biosphere </li>
+						<li>describe and explain the greenhouse effect, and the role of various gases — including methane, carbon dioxide and water vapour — in determining the scope of the greenhouse effect </li>
+					</ul>
+
+					<br>    
+					<li> Analyze the relationships among net solar energy, global energy transfer processes — primarilyradiation, convection and hydrologic cycle — and climate. </li>
+					<ul>
+						<li>describe, in general terms, how thermal energy is transferred through the atmosphere (i.e., global wind patterns, jet stream, Coriolis effect, weather systems) and through the hydrosphere(i.e., ocean currents, large bodies of water) from latitudes of net radiation surplus to latitudes of net radiation deficit, resulting in a variety of climatic zones 
+						<div class="i_indent">(e.g., analyze static and animatedsatellite images)</div> </li>
+						<li>investigate and describe, in general terms, the relationships among solar energy reaching Earth’s surface and time of year, angle of inclination, length of daylight, cloud cover, albedo effect and aerosol or particulate distribution </li>
+						<li>explain how thermal energy transfer through the atmosphere and hydrosphere affects climate </li>
+						<li>investigate and interpret how variations in thermal properties of materials can lead to uneven heating and cooling </li>
+						<li>investigate and explain how evaporation, condensation, freezing and melting transfer thermal energy; i.e., use simple calculations of heat of fusion <span style="font-style:italic;">H<sub>fus</sub> = Q/n </span> and vaporization <span style="font-style:italic;">H<sub>vap</sub> = Q/n</span>, and <span style="font-style:italic;">Q=mc&Delta;t</span> to convey amounts of thermal energy involved, and link these processes to the hydrologic cycle </li>
+				   </ul>
+
+					<br>
+					<li>Relate climate to the characteristics of the world’s major biomes, and compare biomes in different regions of the world  </li>
+					<ul>
+						<li>describe a biome as an open system in terms of input and output of energy and matter andexchanges at its boundaries 
+						<div class="i_indent">(e.g., compare and contrast cells and biomes as open systems) </div> </li>
+						<li>relate the characteristics of two major biomes (i.e., grassland, desert, tundra, taiga, deciduous and rain forest) to net radiant energy, climatic factors (temperature, moisture, sunlight and wind) andtopography (mountain ranges, large bodies of water) </li>
+						<li>analyze the climatographs of two major biomes (i.e., grasslands, desert, tundra, taiga, deciduous and rain forest) and explain why biomes with similar characteristics can exist in differentgeographical locations, latitudes and altitudes </li>
+						<li>identify the potential effects of climate change on environmentally sensitive biomes
+						<div class="i_indent">(e.g., impact of a reduction in the Arctic ice pack on local species and on Aboriginal societies that rely on traditional lifestyles) </div> </li>
+					</ul>
+
+					<br>
+					<li>Investigate and interpret the role of environmental factors on global energy transfer and climatechange </li>
+					<ul>
+						<li>investigate and identify human actions affecting biomes that have a potentialto change climate
+						<div class="i_indent">(e.g., emission of greenhouse gases, draining of wetlands, forest fires, deforestation) </div>
+						and critically examine the evidence that these factors play a role in climate change
+						<div class="i_indent">(e.g., global warming, rising sea level(s)) </div> </li>
+						<li>identify evidence to investigate past changes in Earth’s climate
+						<div class="i_indent">(e.g., ice core samples, tree ring analysis) </div> </li>
+						<li>describe and evaluate the role of science in furthering the understanding of climate and climate change through international programs 
+						<div class="i_indent">(e.g., World Meteorological Organization, World Weather Watch, Global Atmosphere Watch, Surface Heat Budget of the Arctic Ocean (SHEBA) project, The Intergovernmental Panel on Climate Change (IPCC); the study of paleoclimates and models of future climate scenarios) </div> </li>
+						<li>describe the role of technology in measuring, modelling and interpreting climate and climate change
+						<div class="i_indent">(e.g., computer models, devices to take measurements of greenhouse gases, satellite imaging technology) </div> </li>
+						<li>describe the limitations of scientific knowledge and technology in making predictions related to climate and weather
+						<div class="i_indent">(e.g., predicting the direct and indirect impacts on Canada’s agriculture, forestry and oceans of climate change, or from changes in energy transfer systems, such as ocean currents and global wind patterns) </div> </li>
+						<li>assess, from a variety of perspectives, the risks and benefits of human activity, and its impact on the biosphere and the climate
+						<div class="i_indent">(e.g., compare the Gaia hypothesis with traditional Aboriginal perspectives on the natural world; identify and analyze various perspectives on reducing the impact of human activity on the global climate)  </div> </li>
+					</ul>
+				  </ol>    
+				</div>
+
+			<h3>Skill Outcomes </h3>
+			(focus on scientific inquiry) <br>
+			Initiating and Planning <br>
+			Students will:<br>
+			Ask questions about observed relationships, and plan investigations of questions, ideas, problems and issues <br>
+			<ul>
+				<li>identify questions to investigate that arise from practical problems and issues <br>
+				<div class="i_indent">(e.g., develop questions related to climate change, such as “How will global warming affect Canada’s northern biomes?”;“How will a species be affected by an increase or decrease in average temperature?”)</div> </li>
+				<li>design an experiment, and identify specific variables <br>
+				<div class="i_indent">(e.g., investigate the heating effect of solar energy, using variables, such as temperature, efficiency and materials used) </div> </li>
+				<li>formulate operational definitions of major variables <br>
+				<div class="i_indent">(e.g., define heat of fusion or vaporization as the quantity of energy to change the state of one mole of matter at its melting or boiling point in the absence of temperature change) </div> </li>
+			</ul>
+			  <br>
+			Performing and Recording <br>
+			Students will: <br>
+			Conduct investigations into relationships between and among observable variables, and use a broad range of tools and techniques to gather and record data and information 
+			<ul>
+				<li>carry out procedures, controlling the major variables and adapting or extending procedures where required <br>
+				<div class="i_indent">(e.g., perform an experiment to determine the ability of various materials to absorb or reflect solar energy) </div> </li>
+				<li>use instruments, effectively and accurately, to collect data <br>
+				<div class="i_indent">(e.g., use a barometer, rain gauge,thermometer, anemometer) </div> </li>
+				<li>compile and organize data, using appropriate formats and data treatments to facilitate interpretation of the data <br>
+				<div class="i_indent">(e.g., organize data to prepare climatographs for comparing biomes) </div> </li>
+				<li>use library and electronic research tools to collect information on a given topic <br>
+				<div class="i_indent">(e.g., research sources of greenhouse gases; research protocols to control human sources of greenhouse gases) </div> </li>
+				<li>select and integrate information from various print and electronic sources or from several parts of the same source <br>
+				<div class="i_indent">(e.g., collect weather and climate data, both historic and current, from the Internet) </div> </li>
+			</ul>
+				<br>
+			Analyzing and Interpreting <br>
+			Students will: <br>
+			Analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+			<ul>
+				<li>compile and display, by hand or computer, evidence and information in a variety of formats,including diagrams, flow charts, tables, graphs and scatterplots <br>
+				<div class="i_indent">(e.g.,construct climate graphs to compare any two of the following biomes: grassland, desert, tundra, taiga, deciduous forest, rain forest) </div> </li>
+				<li>identify and apply criteria for evaluating evidence and sources of information, including identifying bias <br>
+				<div class="i_indent">(e.g., investigate the issue of global climate change) </div> </li>
+				<li>interpret patterns and trends in data, and infer or calculate linear and nonlinear relationships among variables <br>
+				<div class="i_indent">(e.g., analyze a graph of mean monthly temperatures for cities that are at similar latitudes but have different climates) </div> </li>
+				<li>identify limitations of data, evidence or measurement <br>
+				<div class="i_indent">(e.g., list the limitations of data and evidence of past climate changes, evaluate the validity of interpolations and extrapolations, use significant digits appropriately) </div> </li>
+				<li>state a conclusion based on experimental data, and explain how evidence gathered supports or refutes the initial hypothesis <br>
+				<div class="i_indent">(e.g., summarize an analysis of the relationship between human activity and changing biomes) </div> </li>
+				<li>explain how data support or refute a hypothesis or a prediction <br>
+				<div class="i_indent">(e.g., provide evidence for or against the hypothesis that human activity is responsible for climate change) </div> </li>
+				<li>propose alternative solutions to a given practical problem, identify the potential strengths and weaknesses of each, and select one as the basis for a plan <br>
+				<div class="i_indent">(e.g., design a home for a specific climate; analyze traditional Aboriginal home designs for their suitability in particular climates) </div> </li>
+			</ul>
+				<br>
+			Communication and Teamwork <br>
+			Students will: <br>
+			Work as members of a team in addressing problems, and apply the skills and conventions of science in communicating information and ideas and in assessing results <br>
+			<ul>
+				<li>represent large and small numbers using appropriate scientific notation </li>
+				<li>select and use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate ideas, plans and results <br>
+				<div class="i_indent">(e.g., use appropriate Système international (SI) units, fundamental and derived units, significant digits) </div> </li>
+				<li>synthesize information from multiple sources or from complex and lengthy texts, and make inferences based on this information <br>
+				<div class="indent">(e.g., use integrated software effectively and efficiently to produce work that incorporates data, graphics and text) </div> </li>
+				<li>identify multiple perspectives that influence a science-related decision or issue <br>
+				<div class="i_indent">(e.g., consult a wide variety of electronic sources that reflect varied viewpoints and economic, social, scientific and other perspectives on global warming and climate change) </div> </li>
+				<li>develop, present and defend a position or course of action, based on findings <br>
+				<div class="i_indent">(e.g., a strategy to reduce greenhouse gas emissions caused by the transportation of people and goods) </div> </li>
+			</ul>
+				<br>
+
+			<h3>Attitude Outcomes </h3>
+			Interest in Science <br>
+			Students will be encouraged to:<br>
+			<div class="indent">Show interest in science-related questions and issues, and confidently pursue personal interests and career possibilities within science-related fields </div>
+			<div class="i_indent">(e.g., expand their inquiries beyond theclassroom and into their everyday lives; show interest in careers related to climate and the environment) </div>
+				<br>
+			Mutual Respect <br>
+			Students will be encouraged to: <br>
+			<div class="indent">Appreciate that scientific understanding evolves from the interaction of ideas involving people with different views and backgrounds </div>
+			<div class="i_indent">(e.g., appreciate Aboriginal clothing and home designs of the past and present that use locally-available materials to adapt to climate; recognize that science and technology develop in response to global concerns, as well a s to local needs; consider more than one factor or perspective when making decisions on Science, Technology and Society [STS] issues) </div>
+				<br>
+			Scientific Inquiry <br>
+			Students will be encouraged to: <br>
+			<div class="indent">Seek and apply evidence when evaluating alternative approaches to investigations, problems and 
+			issues </div>
+			<div class="i_indent">(e.g., view a situation from different perspectives, propose options and compare them when making decisions or taking action; evaluate inferences and conclusions with a critical mind and
+			without bias, being cognizant of the many factors involved in experimentation </div>
+				<br>
+			Collaboration <br>
+			Students will be encouraged to: <br>
+			<div class="indent">Work collaboratively in planning and carrying out investigations, as well as in generating and evaluating ideas </div>
+			<div class="i_indent">(e.g.,choose a variety of strategies, such as active listening, paraphrasing and questioning, in order to understand other points of view; consider a variety of perspectives and seek consensus before making decisions)</div>
+				<br>
+			Stewardship <br>
+			Students will be encouraged to: <br>
+			<div class="indent">Demonstrate sensitivity and responsibility in pursuing a balance between the needs of humans and a sustainable environment </div>
+			<div class="i_indent">(e.g., recognize that human actions today may affect the sustainability of biomes for future generations; identify, without bias, potential conflicts between responding to human wants and needs and protecting the environment) </div>
+				<br>
+			Safety <br>
+			Students will be encouraged to: <br>
+			<div class="indent">Show concern for safety in planning, carrying out and reviewing activities </div>
+			<div class="i_indent">((e.g., demonstrate concern for self and others in planning and carrying out experimental activities involving the heating of materials; select safe methods for collecting evidence and solving problems) </div>
+
+				<br>
+
+			<h3>Links to Mathematics </h3>
+			The  following mathematics outcomes are related to the content of Unit C but are not considered prerequisites. 
+				<ul>
+					<li>Concept Mathematics Course, Strand and Specific Outcome </li>
+					<li>Data Collection and Analysis - Grade 9 Mathematics, Statistics and Probability (Data Analysis),Specific Outcomes 1 and 3 </li>
+					<li>Rate, Ratio and Proportion - Grade 8 Mathematics, Number, Specific Outcomes 3, 4 and 5 </li>
+					<li>Graph Analysis - Grade 8 Mathematics, Statistics and Probability (Data Analysis),
+					Specific Outcome 1; Grade 9 Mathematics, Patterns and Relations (Patterns), Specific Outcome 2; Mathematics10C, Relations and Functions, Specific Outcomes 1 and 4; Mathematics 20-3, Statistics,Specific Outcome 1</li>
+					<li>Solving Equations - Grade 9 Mathematics, Patterns and Relations (Variables and Equations), Specific Outcome 3 </li>
+				  </ul>
+
+				<br>
+				<br>
+	</div>
+		<h2>Unit Focus Questions </h2>
+			   <ol>
+				<li>Are there relationships between solar energy, global energy transfer processes, climate and biomes? </li>
+				<li>How do global systems transfer energy through the lithosphere, hydrosphere, and atmosphere? </li>
+				<li>What evidence suggests our climate may be changing more rapidly than living species can adapt? </li>
+				<li>Is human activity causing climate change, and in meeting human needs, how can we reduce our impact on the biosphere and on global climate? </li>
+			   </ol>
+		  <br>
+	</div>
+		
+
+<!--  ***********************************************************************************************************   -->
+
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<div class="S10Cbg"><h1 class="S10Dbg secTitle">Chapter D2.0 Global systems transfer energy through the biosphere</h1> </div>     
+	<div class="S10Dc">
+		<h2>Key Concepts </h2>
+		<ul>
+			<li>Solar radiation budget. </li>
+			<li>Climate zones, transfer of thermal energy by the hydrosphere and the atmosphere. </li>
+			<li>Hydrologic cycle and phase change. </li>
+			<li>Relationship between biomes and solar energy and climate. </li>
+		</ul>
+
+		<h2>Learning Outcomes </h2>
+		<ul>
+			<li>Identify the Sun as the source of all energy on Earth. </li>
+			<li>Investigate and describe the relationships among solar energy reaching Earth's surface and time of year, angle of inclination, length of daylight, cloud cover, albedo effect, and aerosol or particulate distribution. </li>
+			<li>Analyze the net radiation budget, using percent. </li>
+			<li>Describe how thermal energy is transferred through the atmosphere and the hydrosphere, from latitudes of net radiation surplus to latitudes of net radiation deficit. </li>
+			<li>Explain how thermal energy transfer through the atmosphere and hydrosphere affects climate. </li>
+			<li>Describe and explain the greenhouse effect. </li>
+			<li>Investigate and interpret how variations in thermal properties of materials can lead to uneven heating and cooling. </li>
+			<li>Investigate and explain how evaporation, condensation, freezing, and melting transfer thermal energy. </li>
+			<li>Describe a biome as an open system. </li>
+			<li>Relate the characteristics of two biomes to net radiant energy, climatic factors, and topography. </li>
+			<li>Analyze the climatographs of two major biomes, and explain why biomes with cimilar characteristics can exist in different geographical locations, latitudes, and altitudes. </li>
+		</ul>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	<span class="def">Thermal energy </span>- is the energy possessed by a substance by virtue of the kinetic energy of its molecules or atoms. <br>
+	 <h2 class="S10Dbg secTitle">D2.1  Energy Relationships and the Biosphere</h2>
+	<span class="def">Radiant energy </span>- energy that is transmitted as electromagnetic waves. <br>
+All energy on Earth initially comes from the sun (solar energy). <br>
+A small amount of the incoming energy is changed into food energy by photosynthesis.  Much is absorbed as thermal energy (heat) in the atmosphere, hydrosphere and lithosphere, and much is reflected back into space, depending on albedo. <br>
+<span class="def">Latitudes </span>- imaginary circles around the Earth parallel to the equator. <br>
+The latitudes go from 0<sup>o</sup> at the equator to 90<sup>o</sup> at the north and south poles. <br>
+As the latitude increases the amount of solar energy per m<sup>2</sup> decreases.  Northern and southern latitudes are colder than at the equator because they don't get as much solar energy. <br>
+The Earth is also inclined (tilted) compared to the Sun.  This causes the seasons (summer, winter, etc...) as the Earth rotates around the Sun. <br>
+<span class="def">Solstice </span>- is one of two points in Earth's orbit at which the poles are the most tilted toward or away from the Sun. <br>
+<span class="def">Equinox </span>- is one of two points in Earth's orbit when the number of daylight hours is equal to the number of hours of night. <br>
+ <br>
+<h3 class="S10Dc">Insolation and the Angle of Inclination </h3> <br>
+<span class="def">Angle of incidence </span>- is the angle between a ray falling on a surface and the line perpendicular to that surface. <br>
+ <br>
+<h3 class="S10Dc">Absorption and Reflection by the Biosphere </h3> 
+<span class="def">Reflect </span>- when electromagnetic energy (light) bounces off in another direction. <br>
+<span class="def">Absorb </span>- when electromagnetic energy (light) is changed into another type of energy in the object struck by the electromagnetic energy.  In this case the light energy heats the greenhouse gas. <br>
+Atmospheric dust and clouds can reduce how much energy gets to the ground and increase how much is reflected. <br>
+ <br>
+<h3 class="S10Dc">Albedo - Reflection by the Lithosphere and Hydrosphere </h3>
+<span class="def">Albedo </span>- is a measurement the amount of solar energy that is reflected from the Earth. <br>
+The albedo is affected by the material (water, snow, asphalt, concrete, grass, etc…) and whether it is reflective or not. <br>
+ <br>
+<h3 class="S10Dc">Natural Greenhouse Effect </h3>
+<span class="def">Natural Greenhouse effect </span>- absorption of thermal energy by the atmosphere. <br>
+<span class="def">Greenhouse gases </span>- gases that contribute to the greenhouse effect. <br>
+ <br>
+<h3 class="S10Dc">Net Radiation Budget </h3>
+	Net radiation budget describes how much energy comes to the Earth, how much is reflected and how much is absorbed. <br>
+	Net budget = solar energy = absorbed + reflected <br>
+	Absorbed = solar energy - reflected energy <br>
+<br>
+	 <br>
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="S10Dbg secTitle">D2.2 Thermal Energy Transfer in the Atmosphere</h2>
+	<span class="def">Thermal energy transfer </span>- the movement of thermal energy (heat) from one location to another. <br>
+
+	<h3 class="S10Dc">Conduction and Convection </h3>
+
+	Heat energy moves in three ways: <br>
+	<span class="def">Radiation </span>- the emission of infrared radiation. <br>
+	<span class="def">Ex.</span> <span class="example">IR heat lamp, IR camera </span> <br>
+	<span class="def">Conduction </span>- is the transfer of thermal energy through objects as the molecules bump into each other. <br>
+	<span class="def">Ex.</span>  <span class="example">Frying pan, heat along metal </span> <br>
+	<span class="def">Convection </span>- is the transfer of thermal energy through the movement of hot fluids (gas or liquid). <br>
+	<span class="def">Ex.</span> <span class="example">Boiling water, radiators </span> <br>
+	<span class="def">Fluids </span>- a substance with no definite shape (liquid or gas) <br>
+	<span class="def">Current </span>- a flow of fluid from one location to another <br>
+	<span class="def">Density </span>- the amount of mass in a given volume <br>
+	 <br>
+	<h3 class="S10Dc">Effects of Thermal Energy Transfer in the Atmosphere </h3>
+	<span class="def">Atmosphere pressure </span>- the pressure exerted by the mass of air above any point o Earth's surface.  Average is 101.3 kPa. <br>
+	<span class="def">Wind </span>- the movement of cool air from areas of high pressure to areas of low pressure. <br>
+	<span class="def">Coriolis effect </span>- an effect due to the rotation of the Earth.  Causes hurricanes to rotate clockwise in the northern hemisphere and cyclones to rotate counter clockwise in the southern hemisphere. <br>
+	 The coriolis effect does NOT affect the flow of toilets.  It only affects large air masses over long periods of time. <br>
+	 <br>
+	<h3 class="S10Dc">Global Wind Patterns </h3>
+	<span class="def">Jet stream</span>- a band of fast moving air in the stratosphere. <br>
+	Convection currents and the coriolis effect cause the air movement which causes weather . P. 374 <br>
+	 <br>
+
+			<div class="S10Dbg"><div class="S10TitleD"><div class = "customHR">.</div></div></div>
+					  <!-- *********************************************************************** -->
+		<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+			<h2 class="S10Dbg secTitle">D2.3 Thermal Energy Transfer in the Hydrosphere </h2>
+	Heating water causes currents in the oceans which transfers energy and affects weather. Page 376 <br>
+	<span class="def">Ex. </span> <span class="example">Even though England is further north than Toronto, due to the warm water it has milder weather. </span><br>
+	 <br>
+	<h3 class="S10Dc">Specific Heat Capacity </h3>
+	Water requires huge amounts of energy to change its temperature, compared to most substances. <br>
+	<span class="def">Specific heat capacity (c)</span>- the amount of energy required to raise the temperature of 1 g of the substance by 1 &deg;C.  Water has a large value of 4.19 4.19 J/g&middot;&deg;C &times;. Most values are less than 4.19. <br>
+	 <br>
+	<h3 class="S10Dc">Quantity of Thermal Energy, Q</h3>
+	<span class="def">Quantity of thermal energy, Q</span>-  <br>
+	Thermal energy is E<sub>t</sub> or Q  <br>
+			<span class="equation">Q = mc&Delta;T  </span><br>
+			<span class="equation">Q</span> - thermal energy, J  <br>
+			<span class="equation">m</span> - mass, grams, g  <br>
+			<span class="equation">C</span> - specific heat capacity, 4.19 J/g&middot;&deg;C for water <br>
+			<span class="equation">&Delta;T</span> = T<sub>f</sub> - T<sub>i</sub>, change in temperature, <sup>o</sup>C <br>
+	 <br>
+	 <span class="def">Calorimeter </span>- any device used to determine the transfer of thermal energy. <br>
+	Specific heat capacity of different substances. <br>
+	 <br>
+	The larger c the more energy required to heat 1 g of the material. <br>
+	 <br>
+	<span class="def">Ex. </span> How much energy is required to heat 500 g of water from 20 &deg;C to 100 &deg;C ? <br>
+	<div class="indent">
+		<div class="example">
+			Q = mc&Delta;T  <br>
+			Q = 500 g &times; 4.19 J/g&middot;&deg;C &times; (100 - 20 &deg;C) <br>
+			Q = 1.7 &times; 10<sup>5</sup> J <br>
+			The energy required is 1.7&times;10<sup>5</sup>J. <br>
+		</div>
+	</div>
+	 <br>
+	 <br>
+	Practice Problems pages 379 to 380. <br>
+	 <br>
+	<h3 class="S10Dc">The Hydrologic Cycle and Energy Transfer </h3>
+	<span class="def">Hydrologic cycle (water cycle)</span>- the interaction between water and the biosphere. <br>
+	<span class="def">Phase </span>- a state of matter: solid, liquid or gas. <br>
+	 <br>
+	<h3 class="S10Dc"> Heat of Fusion and Heat of Vaporization </h3>
+	It takes energy to change a substance's state. <br>
+	<span class="def">Heat of fusion </span>- the energy required to change 1 mol of substance from solid phase to liquid phase. <br>
+	<span class="def">Heat of solidification </span>- the energy required to change 1 mol of substance from liquid phase to solid phase. It is the same value but opposite phase change as fusion. <br>
+	The higher the heat of fusion (solidification), the more energy required to melt or freeze a substance. <br>
+	Heat of fusion of various substances. <br>
+	 <br>
+	<span class="def">Heat of vaporization </span>- the energy required to change 1 mol of substance from liquid phase to gaseous phase. <br>
+	<span class="def">Heat of condensation </span>- the energy required to change 1 mol of substance from gaseous phase to liquid phase. Same value as heat of vaporization, but the opposite phase change.<br>
+	Heat of vaporization of various substances. <br>
+	The higher the heat of vaporization (condensation), the more energy required to vaporize or condense a substance. <br>
+	 <br>
+	<h3 class="S10Dc">Calculating Heat of Fusion and Heat of Vaporization </h3>
+			<span class="equation">H<sub>fus</sub> = Q/n </span> <br>
+	H<sub>fus</sub> - the heat of suion, in kJ/mol <br>
+	Q - the quantity of thermal energy, in kJ <br>
+	n - the amount of the substance, in mol <br>
+	 <br>
+	<span class="def">Ex. </span>How much energy is required to melt 15.0 g of ice? <br>
+	<div class="indent">	
+		<div class="example">
+			First find the number of moles of water in 15.0 g. <br>
+			n = 15.0 g / 18.02 g/mol <br>
+			n = 0.832408... mol  (don't round until the end of the question) <br>
+			 <br>
+		<div class="equation"> 
+		  <table class="fraction" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2"><em>n</em> = &nbsp;</td>
+				  <td nowrap="nowrap">15.0 g</td>
+			  </tr>
+			  <tr>
+			  	  <td class="upper_line">18.02 g/mol</td>
+			  </tr>
+
+			  <tr>
+				  <td nowrap="nowrap"><em>n</em> = &nbsp;</td>
+				  <td nowrap="nowrap">0.832408... mol </td>
+				  <td> &nbsp;(don't round until the end of the question)</td>
+			  </tr>
+		  </table>
+		</div> 
+<br>
+			H<sub>fus</sub> = Q/n <br>
+			Q = H<sub>fus</sub> &times; n <br>
+			Q = 6.01 kJ/mol &times; 0.832408... mol <br>
+			Q = 5002.774695 J <br>
+			It requires 5.00 &times; 10<sup>3</sup> J or 5.00 kJ of energy to melt the ice. <br>
+		</div>  
+		
+		<div class="equation"> 
+		  <table class="fraction" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2"><em>H<sub>fus</sub></em> = &nbsp;</td>
+				  <td nowrap="nowrap"><em>Q</em></td>
+			  </tr>
+			  <tr>
+			  	  <td class="upper_line"><em>n</em></td>
+			  </tr>
+
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2">&nbsp;<em>Q</em> = &nbsp;</td>
+				  <td nowrap="nowrap" rowspan="2'">6.01 </td>
+				  <td> &nbsp;kJ</td>
+				  <td nowrap="nowrap" rowspan="2'">&nbsp; &times; 0.832408... mol </td>
+			  </tr>
+			  <tr>
+			  	   <td class="upper_line">mol</td>
+			  </tr>
+			  
+			  <tr>
+				  <td nowrap="nowrap">&nbsp;<em>Q</em> = &nbsp;</td>
+				  <td nowrap="nowrap" colspan="2">5002.774695 J</td>
+			  </tr>	  
+		  </table>
+		</div> 
+		
+		
+	</div>
+	  <br>
+	<span class="def">Ex. </span> How much energy is required to vaporize 250 g of ethyl alcohol? <br>
+	<div class="indent">	
+		<div class="example">
+
+			First find the number of moles of ethyl alcohol C<sub>2</sub>H<sub>5</sub>OH in 250 g. <br>
+			n = 250 g / 46.08 g/mol <br>
+			n = 5.425347... mol  (don't round until the end of the question) <br>
+			 <br>
+			H<sub>vap</sub> = Q/n <br>
+			Q = H<sub>vap</sub> &times; n <br>
+			Q = 40.65 kJ/mol &times; 5.425347... mol <br>
+			Q = 220540.3646... J <br>
+			It requires 2.21 &times; 10<sup>5</sup> J or 2.21 kJ of energy to vaporize the ethyl alcohol. <br>
+		</div> 
+	 <br>
+		<div class="equation"> 
+		  <table class="fraction" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2"><em>n</em> = &nbsp;</td>
+				  <td nowrap="nowrap">250 g</td>
+			  </tr>
+			  <tr>
+			  	  <td class="upper_line">46.08 g/mol</td>
+			  </tr>
+
+			  <tr>
+				  <td nowrap="nowrap"><em>n</em> = &nbsp;</td>
+				  <td nowrap="nowrap">5.425347... mol </td>
+				  <td> &nbsp;(don't round until the end of the question)</td>
+			  </tr>
+		  </table>
+		</div> 
+		<br>
+		<div class="equation"> 
+		  <table class="fraction" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2"><em>H<sub>fus</sub></em> = &nbsp;</td>
+				  <td nowrap="nowrap"><em>Q</em></td>
+			  </tr>
+			  <tr>
+			  	  <td class="upper_line"><em>n</em></td>
+			  </tr>
+
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2">&nbsp;<em>Q</em> = &nbsp;</td>
+				  <td nowrap="nowrap" rowspan="2'">40.65 &nbsp;</td>
+				  <td> &nbsp;kJ</td>
+				  <td nowrap="nowrap" rowspan="2'">&nbsp; &times; 5.425347... mol </td>
+			  </tr>
+			  <tr>
+			  	   <td class="upper_line">mol</td>
+			  </tr>
+			  
+			  <tr>
+				  <td nowrap="nowrap">&nbsp;<em>Q</em> = &nbsp;</td>
+				  <td nowrap="nowrap" colspan="3" align="left">220540.3646... J</td>
+			  </tr>	  
+		  </table>
+		</div> 
+	</div>
+	 <br>
+	Practice Problems page 386 to 387
+	 <br>
+	<h3 class="S10Dc">Phase Changes and Global Energy Transfer </h3>
+	 <br>
+			<br>
+		<div style="background-color: #555;" class="main" id="section14" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section15"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	<h2 class="S10Dbg secTitle">D2.4 Earth's Biomes </h2>
+		<span class="def">Biomes </span>- a large geographical region with a particular range of temperature and precipitation levels, and the plants and animals that are adapted to those climate conditions. <br>
+		<span class="def">Ex. </span> <span class="example">Tundra, Taiga, Deciduous forest, grassland, desert and Rain forest. </span> <br>
+		 <br>
+		<table style="border: 3px dotted purple; border-collapse:collapse;">
+			<tr style="background-color:plum;">
+				<th style="border: 3px dotted purple;"><h3>Name </h3></th>
+				<th style="border: 3px dotted purple;"><h3>Precipitation </h3></th>
+				<th style="border: 3px dotted purple;"><h3>Temperature </h3></th>
+				<th style="border: 3px dotted purple;"><h3>Plants </h3></th>
+				<th style="border: 3px dotted purple;"><h3>Animals </h3></th>
+			</tr>
+			<tr>
+				<th style="border: 3px dotted purple;">Tundra </th>
+				<td style="border: 3px dotted purple;">20 cm/y;<br> mostly as snow</td>
+				<td style="border: 3px dotted purple;">-15 to 5 <sup>o</sup>C </td>
+				<td style="border: 3px dotted purple;">Lichens, mosses, sedges, few dwarf woody shrubs</td>
+				<td style="border: 3px dotted purple;">Ptarmigan migratory birds in summer, arctic fox, snowshoe hare, lemming, caribou, reindeer, musk ox, wolves, polar bear </td>
+			</tr>
+			<tr style="background-color:lavender;">
+				<th style="border: 3px dotted purple;">Taiga </th>
+				<td style="border: 3px dotted purple;">40 to 100 cm/y;<br> much as snow </td>	
+				<td style="border: 3px dotted purple;">4 to 14 <sup>o</sup>C<br>Cool summers, cold winters</td>
+				<td style="border: 3px dotted purple;">Cone-bearing evergreens, few lichens and mosses</td>
+				<td style="border: 3px dotted purple;">Woodpeckers, chickadees, grosbeaks, hawks, eagles, rodents, rabbits, squirrels, moose, bear, lynx, fox, wolves </td>
+			</tr>
+			<tr>
+				<th style="border: 3px dotted purple;">Deciduous forest </th>
+				<td style="border: 3px dotted purple;">75 to 150 cm/y</td>
+				<td style="border: 3px dotted purple;">14 to 27 <sup>o</sup>C<br>Well-defined winter and summer seasons </td>
+				<td style="border: 3px dotted purple;">Broad-leaved deciduous trees, mosses, lichens, ferns</td>
+				<td style="border: 3px dotted purple;">Insects and birds, squirrels, rabbits, skunk, chipmunks, White-tailed deer, black bear, timber wolf, red fox</td>
+			</tr>
+			<tr style="background-color:lavender;">
+				<th style="border: 3px dotted purple;">Grassland-Prairie </th>
+				<td style="border: 3px dotted purple;">25 to 57 cm/y </td>
+				<td style="border: 3px dotted purple;">4 to 18 <sup>o</sup>C<br>Winter and summer seasons</td>
+				<td style="border: 3px dotted purple;">Grasses some forbs</td>
+				<td style="border: 3px dotted purple;">Hawks, snakes, mice gophers, rabbits, buffalo, deer, elk, antelope, coyotes, badgers, kit foxes</td>
+			</tr>
+			<tr>
+				<th style="border: 3px dotted purple;">Grassland - Savanna </th>
+				<td style="border: 3px dotted purple;">25 to 57 cm/y </td>
+				<td style="border: 3px dotted purple;">18 to 30 <sup>o</sup>C<br>Wet season and dry season</td>
+				<td style="border: 3px dotted purple;">Grasses, scattered trees</td>
+				<td style="border: 3px dotted purple;">Insects, birds, reptiles, elephants, giraffe, antelopes, zebras, wildebeest, rhinoceros, cheetah, lion, hyena </td>
+			</tr>
+			<tr style="background-color:lavender;">
+				<th style="border: 3px dotted purple;">Rainforest </th>
+				<td style="border: 3px dotted purple;"> &gt; 200 cm/y </td>
+				<td style="border: 3px dotted purple;">25 to 30 <sup>o</sup>C <br>May have short dry season </td>
+				<td style="border: 3px dotted purple;">Broad-leaved trees, evergreen and deciduous vines and shrubs, air plants </td>
+				<td style="border: 3px dotted purple;">Hummingbirds, parakeets, parrots, toucans, snakes, lizards, frogs, paca, agouti, peccary, armadillo, coatimundi, monkeys, gorillas, jaguars, tigers </td>
+			</tr>
+			<tr>
+				<th style="border: 3px dotted purple;">Desert </th>
+				<td style="border: 3px dotted purple;"> &gt; 25 cm/y </td>
+				<td style="border: 3px dotted purple;">12 to 27 <sup>o</sup>C</td>
+				<td style="border: 3px dotted purple;">Succulent plants (cacti), non-succulent, drought-tolerant plants (sage-brush, mesquite tree) </td>
+				<td style="border: 3px dotted purple;">Millipedes, centipedes, scorpions, spiders, lizards, snakes, running birds (ostrich, roadrunner), antelope, goats, sheep, camels, bats, rodents, rabbits, coyote, kit fox, dingos</td>
+			</tr>
+		</table>
+
+
+		<br>
+		Page 402 Canada's biomes <br>
+		<br>
+		<br>
+	
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Science 10 <br>
+			Program of Studies <br>
+	    <img src="./AlbertaEdLogo.png" width="159" height="75" alt=""/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/index.cfm?locator=PS38Uw&PMDbSiteId=2621&PMDbSolutionId=25862&PMDbSubSolutionId=&PMDbCategoryId=25879&PMDbSubCategoryId=26225&PMDbSubjectAreaId=&PMDbProgramId=46628&gclid=CjwKCAiAx8KQBhAGEiwAD3EiPyhuOXoPKYfgJY5MIoaVRWwwqvqFDb49cfy6JcYeLKmU2qMp6sio4xoCXfIQAvD_BwE">Addison Wesley Science 10 Textbook <br>
+	  <img src="./Science10Cvr.png" width="169" height="223" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+
+<!--  **************************************  -->
+	
+	</div>
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>
