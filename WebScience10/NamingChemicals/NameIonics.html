@@ -1,0 +1,485 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Naming Compounds Ionic</title>
+</head>
+
+<body>
+	<h2>Naming Ionic Compounds</h2>
+	<p>Choose a type of ionic compound:
+		<select id="QuestionType" onchange"_selectQuestions()">
+			<option value="1" selected> Basic Ionic</option>
+			<option value="2" > Polyatomic Ionic</option>
+			<option value="3" > Multivalent Ionic</option>
+			<option value="4" > All Ionic</option>
+		</select> 
+		<button onclick="_selectQuestions()">Load Question</button>
+	</p>
+	  <br>
+	<p>What is the name of the compound with the chemical formula: <span id="Question"> </span> ?</p>
+	<p style="font-size:1.5em;">Chemical Name: <input type="text" id="Text1" value="">  <button onclick="_CheckAnswer()">Check Answer</button> </p>
+	
+	<p><span id="FeedBack"></span></p>
+	<p>You have <span id="Score"></span> correct.</p>
+<script>
+	// *********************************************************
+	// Declare variables
+	
+	// Metal Ion Arrays
+	// Univalent Ions 0 - 49
+	// Polyatomic 50 - 51
+	// Multivalent Ions 52 - 111
+		var MetalSymbolArray = [];
+		var MetalNameArray = [];
+		var MetalChargeArray = [];
+	
+MetalSymbolArray[0] = "Ac";	MetalNameArray[0] = "actinium";	MetalChargeArray[0] = 3;
+MetalSymbolArray[1] = "Ag";	MetalNameArray[1] = "silver";	MetalChargeArray[1] = 1;
+MetalSymbolArray[2] = "Al";	MetalNameArray[2] = "aluminium";	MetalChargeArray[2] = 3;
+MetalSymbolArray[3] = "Ba";	MetalNameArray[3] = "barium";	MetalChargeArray[3] = 2;
+MetalSymbolArray[4] = "Be";	MetalNameArray[4] = "beryllium";	MetalChargeArray[4] = 2;
+MetalSymbolArray[5] = "Ca";	MetalNameArray[5] = "calcium";	MetalChargeArray[5] = 2;
+MetalSymbolArray[6] = "Cd";	MetalNameArray[6] = "cadmium";	MetalChargeArray[6] = 2;
+MetalSymbolArray[7] = "Ce";	MetalNameArray[7] = "cerium";	MetalChargeArray[7] = 3;
+MetalSymbolArray[8] = "Cf";	MetalNameArray[8] = "californium";	MetalChargeArray[8] = 3;
+MetalSymbolArray[9] = "Cm";	MetalNameArray[9] = "curium";	MetalChargeArray[9] = 3;
+MetalSymbolArray[10] = "Cs";	MetalNameArray[10] = "cesium";	MetalChargeArray[10] = 1;
+MetalSymbolArray[11] = "Dy";	MetalNameArray[11] = "dysprosium";	MetalChargeArray[11] = 3;
+MetalSymbolArray[12] = "Er";	MetalNameArray[12] = "erbium";	MetalChargeArray[12] = 3;
+MetalSymbolArray[13] = "Es";	MetalNameArray[13] = "einsteinium";	MetalChargeArray[13] = 3;
+MetalSymbolArray[14] = "Fm";	MetalNameArray[14] = "fermium";	MetalChargeArray[14] = 3;
+MetalSymbolArray[15] = "Fr";	MetalNameArray[15] = "francium";	MetalChargeArray[15] = 1;
+MetalSymbolArray[16] = "Ga";	MetalNameArray[16] = "gallium";	MetalChargeArray[16] = 3;
+MetalSymbolArray[17] = "Gd";	MetalNameArray[17] = "gadolinium";	MetalChargeArray[17] = 3;
+MetalSymbolArray[18] = "Ge";	MetalNameArray[18] = "germanium";	MetalChargeArray[18] = 4;
+MetalSymbolArray[19] = "H";	MetalNameArray[19] = "hydrogen";	MetalChargeArray[19] = 1;
+MetalSymbolArray[20] = "Hf";	MetalNameArray[20] = "hafnium";	MetalChargeArray[20] = 4;
+MetalSymbolArray[21] = "Ho";	MetalNameArray[21] = "holmium";	MetalChargeArray[21] = 3;
+MetalSymbolArray[22] = "In";	MetalNameArray[22] = "indium";	MetalChargeArray[22] = 3;
+MetalSymbolArray[23] = "Ir";	MetalNameArray[23] = "iridium";	MetalChargeArray[23] = 4;
+MetalSymbolArray[24] = "K";	MetalNameArray[24] = "potassium";	MetalChargeArray[24] = 1;
+MetalSymbolArray[25] = "La";	MetalNameArray[25] = "Lanthanum";	MetalChargeArray[25] = 3;
+MetalSymbolArray[26] = "Li";	MetalNameArray[26] = "lithium";	MetalChargeArray[26] = 1;
+MetalSymbolArray[27] = "Lr";	MetalNameArray[27] = "lawrencium";	MetalChargeArray[27] = 3;
+MetalSymbolArray[28] = "Lu";	MetalNameArray[28] = "lutetium";	MetalChargeArray[28] = 2;
+MetalSymbolArray[29] = "Mg";	MetalNameArray[29] = "magnesium";	MetalChargeArray[29] = 2;
+MetalSymbolArray[30] = "Mo";	MetalNameArray[30] = "molybdenum";	MetalChargeArray[30] = 6;
+MetalSymbolArray[31] = "Na";	MetalNameArray[31] = "sodium";	MetalChargeArray[31] = 1;
+MetalSymbolArray[32] = "Nd";	MetalNameArray[32] = "neodymium";	MetalChargeArray[32] = 3;
+MetalSymbolArray[33] = "Np";	MetalNameArray[33] = "neptunium";	MetalChargeArray[33] = 5;
+MetalSymbolArray[34] = "Os";	MetalNameArray[34] = "osmium";	MetalChargeArray[34] = 4;
+MetalSymbolArray[35] = "Pm";	MetalNameArray[35] = "promethium";	MetalChargeArray[35] = 3;
+MetalSymbolArray[36] = "Pr";	MetalNameArray[36] = "praseodymium";	MetalChargeArray[36] = 3;
+MetalSymbolArray[37] = "Ra";	MetalNameArray[37] = "radium";	MetalChargeArray[37] = 2;
+MetalSymbolArray[38] = "Rb";	MetalNameArray[38] = "rubidium";	MetalChargeArray[38] = 1;
+MetalSymbolArray[39] = "Re";	MetalNameArray[39] = "rhenium";	MetalChargeArray[39] = 7;
+MetalSymbolArray[40] = "Rh";	MetalNameArray[40] = "rhodium";	MetalChargeArray[40] = 3;
+MetalSymbolArray[41] = "Sc";	MetalNameArray[41] = "scandium";	MetalChargeArray[41] = 3;
+MetalSymbolArray[42] = "Sr";	MetalNameArray[42] = "strontium";	MetalChargeArray[42] = 2;
+MetalSymbolArray[43] = "Ta";	MetalNameArray[43] = "tantalum";	MetalChargeArray[43] = 5;
+MetalSymbolArray[44] = "Tb";	MetalNameArray[44] = "terbium";	MetalChargeArray[44] = 3;
+MetalSymbolArray[45] = "Tc";	MetalNameArray[45] = "technetium";	MetalChargeArray[45] = 7;
+MetalSymbolArray[46] = "Th";	MetalNameArray[46] = "thorium";	MetalChargeArray[46] = 4;
+MetalSymbolArray[47] = "W";	MetalNameArray[47] = "tungsten";	MetalChargeArray[47] = 6;
+MetalSymbolArray[48] = "Y";	MetalNameArray[48] = "yttrium";	MetalChargeArray[48] = 3;
+MetalSymbolArray[49] = "Zn";	MetalNameArray[49] = "zinc";	MetalChargeArray[49] = 2;
+MetalSymbolArray[50] = "Zr";	MetalNameArray[50] = "zirconium";	MetalChargeArray[50] = 4;
+		
+MetalSymbolArray[51] = "NH4";	MetalNameArray[51] = "ammonium";	MetalChargeArray[51] = 1;
+MetalSymbolArray[52] = "NH4";	MetalNameArray[52] = "ammonium";	MetalChargeArray[52] = 1;
+		
+MetalSymbolArray[53] = "Am";	MetalNameArray[53] = "americium (III)";	MetalChargeArray[53] = 3;
+MetalSymbolArray[54] = "Am";	MetalNameArray[54] = "americium (IV)";	MetalChargeArray[54] = 4;
+MetalSymbolArray[55] = "Au";	MetalNameArray[55] = "gold (III)";	MetalChargeArray[55] = 3;
+MetalSymbolArray[56] = "Au";	MetalNameArray[56] = "gold (I)";	MetalChargeArray[56] = 1;
+MetalSymbolArray[57] = "Bi";	MetalNameArray[57] = "bismuth (III) ";	MetalChargeArray[57] = 3;
+MetalSymbolArray[58] = "Bi";	MetalNameArray[58] = "bismuth (V)";	MetalChargeArray[58] = 5;
+MetalSymbolArray[59] = "Bk";	MetalNameArray[59] = "berkelium (III)";	MetalChargeArray[59] = 3;
+MetalSymbolArray[60] = "Bk";	MetalNameArray[60] = "berkelium (IV)";	MetalChargeArray[60] = 4;
+MetalSymbolArray[61] = "Co";	MetalNameArray[61] = "cobalt (II)";	MetalChargeArray[61] = 2;
+MetalSymbolArray[62] = "Co";	MetalNameArray[62] = "cobalt (III)";	MetalChargeArray[62] = 3;
+MetalSymbolArray[63] = "Cr";	MetalNameArray[63] = "chromium (III)";	MetalChargeArray[63] = 3;
+MetalSymbolArray[64] = "Cr";	MetalNameArray[64] = "chromium (II)";	MetalChargeArray[64] = 2;
+MetalSymbolArray[65] = "Cu";	MetalNameArray[65] = "copper (II)";	MetalChargeArray[65] = 2;
+MetalSymbolArray[66] = "Cu";	MetalNameArray[66] = "copper (I)";	MetalChargeArray[66] = 1;
+MetalSymbolArray[67] = "Eu";	MetalNameArray[67] = "europium (III)";	MetalChargeArray[67] = 3;
+MetalSymbolArray[68] = "Eu";	MetalNameArray[68] = "europium (II)";	MetalChargeArray[68] = 2;
+MetalSymbolArray[69] = "Fe";	MetalNameArray[69] = "iron (III)";	MetalChargeArray[69] = 3;
+MetalSymbolArray[70] = "Fe";	MetalNameArray[70] = "iron (II)";	MetalChargeArray[70] = 2;
+MetalSymbolArray[71] = "Hg";	MetalNameArray[71] = "mercury (II)";	MetalChargeArray[71] = 2;
+MetalSymbolArray[72] = "Hg";	MetalNameArray[72] = "mercury (I)";	MetalChargeArray[72] = 1;
+MetalSymbolArray[73] = "Md";	MetalNameArray[73] = "mendelevium (II)";	MetalChargeArray[73] = 2;
+MetalSymbolArray[74] = "Md";	MetalNameArray[74] = "mendelevium (III)";	MetalChargeArray[74] = 3;
+MetalSymbolArray[75] = "Mn";	MetalNameArray[75] = "manganese (II)";	MetalChargeArray[75] = 2;
+MetalSymbolArray[76] = "Mn";	MetalNameArray[76] = "manganese (IV)";	MetalChargeArray[76] = 4;
+MetalSymbolArray[77] = "Nb";	MetalNameArray[77] = "niobium (V)";	MetalChargeArray[77] = 5;
+MetalSymbolArray[78] = "Nb";	MetalNameArray[78] = "niobium (III)";	MetalChargeArray[78] = 3;
+MetalSymbolArray[79] = "Ni";	MetalNameArray[79] = "nickel (II)";	MetalChargeArray[79] = 2;
+MetalSymbolArray[80] = "Ni";	MetalNameArray[80] = "nickel (III)";	MetalChargeArray[80] = 3;
+MetalSymbolArray[81] = "No";	MetalNameArray[81] = "nobelium (II)";	MetalChargeArray[81] = 2;
+MetalSymbolArray[82] = "No";	MetalNameArray[82] = "nobelium (III)";	MetalChargeArray[82] = 3;
+MetalSymbolArray[83] = "Pa";	MetalNameArray[83] = "protactinium (V)";	MetalChargeArray[83] = 5;
+MetalSymbolArray[84] = "Pa";	MetalNameArray[84] = "protactinium (IV)";	MetalChargeArray[84] = 4;
+MetalSymbolArray[85] = "Pb";	MetalNameArray[85] = "lead (II)";	MetalChargeArray[85] = 2;
+MetalSymbolArray[86] = "Pb";	MetalNameArray[86] = "lead (IV)";	MetalChargeArray[86] = 4;
+MetalSymbolArray[87] = "Pd";	MetalNameArray[87] = "palladium (II) ";	MetalChargeArray[87] = 2;
+MetalSymbolArray[88] = "Pd";	MetalNameArray[88] = "palladium (IV)";	MetalChargeArray[88] = 4;
+MetalSymbolArray[89] = "Po";	MetalNameArray[89] = "polonium (II)";	MetalChargeArray[89] = 2;
+MetalSymbolArray[90] = "Po";	MetalNameArray[90] = "polonium (IV)";	MetalChargeArray[90] = 4;
+MetalSymbolArray[91] = "Pt";	MetalNameArray[91] = "platinum (IV)";	MetalChargeArray[91] = 4;
+MetalSymbolArray[92] = "Pt";	MetalNameArray[92] = "platinum (II)";	MetalChargeArray[92] = 2;
+MetalSymbolArray[93] = "Pu";	MetalNameArray[93] = "plutonium (IV)";	MetalChargeArray[93] = 4;
+MetalSymbolArray[94] = "Pu";	MetalNameArray[94] = "plutonium (VI)";	MetalChargeArray[94] = 6;
+MetalSymbolArray[95] = "Ru";	MetalNameArray[95] = "ruthenium (III)";	MetalChargeArray[95] = 3;
+MetalSymbolArray[96] = "Ru";	MetalNameArray[96] = "ruthenium (IV)";	MetalChargeArray[96] = 4;
+MetalSymbolArray[97] = "Sb";	MetalNameArray[97] = "antimony (III)";	MetalChargeArray[97] = 3;
+MetalSymbolArray[98] = "Sb";	MetalNameArray[98] = "antimony (V)";	MetalChargeArray[98] = 5;
+MetalSymbolArray[99] = "Sm";	MetalNameArray[99] = "samarium (III)";	MetalChargeArray[99] = 3;
+MetalSymbolArray[100] = "Sm";	MetalNameArray[100] = "samarium (II)";	MetalChargeArray[100] = 2;
+MetalSymbolArray[101] = "Sn";	MetalNameArray[101] = "tin (IV)";	MetalChargeArray[101] = 4;
+MetalSymbolArray[102] = "Sn";	MetalNameArray[102] = "tin (II)";	MetalChargeArray[102] = 2;
+MetalSymbolArray[103] = "Ti";	MetalNameArray[103] = "titanium (IV)";	MetalChargeArray[103] = 4;
+MetalSymbolArray[104] = "Ti";	MetalNameArray[104] = "titanium (III)";	MetalChargeArray[104] = 3;
+MetalSymbolArray[105] = "Tl";	MetalNameArray[105] = "thallium (I)";	MetalChargeArray[105] = 1;
+MetalSymbolArray[106] = "Tl";	MetalNameArray[106] = "thallium (III)";	MetalChargeArray[106] = 3;
+MetalSymbolArray[107] = "U";	MetalNameArray[107] = "uranium (VI)";	MetalChargeArray[107] = 6;
+MetalSymbolArray[108] = "U";	MetalNameArray[108] = "uranium (IV)";	MetalChargeArray[108] = 4;
+MetalSymbolArray[109] = "V";	MetalNameArray[109] = "vanadium (V)";	MetalChargeArray[109] = 5;
+MetalSymbolArray[110] = "V";	MetalNameArray[110] = "vanadium (IV)";	MetalChargeArray[110] = 4;
+MetalSymbolArray[111] = "Yb";	MetalNameArray[111] = "ytterbium (III)";	MetalChargeArray[111] = 3;
+MetalSymbolArray[112] = "Yb";	MetalNameArray[112] = "ytterbium (II)";	MetalChargeArray[112] = 2;
+
+
+
+	// Non Metal Ion Arrays
+	// Univalent Ions 0 - 11
+	// Polyatomic 12 - 34	
+		var NonMetalHTMLArray = [];
+		var NonMetalSymbolArray = [];
+		var NonMetalNameArray = [];
+		var NonMetalChargeArray = [];
+NonMetalHTMLArray[0]="As";	NonMetalSymbolArray[0] = "As";	NonMetalNameArray[0] = "arsenide";	NonMetalChargeArray[0] =3;
+NonMetalHTMLArray[1]="At";	NonMetalSymbolArray[1] = "At";	NonMetalNameArray[1] = "astitide";	NonMetalChargeArray[1] =1;
+NonMetalHTMLArray[2]="Br";	NonMetalSymbolArray[2] = "Br";	NonMetalNameArray[2] = "bromide";	NonMetalChargeArray[2] =1;
+NonMetalHTMLArray[3]="Cl";	NonMetalSymbolArray[3] = "Cl";	NonMetalNameArray[3] = "chloride";	NonMetalChargeArray[3] =1;
+NonMetalHTMLArray[4]="F";	NonMetalSymbolArray[4] = "F";	NonMetalNameArray[4] = "fluoride";	NonMetalChargeArray[4] =1;
+NonMetalHTMLArray[5]="I";	NonMetalSymbolArray[5] = "I";	NonMetalNameArray[5] = "iodide";	NonMetalChargeArray[5] =1;
+NonMetalHTMLArray[6]="N";	NonMetalSymbolArray[6] = "N";	NonMetalNameArray[6] = "nitride";	NonMetalChargeArray[6] =3;
+NonMetalHTMLArray[7]="O";	NonMetalSymbolArray[7] = "O";	NonMetalNameArray[7] = "oxide";	NonMetalChargeArray[7] =2;
+NonMetalHTMLArray[8]="P";	NonMetalSymbolArray[8] = "P";	NonMetalNameArray[8] = "phosphide";	NonMetalChargeArray[8] =3;
+NonMetalHTMLArray[9]="Se";	NonMetalSymbolArray[9] = "Se";	NonMetalNameArray[9] = "selenide";	NonMetalChargeArray[9] =2;
+NonMetalHTMLArray[10]="S";	NonMetalSymbolArray[10] = "S";	NonMetalNameArray[10] = "sulfide";	NonMetalChargeArray[10] =2;
+NonMetalHTMLArray[11]="Te";	NonMetalSymbolArray[11] = "Te";	NonMetalNameArray[11] = "telluride";	NonMetalChargeArray[11] =2;
+			
+NonMetalHTMLArray[12]="BO<sub>3</sub>";	NonMetalSymbolArray[12] = "BO3";	NonMetalNameArray[12] = "borate";	NonMetalChargeArray[12] =3;
+NonMetalHTMLArray[13]="C<sub>6</sub>H<sub>5</sub>COO";	NonMetalSymbolArray[13] = "C6H5COO";	NonMetalNameArray[13] = "benzoate";	NonMetalChargeArray[13] =1;
+NonMetalHTMLArray[14]="CH<sub>3</sub>COO";	NonMetalSymbolArray[14] = "CH3COO";	NonMetalNameArray[14] = "acetate";	NonMetalChargeArray[14] =1;
+NonMetalHTMLArray[15]="ClO";	NonMetalSymbolArray[15] = "ClO";	NonMetalNameArray[15] = "hypochlorite";	NonMetalChargeArray[15] =1;
+NonMetalHTMLArray[16]="ClO<sub>3</sub>";	NonMetalSymbolArray[16] = "ClO3";	NonMetalNameArray[16] = "chlorate";	NonMetalChargeArray[16] =1;
+NonMetalHTMLArray[17]="CN";	NonMetalSymbolArray[17] = "CN";	NonMetalNameArray[17] = "cyanide";	NonMetalChargeArray[17] =1;
+NonMetalHTMLArray[18]="CO<sub>3</sub>";	NonMetalSymbolArray[18] = "CO3";	NonMetalNameArray[18] = "carbonate";	NonMetalChargeArray[18] =2;
+NonMetalHTMLArray[19]="Cr<sub>2</sub>O<sub>7</sub>";	NonMetalSymbolArray[19] = "Cr2O7";	NonMetalNameArray[19] = "dichromate";	NonMetalChargeArray[19] =2;
+NonMetalHTMLArray[20]="CrO<sub>4</sub>";	NonMetalSymbolArray[20] = "CrO4";	NonMetalNameArray[20] = "chromate";	NonMetalChargeArray[20] =2;
+NonMetalHTMLArray[21]="H<sub>2</sub>PO<sub>4</sub>";	NonMetalSymbolArray[21] = "H2PO4";	NonMetalNameArray[21] = "dihydrogen phosphate";	NonMetalChargeArray[21] =1;
+NonMetalHTMLArray[22]="HCO<sub>3</sub>";	NonMetalSymbolArray[22] = "HCO3";	NonMetalNameArray[22] = "hydrogen carbonate";	NonMetalChargeArray[22] =1;
+NonMetalHTMLArray[23]="HPO<sub>4</sub>";	NonMetalSymbolArray[23] = "HPO4";	NonMetalNameArray[23] = "hydrogen phosphate";	NonMetalChargeArray[23] =2;
+NonMetalHTMLArray[24]="HS";	NonMetalSymbolArray[24] = "HS";	NonMetalNameArray[24] = "hydrogen sulfide";	NonMetalChargeArray[24] =1;
+NonMetalHTMLArray[25]="HSO<sub>3</sub>";	NonMetalSymbolArray[25] = "HSO3";	NonMetalNameArray[25] = "hydrogen sulfite";	NonMetalChargeArray[25] =1;
+NonMetalHTMLArray[26]="HSO<sub>4</sub>";	NonMetalSymbolArray[26] = "HSO4";	NonMetalNameArray[26] = "hydrogen sulfate";	NonMetalChargeArray[26] =1;
+NonMetalHTMLArray[27]="MNO<sub>4</sub>";	NonMetalSymbolArray[27] = "MNO4";	NonMetalNameArray[27] = "permanganate";	NonMetalChargeArray[27] =1;
+NonMetalHTMLArray[28]="NO<sub>2</sub>";	NonMetalSymbolArray[28] = "NO2";	NonMetalNameArray[28] = "nitrite";	NonMetalChargeArray[28] =1;
+NonMetalHTMLArray[29]="NO<sub>3</sub>";	NonMetalSymbolArray[29] = "NO3";	NonMetalNameArray[29] = "nitrate";	NonMetalChargeArray[29] =1;
+NonMetalHTMLArray[30]="OH";	NonMetalSymbolArray[30] = "OH";	NonMetalNameArray[30] = "hydroxide";	NonMetalChargeArray[30] =1;
+NonMetalHTMLArray[31]="PO<sub>4</sub>";	NonMetalSymbolArray[31] = "PO4";	NonMetalNameArray[31] = "phosphate";	NonMetalChargeArray[31] =3;
+NonMetalHTMLArray[32]="SiO<sub>3</sub>";	NonMetalSymbolArray[32] = "SiO3";	NonMetalNameArray[32] = "silicate";	NonMetalChargeArray[32] =2;
+NonMetalHTMLArray[33]="SO<sub>3</sub>";	NonMetalSymbolArray[33] = "SO3";	NonMetalNameArray[33] = "sulfite";	NonMetalChargeArray[33] =2;
+NonMetalHTMLArray[34]="SO<sub>4</sub>";	NonMetalSymbolArray[34] = "SO4";	NonMetalNameArray[34] = "sulfate";	NonMetalChargeArray[34] =2;
+
+
+	// Molecular Compound prefixes
+	var MolecularPrefixArray = [];
+	MolecularPrefixArray[1]="mono";
+	MolecularPrefixArray[2]="di";
+	MolecularPrefixArray[3]="tri";
+	MolecularPrefixArray[4]="tetra";
+	MolecularPrefixArray[5]="penta";
+	MolecularPrefixArray[6]="hexa";
+	MolecularPrefixArray[7]="hepta";
+	MolecularPrefixArray[8]="octa";
+	MolecularPrefixArray[9]="ennea";
+	MolecularPrefixArray[10]="deca";
+	
+	
+	
+	// track which metal ions to use for the questions
+	var MetalIonMax = 0;
+	var MetalIonMin = 0;
+	var MetalLength = MetalSymbolArray.length;
+	
+	// track which non-metal ions to use for the question
+	var NonMetalIonMax = 0;
+	var NonMetalIonMin = 0;
+	var NonMetalLength = NonMetalSymbolArray.length;
+	
+	// track the answer
+	var FirstIon = 0;
+	var SecondIon = 0;
+	var NameCompound = "";
+	var SymbolIon = "";
+	var CheckAnswer = [];
+	var Correct = false;
+	var Score = 0;
+	document.getElementById('Score').innerHTML = Score;
+	
+	// *********************************************************
+	// function to add an element to the drop list
+	function _checkAnswer(){
+		Correct = true;
+		document.getElementById('FeedBack').innerHTML = "";
+		// var x = document.getElementById("AnswerFormula");
+		console.log("Metal is: "+FirstIon+" CheckAnswer is: +"+CheckAnswer[1]+ " Selected is: "+document.getElementById("MetalIon").value );
+		// Check to see if the metal ion is correct
+		if (CheckAnswer[1] != document.getElementById("MetalIon").value){
+			// if multivalent, between 53 and 112 the odd and odd + 1 are the same symbol
+		
+			
+			
+			if (CheckAnswer[1] <51){
+				document.getElementById('FeedBack').innerHTML += "Check the metal ion symbol. <br>";
+				Correct = false;
+			} else { if (ChekcAnswer[1] === (document.getElementById("MetalIon").value +1)){
+						 document.getElementById('FeedBack').innerHTML += "Check the metal ion symbol. <br>";
+						Correct = false;
+					}
+				   }
+			}			
+
+		if (CheckAnswer[2] != document.getElementById("MetalIonNumber").value){
+			document.getElementById('FeedBack').innerHTML += "Check the number of metal ions. <br>";
+			Correct = false;
+		} 
+		if (CheckAnswer[3] != document.getElementById("NonMetalIon").value){
+			document.getElementById('FeedBack').innerHTML += "Check the non-metal ion symbol. <br>";
+			Correct = false;
+		}
+		if (CheckAnswer[4] != document.getElementById("NonMetalIonNumber").value){
+			document.getElementById('FeedBack').innerHTML += "Check the number of non-metal ions. <br>";
+			Correct = false;
+		}
+		if (Correct){
+			Score += 1;
+			document.getElementById('Score').innerHTML = Score;
+			document.getElementById('FeedBack').innerHTML += "You are correct!";
+			document.getElementById('FeedBack').style.color = 'green';
+			document.getElementById('FeedBack').style.fontSize= "2em";
+		} else {
+			document.getElementById('FeedBack').style.color = 'red';
+			document.getElementById('FeedBack').style.fontSize= "1em";
+		}
+	}
+	
+	// *********************************************************
+	// function to add an element to the drop list
+	function _displayFormula(){
+		var workingFormula;
+		// Get the values from the drop downs
+		// Metal Ion symbol
+		workingFormula = MetalSymbolArray[document.getElementById("MetalIon").value];
+		// metal ion subscript if larger than 1
+		if(document.getElementById("MetalIonNumber").value > 1){
+			workingFormula += "<sub>"+document.getElementById("MetalIonNumber").value +"</sub>";
+		}
+				
+		// if polyatomic > 11 and subscipt larger than 1
+		if ((document.getElementById("NonMetalIon").value > 11 ) && (document.getElementById("NonMetalIonNumber").value >1 ) ) {
+			workingFormula += "(" + NonMetalHTMLArray[document.getElementById("NonMetalIon").value] + ")";
+		} else { 
+			workingFormula += NonMetalHTMLArray[document.getElementById("NonMetalIon").value];
+		}
+		if (document.getElementById("NonMetalIonNumber").value > 1){
+			workingFormula += "<sub>"+document.getElementById("NonMetalIonNumber").value+"</sub>";
+		}
+		
+		// write the formula to the screen
+		document.getElementById("AnswerFormula").innerHTML = workingFormula;
+	}
+	
+	// *********************************************************
+	// Set the array parameters for the metals array and non-metals array
+	function _selectQuestions(){
+		Correct = false;
+		document.getElementById('FeedBack').innerHTML = "";
+		// console.log("SelectQuestions");
+		var QuestionBounds = parseInt(document.getElementById('QuestionType').value);
+		switch (QuestionBounds){
+			case 1: 
+				// Basic Ionic  Metals 0 up to 49; Non-metals 0 up to 11
+				MetalIonMin = 0;
+				MetalIonMax = 50;
+				NonMetalIonMin = 0;
+				NonMetalIonMax = 11;
+			break;
+			case 2:
+				// Polyatomics  Metals 0 up to 51  ; Non-metals 11 up to 34
+				MetalIonMin = 0;
+				MetalIonMax = 52;
+				NonMetalIonMin = 12;
+				NonMetalIonMax = 34;				
+			break;
+			case 3:
+				// Multivalent  Metals 52 up to 111 ; Non-metals 0 up to 34	
+				MetalIonMin = 53;
+				MetalIonMax = 112;
+				NonMetalIonMin = 0;
+				NonMetalIonMax = 11;	
+			break;
+			case 4: 
+				// All Ionics	Metals 0 up to 111; Non-metals 0 up to 34
+				MetalIonMin = 0;
+				MetalIonMax = 112;
+				NonMetalIonMin = 0;
+				NonMetalIonMax = 34;	
+			break;
+		}
+	
+		
+		// determine the question, select the first and second ions
+		FirstIon = Math.round(Math.random() *(MetalIonMax - MetalIonMin) + MetalIonMin);
+		CheckAnswer[1] = FirstIon;
+		CheckAnswer[4] = MetalChargeArray[FirstIon];
+		SecondIon = Math.round(Math.random() *(NonMetalIonMax-NonMetalIonMin) +NonMetalIonMin);
+		CheckAnswer[3] = SecondIon;
+		CheckAnswer[2] = NonMetalChargeArray[SecondIon];
+
+			
+			// Determine the name of the compound
+			NameIon = MetalNameArray[FirstIon] + " " + NonMetalNameArray[SecondIon];
+			
+console.log (NameIon+" First : " + FirstIon+", "+MetalChargeArray[FirstIon]+" Second: "+SecondIon+" , "+NonMetalChargeArray[SecondIon]);
+					
+			//***************************************************
+			// if the charges are equal to each other don't swap and drop
+			if (MetalChargeArray[FirstIon] === NonMetalChargeArray[SecondIon]) {
+				SymbolIon = MetalSymbolArray[FirstIon] + NonMetalHTMLArray[SecondIon];
+				CheckAnswer[2]=1;
+				CheckAnswer[4]=1;
+			} 
+			
+			//***************************************************
+			// if the charges are not equal to each other
+			if (!(MetalChargeArray[FirstIon] === NonMetalChargeArray[SecondIon])) {
+				// metal ion, if ammonium put in brackets
+				if (((FirstIon === 51) || (FirstIon === 52)) && (NonMetalChargeArray[SecondIon] > 1)) {
+					SymbolIon = "("+MetalSymbolArray[FirstIon]+")";
+				} else {
+					SymbolIon = MetalSymbolArray[FirstIon]
+				}
+				
+				// if the non metal has a charge <> 1
+				if (!(NonMetalChargeArray[SecondIon] === 1)){
+					SymbolIon += "<sub>" + NonMetalChargeArray[SecondIon] + "</sub>"
+				}	
+				
+				// if the metal has a charge <> 1
+				if (!(MetalChargeArray[FirstIon] === 1)){
+					// if polyatomic put in brackets
+					if (SecondIon > 12){
+						SymbolIon += "("+NonMetalHTMLArray[SecondIon]+")<sub>" + MetalChargeArray[FirstIon] + "</sub>";
+					} else {
+						SymbolIon += NonMetalHTMLArray[SecondIon]+"<sub>" + MetalChargeArray[FirstIon] + "</sub>";
+					}
+				} else {
+					SymbolIon += NonMetalHTMLArray[SecondIon];
+				}
+			} 
+			
+			// If both charges are multiples of 2 (even)
+			if ((MetalChargeArray[FirstIon] /  NonMetalChargeArray[SecondIon] === 2) &&(MetalChargeArray[FirstIon]>3)) {
+				CheckAnswer[2] = CheckAnswer[2] / 2;
+				CheckAnswer[4] = CheckAnswer[4] / 2;
+				// metal ion, if ammonium put in brackets
+				if ((FirstIon === 51) || (FirstIon === 52) && (NonMetalChargeArray[SecondIon]/2 > 1)) {
+					SymbolIon = "("+MetalSymbolArray[FirstIon]+")";
+				} else {
+					SymbolIon = MetalSymbolArray[FirstIon]
+				}
+				
+				// if the non metal has a charge <> 1
+				if (!(NonMetalChargeArray[SecondIon]/2 === 1)){
+					SymbolIon += "<sub>" + NonMetalChargeArray[SecondIon] + "</sub>"
+				}	
+				
+				// if the metal has a charge <> 1
+				if (!(MetalChargeArray[FirstIon]/2 === 1)){
+					// if polyatomic put in brackets
+					if (SecondIon > 12){
+						SymbolIon += "("+NonMetalHTMLArray[SecondIon]+")<sub>" + MetalChargeArray[FirstIon]/2 + "</sub>";
+					} else{
+						SymbolIon += NonMetalHTMLArray[SecondIon]+"<sub>" + MetalChargeArray[FirstIon]/2 + "</sub>";
+					}
+				} else {
+					SymbolIon += NonMetalHTMLArray[SecondIon];
+				}
+			}
+			
+			// If both charges are multiples of 3
+			if ((MetalChargeArray[FirstIon] /  NonMetalChargeArray[SecondIon] === 3)&&(MetalChargeArray[FirstIon]>4)) {
+				CheckAnswer[2] = CheckAnswer[2] / 3;
+				CheckAnswer[4] = CheckAnswer[4] / 3;
+				// metal ion, if ammonium put in brackets
+				if ((FirstIon === 73)&& (NonMetalChargeArray[SecondIon]/3 > 1)) {
+					SymbolIon = "("+MetalSymbolArray[FirstIon]+")";
+				} else {
+					SymbolIon = MetalSymbolArray[FirstIon]
+				}
+				
+				// if the non metal has a charge <> 1
+				if (!(NonMetalChargeArray[SecondIon]/3 === 1)){
+					SymbolIon += "<sub>" + NonMetalChargeArray[SecondIon]/3 + "</sub>"
+				}	
+				
+				// if the metal has a charge <> 1
+				if (!(MetalChargeArray[FirstIon]/3 === 1)){
+					// if polyatomic put in brackets
+					if (SecondIon > 12){
+						SymbolIon += "("+NonMetalHTMLArray[SecondIon]+")<sub>" + MetalChargeArray[FirstIon]/3 + "</sub>";
+					} else{
+						SymbolIon += NonMetalHTMLArray[SecondIon]+"<sub>" + MetalChargeArray[FirstIon]/3 + "</sub>";
+					}
+				} else {
+					SymbolIon += NonMetalHTMLArray[SecondIon];
+				}
+			}
+		console.log("SymbolIon: " + SymbolIon);
+		document.getElementById("Question").innerHTML = SymbolIon;
+	}
+	
+
+	//  Starting function ***************************************************************
+	window.onload = function() {
+		_selectQuestions();
+	}
+
+			
+
+		
+		
+		function _CheckAnswer(){
+			if (NameIon === Text1.value){
+				document.getElementById("FeedBack").innerHTML = "You are correct!";
+				document.getElementById("FeedBack").style.color = "green";
+				document.getElementById("FeedBack").style.fontSize = "1.5em";
+				Score += 1;
+				document.getElementById("Score").innerHTML = Score;
+			} else {
+				document.getElementById("FeedBack").innerHTML = "You are incorrect!";
+				document.getElementById("FeedBack").style.color = "red";
+				document.getElementById("FeedBack").style.fontSize = "1em";
+			}
+			
+		}
+		
+	</script>
+</body>
+</html>
