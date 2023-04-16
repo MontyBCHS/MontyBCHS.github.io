@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Refraction</title>
+	<style>
+		#LaserPicture{
+			position:relative;
+			width: 80px;
+			height: 20px;
+			top: 20px;
+			left: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Click and drag the laser to see the light refract in the water.</h2>
+	Top Medium
+	<select id="Media1" onchange="_changeNTop()">
+		<option value="1">vacuum</option>
+		<option value="1.0003" selected>air</option>
+		<option value="1.31">ice</option>
+		<option value="1.33">water</option>
+		<option value="1.37">ethanol</option>
+		<option value="1.47">glycerin</option>
+		<option value="1.47">quartz glass</option>
+		<option value="1.52">crown glass</option>
+		<option value="1.52">Lucite (plexiglass)</option>
+		<option value="1.54">ruby</option>
+		<option value="1.92">zircon</option>
+		<option value="2.42">diamond</option>
+	</select>
+	Bottom Medium
+	<select id="Media2" onchange="_changeNBottom()">
+		<option value="1">vacuum</option>
+		<option value="1.0003">air</option>
+		<option value="1.31">ice</option>
+		<option value="1.33" selected>water</option>
+		<option value="1.37">ethanol</option>
+		<option value="1.47">glycerin</option>
+		<option value="1.47">quartz glass</option>
+		<option value="1.52">crown glass</option>
+		<option value="1.52">Lucite (plexiglass)</option>
+		<option value="1.54">ruby</option>
+		<option value="1.92">zircon</option>
+		<option value="2.42">diamond</option>
+	</select>
+	  <br>
+	<canvas id="canvas" width="600" height="600" style="border: 1px solid black"></canvas>
+
+	
+
+
+<script>
+			
+		// Variables  ***************************************************************
+		var canvas, context;
+		canvas = document.getElementById("canvas");
+		context = canvas.getContext("2d");
+
+		//Background  ***************************************************************
+		var ProtractorImage = new Image();
+		ProtractorImage.src = "Refraction-Protractor-Transparent.png";
+	
+		//Laser Picture  ************************************************************
+		var LaserImage = new Image();
+		LaserImage.src = "Laser.png";
+		//Laser starting point
+		var Laser_X = 490;
+		var Laser_Y = 180;
+		var Laser_Angle = 0;
+		
+		var isDraggable = false;
+
+		// n values for the two substances n = 1 for air and n=1.33 for water
+		var topN = 1;
+		var bottomN = 1.33;
+	
+		//  Starting function ***************************************************************
+		window.onload = function() {
+			_MouseEvents();
+			setInterval(function() {
+    				// _ResetCanvas();
+    				_drawImages();
+  					}, 1000/30);
+		}
+	
+	
+		// Change the top index of refraction, n
+		function _changeNTop() {
+			topN = parseFloat(document.getElementById("Media1").value);
+			console.log("N Top = "+topN);
+		}
+	
+		// Change the bottom index of refraction, n
+		function _changeNBottom() {
+			bottomN = parseFloat(document.getElementById("Media2").value);
+			console.log("N Bottom = "+bottomN);
+		}
+	
+		function _drawImages() {
+			// Draw background white rectangle and bottom blue rectangle
+			context.fillStyle = "ghostwhite";
+			context.fillRect(0,0, canvas.width, canvas.height/2);
+			context.fillStyle = "lightBlue";
+			context.fillRect(0,canvas.height/2,canvas.width, canvas.height);
+			
+			// Draw protractor
+			context.drawImage(ProtractorImage, 80, 80);
+
+			// see if the mouse is below the air water boundary, if it is stop drag and move laser up
+			if (Laser_Y >= canvas.height/2){
+				isDraggable = false;
+				if (Laser_Y >= canvas.height/2){
+					Laser_Y = canvas.height/2-10;
+				}
+			}
+
+		
+			// Draw Incident laser beam
+			_drawLaser();
+			// Draw Reflected Laser beam
+			_drawReflected();
+			
+			// Draw laser
+			_rotateImage();
+			// Draw the refracted laser beam in the water
+			_drawRefracted();
+
+
+		}
+		
+		// draw the incident laser light beam
+		function _drawLaser(){
+			// Draw from laser to centre
+			context.beginPath();
+			context.lineWidth = 3;
+			context.strokeStyle = "red";
+			context.moveTo(Laser_X, Laser_Y);
+			context.lineTo(canvas.width/2, canvas.height/2);
+			context.stroke(); 
+		}
+
+		// draw the reflected beam in the air
+		function _drawReflected(){
+			// determine the final x coordinate, y coordinate is top of page = 0
+			let final_X = 0;
+			final_X = canvas.width/2 + Math.tan(Math.PI/2-Laser_Angle)*canvas.height/2;
+			
+			context.beginPath();
+			context.lineWidth = 1;
+			context.strokeStyle = "red";
+			context.moveTo(final_X, 0);
+			context.lineTo(canvas.width/2, canvas.height/2);
+			context.stroke(); 
+		}
+	
+		// draw the refracted beam in the water
+		function _drawRefracted(){
+			let refractedAngle = 0;
+			
+			//****************************************
+			//*******************************************
+			// not calculating or drawing the right angle
+			refractedAngle = Math.asin(topN * Math.sin(Math.PI/2-Laser_Angle)/bottomN);
+			
+			console.log('Anlge: '+ (Math.PI/2-Laser_Angle)*180/Math.PI);
+			console.log('Incident:'+Laser_Angle*180/Math.PI+' refracted angle: ',refractedAngle*180/Math.PI);
+			
+			context.beginPath();
+			context.lineWidth = 3;
+			context.strokeStyle = "red";
+			context.moveTo(canvas.width/2, canvas.height/2);
+			context.lineTo(canvas.width/2+canvas.height/2*Math.tan(refractedAngle), canvas.height);
+			context.stroke(); 
+			
+		}
+		
+	
+				//  All of the Mouseevents  ***********************************************	
+		function _MouseEvents() {
+
+			canvas.onmousedown = function(e) {
+				
+				var mouseX = e.pageX - this.offsetLeft;
+				var mouseY = e.pageY - this.offsetTop;
+
+				console.log("mouseX: "+mouseX+" mouseY: "+mouseY);
+				console.log("Laser X: "+(Laser_X - LaserImage.width/2)+" , "+(Laser_X + LaserImage.width/2)+" , "+(Laser_Y - LaserImage.height/2)+" , "+(Laser_Y+LaserImage.height/2));
+				
+				// see if the mouse is on the laser
+				if (mouseX >= (Laser_X - LaserImage.width/2) && mouseX <= (Laser_X + LaserImage.width/2) && mouseY >= (Laser_Y - LaserImage.height/2) && mouseY <= (Laser_Y+LaserImage.height/2)) {
+						
+						isDraggable = true;
+						console.log("Inside Inside ", isDraggable);	
+			
+				}
+			};  // end onmousedown
+
+			// Drag in both axis
+			canvas.onmousemove = function(e) {
+				if (isDraggable) {
+					Laser_X = e.pageX - this.offsetLeft;
+      				Laser_Y = e.pageY - this.offsetTop;
+    			}
+			};
+
+			// Stop when the mouse is released
+			canvas.onmouseup = function(e) {
+				isDraggable = false;
+				console.log('mouse up');
+			};
+
+			// Stop when the mouse hits the edge of the canvas
+			canvas.onmouseout = function(e) {
+				isDraggable = false;
+			};
+		}
+	
+	
+	
+		// function to rotate the laser and point it at the centre ************************************************
+		function _rotateImage() {
+			// calculate the angle in radians
+			Laser_Angle = Math.atan((Laser_X-canvas.width/2)/(Laser_Y-canvas.height/2));
+			
+			
+			console.log('Anlge: '+ Laser_Angle*180/Math.PI);
+			Laser_Angle = Math.PI/2-Laser_Angle;
+			// Rotate the laser to the middle
+			context.save();
+			context.translate(Laser_X , Laser_Y );
+			// context.translate(Laser_X + LaserImage.width/2, Laser_Y + LaserImage.height/2);
+			context.rotate(Laser_Angle);
+			context.drawImage(LaserImage,-40,-10);
+			// context.rotate(Math.Pi/3);
+			context.restore();
+		}
+	
+	</script>
+</body>
+</html>
