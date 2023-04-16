@@ -1,0 +1,778 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P30 U6 Ch10</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 30</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="P30U5Ch9.html">Chapter 9 Momentum</a>
+			<a class="active" href="P30U6Ch10.html">Chapter 10 Electrostatics</a>
+			<a href="P30U6Ch11.html">Chapter 11 Electric Fields</a>
+			<a href="P30U6Ch12.html">Chapter 12 Magnetic Fields</a>
+			<a href="P30U7Ch13.html">Chapter 13 Lights Waves</a>
+			<a href="P30U7Ch14.html">Chapter 14 Light Duality</a>
+			<a href="P30U8Ch15.html">Chapter 15 Atomic</a>
+			<a href="P30U8Ch16.html">Chapter 16 Radiation</a>
+			<a href="P30U8Ch17.html">Chapter 17 Quarks</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P30bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 6: Forces and Fields</h2></div>
+		<h2>Unit Themes and Emphases</h2>
+		<ul>
+			<li>Energy and Matter </li>
+			<li>Nature of Science </li>
+			<li>Scientific Inquiry </li>
+		</ul>
+		<h2>Focussing Questions</h2>
+		<ul>
+			<li>How was the value of the elementary charge determined? </li>
+			<li>What is the relationship between electricity and magnetism? </li>
+			<li>How does magnetism assist in the understanding of fundamental particles? </li>
+			<li>How has this understanding revolutionized the modern way of life? </li>
+		</ul>	
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  		<h2>Unit B: Forces and Fields </h2>
+	
+		<strong>Themes: </strong>Energy and Matter <br>
+		<strong>Overview: </strong>In this unit, students investigate electric and magnetic forces and fields and their applications in technological devices. <br>
+		This unit builds on: 
+		<ul>
+			<li>Science 9, Unit D: Electrical Principles and Technologies </li>
+			<li>Physics 20, Unit A: Kinematics; Unit B: Dynamics; Unit C: Circular Motion, Work and Energy; and Unit D: Oscillatory Motion and Mechanical Waves </li>
+		</ul>
+		  <br>
+		This unit prepares students for further study of electromagnetic phenomena in subsequent units and for post-secondary studies in physics. Unit B will require approximately 30% of the time allotted for Physics 30. <br>
+		  <br>
+		<strong>Focusing Questions: </strong>
+		<ul>
+			<li>How was the value of the elementary charge determined? </li>
+			<li>What is the relationship between electricity and magnetism? </li>
+			<li>How does magnetism assist in the understanding of fundamental particles? </li>
+			<li>How has this understanding revolutionized the modern way of life? </li>
+		</ul>
+		<strong>General Outcomes: </strong>There are three major outcomes in this unit. <br>
+		Students will:<br>
+		<ol>
+			<li>explain the behaviour of electric charges, using the laws that govern electrical interactions </li>
+			<li>describe electrical phenomena, using the electric field theory </li>
+			<li>explain how the properties of electric and magnetic fields are applied in numerous devices. </li>
+		</ol>	
+		<strong>Key Concepts: </strong>The following concepts are developed in this unit and may also be addressed in other units or in other courses. The intended level and scope of treatment is defined by the learning outcomes.
+		<ul>
+			<li>electric charge </li>
+			<li>conservation of charge </li>
+			<li>Coulomb’s law </li>
+			<li>vector fields </li>
+			<li>electric field </li>
+			<li>magnetic field </li>
+			<li>electric potential difference </li>
+			<li>interaction of charges with electric and magnetic fields </li>
+			<li>charge quantization—Millikan’s experiment </li>
+			<li>electromagnetic induction </li>
+		</ul>
+			<strong>General Outcome  </strong>
+		<h2>B1 Students will explain the behaviour of electric charges, using the laws that govern electrical interactions. </h2>
+
+		<strong>Specific Outcomes for Knowledge</strong> <br>
+		Students will:
+		<p class="know-hanging">30–B1.1k explain electrical interactions in terms of the law of conservation of charge </p>
+		<p class="know-hanging">30–B1.2k explain electrical interactions in terms of the repulsion and attraction of charges </p>
+		<p class="know-hanging">30–B1.3k compare the methods of transferring charge (conduction and induction) </p>
+		<p class="know-hanging">30–B1.4k explain, qualitatively, the distribution of charge on the surfaces of conductors and insulators </p>
+		<p class="know-hanging">30–B1.5k explain, qualitatively, the principles pertinent to Coulomb’s torsion balance experiment </p>
+		<p class="know-hanging">30–B1.6k apply Coulomb’s law, quantitatively, to analyze the interaction of two point charges </p>
+		<p class="know-hanging">30–B1.7k determine, quantitatively, the magnitude and direction of the electric force on a point charge due to two or more other point charges in a plane </p>
+		<p class="know-hanging">30–B1.8k compare, qualitatively and quantitatively, the inverse square relationship as it is expressed by Coulomb’s law and by Newton’s universal law of gravitation. </p>
+		  <br>
+		<strong>Specific Outcomes for Science, Technology and Society (STS) (Nature of Science Emphasis) </strong> <br>
+		Students will: <br>
+		<p class="know-hanging">30–B1.1sts explain that concepts, models and theories are often used in interpreting and explaining observations and in predicting future observations (NS6a) </p>
+		<div class="indent"> 
+			<ul>
+				<li><em>explain that the electric model of matter is fundamental to the interpretation of electrical phenomena </em> </li>
+				<li><em>explain that charge separation and transfer from one object to another are fundamental electrical processes </em> </li>
+			</ul>
+		</div>
+		<p class="know-hanging">30–B1.2sts explain that scientific knowledge may lead to the development of new technologies, and new technologies may lead to or facilitate scientific discovery (ST4) [ICT F2–4.4] </p>
+		<div class="indent"> 
+			<ul>
+				<li><em>compare and contrast the experimental designs used by Coulomb and Cavendish, in terms of the role that technology plays in advancing science. </em> </li>
+			</ul>
+		</div>
+		<strong>Specific Outcomes for Skills (Nature of Science Emphasis) </strong> <br>
+		Initiating and Planning <br>
+		Students will: 
+		<p class="know-hanging">30–B1.1s formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues </p>
+		<div class="indent"> 
+			<ul>
+				<li><em>design an experiment to examine the relationships among magnitude of charge, electric force and distance between point charges (IP–NS2) </em> </li>
+				<li><em> predict the results of an activity that demonstrates charge separation and transfer (IP–NS3) [ICT C6–4.1]. </em> </li>
+			</ul>
+		</div>
+		Performing and Recording <br>
+		Students will:
+		<p class="know-hanging">30–B1.2s conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information</p>
+		<div class="indent"> 
+			<ul>
+				<li>perform an activity to demonstrate methods of charge separation and transfer (PR–NS3) </li>
+				<li>perform an experiment to demonstrate the relationships among magnitude of charge, electric force and distance between point charges (PR–NS2, PR–NS3) [ICT C6–4.4]. </li>
+			</ul>
+		</div>
+		Analyzing and Interpreting <br>
+		Students will: <br>
+		<p class="know-hanging">30–B1.3s analyze data and apply mathematical and conceptual models to develop and assess possible solutions </p>
+		<div class="indent">
+			<ul>
+				<li>infer, from empirical evidence, the mathematical relationship among charge, force and distance between point charges (AI–NS2) [ICT C7–4.2] </li>
+				<li>use free-body diagrams to describe the electrostatic forces acting on a charge (AI–NS1) </li>
+				<li>use graphical techniques to analyze data; <em>e.g., curve straightening (manipulating variables to obtain a straight-line graph) </em>(AI–NS2) [ICT C6–4.3, C7–4.2]. </li>
+			</ul>
+		</div>
+		Communication and Teamwork <br>
+		Students will: 
+		<p class="know-hanging">30–B1.4s work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results </p>
+		<div class="indent">
+			<ul>
+				<li>select and use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate findings and conclusions (CT–NS2). </li>
+			</ul>
+		</div>
+		<strong>Note: </strong>Some of the outcomes are supported by examples. The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed.	<br>
+		  <br>
+
+		<strong>General Outcome </strong>
+		<h2>B2 Students will describe electrical phenomena, using the electric field theory. </h2>
+
+
+		<strong>Specific Outcomes for Knowledge</strong>
+		Students will:
+		<p class="know-hanging">30–B2.1k define vector fields </p>
+		<p class="know-hanging">30–B2.2k compare forces and fields </p>
+		<p class="know-hanging">30–B2.3k compare, qualitatively, gravitational potential energy and electric potential energy </p>
+		<p class="know-hanging">30–B2.4k define electric potential difference as a change in electric potential energy per unit of charge </p>
+		<p class="know-hanging">30–B2.5k calculate the electric potential difference between two points in a uniform electric field </p>
+		<p class="know-hanging">30–B2.6k explain, quantitatively, electric fields in terms of intensity (strength) and direction, relative to the source of the field and to the effect on an electric charge </p>
+		<p class="know-hanging">30–B2.7k define electric current as the amount of charge passing a reference point per unit of time </p>
+		<p class="know-hanging">30–B2.8k describe, quantitatively, the motion of an electric charge in a uniform electric field </p>
+		<p class="know-hanging">30–B2.9k explain, quantitatively, electrical interactions using the law of conservation of energy </p>
+		<p class="know-hanging">30–B2.10k explain Millikan’s oil-drop experiment and its significance relative to charge quantization. </p>
+		  <br>
+		<strong>Specific Outcomes for Science, Technology and Society (STS) (Science and Technology Emphasis) </strong>
+		Students will: <br>
+		<p class="know-hanging">30–B2.1sts explain that the goal of technology is to provide solutions to practical problems (ST1) [ICT F2–4.4] </p>
+		<div class="indent">
+			<ul>
+				<li><em>assess how the principles of electrostatics are used to solve problems in industry and technology and to improve upon quality of life; e.g., photocopiers, electrostatic air cleaners, precipitators, antistatic clothing products, lightning rods </em> </li>
+			</ul>
+		</div>
+		<p class="know-hanging">30–B2.2sts explain that scientific knowledge may lead to the development of new technologies, and new technologies may lead to or facilitate scientific discovery (ST4) [ICT F2–4.4] </p>
+		<div class="indent">
+			<ul>
+				<li><em>explain, qualitatively, how the problem of protecting sensitive components in a computer from electric fields is solved. </em> </li>
+			</ul>
+		</div>
+		  <br>
+			<strong>Specific Outcomes for Skills (Science and Technology Emphasis) </strong>
+			Initiating and Planning <br>
+		Students will: 
+		<p class="know-hanging">30–B2.1s formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues </p>
+		<div class="indent">
+			<ul>
+				<li><em>evaluate and select appropriate procedures and instruments for collecting data and information and for determining and plotting electric fields (IP–ST3) [ICT C6–4.5]. </em> </li>
+			</ul>
+		</div>
+			Performing and Recording <br>
+		Students will: <br>
+		<p class="know-hanging">30–B2.2s conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information </p>
+		<div class="indent">
+			<ul>
+				<li>plot electric fields, using field lines, for fields induced by discrete point charges, combinations of discrete point charges (similarly and oppositely charged) and charged parallel plates (PR–NS2). </li>
+			</ul>
+		</div>
+		Analyzing and Interpreting <br>
+		Students will: <br>
+		<p class="know-hanging">30–B2.3s analyze data and apply mathematical and conceptual models to develop and assess possible solutions </p>
+		<div class="indent">
+			<ul>
+				<li>analyze, quantitatively, the motion of an electric charge following a straight or curved path in a uniform electric field, using Newton’s second law, vector addition and conservation of energy (AI–NS3) </li>
+				<li>use accepted scientific convention and express energy in terms of electron volts, when appropriate (AI–NS1) </li>
+				<li>use free-body diagrams to describe the forces acting on a charge in an electric field (AI–NS1). </li>
+			</ul>
+		</div>
+		Communication and Teamwork <br>
+		Students will: 
+		<p class="know-hanging">30–B2.4s work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results </p>
+		<div class="indent">
+			<ul>
+				<li>select and use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate findings and conclusions (CT–ST2). </li>
+			</ul>
+		</div>
+		<strong>Note: </strong>Some of the outcomes are supported by examples. The examples are written in <em>italics</em> and do not form part of the required program but are provided as an illustration of how the outcomes might be developed.	<br>
+		  <br>
+
+		<strong>General Outcome </strong>
+		<h2>B3 Students will explain how the properties of electric and magnetic fields are applied in numerous devices. </h2>
+
+		<strong>Specific Outcomes for Knowledge </strong> <br>
+		Students will:
+			<p class="know-hanging">30–B3.1k describe magnetic interactions in terms of forces and fields </p>
+		<p class="know-hanging">30–B3.2k compare gravitational, electric and magnetic fields (caused by permanent magnets and moving charges) in terms of their sources and directions </p>
+		<p class="know-hanging">30–B3.3k describe how the discoveries of Oersted and Faraday form the foundation of the theory relating electricity to magnetism </p>
+		<p class="know-hanging">30–B3.4k describe, qualitatively, a moving charge as the source of a magnetic field and predict the orientation of the magnetic field from the direction of motion </p>
+		<p class="know-hanging">30–B3.5k explain, qualitatively and quantitatively, how a uniform magnetic field affects a moving electric charge, using the relationships among charge, motion, field direction and strength, when motion and field directions are mutually perpendicular </p>
+		<p class="know-hanging">30–B3.6k explain, quantitatively, how uniform magnetic and electric fields affect a moving electric charge, using the relationships among charge, motion, field direction and strength, when motion and field directions are mutually perpendicular </p>
+		<p class="know-hanging">30–B3.7k describe and explain, qualitatively, the interaction between a magnetic field and a moving charge and between a magnetic field and a current-carrying conductor </p>
+		<p class="know-hanging">30–B3.8k explain, quantitatively, the effect of an external magnetic field on a current-carrying conductor </p>
+		<p class="know-hanging">30–B3.9k describe, qualitatively, the effects of moving a conductor in an external magnetic field, in terms of moving charges in a magnetic field. </p>
+		  <br>	
+		<strong>Specific Outcomes for Science, Technology and Society (STS) (Nature of Science Emphasis) </strong> <br>
+		Students will: 
+		<p class="know-hanging">30–B3.1sts explain that concepts, models and theories are often used in interpreting and explaining observations and in predicting future observations (NS6a) </p>
+		<div class="indent">
+			<ul>
+				<li><em>discuss, qualitatively, Lenz’s law in terms of conservation of energy, giving examples of situations in which Lenz’s law applies </em> </li>
+				<li><em>investigate the mechanism that causes atmospheric auroras </em></li>
+			</ul>
+		</div>
+		<p class="know-hanging">30–B3.2sts explain that the goal of technology is to provide solutions to practical problems and that the appropriateness, risks and benefits of technologies need to be assessed for each potential application from a variety of perspectives, including sustainability (ST1, ST7) [ICT F2–4.2, F3–4.1] </p>
+		<div class="indent">
+			<ul>
+				<li><em>evaluate an electromagnetic technology, such as magnetic resonance imaging (MRI), positron emission tomography (PET), transformers, alternating current (AC) and direct current (DC) motors, AC and DC generators, speakers, telephones </em> </li>
+				<li><em>investigate the effects of electricity and magnetism on living organisms, in terms of the limitations of scientific knowledge and technology and in terms of quality of life </em> </li>
+			</ul>
+		</div>
+		<p class="know-hanging">30–B3.3sts explain that scientific knowledge may lead to the development of new technologies, and new technologies may lead to or facilitate scientific discovery (ST4) [ICT F2–4.4] </p>
+		<div class="indent"> 
+			<ul>
+				<li><em>describe how technological developments were influenced by the discovery of superconductivity </em> </li>
+				<li><em>investigate how nanotubes can be used to construct low-resistance conductors. </em> </li>
+			</ul>
+		</div>
+		<strong>Note:</strong> Some of the outcomes are supported by examples. The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed. <br> 
+		  <br>
+		<strong>Specific Outcomes for Skills (Nature of Science Emphasis) </strong> <br>
+		Initiating and Planning <br>
+		Students will: 
+		<p class="know-hanging">30–B3.1s formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues </p>
+		<div class="indent">
+			<ul>
+				<li>design an experiment to demonstrate the effect of a uniform magnetic field on a current-carrying conductor (IP–NS2) </li>
+				<li>design an experiment to demonstrate the effect of a uniform magnetic field on a moving conductor (IP–NS2) </li>
+				<li><em>design an experiment to demonstrate the effect of a uniform magnetic field on a moving electric charge (IP–NS2). </em> </li>
+			</ul>
+		</div>
+		Performing and Recording <br>
+		Students will: 
+		<p class="know-hanging">30–B3.2s conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information </p>
+		<div class="indent">
+			<ul>
+				<li>perform an experiment to demonstrate the effect of a uniform magnetic field on a current-carrying conductor, using the appropriate apparatus effectively and safely (PR–NS2, PR–NS3) [ICT F5–4.2] </li>
+				<li>perform an experiment to demonstrate the effect of a uniform magnetic field on a moving conductor, using the appropriate apparatus effectively and safely (PR–NS2, PR–NS3) [ICT F5–4.2] </li>
+				<li>predict, using appropriate hand rules, the relative directions of motion, force and field in electromagnetic interactions (PR–NS2). </li>
+			</ul>
+		</div>
+		Analyzing and Interpreting <br>
+		Students will: <br>
+		<p class="know-hanging">30–B3.3s analyze data and apply mathematical and conceptual models to develop and assess possible solutions </p>
+		<div class="indent">
+			<ul>
+				<li>state a conclusion, based on experimental evidence that describes the interactions of a uniform magnetic field and a moving or current-carrying conductor (AI–NS6) </li>
+				<li>analyze, quantitatively, the motion of an electric charge following a straight or curved path in a uniform magnetic field, using Newton’s second law and vector addition (AI–NS3) [ICT C7–4.2] </li>
+				<li>analyze, quantitatively, the motion of an electric charge following a straight path in uniform and mutually perpendicular electric and magnetic fields, using Newton’s second law and vector addition (AI–NS3) [ICT C7–4.2] </li>
+				<li>use free-body diagrams to describe forces acting on an electric charge in electric and magnetic fields (AI–NS1). </li>
+			</ul>
+		</div>
+		Communication and Teamwork <br>
+		Students will:
+		<p class="know-hanging">30–B3.4s work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results </p>
+		<div class="indent">
+			<ul>
+				<li>select and use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate findings and conclusions (CT–NS2). </li>
+			</ul>
+		</div>
+		<strong>Note: </strong>Some of the outcomes are supported by examples. The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed.
+
+		<strong>Links to Mathematics </strong> <br>
+		The following mathematics outcomes are related to the content of Unit B but are not considered prerequisites. <br>
+		  <br>
+		<table width="90%" border="1">
+		  <tbody>
+			<tr>
+			  <th scope="col">&nbsp;Concept</th>
+			  <th scope="col">&nbsp;Mathematics Course, Strand and Specific Outcome</th>
+			</tr>
+			<tr>
+			  <td>&nbsp;Data Collection and Analysis</td>
+			  <td>&nbsp;Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;Measurement and Unit Conversions</td>
+			  <td>&nbsp;Mathematics 10C, Measurement, Specific Outcomes 1 and 2; <br>
+				&nbsp;Mathematics 10-3, Measurement, Specific Outcome 1; <br>
+				&nbsp;Mathematics 20-3, Algebra, Specific Outcome 3</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;Trigonometry</td>
+			  <td>&nbsp;Mathematics 10C, Measurement, Specific Outcome 4; <br>  
+				&nbsp;Mathematics 10-3, Geometry, Specific Outcomes 2 and 4</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;Rate and Proportions</td>
+			  <td>&nbsp;Mathematics 20-2, Measurement, Specific Outcome 1</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;Graph Analysis</td>
+			  <td>&nbsp;Mathematics10C, Relations and Functions, Specific Outcomes 1, 4 and 7; <br>
+				&nbsp;Mathematics 20-3, Statistics, Specific Outcome 1 <br>
+				&nbsp;Mathematics 30-1, Relations and Functions, Specific Outcome 14 </td>
+			</tr>
+			<tr>
+			  <td>&nbsp;Solving Equations</td>
+			  <td>&nbsp;Grade 9 Mathematics, Number, Specific Outcome 6 <br>
+				&nbsp;Mathematics 20-1, Algebra and Number, Specific Outcome 6; <br>
+				&nbsp;Mathematics 30-2, Relations and Functions, Specific Outcome 3 </td>
+			</tr>
+			<tr>
+			  <td>&nbsp;Scale Diagrams</td>
+			  <td>&nbsp;Mathematics 20-2, Measurement, Specific Outcome 2; <br>
+				&nbsp;Mathematics 20-3, Geometry, Specific Outcome 2</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;Slope</td>
+			  <td>&nbsp;Mathematics10C, Relations and Functions, Specific Outcomes 3 and 5; <br>
+				&nbsp;Mathematics 20-3, Algebra, Specific Outcome 2</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;Powers</td>
+			  <td>&nbsp;Mathematics10C, Algebra and Number, Specific Outcome 3</td>
+			</tr>
+
+		  </tbody>
+		</table>
+		<br>
+
+		<strong>Note: </strong>The use of systems of equations, the quadratic formula and trigonometric ratios for angles greater than 90º is not required in this unit.	
+	<br>
+	<br>
+		</div>
+	</div>
+
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P30bg"><h1 class="P30bg secTitle">Chapter 10: Physics laws can explain the behaviour of electric charges</h1> </div>     
+	<div class="P30c">
+		<h2>Key Concepts</h2>
+		<ul>
+			<li>electric charge </li>
+			<li> conservation of charge </li>
+			<li>Coulomb’s law </li>
+		</ul>
+		<h2>Knowledge</h2>
+		<ul>
+			<li>explain electrical interactions using the law of conservation of charge </li>
+			<li>explain electrical interactions in terms of the repulsion and attraction of charges </li>
+			<li>compare conduction and induction </li>
+			<li>explain the distribution of charge on the surfaces of conductors and insulators </li>
+			<li>use Coulomb’s law to calculate the electric force on a point charge due to a second point charge </li>
+			<li>explain the principles of Coulomb’s torsion balance experiment </li>
+			<li>determine the magnitude and direction of the electric force on a point charge due to one or more stationary point charges in a plane </li>
+			<li>compare, qualitatively and quantitatively, the inverse square relationship as it is expressed by Coulomb’s law and by Newton’s universal law of gravitation </li>
+		</ul>
+		<h2>Science, Technology, and Society</h2>
+		<ul>
+			<li>explain that concepts, models, and theories are often used in predicting, interpreting, and
+			explaining observations </li>
+			<li>explain that scientific knowledge may lead to new technologies and new technologies may lead to scientific discoveries </li>
+		</ul>
+		<a href="https://www.flippity.net/fc.asp?k=1fWSpcYljoy66dwtiK3WKxN9jqOEIDRUgMDm5tQwZlkc" style="align:center;"><h2>Flippity Review Questions for Chapter 10</h2> <img src="P30Ch10/QRP30Ch10ReviewQuestions.png" width="200" height="200" alt="Flippity Review Questions QR Code"/></a>
+	</div>
+
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section101" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png"  alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section102"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P30bg secTitle">10.1  Electrical Interactions</h2>		
+		<strong>Review</strong> <br>
+
+		All matter is composed of microscopic atoms. <br>
+		Electric charges are carried in the atom by electrons and protons. <br>
+		Protons have a  positive charge (1+). <br>
+		Electrons have a negative charge (1-). <br>
+		Neutrons have neutral (zero) charge (0). <br>
+
+		  <br>		
+		Like charges repel  <br>
+		<img src="P30Ch10/Repulsion-positives.png" width="250" height="53" alt="Positive charges repelling"/> &nbsp;or&nbsp; <img src="P30Ch10/Repulsion-negatives.png" width="250" height="53" alt="Negative charges repelling"/> <br>
+		Opposite charges attract <br>
+		<img src="P30Ch10/Attraction-Opposites.png" width="250" height="53" alt="Positive and Negative attracting"/> <br>
+		  <br>
+		<span class="def">Insulators </span>– a material that does not allow electrons to flow. 
+		<span class="ex">Eg.</span> glass, plastic, wood, dry skin
+		  <br>
+
+		<span class="def">Conductor </span>– a material that allows electrons to flow. 
+		<span class="ex">Eg. </span>Metals, salt water, acids, bases <br>
+		  <br>
+		<strong>The Law of Conservation of Charge </strong> <br>
+		The net charge of an isolated system is conserved. <br>
+		Charges cannot be created nor destroyed.  They can only be transferred from one object to another. <br>
+		  <br>
+		<strong>Charging by Friction </strong> <br>
+		Some atoms have a stronger hold on their electrons than others. <br>
+		When two objects rub the one with the stronger hold on their electrons will strip electrons from the other object. <br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/sN1c7UY7GME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		  <br>			
+		<strong>Charging by Conduction / Contact </strong> <br>
+		<span class="def">Conduction </span>– process of charging an object through the direct transfer of electrons when a charged object touches a neutral object. <br>
+		  <iframe width="560" height="315" src="https://www.youtube.com/embed/tMK0kO_40OM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+		<strong>Charging by Induction </strong> <br>
+		<span class="def">Induction </span>- movement of charge caused by an external charged object.
+		  <br>
+		  <br>
+	<div style="background-color: #555;" class="main" id="section102" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section101"> <button type="button"> <img src="../Images/PreviousButton.png"  alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section103"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="P30bg secTitle">10.2  Coulomb’s Law</h2>
+		<strong>Problem:   </strong> <br>
+		What is the relationship between force, charge and distance? <br>
+		<strong>Background information: </strong> <br>
+		Opposite charges attract, like charges repel.  The more charge an object has the more force that acts on it.  As the distance increases the force decreases. <br>
+		<strong>Manipulated variable </strong> <br>
+		1<sup>st</sup> graph Distance and 2<sup>nd</sup> graph charge <br>
+		<strong>Responding variable: </strong> <br>
+		Force <br>
+		<strong>Control variables: </strong> <br>
+		<ul>
+		  <li>Preventing air currents from affecting results by doing the experiment in a closed container.</li>
+		  <li>Preventing outside charges from affecting the results by doing the experiment in a closed glass (insulator) container.</li>
+			<li>Preventing gravity from affecting results, by arranging the forces sideways. </li>
+		</ul>
+		<strong>Procedure: </strong> <br>
+		<ol>
+			<li>Set up torsion balance to measure small forces. </li>
+			<li>Charge each end of the torsion balance and the test sphere. </li>
+			<li>Move the torsion arm to a specified distance. </li>
+			<li>Measure the acceleration of the torsion balance and calculate the force. </li>
+			<li>Repeat for different charges and distances. </li>
+		</ol>
+		<strong>Observations and Graphs:</strong>
+		  <br>
+
+		<table width="100%" border="1" style="text-align:center;">
+		  <tbody>
+			<tr>
+			  <th style="width:15%;">&nbsp;Charge </th>
+			  <th style="width:15%;">&nbsp;Force </th>
+			  <th rowspan="11"> <img src="P30Ch10/ForceAsAFunctionOfCharge.png" width="825" height="484" alt="Linear Graph"/> </th>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;1.0</td>
+			  <td>&nbsp;&nbsp;3.0</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;2.0</td>
+			  <td>&nbsp;&nbsp;6.0</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;3.0</td>
+			  <td>&nbsp;&nbsp;9.0</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;4.0</td>
+			  <td>&nbsp;12.0</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;5.0</td>
+			  <td>&nbsp;15.0</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;6.0</td>
+			  <td>&nbsp;18.0</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;7.0</td>
+			  <td>&nbsp;21.0</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;8.0</td>
+			  <td>&nbsp;24.0</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;9.0</td>
+			  <td>&nbsp;27.0</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;10.0</td>
+			  <td>&nbsp;30.0</td>
+			</tr>
+		  </tbody>
+		</table>
+		  <br>
+		The magnitude of the force of electrostatic attraction or repulsion is: <br>
+		Directly proportional to the product of the two charges: |F<sub>e</sub>| &Proportional; q<sub>1</sub>&times;q<sub>2</sub> <br>
+		  <br>
+		  <br>
+		  <br>
+		<table width="100%" border="1" style="text-align:center;">
+		  <tbody>
+			<tr>
+			  <th style="width:15%;">&nbsp;Radius <br> (distance between charges) </th>
+			  <th style="width:15%;">&nbsp;Force </th>
+			  <th rowspan="11"> <img src="P30Ch10/ForceAsAFunctionOfRadius.png" width="821" height="482" alt="Inverse Squared Graph"/> </th>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;1.0</td>
+			  <td>&nbsp;1.00</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;2.0</td>
+			  <td>&nbsp;0.25</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;3.0</td>
+			  <td>&nbsp;0.11</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;4.0</td>
+			  <td>&nbsp;0.06</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;5.0</td>
+			  <td>&nbsp;0.04</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;6.0</td>
+			  <td>&nbsp;0.03</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;7.0</td>
+			  <td>&nbsp;0.02</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;8.0</td>
+			  <td>&nbsp;0.02</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;&nbsp;9.0</td>
+			  <td>&nbsp;0.01</td>
+			</tr>
+			<tr>
+			  <td>&nbsp;10.0</td>
+			  <td>&nbsp;0.01</td>
+			</tr>
+		  </tbody>
+		</table>
+		  <br>
+		  <br>
+		The magnitude of the force of electrostatic attraction or repulsion is: <br>
+		Inversely proportional to the square of the distance between their centres r:  	
+	<!-- Coloumb's Law *************************************************************** -->
+      <table class="equation" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap" class="equation">
+                  <em>&vert;F<sub>e</sub>&vert;</em> <strong>&Proportional;</strong> &nbsp; 
+              </td>
+              <td nowrap="nowrap" class="equation">
+                  <em>1</em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -3.8em; top : -1em; position: relative;">&rarr;</div>
+			  </td>
+          </tr>
+          <tr>
+              <td class="upper_line equation">
+                  <em>r<sup>2</sup></em>
+              </td>
+		  </tr>
+      </table>
+     <!-- Coloumb's Law *************************************************************** -->		
+	<br>
+		  <br>
+		  <br>
+		This gives the equation:
+
+
+	<br>
+ 	<!-- Coloumb's Law *************************************************************** -->
+      <table class="equation" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap" class="equation">
+                  <em>&vert;F<sub>e</sub>&vert;</em> <strong>=</strong> &nbsp; 
+              </td>
+              <td nowrap="nowrap" class="equation">
+                  <em>kq<sub>1</sub>q<sub>2</sub></em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -5.8em; top : -1em; position: relative;">&rarr;</div>
+			  </td>
+          </tr>
+          <tr>
+              <td class="upper_line equation">
+                  <em>r<sup>2</sup></em>
+              </td>
+		  </tr>
+      </table>
+     <!-- Coloumb's Law *************************************************************** -->
+
+	  <br>
+	Coulomb's Constant - k = 8.99 &times; 10<sup>9</sup> Nm<sup>2</sup>C<sup>-2</sup> <br>
+	q is the charge measured in Coulombs. <br>
+	r is the distance between the charges in meters. <br>
+	  <br>
+      <br>
+	<div id="section103"></div>
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Science 10 <br>
+			Program of Studies <br>
+	    <img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>    
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+</div> <!--   end page -->
+	
+	
+	
+</body>
+</html>

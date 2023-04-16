@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P30 U5 Ch9</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 30</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a class="active" href="P30U5Ch9.html">Chapter 9 Momentum</a>
+			<a href="P30U6Ch10.html">Chapter 10 Electrostatics</a>
+			<a href="P30U6Ch11.html">Chapter 11 Electric Fields</a>
+			<a href="P30U6Ch12.html">Chapter 12 Magnetic Fields</a>
+			<a href="P30U7Ch13.html">Chapter 13 Lights Waves</a>
+			<a href="P30U7Ch14.html">Chapter 14 Light Duality</a>
+			<a href="P30U8Ch15.html">Chapter 15 Atomic</a>
+			<a href="P30U8Ch16.html">Chapter 16 Radiation</a>
+			<a href="P30U8Ch17.html">Chapter 17 Quarks</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P30bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 5: Momentum and Impulse</h2></div>
+		<h2>Unit Themes and Emphases</h2>
+		<ul>
+			<li>Energy and Matter </li>
+			<li>Nature of Science </li>
+			<li>Scientific Inquiry </li>
+		</ul>
+		<h2>Focusing Questions:  </h2>
+		<ul>
+			<li>What characteristics of an object affect its momentum?  </li>
+			<li>How are momentum and impulse related?  </li>
+			<li>How does our understanding of concepts relating momentum and impulse influence the design of safety and sporting equipment? </li>
+		</ul>
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  		<h2>Unit A: Momentum and Impulse </h2>
+			<strong>Themes: </strong>Change and Systems <br>	
+			<strong>Overview: </strong>In this unit, Newton’s second law of motion is linked to the concepts of momentum and impulse. <br>
+			This unit builds on: <br>
+			<ul>	
+				<li>Physics 20, Unit A: Kinematics; Unit B: Dynamics; and Unit C: Circular Motion, Work and Energy</li>
+			</ul>	
+			This unit prepares students for further study of mechanics in subsequent units and for post-secondary studies in physics. Unit A will require approximately 15% of the time allotted for Physics 30. <br>
+			  <br>
+			<strong>Focusing Questions:  </strong>
+			<ul>
+				<li>What characteristics of an object affect its momentum?  </li>
+				<li>How are momentum and impulse related?  </li>
+				<li>How does our understanding of concepts relating momentum and impulse influence the design of safety and sporting equipment? </li>
+			</ul>
+			<strong>General Outcomes: </strong>There is one major outcome in this unit. <br>
+			Students will: <br>
+			<h2>A1. explain how momentum is conserved when objects interact in an isolated system.</h2>
+			<strong>Key Concepts: </strong>The following concepts are developed in this unit and may also be addressed in other units or in other courses. The intended level and scope of treatment is defined by the learning outcomes. <br>
+			<ul>
+				<li>impulse </li>
+				<li>momentum </li>
+				<li>Newton’s laws of motion </li>
+				<li>elastic collisions </li>
+				<li>inelastic collisions </li>	
+			</ul>	
+			<strong>Specific Outcomes for Knowledge </strong> <br>
+			Students will: <br>
+			<p class="know-hanging">30–A1.1k define momentum as a vector quantity equal to the product of the mass and the velocity of an object </p>
+			<p class="know-hanging">30–A1.2k explain, quantitatively, the concepts of impulse and change in momentum, using Newton’s laws of motion </p>
+			<p class="know-hanging">30–A1.3k explain, qualitatively, that momentum is conserved in an isolated system </p>
+			<p class="know-hanging">30–A1.4k explain, quantitatively, that momentum is conserved in one- and two-dimensional interactions in an isolated system </p>
+			<p class="know-hanging">30–A1.5k define, compare and contrast elastic and inelastic collisions, using quantitative examples, in terms of conservation of kinetic energy. </p>
+			  <br>
+			<strong>Specific Outcomes for Science, Technology and Society (STS) (Science and Technology Emphasis) </strong>
+			Students will: <br>
+			<p class="know-hanging">30–A1.1sts explain that technological problems often require multiple solutions that involve different designs, materials and processes and that have both intended and unintended consequences (ST3) [ICT F3–4.1] </p>
+			<div class="indent">
+				<ul>
+					<li>investigate the role of impulse and momentum in the design and function of rockets and thrust systems </li>
+					<li>assess the roles that conservation laws, the concepts of impulse and inertia and Newton’s laws play in the design and use of injury-prevention devices in vehicles and sports </li>
+					<li>describe the limitations of applying the results from studies of isolated systems in solving a practical problem, as occurred with the early design and deployment of airbags. </li>
+				</ul>	
+			</div>
+			  <br>
+			<strong>Specific Outcomes for Skills (Science and Technology Emphasis) </strong> <br>
+			Initiating and Planning <br>
+			Students will:
+			<p class="know-hanging">30–A1.1s formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues </p>
+			<div class="indent">
+				<ul>
+					<li>design an experiment and identify and control major variables; <em>e.g., demonstrate the conservation of linear momentum or illustrate the relationship between impulse and change in momentum (IP–NS2). </em> </li>
+				</ul>
+			</div>
+			Performing and Recording <br>
+			Students will: <br>
+			<p class="know-hanging">30–A1.2s conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information </p>
+			<div class="indent">
+				<ul>
+					<li>perform an experiment to demonstrate the conservation of linear momentum, using available technologies; <em>e.g., air track, air table, motion sensors, strobe lights and photography (PR–NS2, PR–NS3) [ICT C6–4.4] </em></li>
+					<li>collect information from various print and electronic sources to explain the use of momentum and impulse concepts; <em>e.g., rocketry and thrust systems or the interaction between a golf club head and the ball (PR–ST1, PR–ST2) [ICT C1–4.1]. </em> </li>
+				</ul>
+			</div>
+			Analyzing and Interpreting <br>
+			Students will: <br>
+			<p class="know-hanging">30–A1.3s analyze data and apply mathematical and conceptual models to develop and assess possible solutions </p>
+			<div class="indent">
+				<ul>
+					<li>analyze graphs that illustrate the relationship between force and time during a collision (AI–NS2) [ICT C7–4.2] </li>
+					<li>analyze, quantitatively, one- and two-dimensional interactions, using given data or by manipulating objects or computer simulations (AI–NS3) [ICT C6–4.2, C7–4.2]. </li>
+				</ul>
+			</div>
+			Communication and Teamwork <br>
+			Students will: <br>
+			<p class="know-hanging">30–A1.4s work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results </p>
+			<div class="indent">
+				<ul>
+					<li>use appropriate Système international (SI) units, fundamental and derived units and significant digits (CT–NS2) &clubs; </li>
+					<li>use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate ideas, plans and results (CT–ST2) &clubs; </li>
+					<li>use the delta notation correctly when describing changes in quantities (CT–NS2) &clubs;. </li>
+					<li>&clubs; To be developed throughout the course. </li>
+				</ul>
+			</div>	
+			  <br>
+			<strong>Links to Mathematics </strong> <br>
+			The following mathematics outcomes are related to the content of Unit A but are not considered prerequisites. 
+
+			<table width="90%" border="1" style="color:red;">
+			  <tbody>
+				<tr>
+				  <th scope="col">&nbsp;Concept</th>
+				  <th scope="col">&nbsp;Mathematics Course, Strand and Specific Outcome</th>
+				</tr>
+				<tr>
+				  <td>&nbsp;Data Collection and Analysis</td>
+				  <td>&nbsp;Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;Measurement and Unit Conversions</td>
+				  <td>&nbsp;Mathematics 10C, Measurement, Specific Outcomes 1 and 2; <br>
+					&nbsp;Mathematics 10-3, Measurement, Specific Outcome 1; <br>
+					&nbsp;Mathematics 20-3, Algebra, Specific Outcome 3</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;Trigonometry</td>
+				  <td>&nbsp;Mathematics 10C, Measurement, Specific Outcome 4; <br>  
+					&nbsp;Mathematics 10-3, Geometry, Specific Outcomes 2 and 4</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;Rate and Proportions</td>
+				  <td>&nbsp;Mathematics 20-2, Measurement, Specific Outcome 1</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;Graph Analysis</td>
+				  <td>&nbsp;Mathematics10C, Relations and Functions, Specific Outcomes 1, 4 and 7; <br>
+					&nbsp;Mathematics 20-3, Statistics, Specific Outcome 1</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;Solving Equations</td>
+				  <td>&nbsp;Grade 9 Mathematics, Number, Specific Outcome 6</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;Scale Diagrams</td>
+				  <td>&nbsp;Mathematics 20-2, Measurement, Specific Outcome 2; <br>
+					&nbsp;Mathematics 20-3, Geometry, Specific Outcome 2</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;Slope</td>
+				  <td>&nbsp;Mathematics10C, Relations and Functions, Specific Outcomes 3 and 5; <br>
+					&nbsp;Mathematics 20-3, Algebra, Specific Outcome 2</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;Area Calculations</td>
+				  <td>&nbsp;Mathematics 10-3, Measurement, Specific Outcome 4</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;Powers</td>
+				  <td>&nbsp;Mathematics10C, Algebra and Number, Specific Outcome 3</td>
+				</tr>
+
+			  </tbody>
+			</table>
+			<strong>Note: </strong>The use of systems of equations, the quadratic formula and trigonometric ratios for angles greater than 90º is not required in this unit. <br>
+		</div>
+	</div>
+
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P30bg"><h1 class="P30bg secTitle">Chapter 9: The momentum of an isolated system of interacting objects is conserved.</h1> </div>     
+	<div class="P30c">
+		<h2>Key Concepts</h2>
+		In this chapter, you will learn about:
+		<ul>
+			<li>impulse </li>
+			<li>momentum </li>
+			<li>Newton’s laws of motion </li>
+			<li>elastic and inelastic collisions </li>
+		</ul>
+		<h2>Knowledge</h2>
+		<ul>
+			<li>define momentum as a vector quantity </li>
+			<li>explain impulse and momentum using Newton’s laws of motion </li>
+			<li>explain that momentum is conserved in an isolated system </li>
+			<li>explain that momentum is conserved in one- and two-dimensional interactions </li>
+			<li>compare and contrast elastic and inelastic collisions </li>
+		</ul>
+		<h2>Science, Technology, and Society</h2>
+		<ul>
+			<li>explain that technological problems lend themselves to multiple solutions </li>
+		</ul>
+		<a href="https://www.flippity.net/fc.asp?k=1WUwKpfmsVh-9eOTDWE4nP1DvF3I5jbSwB3aNW_Pdc5A" style="align:center;"><h2>Flippity Review Questions for Chapter 9</h2> <img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/qr-p30-ch9-review-questions_orig.png" alt""></a>
+	</div>
+		
+	
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section91" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section92"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P30bg secTitle">9.1  Momentum is Mass Times Velocity</h2>		
+		<span class="def">Momentum </span> - the product of the mass of the object and its velocity. <br>
+
+		 	<!-- Momentum *************************************************************** -->
+		<div class="equation"> 
+		  <table class="equation" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td nowrap="nowrap">
+					  <em>p = m&Delta;v</em>
+				  </td>
+				  <td nowrap="nowrap">
+					  <div style="left : -4.2em; top : -0.6em; position: relative;">&rarr;</div>
+
+				  </td>
+				  <td>
+					  <div style="left : -1.6em; top : -0.6em; position: relative;">&rarr;</div>
+				  </td>
+			  </tr>
+			</table>
+		</div>
+	 <!-- Momentum *************************************************************** -->
+		
+		An external non-zero net force acting on an object is equal to the rate of change of momentum of the object. ie. with large forces change the momentum quickly, small forces change the momentum slowly. <br>
+		  <br>
+          <br>
+	<div style="background-color: #555;" class="main" id="section92" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section91"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section93"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="P30bg secTitle">9.2 Impulse Is Equivalent to a Change in Momentum </h2>
+		
+			<!-- Impulse *************************************************************** -->
+			<table class="fraction" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td rowspan="2" nowrap="nowrap" class="equation">
+					  <em>F<sub>net</sub> </em> <strong>=</strong> &nbsp; 
+				  </td>
+				  <td nowrap="nowrap" class="equation">
+					  <em>&Delta;p</em>
+				  </td>
+				  <td rowspan="2" nowrap="nowrap">
+				  		<div style="left : -5.0em; top : -0.2em; position: relative;">&rarr;</div>
+					  	<div style="left : -0.6em; top : -2.6em; position: relative;">&rarr;</div>
+			  		</td>
+			  </tr>
+			  <tr>
+				  <td class="upper_line equation">
+					  <em>&Delta;t</em>
+				  </td>
+			  </tr>
+		  </table>
+		 <!-- Impulse *************************************************************** -->
+		
+		 <!-- Impulse *************************************************************** -->
+		<div class="equation"> 
+		  <table class="equation" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td nowrap="nowrap">
+					  <em>F&Delta;t= m&Delta;v</em>
+				  </td>
+				  <td nowrap="nowrap">
+					  <div style="left : -4.6em; top : -0.8em; position: relative;">&rarr;</div>
+				  </td>
+				  <td>
+					  <div style="left : -1.6em; top : -0.6em; position: relative;">&rarr;</div>
+				  </td>
+			  </tr>
+			</table>
+		</div>
+		 <!-- Impulse *************************************************************** -->
+		
+		<span class="def">Impulse </span>- the change in momentum, is the area under a force time graph. <br>
+		 DIAGRAM - Force vs Time Graph <br>
+        <br>
+		<br>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section93" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section92"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section94"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P30bg secTitle">9.3  Collisions in One Dimension </h2>
+
+		<strong>Law of conservation of momentum</strong> <br>
+		When no external net force acts on a system, the momentum of the system remains constant. <br>
+		<br>
+		<!-- Momentum *************************************************************** -->
+		<div class="equation"> 
+		  <table class="equation" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td nowrap="nowrap">
+					  <em>&Sigma;p<sub>before</sub> = &Sigma;p<sub>after</sub></em>
+				  </td>
+				  <td nowrap="nowrap">
+					  <span style="left : -7.5em; top : -0.6em; position: relative;">&rarr;</span>
+					  <span style="left : -3.8em; top : -0.6em; position: relative;">&rarr;</span>
+				  </td>
+			  </tr>
+			</table>
+		</div>
+	 <!-- Momentum *************************************************************** -->
+
+
+		Energy in Collisions <br>
+		<span class="def">Elastic collision</span> – a collision where kinetic energy is conserved. <br>
+		<span class="def">Inelastic collision</span> – a collision where kinetic energy is lost as heating due to the work done by friction, elastic energy deforming objects and sound energy. <br>
+
+        <br>
+		<br>
+		<div style="background-color: #555;" class="main" id="section94" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section93"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section95"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+
+		</div>
+          <h2 class="P30bg secTitle">9.4  Collisions in Two Dimensions </h2>
+
+		In two-dimensional collisions where no external net force acts on the system, the momentum of the system in both the x and y directions remain constant. <br>
+
+		<span class="equation"><em>&Sigma;p<sub>X<sub>before</sub></sub> = &Sigma;p<sub>X<sub>after</sub></sub></em></span> <br>		
+		<span class="equation"><em>&Sigma;p<sub>Y<sub>before</sub></sub> = &Sigma;p<sub>Y<sub>after</sub></sub></em></span> <br>
+             <br>
+			<br>
+	
+		<div id="section95" >
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Science 10 <br>
+			Program of Studies <br>
+	    <img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>    
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	</div>
+
+</div> <!--   end page -->
+</body>
+</html>
