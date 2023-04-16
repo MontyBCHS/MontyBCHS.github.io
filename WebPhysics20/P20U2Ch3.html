@@ -1,0 +1,635 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P20 UA Ch3 Forces</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 20</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="P20U1Ch1.html">Chapter 1 Acceleration</a>
+			<a href="P20U1Ch2.html">Chapter 2 Vectors</a>
+			<a class="active" href="P20U2Ch3.html">Chapter 3 Forces</a>
+			<a href="P20U2Ch4.html">Chapter 4 Gravity</a>
+			<a href="P20U3Ch5.html">Chapter 5 Circular Motion</a>
+			<a href="P20U3Ch6.html">Chapter 6 Energy</a>
+			<a href="P20U4Ch7.html">Chapter 7 Harmonic Motion</a>
+			<a href="P20U4Ch8.html">Chapter 8 Waves</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P20bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 2: Dynamics</h2></div>
+	   <h2>Unit Themes and Emphases</h2>
+            Change and Systems <br>
+              <br>
+            <h2>Focusing Questions</h2>
+            <ul>
+                <li>How do changes in position, velocity, and acceleration allow us to predict the paths of moving objects and systems?</li>
+                <li>How do the principles of kinematics influence the development of new mechanical technologies?</li>
+            </ul>
+        <br>
+		<br>
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h2>Unit B:  Dynamics  </h2>
+	<h2>Themes:  Change and Systems   </h2>
+ 	<h2>Overview: </h2> 
+	 In this unit, students investigate causes of change in the position and velocity of objects and systems in a study of dynamics and gravitation.  The concept of fields is introduced in the explanation of gravitational effects.    <br>
+ 
+	This unit builds on:  <br>
+	<ul>
+		<li>•   Grade 7 Science, Unit D:  Structures and Forces </li>
+		<li>•   Grade 8 Science, Unit D:  Mechanical Systems </li>
+		<li>•   Science 10, Unit B:  Energy Flow in Technological Systems </li>
+		<li>•   Physics 20, Unit A:  Kinematics </li>
+	 </ul>
+	This unit prepares students for further study, in subsequent units and physics courses, of Newton’s laws, periodic motion and particles in electric and magnetic fields.     <br>
+	   <br>
+	Unit B will require approximately 25% of the time allotted for Physics 20.  <br>
+ 	<br>
+	<h2>Focusing Questions:  </h2>
+	<ul>
+		<li>How does the understanding of forces help humans improve or change their environment?  </li>
+		<li>How do the principles of dynamics influence the development of new mechanical technologies? </li> 
+		<li>What role do gravitational effects play in the universe? </li>
+	</ul>
+ 	 <br>
+	<h2>General Outcomes: </h2>
+	 There are two major outcomes in this unit. Students will:  <br>
+	<ul>
+		<li> <b>B1.  explain the effects of balanced and unbalanced forces on velocity </b> </li>
+		<li> <b>B2.  explain that gravitational effects extend throughout the universe. </b> </li>
+ 	</ul>
+	 <br> 	
+	Key Concepts:  The following concepts are developed in this unit and may also be addressed in other units or in other courses.  The intended level and scope of treatment is defined by the outcomes. <br>
+	<ul>
+		<li>Newton’s laws of motion </li>
+		<li>inertia </li>
+		<li>vector addition </li>
+		<li>static and kinetic friction </li>
+		<li>gravitational force </li>
+		<li>Newton’s law of universal gravitation </li>
+		<li>gravitational field </li>
+	</ul>
+	  <br>
+
+
+	<h2>General Outcome:  B1.  explain the effects of balanced and unbalanced forces on velocity.</h2>
+	<h2>Specific Outcomes for Knowledge </h2>
+ 
+	Students will:  <br>
+	<div class="indent">
+		20–B1.1k  explain that a nonzero net force causes a change in velocity  <br>
+		20–B1.2k  apply Newton’s first law of motion to explain, qualitatively, an object’s state of rest or uniform motion   <br>
+		20–B1.3k  apply Newton’s second law of motion to explain, qualitatively, the relationships among net force, mass and acceleration   <br>
+		20–B1.4k  apply Newton’s third law of motion to explain, qualitatively, the interaction between two objects, recognizing that the two forces, equal in magnitude and opposite in direction, do not act on the same object   <br>
+		20–B1.5k  explain, qualitatively and quantitatively, static and kinetic forces of friction acting on an object   <br>
+		20–B1.6k  calculate the resultant force, or its constituents, acting on an object by adding vector components graphically and algebraically   <br>
+		20–B1.7k  apply Newton’s laws of motion to solve, algebraically, linear motion problems in horizontal, vertical and inclined planes near the surface of Earth, ignoring air resistance.  <br>
+ 	</div>
+	 <br>
+	<h2>Specific Outcomes for Science, Technology and Society (STS) (Social and Environmental Contexts Emphasis)  </h2>
+ 
+	Students will:  <br>
+	<div class="indent">
+		20–B1.1sts  explain that the goal of technology is to provide solutions to practical problems, that technological development includes testing and evaluating designs and prototypes on the basis of established criteria, and that the products of technology cannot solve all problems (ST1, ST5d, ST6) [ICT F2–4.4]  <br>
+			<span class="i_indent">•   assess the design and use of injury-prevention devices in cars and sports in terms of Newton’s laws of motion   </span> <br>
+			<span class="i_indent">•    explain how buffalo jumps represented a technological solution to food supply problems and describe the advantages and limitations of such a technique  </span> <br>
+		  <br>
+		20–B1.2sts  explain that science and technology are developed to meet societal needs and that society provides direction for scientific and technological development (SEC1, SEC4)  [ICT F2–4.8] 
+			<span class="i_indent">•     discuss the use of seat belts in school buses  </span> <br>
+		  <br>
+		20–B1.3sts  explain that scientific knowledge and theories develop through hypotheses, the collection of evidence, investigation and the ability to provide explanations (NS2)  <br>
+			<span class="i_indent"> •   analyze the trajectory of lunar dust particles as illustrated in a video. </span> <br>
+		  <br>
+		 Note:  Some of the outcomes are supported by examples.  The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed. <br>
+	</div>	
+	  <br>
+ 
+	<h2>Specific Outcomes for Skills (Science and Technology Emphasis) </h2>
+ 	<br>
+	Initiating and Planning <br>
+ 	Students will:  <br>
+	<div class="i_indent">
+		20–B1.1s  formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues <br>
+			<span class="i_indent">•   identify questions to investigate arising from practical problems; </span> <br>
+			<span class="i_indent">e.g., What are the relationships among acceleration, mass and force acting on a moving object?  (IP–ST1). </span> <br>
+ 	</div>
+	Performing and Recording <br>
+	Students will: 
+	<div class="i_indent">
+		20–B1.2s  conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information 
+			<span class="i_indent">•   conduct experiments to determine relationships among force, mass and acceleration, using available technologies; e.g., using interval timers or motion sensors to gather data (PR–ST3) [ICT C6–4.4] </span> <br>
+			<span class="i_indent">•   research the use of kinematics and dynamics principles in everyday life; e.g., research traffic accident investigation methods, using the Internet and/or interviews (PR–ST1). </span> <br>
+ 	</div>
+	 <br>
+	Analyzing and Interpreting  <br>
+ 
+	Students will:  <br>
+	<div class="i_indent">
+		20–B1.3s  analyze data and apply mathematical and conceptual models to develop and assess possible solutions  <br>
+			<span class="i_indent">•   analyze a graph of empirical data to infer the mathematical relationships among force, mass and acceleration (AI–NS6) [ICT C6–4.1] </span> <br>
+			<span class="i_indent">•   use free-body diagrams to describe the forces acting on an object (AI–NS1). </span> <br>
+	 	</div>
+
+	Communication and Teamwork <br>
+	Students will:  <br>
+	<div class="i_indent">
+		20–B1.4s  work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results 
+			<span class="i_indent">•   select and use appropriate numeric, symbolic, graphical or linguistic modes of representation to communicate findings and conclusions (CT–ST2). </span> <br>
+		Note:  Some of the outcomes are supported by examples.  The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed. <br>
+ 	</div>
+ 
+ 
+	  <br>
+	<h2>Links to Mathematics:</h2>
+	The following mathematics topics are related to the content of Unit B but are not considered prerequisites.<br> 
+ 	Concept			Mathematics Course, Strand and Specific Outcome <br>
+	Data Collection and Analysis <br>
+		<span class="indent"> Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3 </span> <br>
+		<span class="indent"> Measurement and Unit ConversionsMathematics 10C, Measurement, Specific Outcomes 1 and 2;</span> <br>
+		<span class="indent"> Mathematics 10-3, Measurement, Specific Outcome 1;</span> <br>
+		<span class="indent"> Mathematics 20-3, Algebra, Specific Outcome 3</span> <br>
+	Trigonometry <br>
+		<span class="indent"> Mathematics 10C, Measurement, Specific Outcome 4;</span> <br>
+		<span class="indent"> Mathematics 10-3, Geometry, Specific Outcomes 2 and 4 </span> <br>
+	Rate and Proportions <br>
+		<span class="indent"> Mathematics 20-2, Measurement, Specific Outcome 1 </span> <br>
+	Graph Analysis <br>
+		<span class="indent"> Mathematics10C, Relations and Functions, Specific Outcomes 1, 4 and 7; </span> <br>
+		<span class="indent"> Mathematics 20-3, Statistics,  Specific Outcome 1 Solving Equations </span> <br>
+		<span class="indent"> Grade 9 Mathematics, Number, Specific Outcome 6; </span> <br>
+		<span class="indent"> Mathematics 20-1, Algebra and Number, Specific Outcome 6; </span> <br>
+		<span class="indent"> Mathematics 30-2, Relations and Functions, Specific Outcome 3 </span> <br>
+	Scale Diagrams <br>
+		<span class="indent"> Mathematics 20-2, Measurement,Specific Outcome 2; </span> <br>
+		<span class="indent"> Mathematics 20-3, Geometry, Specific Outcome 2 </span> <br>
+	Slope <br>
+		<span class="indent"> Mathematics10C, Relations and Functions, Specific Outcomes 3 and 5; </span> <br>
+		<span class="indent"> Mathematics 20-3, Algebra, Specific Outcome 2 </span> <br>
+	Area Calculations <br>
+		<span class="indent"> Mathematics 10-3, Measurement, Specific Outcome 4 </span> <br>    
+	Powers <br>
+		<span class="indent">Mathematics10C, Algebra and Number, Specific Outcome 3 </span> <br>
+	Note: The use of systems of equations, the quadratic formula and trigonometric ratios for angles greater than 90º is not required in this unit.<br>
+	  <br>
+	</div>
+	  <br>
+	</div>
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P20bg"><h1 class="P20bg secTitle">Chapter 3: Forces can change velocity</h1> </div>     
+	<div class="P20c">
+		<h2>Key Concepts</h2>
+	<ul>
+		<li>Vector addition </li>
+		<li>Newton’s laws of motion </li>
+		<li>Static and kinetic friction </li>
+	</ul>
+	<h2>Knowledge</h2>
+	<ul>
+		<li>Explain that a non-zero net force causes a change in velocity </li>
+		<li>Calculate the net force </li>
+		<li>Apply Newton’s three laws to solve motion problems </li>
+		<li>Explain static and kinetic friction. </li>
+	</ul>
+	<h2>STS</h2>
+	<ul>
+		<li>Explain that the goal of technology is to provide solutions to practical problems </li>
+		<li>Explain that science and technology develop to meet societal needs </li>
+		<li>Explain that science develops through experimentation. </li>
+	</ul>
+	<br>
+	</div>
+		
+
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P20bg secTitle">3.1 The Nature of Force</h2>
+
+	<span class="def">Dynamics </span>– branch of mechanics dealing with the cause of motion <br>
+	 <br>
+	<span class="def">Force </span>– a quantity measuring a push or pull on an object <br>
+	 <br>
+	<span class="def">Free-body diagram </span>– vector diagram of an object in isolation showing all the forces acting on it
+	A free-body diagram helps you write the net force acting on an object. <br>
+	 <br>
+	Net force is the vector sum of two or more forces acting simultaneously on an object.
+	The net force causes the acceleration <br>
+	 <br>
+	<span class="ex">Ex. </span> <span class="example">A person pulls on an object with 100 N of force east, and the force of friction is 30 N west. </span> <br>
+	 <br>
+	The sum of the forces is: <br>
+	 <br>
+	The net force causes the acceleration <br>
+	 <br>
+	<span class="ex">Ex. </span> <span class="example">Two forces are acting on an object.  The first force is 40 N east and the second force is 30 N north.   </span> <br>
+		  <span class="example">a.	Draw a free body diagram. </span> <br>
+		  <span class="example">b.	What is the net force acting on the object? </span> <br>
+	 <br>
+	Example 3.4 p 134 <br>
+	 <br>
+	<span class="ex">Normal force </span>– force on an object that is perpendicular to a common contact surface (ground holding an object up) <br>
+	 <br>
+       <div class="review indent">
+           <h3>Review Questions</h3>
+			What is a force? <button onclick="document.getElementById('3-10').innerHTML = 'A force is any push or pull. '">Answer</button><br>
+                <span id="3-10" class="indent"></span><br>
+
+	What is shown on a free body diagram? <button onclick="document.getElementById('3-11').innerHTML = 'The free body diagram shows the object (dot) and the forces acting on the object.'">Answer</button><br>
+                <span id="3-11" class="indent"></span><br>
+	Why is the net force important? <button onclick="document.getElementById('3-12').innerHTML = 'The net force causes acceleration. '">Answer</button><br>
+                <span id="3-12" class="indent"></span><br>
+	What is the normal force? <button onclick="document.getElementById('3-13').innerHTML = 'The normal force is the force of the ground holding the object up. '">Answer</button><br>
+                <span id="3-13" class="indent"></span><br>
+	 </div>
+	 <br>
+     <br>
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="P20bg secTitle">3.2  Newton’s First Law</h2>
+	Newton’s first law states that an object will continue being at rest or moving at constant speed in a straight line unless acted upon by a non-zero net force. <br>
+	<br>
+	Newton’s first law:  &Delta;F = 0 when a = 0 or &Delta;v = 0 <span style="left : -13.2em; top : -0.8em; position: relative;">&rarr;</span><span style="left : -8.6em; top : -0.6em; position: relative;">&rarr;</span><span style="left : -4.8em; top : -0.6em; position: relative;">&rarr;</span><br>
+	 <br>
+	<span class="def">Inertia </span>– property of an object that resists acceleration <br>
+	 <br>
+	<em>Principle of uniform motion</em> When the forces on an object are balanced then the object travels in uniform motion (no acceleration). <br>
+	<em>Principle of uniformly accelerated motion</em> When the forces on an object are not balanced, net force, the object will accelerate uniformly.
+	 <br>
+	What is Newton’s First Law?
+	Objects in motion stay in motion, objects at rest stay at rest until a net force acts on the object.
+	Apply Newton’s first law to a car.
+	The car won’t move until the engine pushes it.
+	Car will roll until the brakes are applied.
+        <div class="review indent">
+            <h3>Review Questions</h3>
+	What is Newton’s First Law?<button onclick="document.getElementById('3-20').innerHTML = 'Objects in motion stay in motion, objects at rest stay at rest until a net force acts on the object.'">Answer</button><br>
+                <span id="3-20" class="indent"></span><br>
+	
+	Apply Newton’s first law to a car.<button onclick="document.getElementById('3-21').innerHTML = 'The car won’t move until the engine pushes it. The car will roll until the brakes are applied.'">Answer</button><br>
+                <span id="3-21" class="indent"></span><br>
+    	</div>
+	 <br>
+
+    <br>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">3.3  Newton’s Second Law </h2>
+	Newton’s second law states that when a non-zero net force acts on an object, the object accelerates in the direction of the net force.  The magnitude of the acceleration is directly proportional to the magnitude of the net force and inversely proportional to the mass of the object. <br>
+	 <br>
+	Newton’s second law:  <br>
+	F=ma <br>
+<!-- a = F/m ^************************************************************* -->
+    <div class="equation"> 
+      <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  <em>a</em> = &nbsp; 
+              </td>
+              <td nowrap="nowrap">
+                  <em>F<sub>net</sub></em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -4em; top : 0.3em; position: relative;">&rarr;</div>
+				  <div style="left : -1.7em; top : -2.9em; position: relative;">&rarr;</div>
+			  </td>	
+          </tr>
+          <tr>
+              <td class="upper_line">
+                  <em>m</em>
+              </td>
+          </tr>
+      </table>
+    </div>  
+     <!-- a = F/m ^************************************************************* -->
+  
+     <br>
+	F - Force, N = kg&middot;m/s<sup>2</sup> <br>
+    m - mass, kg <br>
+    a - acceleration, m/s<sup>2</sup> <br>
+	 <br>
+	<span class="def">Inertial mass </span>– mass measurement based on the ratio of a known net force on an object to the acceleration of the object <br>
+	 <br>
+	<span class="example">Ex. </span> <span class="example"> A Porsche 997 Turbo can accelerate from 0 to 100 kph in 3.2 seconds and masses 1443 kg.  How much force is required to accelerate it? </span> <br>
+	 <br>
+          	<div class="review indent">
+                <h3>Review Questions</h3>
+	What is Newton’s second law?  <button onclick="document.getElementById('3-30').innerHTML = 'a = F/m'">Answer</button><br>
+                    <span id="3-30" class="indent"></span><br>
+	What are the units for force? <button onclick="document.getElementById('3-31').innerHTML = 'Force is measured in newtons.'">Answer</button><br>
+                    <span id="3-31" class="indent"></span><br>
+			</div>
+ 	 <br>
+     <br>           
+		<div style="background-color: #555;" class="main" id="section14" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section13"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section15"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+
+		</div>
+          <h2 class="P20bg secTitle">3.4  Newton’s Third Law </h2>
+	Newton’s third law states that if object A exerts a force on object B, then B exerts a force on A that is equal in magnitude and opposite in direction. <br>
+	 <br>
+	Newton’s third law: F<sub>A on B</sub> = F<sub>B on A</sub><span style="left : -7.8em; top : -0.8em; position: relative;">&rarr;</span> <span style="left : -4.6em; top : -0.8em; position: relative;">&rarr;</span><br>
+	 <br>
+	<span class="def">Action force </span>– force initiated by object A on object B <br>
+	<span class="def">Reaction force </span>– force exerted by object B on object A <br>
+	Action-Reaction Pairs	 <br>
+	 <br>
+	<span class="ex">Ex. </span> <span class="example">Tigger jumps up accelerating upwards at 10 m/s<sup>2</sup>.  If Tigger masses 8.0 kg, what is the force of the ground holding up Tigger? </span> <br>
+	 <br>
+          	<div class="review indent">
+                <h3>Review Questions</h3>
+	What is Newton’s Third Law? <button onclick="document.getElementById('3-40').innerHTML = 'Every action has an equal and opposite reaction.'">Answer</button><br>
+                <span id="3-40" class="indent"></span><br>
+	If every force has an equal opposite force why do things move? <button onclick="document.getElementById('3-41').innerHTML = 'The opposite force acts on a different object.'">Answer</button><br>
+                <span id="3-41" class="indent"></span><br>
+			</div>
+	 <br>
+	 <br>
+		<div style="background-color: #555;" class="main" id="section15" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section14"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section16"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+
+		</div>
+		<h2 class="P20bg secTitle">3.5  Friction Affects Motion </h2>
+	Forces on an incline <br>
+	 <br>
+	F<sub>g||</sub> = mg&times;sin&theta; <span style="left : -7.6em; top : -0.8em; position: relative;">&rarr;</span><br>
+	<br>
+	F<sub>g&perp;</sub> = mg&times;cos&theta;	normally F<sub>g</sub> = -F<sub>N</sub> <span style="left : -16.2em; top : -0.8em; position: relative;">&rarr;</span><span style="left : -5.2em; top : -0.8em; position: relative;">&rarr;</span><span style="left : -3.6em; top : -0.8em; position: relative;">&rarr;</span><br>
+	<br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/N2MvssBfb00" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+	<br>
+      <!-- Fg parallel************************************************************* -->
+        <div class="equation">
+            <em>F<sub>g||</sub> = mg&times;sin&theta;</em><span style="left : -13.2em; top : -0.8em; position: relative;">&rarr;</span>
+        </div>  
+      <!-- Fg parallel************************************************************* -->
+        F<sub>g||</sub> - force of gravity parallel to the surface, N <br>
+      <!-- Fg perpendicular ^************************************************************* -->
+        <div class="equation">
+            <em>F<sub>g&perp;</sub> = mg&times;cos&theta;</em> 
+        </div>  
+      <!-- Fg perpendicular ^************************************************************* -->
+		F<sub>g&perp;</sub> - force of gravity perpendicular to the surface, N <br>
+	 <br>
+	<span class="ex">Ex. </span> <span class="example">A 75 kg person is standing on an icy frictionless slope at 30<sup>o</sup>.  What is the person’s acceleration down the hill? </span> <br>
+
+	Friction – force that opposes either the motion of an object or the direction the object would be moving in if there were no friction <br>
+	Static friction – force exerted on an object at rest that prevents the object from sliding on another object <br>
+	Kinetic friction – force exerted on an object in motion that opposes the motion of the object as it slides on another <br>
+	 <br>
+	The magnitude of the force of friction acting on an object is directly proportional to the normal force on the object. <br>
+	<!-- ^************************************************************* -->
+    <div class="equation">
+		<table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td>
+				  &vert;<em>F<sub>f</sub></em>&vert;<em> = &mu; </em>&vert;<em>F<sub>N</sub></em>&vert; 
+			</td>
+			<td>
+				  <div style="left : -4.9em; top : 0.2em; position: relative;">&rarr;</div>
+				  <div style="left : -1.3em; top : -1.9em; position: relative;">&rarr;</div>
+			  </td>
+			</tr>
+		</table>
+    </div>  
+      <!-- Ffriction = u Fn ^************************************************************* -->
+	F<sub>f</sub> - force of friction, N <br>
+    &mu; - coefficient of friction, no units <br>
+    F<sub>N</sub> - force normal, force of the ground pushing up on the object, N <br>
+     <br>
+	<h1>INSERT FORCE OF FRICTION VIDEO</h1>
+	 <br>
+	The coefficients of friction are proportionality constants that relate the magnitude of the force of friction to the magnitude of the normal force.   <br>
+	 <br>
+	Temperature, moisture, and the smoothness or roughness of the contact surfaces, and the materials forming the contact surface are some factors that affect the value of the coefficients of friction. <br>
+	 <br>
+	<span class="ex">Coefficient for static friction </span>– proportionality constant relating F<sub>f</sub> static maximum and F<sub>N</sub> <br>
+	<span class="ex">Coefficient for kinetic friction </span>- proportionality constant relating F<sub>f</sub> kinetic and F<sub>N</sub> <br>
+	 <br>
+	<h1>FOCES PUSHING ON AN OBJECT VIDEO</h1>
+	 <br>
+	<span class="ex">Ex. </span> <span class="example">A Cooper mini with a mass of 617 kg skids to a halt.  Use table 3.4 p. 183 to calculate the kinetic friction between the rubber tires and the dry asphalt. </span> <br>
+	 <br>
+	<span class="example">Ex. </span> <span class="example">The same mini Cooper is traveling at 20 m/s and then skids to a halt. </span> <br>
+	<span class="example">A.  What is the car’s acceleration? </span> <br>
+	<span class="example">B.  How far does the car skid? </span> <br>
+	 <br>
+		  <span class="ex">Ex. </span> <span class="example">The same Cooper mini skids to a halt in the rain.  What is the ratio of the kinetic friction from dry to wet conditions? </span> <br>
+	 <br>
+		<span class="ex">Ex. </span> <span class="example">A 30 kg child on waxed hickory skis on dry snow is standing on a 40<sup>o</sup> hill. </span> <br>
+	<span class="example">a.	Draw a free body diagram. </span><br>
+	<span class="example">b.	What is the force of gravity perpendicular? </span><br>
+	<span class="example">c.	What is the force normal? </span> <br>
+	<span class="example">d.	What is the force of static friction? </span> <br>
+
+	<span class="example">e.	What is the force of gravity parallel? </span> <br>
+	<span class="example">f.	What is the child’s initial acceleration? </span> <br>
+	 <br>
+	<span class="ex">Ex. </span> <span class="example"> A skateboarder (m=50 kg) is rolling up a 30o hill at 4.5 m/s.  How far will the skateboarder go up the hill if &mu;=0.25. </span> <br>
+    
+         <div class="review indent">
+             <h3>Review Questions</h3>
+			  What is friction? <button onclick="document.getElementById('3-50').innerHTML = 'Friction is a force that opposes motion. '">Answer</button><br>
+                <span id="3-50" class="indent"></span><br>
+	What is the difference between static and kinetic friction? <button onclick="document.getElementById('3-51').innerHTML = 'Static friction acts on stationary objects and kinetic friction acts on moving objects. '">Answer</button><br>
+                <span id="3-51" class="indent"></span><br>
+	What is larger static or kinetic friction? <button onclick="document.getElementById('3-52').innerHTML = 'Static friction is larger than or equal to kinetic friction. '">Answer</button><br>
+                <span id="3-52" class="indent"></span><br>
+	What is the force of friction proportional to? <button onclick="document.getElementById('3-53').innerHTML = 'Force of friction is proportional to force normal.'">Answer</button><br>
+                <span id="3-53" class="indent"></span><br>
+	What is the equation for the force of friction? <button onclick="document.getElementById('3-54').innerHTML = 'F = &mu;F<sub>Normal</sub>'">Answer</button><br>
+                <span id="3-54" class="indent"></span><br>
+	What are the two components of gravity for objects on a slope? <button onclick="document.getElementById('3-55').innerHTML = 'Force of gravity parallel to the surface and perpendicular to the surface.'">Answer</button><br>
+                <span id="3-55" class="indent"></span><br>
+	What is the equation for the force of gravity parallel to the surface? <button onclick="document.getElementById('3-56').innerHTML = 'Fg<sub>||</sub>=mgsin&theta;'">Answer</button><br>
+                <span id="3-56" class="indent"></span><br>
+	What is the equation for the force of gravity perpendicular to the surface? <button onclick="document.getElementById('3-57').innerHTML = 'Fg = mgcos&theta; 	normally F<sub>g</sub> = F<sub>N</sub>;'">Answer</button><br>
+                <span id="3-57" class="indent"></span><br>
+	<br>
+	</div>
+
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Physics 20 <br>
+			Program of Studies <br>
+		<img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>      
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+	</div>
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>

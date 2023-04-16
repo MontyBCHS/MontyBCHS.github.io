@@ -1,0 +1,490 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P20 UA Ch8 Waves</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 20</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="P20U1Ch1.html">Chapter 1 Acceleration</a>
+			<a href="P20U1Ch2.html">Chapter 2 Vectors</a>
+			<a href="P20U2Ch3.html">Chapter 3 Forces</a>
+			<a href="P20U2Ch4.html">Chapter 4 Gravity</a>
+			<a href="P20U3Ch5.html">Chapter 5 Circular Motion</a>
+			<a href="P20U3Ch6.html">Chapter 6 Energy</a>
+			<a href="P20U4Ch7.html">Chapter 7 Harmonic Motion</a>
+			<a class="active" href="P20U4Ch8.html">Chapter 8 Waves</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P20bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 4: Oscillatory Motion and Mechanical Waves </h2></div>
+	<h2>Unit Themes and Emphases</h2>
+	<ul>
+		<li>Change, Energy and Matter </li>
+		<li>Scientific Inquiry </li>
+		<li>Nature of Science </li>
+	</ul>
+
+	<h2>Focusing Questions </h2>
+	<ul>
+		<li>Where do we observe oscillatory motion? </li>
+		<li>How do mechanical waves transmit energy? </li>
+		<li>How can an understanding of the natural world improve how society, technology and the environment interact? </li>
+	</ul>
+        <br>
+		<br>
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h2>Unit D:  Oscillatory Motion and Mechanical Waves </h2>
+	<h2>Themes:  Energy and Matter </h2>
+ 	<h2>Overview: </h2>
+	In this unit, students investigate simple harmonic motion and mechanical waves. <br>
+ 	This unit builds on: <br>
+	<ul>	
+		<li>Science 10, Unit B:  Energy Flow in Technological Systems </li>
+		<li>Physics 20, Unit A:  Kinematics; Unit B:  Dynamics; and Unit C:  Circular Motion, Work and Energy </li>
+ 	</ul>
+	This unit prepares students for further study, in subsequent physics courses, of simple harmonic motion and wave phenomena. <br>
+	 <br> 
+	Unit D will require approximately 30% of the time allotted for Physics 20. <br>
+ 	 <br>
+
+	<h2>Focusing Questions:  </h2>
+	<ul>
+		<li>What are examples of oscillatory motion in the world around us?  </li>
+		<li>How do mechanical waves transmit energy?  </li>
+		<li>How is structural design and the development of technologies influenced by our understanding of wave properties? </li>
+ 	</ul>
+	<h2>General Outcomes:   </h2>
+	There are two major outcomes in this unit.<br>
+ 	Students will: <br>
+	<b>D1.  describe the conditions that produce oscillatory motion </b> <br>
+	<b>D2.  describe the properties of mechanical waves and explain how mechanical waves transmit energy. </b><br>
+	 <br>
+
+	<h2>Key Concepts:  </h2>
+	The following concepts are developed in this unit and may also be addressed in other units or in other courses.  The intended level and scope of treatment is defined by the outcomes. <br> 
+	<ul>
+		<li>oscillatory motion </li>
+		<li>simple harmonic motion </li>
+		<li>restoring force </li>
+		<li>oscillating spring, pendulum </li>
+		<li>mechanical resonance </li>
+		<li>mechanical waves—longitudinal and transverse </li>
+		<li>universal wave equation </li>
+		<li>reflection </li>
+		<li>interference </li>
+		<li>acoustic resonance </li> 
+		<li>Doppler effect </li>
+	</ul>
+	  <br>
+	<h2> General Outcome 1</h2>
+	1.  describe the conditions that produce oscillatory motion <br>
+
+	<h2>Specific Outcomes for Knowledge </h2>
+	Students will: 
+	<div class="indent">
+		20–D1.1k  describe oscillatory motion in terms of period and frequency  <br>
+		20–D1.2k  define simple harmonic motion as a motion due to a restoring force that is directly proportional and opposite to the displacement from an equilibrium position  <br>
+		20–D1.3k  explain, quantitatively, the relationships among displacement, acceleration, velocity and time for simple harmonic motion, as illustrated by a frictionless, horizontal mass-spring system or a pendulum, using the small-angle approximation  <br>
+		20–D1.4k  determine, quantitatively, the relationships among kinetic, gravitational potential and total mechanical energies of a mass executing simple harmonic motion  <br>
+		20–D1.5k  define mechanical resonance.  <br>
+ 	</div>
+	  <br>
+	
+	<h2>Specific Outcomes for Science, Technology and Society (STS) (Nature of Science Emphasis) </h2>
+ 	Students will: 
+	<div class="indent">
+		20–D1.1sts  explain that the goal of science is knowledge about the natural world (NS1) <br> 
+		<span class="i_indent">•   analyze, qualitatively, the forces in real-life examples of simple harmonic motion: </span> <br>
+		<span class="i_indent"> -   action of springs in vehicle suspensions  </span> <br> 
+		<span class="i_indent"> -   mechanical resonance in cars, bridges and buildings   </span> <br>
+		<span class="i_indent"> -   seismic waves in Earth’s crust  </span> <br>
+		<span class="i_indent">•   relate the fundamental frequency and amplitude of a vibrating drum membrane to its properties.  </span> <br>
+		Note:  Some of the outcomes are supported by examples.  The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed. <br>
+	</div>
+ 	  <br>
+ 
+	<h2>Specific Outcomes for Skills (Nature of Science Emphasis) </h2>
+ 	Initiating and Planning <br>
+ 
+	Students will: <br>
+	<div class="indent">
+		20–D1.1s  formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues <br>
+		<span class="indent">•   design an experiment to demonstrate that simple harmonic motion can be observed within certain limits, relating the frequency and period of the motion to the physical characteristics of the system;  </span><br>
+		<span class="i_indent">e.g., a frictionless horizontal mass-spring system or a pendulum (IP–NS2) </span> <br>
+		<span class="indent">•   predict the conditions required for mechanical resonance (IP–NS3).  </span> <br>
+ 	</div>
+	 <br>
+	Performing and Recording <br>
+ 	Students will: <br>
+	<div class="indent">
+		20–D1.2s  conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information <br>
+		<span class="indent">•   perform an experiment to determine the relationship between the length of a pendulum and its period of oscillation (PR–NS3)  </span><br>
+		<span class="indent">•   perform an experiment to illustrate the phenomenon of mechanical resonance  (PR–NS3)  </span><br>
+		<span class="indent">•   perform an experiment to determine the spring constant of a spring (PR–NS3).  </span><br>
+	</div>
+	  <br>
+ 	Analyzing and Interpreting <br>
+ 	Students will: <br>
+	<div class="indent">
+		20–D1.3s  analyze data and apply mathematical and conceptual models to develop and assess possible solutions  <br>
+		<span class="i_indent">•   relate the length of a pendulum to its period of oscillation (AI–NS2) [ICT C7–4.2] </span> <br>
+		<span class="i_indent">•   ask if the mass of the pendulum bob is a factor in the pendulum’s period of oscillation (AI–NS5). </span> <br>
+ 	</div>
+	  <br>
+	Communication and Teamwork <br>
+ 	Students will: <br>
+	<div class="indent">
+		20–D1.4s  work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results  <br>
+		<span class="indent">•   select and use appropriate numeric, symbolic, graphical or linguistic modes of representation to communicate findings and conclusions (CT–NS2).  </span><br>
+ 	</div>
+	Note:  Some of the outcomes are supported by examples.  The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed. <br>
+ 
+	  <br>
+	<h2>Links to Mathematics</h2>
+	The following mathematics outcomes are related to the content of Unit D but are not considered prerequisites. <br>
+	Concept - 	Mathematics Course, Strand and Specific Outcome <br>
+	Data Collection and Analysis <br>
+		<span class="indent">Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3 </span> <br>
+	Measurement andUnit Conversions <br>
+		<span class="indent">Mathematics 10C, Measurement, Specific Outcomes 1 and 2; </span> <br>
+		<span class="indent">Mathematics 10-3, Measurement, Specific Outcome 1; </span> <br>
+		<span class="indent">Mathematics 20-3, Algebra, Specific Outcome 3 </span> <br>
+	Trigonometry <br>
+		<span class="indent">Mathematics 10C, Measurement, Specific Outcome 4; </span> <br>
+		<span class="indent">Mathematics 10-3, Geometry, Specific Outcomes 2 and 4 </span> <br>
+	Rate and Proportions <br>
+		<span class="indent">Mathematics 20-2, Measurement, Specific Outcome 1 </span> <br>
+	Graph Analysis <br>
+		<span class="indent">Mathematics10C, Relations and Functions, Specific Outcomes 1, 4 and 7; </span> <br>
+		<span class="indent">Mathematics 20-3, Statistics,  Specific Outcome 1 </span> <br>
+		<span class="indent">Mathematics 30-1, Trigonometry, Specific Outcome 4 </span> <br>
+		<span class="indent">Mathematics 30-2, Relations and Functions, Outcome 8 </span> <br>
+	Solving Equations <br>
+		<span class="indent">Grade 9 Mathematics, Number, Specific Outcome 6; </span> <br>
+		<span class="indent">Mathematics 20-2, Number and Logic, Specific Outcome 4; </span> <br>
+		<span class="indent">Mathematics 20-1, Algebra and Number, Specific Outcomes 3 and 6; </span> <br>
+		<span class="indent">Mathematics 30-2, Relations and Functions, Specific Outcome 3 </span> <br>
+	Slope <br>
+		<span class="indent">Mathematics10C, Relations and Functions, Specific Outcomes 3 and 5; </span> <br>
+		<span class="indent">Mathematics 20-3, Algebra, Specific Outcome 2 </span> <br>
+	Powers <br>
+		<span class="indent">Mathematics10C, Algebra and Number, Specific Outcome 3 </span> <br>
+	Note: The use of systems of equations, the quadratic formula and trigonometric ratios for angles greater than 90<sup>º</sup> is not required in this unit. <br>
+	 <br>
+	  <br>
+	</div>
+	</div>
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P20bg"><h1 class="P20bg secTitle">Chapter 8:  Mechanical waves transmit energy in a variety of ways </h1></div>
+	<div class="P20c">
+		<h2>Unit Themes and Emphases</h2>
+		<ul>
+		<li>Mechanical waves – longitudinal and transverse </li>
+		<li>Universal wave equation </li>
+		<li>Reflection </li>
+		<li>Interference </li>
+		<li>Acoustical resonance </li>
+		<li>Doppler effect </li>
+	</ul>
+	
+	<h2>Knowledge </h2>
+	<ul>
+		<li>Describe how transverse and longitudinal waves move through a medium </li>
+		<li>Explain how the speed, wavelength, frequency, and amplitude of a wave are related. </li>
+		<li>Describe how interference patterns can be used to determine the properties of the waves. </li>
+		<li>Explain the Doppler effect. </li>
+		<li>Describe the difference between transverse and longitudinal waves. </li>
+		<li>Describe how waves are reflected. </li>
+		<li>Explain the relationship between rays and waves. </li>
+		<li>Apply the universal wave equation to explain how frequency, wavelength, and wave velocity are related. </li>
+		<li>Explain the effects of constructive and destructive interference </li>
+	</ul>
+
+	<h2>STS </h2>
+	<ul>
+		<li>Explain that the goal of technology is to provide solutions to practical problems. </li>
+	</ul>
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P20bg secTitle">8.1 The Properties of Waves </h2>
+	Waves have many properties that can be used to analyze the nature of the wave and the way it behaves as it moves through a medium.  Some of these properties are qualitative (crest, trough, wave front, medium, incident wave, reflected wave, wave train) while others are quantitative (amplitude, wavelength, frequency, wave velocity).  <br>
+	<span class="def">Medium – </span> the substance that the wave moves through.<br>
+	<span class="def">Wave – </span> a disturbance of energy that moves through a medium. <br>
+	<span class="def">Equilibrium position – </span> the position of a medium before a wave enters. <br>
+	<span class="def">Crest – </span> the part of a transverse wave above the equilibrium position (positive amplitude).<br>
+	<span class="def">Trough – </span> the part of a transverse wave below the equilibrium position (negative amplitude).<br>
+	<span class="def">Amplitude – </span> the distance a wave has moved from the equilibrium point. Think the height of the wave. <br>
+	<span class="def">Wavelength – </span> the horizontal length of a wave.  The distance from crest to crest or trough to trough or node to second node.<br>
+	<span class="def">Wave front – </span> the front of a wave. Reduces a wave to a simple line.<br>
+	<h1>CIRCULAR WAVE</h1>
+	<span class="def">Incident wave – </span> the incoming (original) wave.<br>
+	<span class="def">Reflected wave – </span> the wave that bounces off of a reflective surface (light that bounced off of a mirror).<br>
+	<h1>MEDIA WAVES ANIMATION</h1>
+	<span class="def">Wave train – </span> a group of waves moving together.<br>
+	<span class="def">Point source – </span> a single point from which a wave emerges.<br>
+	<span class="def">Ray – </span> an arrow that shows the direction of movement of a wave.<br>
+ <br>         
+ 	<!-- v = f lamb) *************************************************************** -->
+          <div class="equation"> 
+            <center><em>v = f &lambda; </em></center>
+          </div>
+    <!-- v = f lamb) *************************************************************** -->
+	v - velocity, m/s <br>
+    f - frequency, Hz <br>
+    &lambda; - wavelength, m <br>
+	 <br>
+     <br>
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          <h2 class="P20bg secTitle">8.2 Transverse and Longitudinal Waves </h2>
+	Waves can move through a medium either as transverse or longitudinal waves.  The relationship among frequency, wavelength, and wave velocity is given by the universal wave equation. <br>
+ 	Pulse -  <br>
+	<h1>LONGITUDINAL WAVE</h1>
+	<h1>TRANSVERSE WAVE</h1>
+    	<br>
+		<br>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">8.3 Superposition and Interference </h2>
+		When two, or more, waves travel in different directions through the same point in space their amplitudes combine according to the principle of superposition.  Depending on the properties of the waves, they may form an interference pattern.  Interference patterns can often be used to determine the properties of the waves from which they are formed. <br>
+		<h1>SUPERPOSITION</h1>
+		<h1>2 POINT SOURCE INTERFERENCE</h1>
+		<span class="def">Interference </span>– the effect of two pulses (or two waves) crossing within a medium; the medium takes on a shape that is different from the shape of either pulse alone <br>
+		<span class="def">Principle of superposition </span>– the displacement of the combined pulse at each point of interference is the sum of the displacements of the individual pulses <br>
+		<span class="def">Constructive interference </span>– the overlap of pulses to create a pulse of greater amplitude <br>
+		<h1>CONSTRUCTIVE INTERFERENCE</h1>
+		<span class="def">Destructive interference </span>– the overlap of pulses to create a pulse of lesser amplitude <br>
+		<h1>DESTRUCTIVE INTERFERENCE</h1>
+		<span class="def">Node </span>– a point on a spring or other medium at which only destructive interference occurs; a point that never vibrates between supercrest and supertroughs; in a standing wave nodes occur at intervals of   <br>
+		<span class="def">Antinode </span>– a point in an interference pattern that oscillates with maximum amplitude; in a standing wave antinodes occur at intervals of   <br>
+		<span class="def">Standing wave </span>– a condition in a spring or other medium in which a wave seems to oscillate around stationary points called nodes.  The wavelength of a standing wave is the distance between alternate nodes or alternate antinodes. <br>
+		<span class="def">Resonance </span>– an increase in the amplitude of a wave due to a transfer of energy in phase with the natural frequency of the wave <br>
+		Closed pipe <br>
+		<span class="def">Fundamental frequency </span>– the lowest frequency produced by a particular instrument; corresponds to the standing wave having a single antinode, with a node at each end of the string <br>
+		<span class="def">Overtone </span>– any frequency of vibration of a string that may exist simultaneously with the fundamental frequency <br>
+		Open pipe <br>
+		<span class="def">Interference pattern </span>– a pattern of maxima and minima resulting from the interaction of waves, as crests and troughs overlap while the waves move through each other <br>
+		<span class="def">Maximum </span>-  a line of points linking antinodes that occur as the result of constructive interference between waves <br>
+		<span class="def">Minimum </span>– a line of points linking nodes that occur as the result of destructive interference between waves <br>
+		<span class="def">Phase shift </span>– the result of waves from one source having to travel farther to reach a particular point in the interference pattern that waves from the other source <br>
+		<h1>OPEN PIPE RESONANCE</h1>
+		<h1>SLIDE WHISTLE RESONANCE</h1>
+	<br>
+	<br>
+			     <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section14" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section15"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">8.4 The Doppler Effect </h2>
+	When a sound source moves either toward or away from a sensor (ear or microphone), the frequency of the sound that is detected will be different from the frequency emitted by the source. <br>
+	When an object is traveling at the speed of sound it creates a shock wave known as a sonic boom. <br>
+	<br>
+	<h1>DOPPLER ANIMATION</h1>
+	 <br> 
+     <!-- dopler *************************************************************** -->
+            <div class="equation"> 
+              <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                      <td rowspan="2" nowrap="nowrap">
+                          <em>f = &nbsp;</em> 
+                      </td>
+                      <td nowrap="nowrap">
+                          <em>v</em>
+                      </td>
+                      <td rowspan="2" nowrap="nowrap">
+                          <em>&nbsp;&times;f<sub>o</sub></em> 
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="upper_line">
+                          <em>v &plusmn; v<sub>s</sub></em>
+                      </td>
+                  </tr>
+              </table>
+            </div>  
+     <!-- dopler *************************************************************** -->
+     f - frequency precieved, Hz <br>
+     v - velocity of wave, m/s <br>
+     v<sub>s</sub> - velocity of source, m/s <br>
+     f<sub>o</sub> - original frequency, Hz <br>
+	  <br>
+	  <br>
+			
+			  
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Physics 20 <br>
+			Program of Studies <br>
+		<img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>      
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	</div>
+
+</div> <!--   end page -->
+</body>
+</html>

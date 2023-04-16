@@ -1,0 +1,637 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P20 UA Ch6 Energy</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 20</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="P20U1Ch1.html">Chapter 1 Acceleration</a>
+			<a href="P20U1Ch2.html">Chapter 2 Vectors</a>
+			<a href="P20U2Ch3.html">Chapter 3 Forces</a>
+			<a href="P20U2Ch4.html">Chapter 4 Gravity</a>
+			<a href="P20U3Ch5.html">Chapter 5 Circular Motion</a>
+			<a class="active" href="P20U3Ch6.html">Chapter 6 Energy</a>
+			<a href="P20U4Ch7.html">Chapter 7 Harmonic Motion</a>
+			<a href="P20U4Ch8.html">Chapter 8 Waves</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P20bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 3: Circular Motion, Work, and Energy </h2></div>
+	<h2>Unit Themes and Emphases</h2>
+	<ul>
+		<li>Energy, Equilibrium and Systems </li>
+		<li>Nature of Science </li>
+		<li>Scientific Inquiry </li>
+	</ul>
+	<h2>Focusing Questions</h2>
+	<ul>	
+		<li>What is necessary to maintain circular motion? </li>
+		<li>How does an understanding of conservation laws contribute to an understanding of the Universe? </li>
+		<li>How can mechanical energy by transferred and transformed? </li>
+	</ul>
+        <br>
+		<br>
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h2>Unit C:  Circular Motion, Work and Energy</h2>	
+	<h2>Themes: Energy and Equilibrium</h2>
+	<h2>Overview:  </h2>
+	In this unit, students extend their study of kinematics and dynamics to uniform circular motion and to mechanical energy, work and power <br>
+	This unit builds on: <br>
+	<ul>
+		<li>•Grade 8 Science, Unit D:  Mechanical Systems </li>
+		<li>•Grade 9 Science, Unit E:  Space Exploration </li>
+		<li>•Science 10, Unit B:  Energy Flow in Technological Systems </li>
+		<li>•Physics 20, Unit A:  Kinematics and Unit B:  Dynamics </li>
+	</ul>
+	This unit prepares students for further study,in subsequent physics courses, of circular motion, conservation laws and particles in magnetic fields.   <br>
+	 <br>
+	Unit C will require approximately 30% of the time allotted for Physics 20. <br>
+	 <br>
+
+	<h2>Focusing Questions:  </h2>
+	<ul>
+		<li>What conditions are necessary to maintain circular motion?  </li>
+		<li>How does an understanding of conservation laws contribute to an understanding of the universe?  </li>
+		<li>How can mechanical energy be transferred and transformed? </li>
+	</ul>
+	<h2>General Outcomes:</h2>
+	There are two major outcomes in this unit. <br>
+	Students will: <br>
+	<em>C1. explain circular motion,using Newton’s laws of motion</em> <br>
+	<em>C2. explain that work is a transfer of energy and that conservation of energy in an isolated system is a fundamental physical concept</em> <br>
+	 <br>
+
+	<h2>Key Concepts:</h2>
+	The following concepts are developed in this unit and may also be addressed in other units or in other courses. The intended level and scope of treatment is defined by the outcomes.Key Concepts:
+	<ul>
+		<li>uniform circular motion </li>
+		<li>planetary and satellite motion </li>
+		<li>Kepler’s laws </li>
+		<li>mechanical energy </li>
+		<li>conservation of mechanical energy </li>
+		<li>work-energy theorem </li>
+		<li>isolated systems </li>
+		<li>power </li>
+	</ul>
+	 <br>
+	<h2>General Outcome 1</h2>
+	C1.  Students will explain circular motion, using Newton’s laws of motion. <br>
+	 <br>
+	<h2>Specific Outcomes for Knowledge</h2>
+	Students will:
+	<div class="indent">
+		20–C1.1k describe uniform circular motion as a special case of two-dimensional motion	5.1		 <br>
+		20–C1.2k explain, qualitatively and quantitatively, that the acceleration in uniform circular motion is directed toward the centre of a circle	5.1 <br>
+		20–C1.3k explain, quantitatively, the relationships among speed, frequency, period and radius for circular motion	5.2 <br>
+		20–C1.4k explain, qualitatively, uniform circular motion in terms of Newton’s laws of motion	5.2	<br>
+		20–C1.5k explain, quantitatively, planetary and natural and artificial satellite motion, using circular motion to approximate elliptical orbits	5.3 <br>
+		20–C1.6k predict the mass of a celestial body from the orbital data of a satellite in uniform circular motion around the celestial body	5.3 <br>
+		20–C1.7k explain, qualitatively, how Kepler’s laws were used in the development of Newton’s law of universal gravitation.	5.3 <br>		
+	</div>
+	 <br>
+	<h2>Specific Outcomes for Science, Technology and Society (STS) (Nature of Science Emphasis) </h2>
+	Students will:
+	<div class="indent">	
+		20–C1.1sts explain that the process of scientific investigation includes analyzing the evidence and providing explanations based upon scientific theories and concepts <br>
+		<span class="i_indent">•	examine the role of orbital perturbations in the discovery of outer planets </span> <br>
+		<span class="i_indent">•	examine the evidence for extra-solar planets	</span> <br>
+		20–C1.2sts explain how science and technology are developed to meet societal needs and expand human capability  <br>
+		<span class="i_indent">•	explain the functions, applications and societal impacts of geosynchronous satellites	</span> <br>	
+		20–C1.3sts explain that the goal of technology is to provide solutions to practical problems  <br>
+		<span class="indent">•	analyze the principles and applications of circular motion in daily situations </span> <br>
+		<span class="i_indent">			–	explain the use of a centrifuge in industry or research </span> <br>
+		<span class="i_indent">			–	explain the motion of a car moving with constant speed through a curve </span> <br>
+		<span class="i_indent">			–	explain the motion of carnival or playground rides moving in a horizontal plane and/or a vertical plane </span> <br>
+		<span class="i_indent">			–	explain the operation of a potter’s wheel. </span> <br>
+	</div>
+	<h2>Specific Outcomes for Skills (Nature of Science Emphasis)</h2>
+	Students will:<br>
+	Initiating and Planning <br>
+	Students will: <br>
+	<div class="indent">
+		20–C1.1s formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues <br>
+		<span class="indent">• design an experiment to investigate the relationships among orbital speed, orbital radius, acceleration and force in uniform circular motion(IP–NS2) 	Vc lab, Fc lab </span> <br>
+		<span class="indent">• explore design characteristics of structures that facilitate circular motion; </span><br>
+			<span class="i_indent">e.g., How is banking used on a racetrack to make high-speed turns safer? 	??????</span> <br>
+	</div>
+	 <br>
+	Performing and Recording <br>
+	Students will: <br>
+	<div class="indent">
+		20–C1.2s conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information <br>
+		<span class="indent">• perform an experiment to investigate the relationships among net force acting on an object in uniform circular motion and the object’s frequency, mass, speed and path radius (PR–NS3)</span> <br>
+	</div>
+	 <br>
+
+	Analyzing and Interpreting <br>
+	Students will: <br>
+	<div class="indent">
+		20–C1.3s analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+		<span class="indent">• organize and interpret experimental data, using prepared graphs or charts (AI–NS1)[ICTC7–4.2] </span> <br>
+		<span class="indent">• construct graphs to show relationships among frequency, mass, speed and path radius </span> <br>
+		<span class="indent">• summarize an analysis of the relationships among frequency, mass, speed and path radius (AI–NS6) </span> <br>
+		<span class="indent">• solve, quantitatively, circular motion problems in both horizontal and vertical planes, using algebraic and/or graphical vector analysis (AI–NS3) [ICT C6–4.1] </span> <br>
+	</div>
+	 <br>
+	Communication and Teamwork <br>
+	Students will: <br>
+	<div class="i_indent">	
+		20–C1.4s work collaboratively in a ddressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results <br>
+		<span class="indent">• select and use appropriate numeric, symbolic, graphical or linguistic modes of representation to communicate findings and conclusions (CT–NS2). </span> <br>
+	</div>
+	Note: Some of the outcomes are supported by examples. The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed <br>
+	 <br>
+	<h2>Links to Mathematics</h2>
+	The following mathematics outcomes are related to the content of Unit C but are not considered prerequisites. <br>
+	Concept 	Mathematics Course, Strand and Specific Outcome<br>
+	Data Collection and Analysis <br>
+	Grade 9 Mathematics,Statistics and Probability (Data Analysis),Specific Outcome 3
+	Measurement and Unit Conversions <br>
+		<span class="indent">Mathematics 10C, Measurement, Specific Outcomes 1 and 2; </span> <br>
+		<span class="indent">Mathematics 10-3, Measurement, Specific Outcome 1; </span> <br>
+		<span class="indent">Mathematics 20-3, Algebra, Specific Outcome 3 </span> <br>
+	Trigonometry <br>
+		<span class="indent">Mathematics 10C, Measurement, Specific Outcome 4; </span> <br>
+		<span class="indent">Mathematics 10-3, Geometry, Specific Outcomes 2 and 4 </span> <br>
+	Rate and Proportions <br>
+		<span class="indent">Mathematics 20-2, Measurement, Specific Outcome 1 </span> <br>
+	Graph Analysis <br>
+		<span class="indent">Mathematics10C, Relations and Functions,Specific Outcomes 1, 4 and 7; </span> <br>
+		<span class="indent">Mathematics 20-3, Statistics,Specific Outcome1 </span> <br>
+	Solving Equations <br>
+		<span class="indent">Grade 9 Mathematics, Number, Specific Outcome 6; </span> <br>
+		<span class="indent">Mathematics 20-1, Algebra and Number, Specific Outcome 6; </span> <br>
+		<span class="indent">Mathematics 30-2, Relations and Functions, Specific Outcome 3 </span> <br>
+	Scale Diagrams <br>
+		<span class="indent">Mathematics 20-2, Measurement,Specific Outcome 2; </span> <br>
+		<span class="indent">Mathematics 20-3, Geometry, Specific Outcome 2 </span> <br>
+	Slope <br>
+		<span class="indent">Mathematics10C, Relations and Functions,Specific Outcome 3 and 5; </span> <br>
+		<span class="indent">Mathematics 20-3, Algebra, Specific Outcome 2 </span> <br>
+	Powers <br>
+		<span class="indent">Mathematics10C, Algebra and Number, Specific Outcome 3 </span> <br>
+	Note: The use of systems of equations, the quadratic formula and trigonometric ratios for angles greater than 90º is not required in this unit <br>
+	 <br>
+	  <br>
+	</div>
+	</div>
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P20bg"><h1 class="P20bg secTitle">Chapter 6.  In An Isolated System, Energy Is Transferred From One Object To Another Whenever Work Is Done </h1></div>
+	<div class="P20c">
+	<h2>Key Concepts </h2>
+	<ul>
+		<li>Work, mechanical energy, and power </li>
+		<li>The Work-energy theorem </li>
+		<li>Isolated and non-isolated systems. </li>
+		<li>The law of conservation of energy </li>
+	</ul>
+
+	<h2>Learning Outcomes</h2>
+	<ul>
+		<li>Use the law of conservation of energy to explain the behaviors of objects within isolated systems. </li>
+		<li>Describe the energy transformations in isolated and non-isolated systems using the work-energy theorem </li>
+		<li>Calculate power output. </li>
+	</ul>
+	<h2>STS </h2>
+	<ul>
+		<li>Explain that models and theories are used to interpret and explain observations. </li>
+		<li>Explain that technology cannot solve all problems </li>
+		<li>Express opinions on the support found in Canadian society for science and technology measures that work toward a sustainable society. </li>
+	</ul>
+	 <br>
+	</div>
+		
+
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P20bg secTitle">6.1 Work and Energy</h2>
+	Work is the transfer of energy that occurs when a force acts over a displacement.  It is a scalar quantity measured in joules.  <br>
+	<br>
+    <!-- W = Fd *************************************************************** -->
+        <center><span class="equation"><em>W = &vert;F&vert; &vert;&Delta;d&vert; cos&theta;</em></span> <span style="left : -5.5em; top : -0.9em; position: relative;">&rarr;</span> <span style="left : -5.0em; top : -0.9em; position: relative;">&rarr;</span> </center>
+    <!-- W = Fd *************************************************************** -->
+    W - work, J = kg&middot;m<sup>2</sup>/s<sup>2</sup> <br>
+    F - force, N <br>
+    d - displacement, m <br>
+    <br>
+	Potential energy is the energy a body has because of its position or configuration.  It is a scalar quantity measured in Joules. <br>
+	Kinetic energy is the energy a body has because of its motion.  It is a scalar quantity measured in Joules. <br>
+  <br> 
+ 	<span class="def">Energy </span>- the ability to do work  <br>
+	<span class="def">Work </span>– a measure of the energy transferred when a force acts over a given displacement.  It is calculated as the product of the magnitude of applied force and the displacement of the object in the direction of that force  <br>
+	<span class="def">Gravitational potential energy </span>– the energy of an object due to its position above the surface of Earth  <br>
+    <!-- Eg = mgh *************************************************************** -->
+			<center><span class="equation"><em>E<sub>g</sub> = mgh</em></span></center>
+    <!-- Eg = mgh *************************************************************** -->
+    E<sub>g</sub> - gravitational potential energy, J <br>
+    m - mass, kg <br>
+    g - acceleration due to gravity = 9.81 m/s<sup>2</sup> <br>
+    h - height, m <br>
+    <br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/TeFmgWMXq5o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+	<span class="def">Reference point </span>– an arbitrarily chosen point from which distances are measured  <br>
+	<span class="def">Elastic potential energy </span>– the energy resulting from an object being altered from its standard shape, without permanent deformation  <br>
+    <!-- F = kx *************************************************************** -->
+		<table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td>
+				  <em>F<sub>s</sub> = -kx</em>
+			  </td>
+			  			<td>
+				  <div style="left : -3.5em; top : 0.2em; position: relative;">&rarr;</div>
+				  <div style="left : -0.8em; top : -1.9em; position: relative;">&rarr;</div>
+			  </td>
+		  </tr>	
+		</table>
+    <!-- F = kx *************************************************************** -->
+    F - force, N <br>
+    k - spring constant, N/m <br>
+    x - stretch or compression <br>
+    <br>
+    <!-- Es = kx^2/2 *************************************************************** -->   
+        <div class="equation">  
+          <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                  <td rowspan="2" nowrap="nowrap">
+                      <em>E<sub>s</sub> = &nbsp; </em>
+                  </td>
+                  <td nowrap="nowrap">
+                      <em>kx<sup><span style="font-style: normal;">2</span></sup></em>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="upper_line">
+                      <span style="font-style: normal;">2</span>
+                  </td>
+              </tr>
+          </table>
+        </div>  
+  	<!-- Es = kx^2/2 *************************************************************** -->
+    E<sub>s</sub> - spring potential energy, J <br>
+    k - spring constant, N/m <br>
+    x - stretch or compression, m <br>
+    <br>
+	<span class="def">Kinetic energy</span> – the energy due to the motion of an object  <br>
+    <!-- Ek=mv^2/2 *************************************************************** -->
+          <div class="equation">  
+            <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td rowspan="2" nowrap="nowrap">
+                        <em>E<sub>k</sub></em> = &nbsp; 
+                    </td>
+                    <td nowrap="nowrap">
+                        <em>mv<sup><span style="font-style: normal;">2</span></sup></em>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="upper_line">
+                        <span style="font-style: normal;">2</span>
+                    </td>
+                </tr>
+            </table>
+          </div>  
+	<!-- Ek=mv^2/2 *************************************************************** -->
+    E<sub>k</sub> - kinetic energy, J <br>
+    m - mass, kg <br>
+    v - velocity, m/s <br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/CrqJSNORjPg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br>
+
+    <br>
+	<h3>Practice Problems</h3>
+	Page 296 Problem1  <a href="https://youtu.be/AkKnxcTJz34">youtu.be/AkKnxcTJz34</a> <br>
+	Page 296 Problem2  <a href="https://youtu.be/YI5gYh9L4GY">youtu.be/YI5gYh9L4GY</a> <br>
+	Page 296 Problem3  <a href="https://youtu.be/-f26A6qUtSI">youtu.be/-f26A6qUtSI</a> <br>
+	<br>
+	Page 298 Problem1  <a href="https://youtu.be/A0BvvLnkAAo">youtu.be/A0BvvLnkAAo</a> <br>
+	Page 298 Problem2  <a href="https://youtu.be/9VnFnpx-NcU">youtu.be/9VnFnpx-NcU</a> <br>
+	Page 298 Problem3  <a href="https://youtu.be/8v5ZKL-j1ao">youtu.be/8v5ZKL-j1ao</a> <br>
+	<br>
+	Page 301 Problem 1  <a href="https://youtu.be/kVlzY3VE9tc">youtu.be/kVlzY3VE9tc</a> <br>
+	Page 301 Problem 2  <a href="https://youtu.be/5bXrFewhSbQ">youtu.be/5bXrFewhSbQ</a> <br>
+	Page 301 Problem 3  <a href="https://youtu.be/2DiU4CA1hEw">youtu.be/2DiU4CA1hEw</a> <br>
+	Page 301 Problem 4  <a href="https://youtu.be/qVPNn5Si_MQ">youtu.be/qVPNn5Si_MQ</a> <br>
+	Page 301 Problem 5  <a href="https://youtu.be/wZX0YlhUBHc">youtu.be/wZX0YlhUBHc</a> <br>
+	<br>
+	Page 303 Problem1  <a href="https://youtu.be/4J0kue2y35k">youtu.be/4J0kue2y35k</a> <br>
+	Page 303 Problem2  <a href="https://youtu.be/mJktL2k0mFo">youtu.be/mJktL2k0mFo</a> <br>
+	Page 303 Problem3  <a href="https://youtu.be/abDzAPghTX0">youtu.be/abDzAPghTX0</a> <br>
+	<br>
+	Page 304 Problem 1  <a href="https://youtu.be/-en10dbT5Tg">youtu.be/-en10dbT5Tg</a> <br>
+	Page 304 Problem 2  <a href="https://youtu.be/ekGhFtW9dXY">youtu.be/ekGhFtW9dXY</a> <br>
+	Page 304 Problem 3  <a href="https://youtu.be/-en10dbT5Tg">youtu.be/-en10dbT5Tg</a> <br>
+	<br> 
+	Page 305 Question 7  <a href="https://youtu.be/oJwiMGICdrE">youtu.be/oJwiMGICdrE</a> <br>
+	Page 305 Question 8  <a href="https://youtu.be/_oUiwT-KSP0">youtu.be/_oUiwT-KSP0</a> <br>
+	Page 305 Question 9  <a href="https://youtu.be/1MKg3K5U0YU">youtu.be/1MKg3K5U0YU</a> <br>
+	Page 305 Question 10  <a href="https://youtu.be/Xlg1Tp18ll0">youtu.be/Xlg1Tp18ll0</a> <br>
+	Page 305 Question 11  <a href="https://youtu.be/ntgnJcqJnIM">youtu.be/ntgnJcqJnIM</a> <br>
+
+     <br>
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          <h2 class="P20bg secTitle">6.2 Mechanical Energy </h2>
+			Work done by a net force causes a change in kinetic energy.  <br>
+			The work-energy theorem states that the work done on a system is equal to the sum of the changes in the potential and kinetic energies.  <br>
+			Mechanical energy is the sum of the potential and kinetic energies.  <br>
+		   <br>
+			<span class="def">Mechanics </span>– the study of kinematics, statics, and dynamics  <br>
+			<span class="def">Mechanical energy </span>– the sum of potential and kinetic energies  <br>
+			<span class="def">Work-energy theorem </span>- the product of the force and distance <br>
+		  <br>
+			<h3>Practice Problems</h3>
+			Page 308 Problem 1  <a href="https://youtu.be/zwG_yI_9PzY">youtu.be/zwG_yI_9PzY</a> <br>
+			Page 308 Problem 2  <a href="https://youtu.be/xP3XB-0uGEA">youtu.be/xP3XB-0uGEA</a> <br>
+			Page 308 Problem 3  <a href="https://youtu.be/COW8joiyZXw">youtu.be/COW8joiyZXw</a> <br>
+			<br>
+			Page 309 Problem 1 <a href="https://youtu.be/F1fbsyvxTz8">youtu.be/F1fbsyvxTz8</a> <br>
+			Page 309 Problem 2  <a href="https://youtu.be/WAbUQ8dCR7I">youtu.be/WAbUQ8dCR7I</a> <br>
+			Page 309 Problem 3  <a href="https://youtu.be/aE_csi3g2vs">youtu.be/aE_csi3g2vs</a> <br>  
+		<br>  
+		<br>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">6.3 Mechanical Energy In Isolated and Non-isolated Systems </h2>
+		The law of conservation of energy states that in an isolated system, the mechanical energy is constant.  <br>
+		A simple pendulum is a good approximation of an isolated system in which energy is conserved.  <br>
+		A conservative force does not affect the mechanical energy of a system.  <br>
+		In non-isolated systems, the mechanical energy may change due to the action of non-conservative forces.  <br>
+		<span class="def">Isolated system </span>– a group of objects assumed to be isolated from all other objects in the universe  <br>
+		<span class="def">Non-isolated system </span>– a system in which there is an energy exchange with the surroundings  <br>
+		<span class="def">Conservation of energy </span>- the total amount of energy in a conservative system (No outside forces) stays the same.  <br>
+	  <br>
+		<h3>Practice Problems</h3>
+		Page 313 Problem 1  <a href="https://youtu.be/VeUROKfM9po">youtu.be/VeUROKfM9po</a> <br>
+		Page 313 Problem 2 <a href="https://youtu.be/I4kbNnGhwYE">youtu.be/I4kbNnGhwYE</a> <br>
+		Page 313 Problem 3 <a href="https://youtu.be/PVwkMjwx0KQ">https://youtu.be/PVwkMjwx0KQ</a> <br>
+		<br>
+		Page 315 Problem 1 <a href="https://youtu.be/oa4ACnMwk7w">youtu.be/oa4ACnMwk7w</a> <br>
+		Page 315 Problem 2 <a href="https://youtu.be/OrZjeMR_VlQ">youtu.be/OrZjeMR_VlQ</a> <br>
+		Page 315 Problem 3 <a href="https://youtu.be/Y6RDiy4jqi0">youtu.be/Y6RDiy4jqi0</a> <br>
+		Page 315 Problem 4 <a href="https://youtu.be/Rire48AJbhU">youtu.be/Rire48AJbhU</a> <br>
+		<br>
+		Page 323 Problem 7 <a href="https://youtu.be/p7Fqg1VzQWA">youtu.be/p7Fqg1VzQWA</a> <br>
+		Page 323 Problem 8 <a href="https://youtu.be/_VkYwFw0osA">youtu.be/_VkYwFw0osA</a> <br>
+		Page 323 Problem 9 <a href="https://youtu.be/CvZiL1mSYzo">youtu.be/CvZiL1mSYzo</a> <br>
+		Page 323 Problem 10 <a href="https://youtu.be/RpxTaT3MfKU">youtu.be/RpxTaT3MfKU</a> <br>
+	<br>
+	<br>
+	
+	              <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">6.4 Work and Power </h2>
+		Power is defied as the rate of ding work.  Power is calculated by find the ratio of the work done to the time required to do the work.  It is measured in Watts.     <br>
+		Power may be calculated by taking the product of the force doing the work and the average speed.  <br>
+	   <br>
+			  <span class="def">Power</span> – the rate of doing work  <br>
+			  <img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/p-wt-et-equation_orig.gif" alt="Equation P = E/t"/><br>
+		<!-- P = W/t *************************************************************** -->
+			<div class="equation"> 
+			  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td rowspan="2" nowrap="nowrap">
+						  <em>P</em> = &nbsp; 
+					  </td>
+					  <td nowrap="nowrap">
+						  <em>W</em>
+					  </td>
+				  </tr>
+				  <tr>
+					  <td class="upper_line">
+						  <em>t</em>
+					  </td>
+				  </tr>
+			  </table>
+			</div> 
+		<!-- P = W/t *************************************************************** -->
+		P - power, rate of transferring energy, W = J/s <br>
+		W - work or energy, J <br>
+		t - time, s <br>
+		<br>
+		A horse power is 746 Watts. 
+		Example of half a horse power by a person: <a href="https://www.youtube.com/watch?v=BAutHXpOLBQ">www.youtube.com/watch?v=BAutHXpOLBQ </a> <br>
+	  <br>
+			  <span class="def">Efficiency </span>– ratio of the energy output to the energy input of any system  <br>
+	  <br>
+		<!-- % Eff = input / output *************************************************************** -->
+			<div class="equation"> 
+			  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td rowspan="2" nowrap="nowrap">
+						  <em>% efficiency = &nbsp; </em>
+					  </td>
+					  <td nowrap="nowrap">
+						  <em>input energy</em>
+					  </td>
+					  <td rowspan="2" nowrap="nowrap">
+						  <em>&times; 100% &nbsp; </em>
+					  </td>
+				  </tr>
+				  <tr>
+					  <td class="upper_line">
+						  <em>output energy</em>
+					  </td>
+				  </tr>
+			  </table>
+			</div> 
+		<!-- % Eff = input / output *************************************************************** -->
+		<span class="def">% efficiency </span>- ratio of energy converted to useful energy <br>
+		<span class="def">input energy </span>- the energy put into the energy conversion, J <br>
+		<span class="def">output energy </span>- the energy removed from the energy conversion, J <br>
+		<br>
+		</div>
+			<h3>Practice Problems</h3>	 
+		Page 325 Problem 1  <a href="https://youtu.be/2nyxDL0SovM">youtu.be/2nyxDL0SovM</a> <br>
+		Page 325 Problem 2  <a href="https://youtu.be/2ASrCdKAUHE">youtu.be/2ASrCdKAUHE</a> <br>
+		Page 325 Problem 3  <a href="https://youtu.be/IXCgYJzUjfw">youtu.be/IXCgYJzUjfw</a> <br>
+		  <br>	 	
+		Page 328 Problem 1  <a href="https://youtu.be/-Up2jpmDlDw">youtu.be/-Up2jpmDlDw</a> <br>
+		Page 328 Problem 2   <a href="https://youtu.be/q2QQtieJrTs">youtu.be/q2QQtieJrTs</a> <br>
+		Page 328 Problem 3  <a href="https://youtu.be/id6m2Pf3JIA">youtu.be/id6m2Pf3JIA</a> <br>
+		Page 328 Problem 4  <a href="https://youtu.be/lpAkKx2VsKs">youtu.be/lpAkKx2VsKs</a> <br>
+		  <br>
+		Page 330 Question 4  <a href="https://youtu.be/p0xUWX_yrwk">youtu.be/p0xUWX_yrwk</a> <br>
+		Page 330 Question 5  <a href="https://youtu.be/wMrE-1xa8Gg">youtu.be/wMrE-1xa8Gg</a> <br>
+		Page 330 Question 6  <a href="https://youtu.be/MrbBRMGbjo0">youtu.be/MrbBRMGbjo0</a> <br>
+		Page 330 Question 7  <a href="https://youtu.be/8C5aiqrP-Wo">youtu.be/8C5aiqrP-Wo</a> <br>
+		<br>
+		<br>  
+			  
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Physics 20 <br>
+			Program of Studies <br>
+		<img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>      
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>

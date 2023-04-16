@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P20 UA Ch5 Circular Motion</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 20</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="P20U1Ch1.html">Chapter 1 Acceleration</a>
+			<a href="P20U1Ch2.html">Chapter 2 Vectors</a>
+			<a href="P20U2Ch3.html">Chapter 3 Forces</a>
+			<a href="P20U2Ch4.html">Chapter 4 Gravity</a>
+			<a class="active" href="P20U3Ch5.html">Chapter 5 Circular Motion</a>
+			<a href="P20U3Ch6.html">Chapter 6 Energy</a>
+			<a href="P20U4Ch7.html">Chapter 7 Harmonic Motion</a>
+			<a href="P20U4Ch8.html">Chapter 8 Waves</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P20bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 3: Circular Motion, Work, and Energy </h2></div>
+	<h2>Unit Themes and Emphases</h2>
+	<ul>
+		<li>Energy, Equilibrium and Systems </li>
+		<li>Nature of Science </li>
+		<li>Scientific Inquiry </li>
+	</ul>
+	<h2>Focusing Questions</h2>
+	<ul>	
+		<li>What is necessary to maintain circular motion? </li>
+		<li>How does an understanding of conservation laws contribute to an understanding of the Universe? </li>
+		<li>How can mechanical energy by transferred and transformed? </li>
+	</ul>
+        <br>
+		<br>
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h2>Unit C:  Circular Motion, Work and Energy</h2>	
+	<h2>Themes: Energy and Equilibrium</h2>
+	<h2>Overview:  </h2>
+	In this unit, students extend their study of kinematics and dynamics to uniform circular motion and to mechanical energy, work and power <br>
+	This unit builds on: <br>
+	<ul>
+		<li>•Grade 8 Science, Unit D:  Mechanical Systems </li>
+		<li>•Grade 9 Science, Unit E:  Space Exploration </li>
+		<li>•Science 10, Unit B:  Energy Flow in Technological Systems </li>
+		<li>•Physics 20, Unit A:  Kinematics and Unit B:  Dynamics </li>
+	</ul>
+	This unit prepares students for further study,in subsequent physics courses, of circular motion, conservation laws and particles in magnetic fields.   <br>
+	 <br>
+	Unit C will require approximately 30% of the time allotted for Physics 20. <br>
+	 <br>
+
+	<h2>Focusing Questions:  </h2>
+	<ul>
+		<li>What conditions are necessary to maintain circular motion?  </li>
+		<li>How does an understanding of conservation laws contribute to an understanding of the universe?  </li>
+		<li>How can mechanical energy be transferred and transformed? </li>
+	</ul>
+	<h2>General Outcomes:</h2>
+	There are two major outcomes in this unit. <br>
+	Students will: <br>
+	<em>C1. explain circular motion,using Newton’s laws of motion</em> <br>
+	<em>C2. explain that work is a transfer of energy and that conservation of energy in an isolated system is a fundamental physical concept</em> <br>
+	 <br>
+
+	<h2>Key Concepts:</h2>
+	The following concepts are developed in this unit and may also be addressed in other units or in other courses. The intended level and scope of treatment is defined by the outcomes.Key Concepts:
+	<ul>
+		<li>uniform circular motion </li>
+		<li>planetary and satellite motion </li>
+		<li>Kepler’s laws </li>
+		<li>mechanical energy </li>
+		<li>conservation of mechanical energy </li>
+		<li>work-energy theorem </li>
+		<li>isolated systems </li>
+		<li>power </li>
+	</ul>
+	 <br>
+	<h2>General Outcome 1</h2>
+	C1.  Students will explain circular motion, using Newton’s laws of motion. <br>
+	 <br>
+	<h2>Specific Outcomes for Knowledge</h2>
+	Students will:
+	<div class="indent">
+		20–C1.1k describe uniform circular motion as a special case of two-dimensional motion	5.1		 <br>
+		20–C1.2k explain, qualitatively and quantitatively, that the acceleration in uniform circular motion is directed toward the centre of a circle	5.1 <br>
+		20–C1.3k explain, quantitatively, the relationships among speed, frequency, period and radius for circular motion	5.2 <br>
+		20–C1.4k explain, qualitatively, uniform circular motion in terms of Newton’s laws of motion	5.2	<br>
+		20–C1.5k explain, quantitatively, planetary and natural and artificial satellite motion, using circular motion to approximate elliptical orbits	5.3 <br>
+		20–C1.6k predict the mass of a celestial body from the orbital data of a satellite in uniform circular motion around the celestial body	5.3 <br>
+		20–C1.7k explain, qualitatively, how Kepler’s laws were used in the development of Newton’s law of universal gravitation.	5.3 <br>		
+	</div>
+	 <br>
+	<h2>Specific Outcomes for Science, Technology and Society (STS) (Nature of Science Emphasis) </h2>
+	Students will:
+	<div class="indent">	
+		20–C1.1sts explain that the process of scientific investigation includes analyzing the evidence and providing explanations based upon scientific theories and concepts <br>
+		<span class="i_indent">•	examine the role of orbital perturbations in the discovery of outer planets </span> <br>
+		<span class="i_indent">•	examine the evidence for extra-solar planets	</span> <br>
+		20–C1.2sts explain how science and technology are developed to meet societal needs and expand human capability  <br>
+		<span class="i_indent">•	explain the functions, applications and societal impacts of geosynchronous satellites	</span> <br>	
+		20–C1.3sts explain that the goal of technology is to provide solutions to practical problems  <br>
+		<span class="indent">•	analyze the principles and applications of circular motion in daily situations </span> <br>
+		<span class="i_indent">			–	explain the use of a centrifuge in industry or research </span> <br>
+		<span class="i_indent">			–	explain the motion of a car moving with constant speed through a curve </span> <br>
+		<span class="i_indent">			–	explain the motion of carnival or playground rides moving in a horizontal plane and/or a vertical plane </span> <br>
+		<span class="i_indent">			–	explain the operation of a potter’s wheel. </span> <br>
+	</div>
+	<h2>Specific Outcomes for Skills (Nature of Science Emphasis)</h2>
+	Students will:<br>
+	Initiating and Planning <br>
+	Students will: <br>
+	<div class="indent">
+		20–C1.1s formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues <br>
+		<span class="indent">• design an experiment to investigate the relationships among orbital speed, orbital radius, acceleration and force in uniform circular motion(IP–NS2) 	Vc lab, Fc lab </span> <br>
+		<span class="indent">• explore design characteristics of structures that facilitate circular motion; </span><br>
+			<span class="i_indent">e.g., How is banking used on a racetrack to make high-speed turns safer? 	??????</span> <br>
+	</div>
+	 <br>
+	Performing and Recording <br>
+	Students will: <br>
+	<div class="indent">
+		20–C1.2s conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information <br>
+		<span class="indent">• perform an experiment to investigate the relationships among net force acting on an object in uniform circular motion and the object’s frequency, mass, speed and path radius (PR–NS3)</span> <br>
+	</div>
+	 <br>
+
+	Analyzing and Interpreting <br>
+	Students will: <br>
+	<div class="indent">
+		20–C1.3s analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+		<span class="indent">• organize and interpret experimental data, using prepared graphs or charts (AI–NS1)[ICTC7–4.2] </span> <br>
+		<span class="indent">• construct graphs to show relationships among frequency, mass, speed and path radius </span> <br>
+		<span class="indent">• summarize an analysis of the relationships among frequency, mass, speed and path radius (AI–NS6) </span> <br>
+		<span class="indent">• solve, quantitatively, circular motion problems in both horizontal and vertical planes, using algebraic and/or graphical vector analysis (AI–NS3) [ICT C6–4.1] </span> <br>
+	</div>
+	 <br>
+	Communication and Teamwork <br>
+	Students will: <br>
+	<div class="i_indent">	
+		20–C1.4s work collaboratively in a ddressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results <br>
+		<span class="indent">• select and use appropriate numeric, symbolic, graphical or linguistic modes of representation to communicate findings and conclusions (CT–NS2). </span> <br>
+	</div>
+	Note: Some of the outcomes are supported by examples. The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed <br>
+	 <br>
+	<h2>Links to Mathematics</h2>
+	The following mathematics outcomes are related to the content of Unit C but are not considered prerequisites. <br>
+	Concept 	Mathematics Course, Strand and Specific Outcome<br>
+	Data Collection and Analysis <br>
+	Grade 9 Mathematics,Statistics and Probability (Data Analysis),Specific Outcome 3
+	Measurement and Unit Conversions <br>
+		<span class="indent">Mathematics 10C, Measurement, Specific Outcomes 1 and 2; </span> <br>
+		<span class="indent">Mathematics 10-3, Measurement, Specific Outcome 1; </span> <br>
+		<span class="indent">Mathematics 20-3, Algebra, Specific Outcome 3 </span> <br>
+	Trigonometry <br>
+		<span class="indent">Mathematics 10C, Measurement, Specific Outcome 4; </span> <br>
+		<span class="indent">Mathematics 10-3, Geometry, Specific Outcomes 2 and 4 </span> <br>
+	Rate and Proportions <br>
+		<span class="indent">Mathematics 20-2, Measurement, Specific Outcome 1 </span> <br>
+	Graph Analysis <br>
+		<span class="indent">Mathematics10C, Relations and Functions,Specific Outcomes 1, 4 and 7; </span> <br>
+		<span class="indent">Mathematics 20-3, Statistics,Specific Outcome1 </span> <br>
+	Solving Equations <br>
+		<span class="indent">Grade 9 Mathematics, Number, Specific Outcome 6; </span> <br>
+		<span class="indent">Mathematics 20-1, Algebra and Number, Specific Outcome 6; </span> <br>
+		<span class="indent">Mathematics 30-2, Relations and Functions, Specific Outcome 3 </span> <br>
+	Scale Diagrams <br>
+		<span class="indent">Mathematics 20-2, Measurement,Specific Outcome 2; </span> <br>
+		<span class="indent">Mathematics 20-3, Geometry, Specific Outcome 2 </span> <br>
+	Slope <br>
+		<span class="indent">Mathematics10C, Relations and Functions,Specific Outcome 3 and 5; </span> <br>
+		<span class="indent">Mathematics 20-3, Algebra, Specific Outcome 2 </span> <br>
+	Powers <br>
+		<span class="indent">Mathematics10C, Algebra and Number, Specific Outcome 3 </span> <br>
+	Note: The use of systems of equations, the quadratic formula and trigonometric ratios for angles greater than 90º is not required in this unit <br>
+	 <br>
+	  <br>
+	</div>
+	</div>
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P20bg"><h1 class="P20bg secTitle">Chapter 5: Newton’s Laws Can Explain Circular Motion</h1> </div>     
+	<div class="P20c">
+	<h2>Key Concepts</h2>
+	<ul>
+		<li>Uniform circular motion </li>
+		<li>Planetary and satellite motion </li>
+		<li>Kepler’s Laws </li>
+	</ul>
+	<h2>Knowledge </h2>
+	<ul>
+		<li>Describe uniform circular motion as a special case of two-dimensional motion </li>
+		<li>Explain centripetal acceleration and force </li>
+		<li>Explain, quantitatively, the relationships among speed, frequency, period, and radius for circular motion </li>
+		<li>Explain, qualitatively, uniform circular motion using Newton’s laws of motion. </li>
+		<li>Explain, quantitatively, the motion of orbiting bodies by using circular motion to approximate elliptical orbits. </li>
+		<li>Predict the mass of a celestial body from orbital data </li>
+		<li>Explain, qualitatively, how Kepler’s laws were used to develop Newton’s universal law of gravitation. </li>
+	</ul>
+	<h2>STS</h2>
+	<ul>
+		<li>Explain the process of scientific inquiry </li>
+		<li>Illustrate how science and technology are developed to meet society’s needs and expand human capabilities. </li>
+		<li>Analyze circular motion in daily situations. </li>
+	</ul>
+	<br>
+	</div>
+		
+
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P20bg secTitle">5.1 Defining Circular Motion</h2>
+		The velocity of an object moving with circular motion is tangent to the circle and 90<sup>o</sup> to the radial line. <br>
+		<!-- Vc=2 pi r/T *************************************************************** -->
+		<div class="equation">  <!-- v = 2Pi r -->
+		  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td rowspan="2" nowrap="nowrap">
+					 &vert;<em>v<sub>c</sub></em>&vert; = &nbsp; 
+				  </td>
+				  <td nowrap="nowrap">
+					  <em>2&pi;r</em>
+				  </td>
+				  <td rowspan="2" nowrap="nowrap">
+					  <div style="left : -4.8em; top : -0.8em; position: relative;">&rarr;</div>
+				  </td>	
+			  </tr>
+			  <tr>
+				  <td class="upper_line">
+					  <em>T</em>
+				  </td>
+			  </tr>
+		  </table>
+		</div> 
+		<!-- Vc=2 pi r/T *************************************************************** -->
+		v<sub>c</sub> - centripetal velocity, m/s <br>
+		r - radius, m <br>
+		T - period, time for one orbit, s <br>
+		<br>
+		Centripetal acceleration and centripetal force are both directed toward the centre of the circle. <br>
+		<img src="P20Ch5 Circular Motion/a v2 r equation.gif" width="76" height="43" alt="equation a = v squared / r"/> 
+		<!-- a = v^2/r *************************************************************** -->
+		<div class="equation"> 
+		  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td rowspan="2" nowrap="nowrap">
+					  &vert;<em>a<sub>c</sub></em>&vert; = &nbsp; 
+				  </td>
+				  <td nowrap="nowrap">
+					  <em>v<sup>2</sup></em>
+				  </td>
+				  <td>
+					 <div style="left : -4.1em; top : 0.2em; position: relative;">&rarr;</div>
+				  </td>
+			  </tr>
+			  <tr>
+				  <td class="upper_line">
+					  r
+				  </td>
+			  </tr>
+		  </table>
+		</div>   
+		 <!-- a = v^2/r *************************************************************** -->
+			 a<sub>c</sub> - acceleration centripetal, m/s<sup>2</sup> <br>
+			 v - velocity centripetal, m/s <br>
+			 r - radius, m <br>
+			<br>
+			<img src="P20Ch5 Circular Motion/a 4pir t2 equation.gif" width="86" height="41" alt="equation a = 4 Pi squared mr / T squared"/> 
+		<!-- a = 4 pi^2 r / T^************************************************************* -->
+		<div class="equation"> 
+		  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td rowspan="2" nowrap="nowrap">
+					  &vert;<em>a<sub>c</sub></em>&vert; = &nbsp; 
+				  </td>
+				  <td nowrap="nowrap">
+					  <em>4 &pi;<sup>2</sup> r</em>
+				  </td>
+							  <td rowspan="2" nowrap="nowrap">
+					  <div style="left : -6.1em; top : -0.8em; position: relative;">&rarr;</div>
+				  </td>	
+			  </tr>
+			  <tr>
+				  <td class="upper_line">
+					  <em>T<sup>2</sup></em>
+				  </td>
+			  </tr>
+		  </table>
+		</div>  
+		 <!-- a = 4 pi^2 r / T^************************************************************* -->
+		   a<sub>c</sub> - acceleration centripetal, m/s<sup>2</sup> <br>
+		   r - radius, m <br>
+		   T - period, s <br>
+		   <br>
+		<span class="def">Axle </span>– shaft on which a wheel rotates <br>
+		<span class="def">Axis of rotation </span>– imaginary line that passes through the centre of rotation perpendicular to the circular motion <br>
+		<span class="def">Uniform circular motion </span>– motion in a circular path at a constant speed <br>
+		<span class="def">Centripetal acceleration </span>– acceleration acting toward the centre of a circle <br>
+		<span class="def">Centripetal force </span>– force acting toward the centre of a circle causing an object to move in a circular path
+	<h1>ANIMATION OF CENTRIPETAL ACCELERATION</h1>
+	<h1>ANIMATION OF CENTRIPETAL FORCE</h1>
+			<!-- Fc = mv^2/r *************************************************************** -->
+		<div class="equation"> 
+		  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td rowspan="2" nowrap="nowrap">
+					  &vert;<em>F<sub>c</sub></em>&vert; = &nbsp; 
+				  </td>
+				  <td nowrap="nowrap">
+					  <em>mv<sup>2</sup></em>
+				  </td>
+				  <td>
+					 <div style="left : -4.8em; top : 0em; position: relative;">&rarr;</div>
+				  </td>
+			  </tr>
+			  <tr>
+				  <td class="upper_line">
+					  r
+				  </td>
+			  </tr>
+		  </table>
+		</div>   
+		 <!-- F = mv^2/r *************************************************************** -->
+			 F<sub>c</sub> - force centripetal, N <br>
+			 m - mass, kg <br>
+			 v - velocity, m/s <br>
+			 r - radius, m <br>
+
+		<!-- Fc = 4 pi^2 mr / T^************************************************************* -->
+			<div class="equation"> 
+			  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td rowspan="2" nowrap="nowrap">
+						  &vert;<em>F<sub>c</sub></em>&vert; = &nbsp; 
+					  </td>
+					  <td nowrap="nowrap">
+						  <em>4 &pi;<sup>2</sup>mr</em>
+					  </td>
+								  <td rowspan="2" nowrap="nowrap">
+						  <div style="left : -6.4em; top : -1.1em; position: relative;">&rarr;</div>
+					  </td>	
+				  </tr>
+				  <tr>
+					  <td class="upper_line">
+						  <em>T<sup>2</sup></em>
+					  </td>
+				  </tr>
+			  </table>
+			</div>   
+		 <!-- Fc = 4 pi^2 mr / T^************************************************************* -->
+			F<sub>c</sub> - force centripetal, N <br>
+			m - mass, kg <br>
+			r - radius, m <br>
+			T - period, s <br>
+		   <br>
+		   <br>
+     <br>
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="P20bg secTitle">5.2 Circular Motion and Newton’s Laws</h2>
+		The velocity of circular motion can be determined by dividing the circumference by the period. <br>
+		The centripetal acceleration of an object is determined by the velocity squared divided by the radius. <br>
+		Newton’s second law states   and can be applied to centripetal acceleration.  A car making a turn experiences a centripetal acceleration and force that is created by the force of friction between the tires and the road. <br>
+		The minimum speed necessary to move an object through a vertical loop equates centripetal force with gravitational force.  Centripetal force can be equated to the gravitational force for planetary objects. <br>
+		Centripetal acceleration and force can be determined using period and frequency instead of speed. <br>
+		  <br>
+		<span class="def">Cycle </span>– one complete back-and-forth motion or oscillation <br>
+		<span class="def">Revolution </span>– one complete cycle for an object moving in a circular path <br>
+		<span class="def">Period </span>– the time required for an object to make one complete oscillation (cycle) <br>
+		<span class="def">Frequency </span>– the number of cycles per second measured in hertz (Hz) <br>
+		<span class="def">RPM </span>– revolutions per minute <br>
+    <br>
+    <br>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">5.3 Satellites and Celestial Bodies in Circular Motion</h2>
+		Kepler formulated three laws that explained the motion of planets in the solar system. <br>
+			<ol>
+				<li>All planets in the solar system have elliptical orbits with the Sun at one focus </li>
+				<li>A line drawn from the Sun to a planet sweeps out equal areas in equal times. </li>
+				<li>The ratio of a planet’s orbital period squared to its orbital radius cubed is a constant.  All the objects orbiting the same focus (e.g. planets, the sun) have the same constant.   </li>
+			</ol>
+		<br>
+		<h1>KEPLER's 1ST LAW ANIMATION</h1>
+		<h1>KEPLER'S 2nd LAW ANIMATION</h1>
+		<br>
+		Newton recognized the reason that Kepler’s laws were correct:   for Earth-Moon system.  He also found a way to determine the mass of an object from the period of a celestial body orbiting it. <br>
+		The discovery of Uranus and Pluto occurred because of the apparent disturbances in the orbit of the planets.  Extrasolar planets have been discovered by examine perturbations in stars’ movements. <br>
+		Humans have placed a variety of artificial satellites into orbit to meet society’s needs. <br>
+		  <br>
+		Kepler’s laws -  <br>
+
+		<!-- Ta^2/ra^3 = Ta^2/ra^3 ************************************************************* -->
+			<div class="equation"> 
+			  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td nowrap="nowrap">
+						  <em>T<sub>a</sub><sup>2</sup></em>
+					  </td>
+					  <td rowspan="2" nowrap="nowrap">
+						   &nbsp;= &nbsp; 
+					  </td>
+					  <td nowrap="nowrap">
+						  <em>T<sub>b</sub><sup>2</sup></em>
+					  </td>
+				  </tr>
+				  <tr>
+					  <td class="upper_line">
+						  <em>r<sub>a</sub><sup>3</sup></em>
+					  </td>
+					  <td class="upper_line">
+						  <em>r<sub>b</sub><sup>3</sup></em>
+					  </td>
+				  </tr>
+			  </table>
+			</div>  
+		 <!-- a = 4 pi^2 r / T^************************************************************* -->
+		  T<sub>a</sub> - planet a's period of orbit <br>
+		  r<sub>a</sub> - radius of planet a's orbit <br>
+		  T<sub>b</sub> - planet b's period of orbit <br>
+		  r<sub>b</sub> - radius of planet b's orbit <br>
+		  Any units are legitimate but both times need to use the same units, and the radii need to use the same units. <br>
+		   <br>
+		Ellipse <br>
+		Eccentricity <br>
+		Orbital period <br>
+		Orbital radius <br>
+		Satellite <br>
+		Artificial satellite <br>
+		Orbital perturbation – irregularity or disturbance in the predicted orbit of a planet <br>
+		Extra solar planet <br>
+		<br>
+		<br>
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Physics 20 <br>
+			Program of Studies <br>
+		<img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>

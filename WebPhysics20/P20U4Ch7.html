@@ -1,0 +1,467 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P20 UA Ch7 Harmonic Motion</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 20</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="P20U1Ch1.html">Chapter 1 Acceleration</a>
+			<a href="P20U1Ch2.html">Chapter 2 Vectors</a>
+			<a href="P20U2Ch3.html">Chapter 3 Forces</a>
+			<a href="P20U2Ch4.html">Chapter 4 Gravity</a>
+			<a href="P20U3Ch5.html">Chapter 5 Circular Motion</a>
+			<a href="P20U3Ch6.html">Chapter 6 Energy</a>
+			<a class="active" href="P20U4Ch7.html">Chapter 7 Harmonic Motion</a>
+			<a href="P20U4Ch8.html">Chapter 8 Waves</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P20bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 4: Oscillatory Motion and Mechanical Waves </h2></div>
+	<h2>Unit Themes and Emphases</h2>
+	<ul>
+		<li>Change, Energy and Matter </li>
+		<li>Scientific Inquiry </li>
+		<li>Nature of Science </li>
+	</ul>
+
+	<h2>Focusing Questions </h2>
+	<ul>
+		<li>Where do we observe oscillatory motion? </li>
+		<li>How do mechanical waves transmit energy? </li>
+		<li>How can an understanding of the natural world improve how society, technology and the environment interact? </li>
+	</ul>
+        <br>
+		<br>
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h2>Unit D:  Oscillatory Motion and Mechanical Waves </h2>
+	<h2>Themes:  Energy and Matter </h2>
+ 	<h2>Overview: </h2>
+	In this unit, students investigate simple harmonic motion and mechanical waves. <br>
+ 	This unit builds on: <br>
+	<ul>	
+		<li>Science 10, Unit B:  Energy Flow in Technological Systems </li>
+		<li>Physics 20, Unit A:  Kinematics; Unit B:  Dynamics; and Unit C:  Circular Motion, Work and Energy </li>
+ 	</ul>
+	This unit prepares students for further study, in subsequent physics courses, of simple harmonic motion and wave phenomena. <br>
+	 <br> 
+	Unit D will require approximately 30% of the time allotted for Physics 20. <br>
+ 	 <br>
+
+	<h2>Focusing Questions:  </h2>
+	<ul>
+		<li>What are examples of oscillatory motion in the world around us?  </li>
+		<li>How do mechanical waves transmit energy?  </li>
+		<li>How is structural design and the development of technologies influenced by our understanding of wave properties? </li>
+ 	</ul>
+	<h2>General Outcomes:   </h2>
+	There are two major outcomes in this unit.<br>
+ 	Students will: <br>
+	<b>D1.  describe the conditions that produce oscillatory motion </b> <br>
+	<b>D2.  describe the properties of mechanical waves and explain how mechanical waves transmit energy. </b><br>
+	 <br>
+
+	<h2>Key Concepts:  </h2>
+	The following concepts are developed in this unit and may also be addressed in other units or in other courses.  The intended level and scope of treatment is defined by the outcomes. <br> 
+	<ul>
+		<li>oscillatory motion </li>
+		<li>simple harmonic motion </li>
+		<li>restoring force </li>
+		<li>oscillating spring, pendulum </li>
+		<li>mechanical resonance </li>
+		<li>mechanical waves—longitudinal and transverse </li>
+		<li>universal wave equation </li>
+		<li>reflection </li>
+		<li>interference </li>
+		<li>acoustic resonance </li> 
+		<li>Doppler effect </li>
+	</ul>
+	  <br>
+	<h2> General Outcome 1</h2>
+	1.  describe the conditions that produce oscillatory motion <br>
+
+	<h2>Specific Outcomes for Knowledge </h2>
+	Students will: 
+	<div class="indent">
+		20–D1.1k  describe oscillatory motion in terms of period and frequency  <br>
+		20–D1.2k  define simple harmonic motion as a motion due to a restoring force that is directly proportional and opposite to the displacement from an equilibrium position  <br>
+		20–D1.3k  explain, quantitatively, the relationships among displacement, acceleration, velocity and time for simple harmonic motion, as illustrated by a frictionless, horizontal mass-spring system or a pendulum, using the small-angle approximation  <br>
+		20–D1.4k  determine, quantitatively, the relationships among kinetic, gravitational potential and total mechanical energies of a mass executing simple harmonic motion  <br>
+		20–D1.5k  define mechanical resonance.  <br>
+ 	</div>
+	  <br>
+	
+	<h2>Specific Outcomes for Science, Technology and Society (STS) (Nature of Science Emphasis) </h2>
+ 	Students will: 
+	<div class="indent">
+		20–D1.1sts  explain that the goal of science is knowledge about the natural world (NS1) <br> 
+		<span class="i_indent">•   analyze, qualitatively, the forces in real-life examples of simple harmonic motion: </span> <br>
+		<span class="i_indent"> -   action of springs in vehicle suspensions  </span> <br> 
+		<span class="i_indent"> -   mechanical resonance in cars, bridges and buildings   </span> <br>
+		<span class="i_indent"> -   seismic waves in Earth’s crust  </span> <br>
+		<span class="i_indent">•   relate the fundamental frequency and amplitude of a vibrating drum membrane to its properties.  </span> <br>
+		Note:  Some of the outcomes are supported by examples.  The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed. <br>
+	</div>
+ 	  <br>
+ 
+	<h2>Specific Outcomes for Skills (Nature of Science Emphasis) </h2>
+ 	Initiating and Planning <br>
+ 
+	Students will: <br>
+	<div class="indent">
+		20–D1.1s  formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues <br>
+		<span class="indent">•   design an experiment to demonstrate that simple harmonic motion can be observed within certain limits, relating the frequency and period of the motion to the physical characteristics of the system;  </span><br>
+		<span class="i_indent">e.g., a frictionless horizontal mass-spring system or a pendulum (IP–NS2) </span> <br>
+		<span class="indent">•   predict the conditions required for mechanical resonance (IP–NS3).  </span> <br>
+ 	</div>
+	 <br>
+	Performing and Recording <br>
+ 	Students will: <br>
+	<div class="indent">
+		20–D1.2s  conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information <br>
+		<span class="indent">•   perform an experiment to determine the relationship between the length of a pendulum and its period of oscillation (PR–NS3)  </span><br>
+		<span class="indent">•   perform an experiment to illustrate the phenomenon of mechanical resonance  (PR–NS3)  </span><br>
+		<span class="indent">•   perform an experiment to determine the spring constant of a spring (PR–NS3).  </span><br>
+	</div>
+	  <br>
+ 	Analyzing and Interpreting <br>
+ 	Students will: <br>
+	<div class="indent">
+		20–D1.3s  analyze data and apply mathematical and conceptual models to develop and assess possible solutions  <br>
+		<span class="i_indent">•   relate the length of a pendulum to its period of oscillation (AI–NS2) [ICT C7–4.2] </span> <br>
+		<span class="i_indent">•   ask if the mass of the pendulum bob is a factor in the pendulum’s period of oscillation (AI–NS5). </span> <br>
+ 	</div>
+	  <br>
+	Communication and Teamwork <br>
+ 	Students will: <br>
+	<div class="indent">
+		20–D1.4s  work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results  <br>
+		<span class="indent">•   select and use appropriate numeric, symbolic, graphical or linguistic modes of representation to communicate findings and conclusions (CT–NS2).  </span><br>
+ 	</div>
+	Note:  Some of the outcomes are supported by examples.  The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed. <br>
+ 
+
+
+	  <br>
+	<h2>Links to Mathematics</h2>
+	The following mathematics outcomes are related to the content of Unit D but are not considered prerequisites. <br>
+	Concept - 	Mathematics Course, Strand and Specific Outcome <br>
+	Data Collection and Analysis <br>
+		<span class="indent">Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3 </span> <br>
+	Measurement andUnit Conversions <br>
+		<span class="indent">Mathematics 10C, Measurement, Specific Outcomes 1 and 2; </span> <br>
+		<span class="indent">Mathematics 10-3, Measurement, Specific Outcome 1; </span> <br>
+		<span class="indent">Mathematics 20-3, Algebra, Specific Outcome 3 </span> <br>
+	Trigonometry <br>
+		<span class="indent">Mathematics 10C, Measurement, Specific Outcome 4; </span> <br>
+		<span class="indent">Mathematics 10-3, Geometry, Specific Outcomes 2 and 4 </span> <br>
+	Rate and Proportions <br>
+		<span class="indent">Mathematics 20-2, Measurement, Specific Outcome 1 </span> <br>
+	Graph Analysis <br>
+		<span class="indent">Mathematics10C, Relations and Functions, Specific Outcomes 1, 4 and 7; </span> <br>
+		<span class="indent">Mathematics 20-3, Statistics,  Specific Outcome 1 </span> <br>
+		<span class="indent">Mathematics 30-1, Trigonometry, Specific Outcome 4 </span> <br>
+		<span class="indent">Mathematics 30-2, Relations and Functions, Outcome 8 </span> <br>
+	Solving Equations <br>
+		<span class="indent">Grade 9 Mathematics, Number, Specific Outcome 6; </span> <br>
+		<span class="indent">Mathematics 20-2, Number and Logic, Specific Outcome 4; </span> <br>
+		<span class="indent">Mathematics 20-1, Algebra and Number, Specific Outcomes 3 and 6; </span> <br>
+		<span class="indent">Mathematics 30-2, Relations and Functions, Specific Outcome 3 </span> <br>
+	Slope <br>
+		<span class="indent">Mathematics10C, Relations and Functions, Specific Outcomes 3 and 5; </span> <br>
+		<span class="indent">Mathematics 20-3, Algebra, Specific Outcome 2 </span> <br>
+	Powers <br>
+		<span class="indent">Mathematics10C, Algebra and Number, Specific Outcome 3 </span> <br>
+	Note: The use of systems of equations, the quadratic formula and trigonometric ratios for angles greater than 90<sup>º</sup> is not required in this unit. <br>
+	 <br>
+	  <br>
+	</div>
+	</div>
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P20bg"><h1 class="P20bg secTitle">Chapter 7:  Oscillatory motion requires a set of conditions </h1></div>
+	<div class="P20c">
+		<h2>Unit Themes and Emphases</h2>
+		<ul>
+		<li>Oscillatory motion </li>
+		<li>Simple harmonic motion </li>
+		<li>Restoring force </li>
+		<li>Oscillating spring and pendulum </li>
+		<li>Mechanical resonance </li>
+	</ul>
+
+	<h2>Learning Outcomes </h2>
+	<ul>
+		<li>Describe oscillatory motion in terms of period and frequency </li>
+		<li>Define simple harmonic motion as being due to a restoring force that is directly proportional and opposite to the displacement of an object from an equilibrium position. </li>
+		<li>Explain the quantitative relationships among displacement, acceleration, velocity, and time for simple harmonic motion. </li>
+		<li>Define mechanical resonance. </li>
+	</ul>
+
+	<h2>STS </h2>
+	<ul>
+		<li>Explain that the goal of science is knowledge about the natural world. </li>
+	</ul>
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P20bg secTitle">7.1 Period and Frequency </h2>
+	<span class="def">Period (T)</span> - is the time for one complete cycle, measured in seconds (s).  If the period  of each cycle remains constant, the object is moving with oscillatory motion. <br>
+	  <br>
+	<span class="def">Frequency (f)</span> - is the number of cycles per second measured in Hertz (Hz). <br>
+	<img src="file:///C|/Users/Common/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.IE5/Y2JNLSSG/7a0a40[1].png" alt=""/><br>
+	<!-- T = 1/f) *************************************************************** -->
+          <div class="equation"> 
+            <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td rowspan="2" nowrap="nowrap">
+                        <em>T = &nbsp;</em> 
+                    </td>
+                    <td nowrap="nowrap">
+                        <em><span style="font-style: normal;">1</span> &nbsp;</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="upper_line">
+                        <em>f</em>
+                    </td>
+                </tr>
+            </table>
+          </div>  
+    <!-- T = 1/f) *************************************************************** -->
+    T - period, s <br>
+    f - frequency, Hz or 1/s or s<sup>-1</sup> <br>
+    <br>
+	<span class="def">Oscillation </span>– one period or complete motion of repeating motion.  <br>
+	  <br>
+	<span class="def">Cycle </span>– see oscillation.  <br>
+	  <br>
+	<span class="def">Oscillatory motion </span>– motion in which the period of each cycle is constant  <br>
+	 <br>
+     <br>
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          <h2 class="P20bg secTitle">7.2   Simple Harmonic Motion </h2>
+	<span class="def">Simple harmonic motion </span>– oscillatory motion where the restoring force is proportional to the displacement of the mass <br>
+	  <br>
+	<span class="def">Restoring force – </span>a force acting opposite to the displacement to move the object back to its equilibrium position  <br>
+	  <br>
+	The pendulum is a simple harmonic oscillator for angles less than 15<sup>o</sup>.  <br>
+	  <br>
+	A pendulum’s period is determined by its length and the acceleration of gravity, but not the mass of the bob.  <br>
+	<img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/t-2pi-l-g-equation_orig.gif" alt="pendulum equation"/>
+		 <br>
+    <!-- T = 2pi (l/g) *************************************************************** -->
+          <div class="equation"> 
+            <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td rowspan="2" nowrap="nowrap">
+                        <em>T = <span style="font-style: normal;">2</span> &pi; <span style="font-size:350%;">&radic;</span></em> 
+                    </td>
+                    <td class="upper_line">
+                        <em>&nbsp;l &nbsp;</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="upper_line">
+                        <em>&nbsp;g</em>
+                    </td>
+                </tr>
+            </table>
+          </div>  
+	<!-- T = 2k(m/k) *************************************************************** -->
+	 T - period, s <br>
+     l - length, m <br>
+     g - acceleration due to gravity, 9.81 m/s<sup>2</sup> on Earth <br>
+      <br>
+	What is the period of a 20 cm pendulum?  <br>
+	  <br>
+	How do you adjust the time of a pendulum clock?  <br>
+    	<br>
+		<br>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">7.3  Position, Velocity, Acceleration, and Time Relationships </h2>
+	When does a pendulum move slowest?  <br>
+	When does a pendulum move fastest? <br>
+	 <br>
+	When is the restoring force the largest? <br>
+	When is the restoring force the smallest? <br>
+	 <br>
+	When is the acceleration the largest? <br>
+	When is the acceleration the smallest? <br>
+	 <br>
+	<span class="def">Resonant frequency </span>– the natural frequency of vibration of an object. <br>
+	 <br>
+	<span class="def">Amplitude </span>– how far the mass moves from equilibrium. <br>
+	 <br>
+	<span class="def">Mechanical resonance </span>– the increase in amplitude of oscillation of a system as a result of a periodic force whose frequency is equal or very close to the resonant frequency of the system <br>
+	 <br>
+	Small force at the resonant frequency  = large amplitude <br>
+	 <br>
+	Bridges and buildings can resonate due to the force of the wind. <br>
+	<br>
+	<br>
+			  
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Physics 20 <br>
+			Program of Studies <br>
+		<img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>

@@ -1,0 +1,635 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P20 UA Ch4 Gravity</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 20</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="P20U1Ch1.html">Chapter 1 Acceleration</a>
+			<a href="P20U1Ch2.html">Chapter 2 Vectors</a>
+			<a href="P20U2Ch3.html">Chapter 3 Forces</a>
+			<a class="active" href="P20U2Ch4.html">Chapter 4 Gravity</a>
+			<a href="P20U3Ch5.html">Chapter 5 Circular Motion</a>
+			<a href="P20U3Ch6.html">Chapter 6 Energy</a>
+			<a href="P20U4Ch7.html">Chapter 7 Harmonic Motion</a>
+			<a href="P20U4Ch8.html">Chapter 8 Waves</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P20bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 2: Dynamics</h2></div>
+	   <h2>Unit Themes and Emphases</h2>
+            Change and Systems <br>
+              <br>
+            <h2>Focusing Questions</h2>
+            <ul>
+                <li>How do changes in position, velocity, and acceleration allow us to predict the paths of moving objects and systems?</li>
+                <li>How do the principles of kinematics influence the development of new mechanical technologies?</li>
+            </ul>
+        <br>
+		<br>
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h2>Unit B:  Dynamics  </h2>
+	<h2>Themes:  Change and Systems   </h2>
+ 	<h2>Overview: </h2> 
+	 In this unit, students investigate causes of change in the position and velocity of objects and systems in a study of dynamics and gravitation.  The concept of fields is introduced in the explanation of gravitational effects.    <br>
+ 
+	This unit builds on:  <br>
+	<ul>
+		<li>•   Grade 7 Science, Unit D:  Structures and Forces </li>
+		<li>•   Grade 8 Science, Unit D:  Mechanical Systems </li>
+		<li>•   Science 10, Unit B:  Energy Flow in Technological Systems </li>
+		<li>•   Physics 20, Unit A:  Kinematics </li>
+	 </ul>
+	This unit prepares students for further study, in subsequent units and physics courses, of Newton’s laws, periodic motion and particles in electric and magnetic fields.     <br>
+	   <br>
+	Unit B will require approximately 25% of the time allotted for Physics 20.  <br>
+ 	<br>
+	<h2>Focusing Questions:  </h2>
+	<ul>
+		<li>How does the understanding of forces help humans improve or change their environment?  </li>
+		<li>How do the principles of dynamics influence the development of new mechanical technologies? </li> 
+		<li>What role do gravitational effects play in the universe? </li>
+	</ul>
+ 	 <br>
+	<h2>General Outcomes: </h2>
+	 There are two major outcomes in this unit. Students will:  <br>
+	<ul>
+		<li> <b>B1.  explain the effects of balanced and unbalanced forces on velocity </b> </li>
+		<li> <b>B2.  explain that gravitational effects extend throughout the universe. </b> </li>
+ 	</ul>
+	 <br> 	
+	Key Concepts:  The following concepts are developed in this unit and may also be addressed in other units or in other courses.  The intended level and scope of treatment is defined by the outcomes. <br>
+	<ul>
+		<li>Newton’s laws of motion </li>
+		<li>inertia </li>
+		<li>vector addition </li>
+		<li>static and kinetic friction </li>
+		<li>gravitational force </li>
+		<li>Newton’s law of universal gravitation </li>
+		<li>gravitational field </li>
+	</ul>
+	  <br>
+
+
+	<h2>General Outcome:  B1.  explain the effects of balanced and unbalanced forces on velocity.</h2>
+	<h2>Specific Outcomes for Knowledge </h2>
+ 
+	Students will:  <br>
+	<div class="indent">
+		20–B1.1k  explain that a nonzero net force causes a change in velocity  <br>
+		20–B1.2k  apply Newton’s first law of motion to explain, qualitatively, an object’s state of rest or uniform motion   <br>
+		20–B1.3k  apply Newton’s second law of motion to explain, qualitatively, the relationships among net force, mass and acceleration   <br>
+		20–B1.4k  apply Newton’s third law of motion to explain, qualitatively, the interaction between two objects, recognizing that the two forces, equal in magnitude and opposite in direction, do not act on the same object   <br>
+		20–B1.5k  explain, qualitatively and quantitatively, static and kinetic forces of friction acting on an object   <br>
+		20–B1.6k  calculate the resultant force, or its constituents, acting on an object by adding vector components graphically and algebraically   <br>
+		20–B1.7k  apply Newton’s laws of motion to solve, algebraically, linear motion problems in horizontal, vertical and inclined planes near the surface of Earth, ignoring air resistance.  <br>
+ 	</div>
+	 <br>
+	<h2>Specific Outcomes for Science, Technology and Society (STS) (Social and Environmental Contexts Emphasis)  </h2>
+ 
+	Students will:  <br>
+	<div class="indent">
+		20–B1.1sts  explain that the goal of technology is to provide solutions to practical problems, that technological development includes testing and evaluating designs and prototypes on the basis of established criteria, and that the products of technology cannot solve all problems (ST1, ST5d, ST6) [ICT F2–4.4]  <br>
+			<span class="i_indent">•   assess the design and use of injury-prevention devices in cars and sports in terms of Newton’s laws of motion   </span> <br>
+			<span class="i_indent">•    explain how buffalo jumps represented a technological solution to food supply problems and describe the advantages and limitations of such a technique  </span> <br>
+		  <br>
+		20–B1.2sts  explain that science and technology are developed to meet societal needs and that society provides direction for scientific and technological development (SEC1, SEC4)  [ICT F2–4.8] 
+			<span class="i_indent">•     discuss the use of seat belts in school buses  </span> <br>
+		  <br>
+		20–B1.3sts  explain that scientific knowledge and theories develop through hypotheses, the collection of evidence, investigation and the ability to provide explanations (NS2)  <br>
+			<span class="i_indent"> •   analyze the trajectory of lunar dust particles as illustrated in a video. </span> <br>
+		  <br>
+		 Note:  Some of the outcomes are supported by examples.  The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed. <br>
+	</div>	
+	  <br>
+ 
+	<h2>Specific Outcomes for Skills (Science and Technology Emphasis) </h2>
+ 	<br>
+	Initiating and Planning <br>
+ 	Students will:  <br>
+	<div class="i_indent">
+		20–B1.1s  formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues <br>
+			<span class="i_indent">•   identify questions to investigate arising from practical problems; </span> <br>
+			<span class="i_indent">e.g., What are the relationships among acceleration, mass and force acting on a moving object?  (IP–ST1). </span> <br>
+ 	</div>
+	Performing and Recording <br>
+	Students will: 
+	<div class="i_indent">
+		20–B1.2s  conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information 
+			<span class="i_indent">•   conduct experiments to determine relationships among force, mass and acceleration, using available technologies; e.g., using interval timers or motion sensors to gather data (PR–ST3) [ICT C6–4.4] </span> <br>
+			<span class="i_indent">•   research the use of kinematics and dynamics principles in everyday life; e.g., research traffic accident investigation methods, using the Internet and/or interviews (PR–ST1). </span> <br>
+ 	</div>
+	 <br>
+	Analyzing and Interpreting  <br>
+ 
+	Students will:  <br>
+	<div class="i_indent">
+		20–B1.3s  analyze data and apply mathematical and conceptual models to develop and assess possible solutions  <br>
+			<span class="i_indent">•   analyze a graph of empirical data to infer the mathematical relationships among force, mass and acceleration (AI–NS6) [ICT C6–4.1] </span> <br>
+			<span class="i_indent">•   use free-body diagrams to describe the forces acting on an object (AI–NS1). </span> <br>
+	 	</div>
+
+	Communication and Teamwork <br>
+	Students will:  <br>
+	<div class="i_indent">
+		20–B1.4s  work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results 
+			<span class="i_indent">•   select and use appropriate numeric, symbolic, graphical or linguistic modes of representation to communicate findings and conclusions (CT–ST2). </span> <br>
+		Note:  Some of the outcomes are supported by examples.  The examples are written in italics and do not form part of the required program but are provided as an illustration of how the outcomes might be developed. <br>
+ 	</div>
+ 
+ 
+	  <br>
+	<h2>Links to Mathematics:</h2>
+	The following mathematics topics are related to the content of Unit B but are not considered prerequisites.<br> 
+ 	Concept			Mathematics Course, Strand and Specific Outcome <br>
+	Data Collection and Analysis <br>
+		<span class="indent"> Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3 </span> <br>
+		<span class="indent"> Measurement and Unit ConversionsMathematics 10C, Measurement, Specific Outcomes 1 and 2;</span> <br>
+		<span class="indent"> Mathematics 10-3, Measurement, Specific Outcome 1;</span> <br>
+		<span class="indent"> Mathematics 20-3, Algebra, Specific Outcome 3</span> <br>
+	Trigonometry <br>
+		<span class="indent"> Mathematics 10C, Measurement, Specific Outcome 4;</span> <br>
+		<span class="indent"> Mathematics 10-3, Geometry, Specific Outcomes 2 and 4 </span> <br>
+	Rate and Proportions <br>
+		<span class="indent"> Mathematics 20-2, Measurement, Specific Outcome 1 </span> <br>
+	Graph Analysis <br>
+		<span class="indent"> Mathematics10C, Relations and Functions, Specific Outcomes 1, 4 and 7; </span> <br>
+		<span class="indent"> Mathematics 20-3, Statistics,  Specific Outcome 1 Solving Equations </span> <br>
+		<span class="indent"> Grade 9 Mathematics, Number, Specific Outcome 6; </span> <br>
+		<span class="indent"> Mathematics 20-1, Algebra and Number, Specific Outcome 6; </span> <br>
+		<span class="indent"> Mathematics 30-2, Relations and Functions, Specific Outcome 3 </span> <br>
+	Scale Diagrams <br>
+		<span class="indent"> Mathematics 20-2, Measurement,Specific Outcome 2; </span> <br>
+		<span class="indent"> Mathematics 20-3, Geometry, Specific Outcome 2 </span> <br>
+	Slope <br>
+		<span class="indent"> Mathematics10C, Relations and Functions, Specific Outcomes 3 and 5; </span> <br>
+		<span class="indent"> Mathematics 20-3, Algebra, Specific Outcome 2 </span> <br>
+	Area Calculations <br>
+		<span class="indent"> Mathematics 10-3, Measurement, Specific Outcome 4 </span> <br>    
+	Powers <br>
+		<span class="indent">Mathematics10C, Algebra and Number, Specific Outcome 3 </span> <br>
+	Note: The use of systems of equations, the quadratic formula and trigonometric ratios for angles greater than 90º is not required in this unit.<br>
+	  <br>
+	</div>
+	  <br>
+	</div>
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P20bg"><h1 class="P20bg secTitle">Chapter 4:  Gravity extends throughout the universe</h1> </div>     
+	<div class="P20c">
+	<h2>Key Concepts</h2>
+		<ul>
+			<li>Gravitational force </li>
+			<li>Newton’s law of universal gravitation </li>
+			<li>Gravitation field </li>
+		</ul>
+		<h2>Knowledge</h2>
+		<ul>
+			<li>Identify gravity as a fundamental force in nature </li>
+			<li>Describe Newton’s law of universal gravitation </li>
+			<li>Explain the Cavendish experiment </li>
+			<li>Define and apply the concept of a gravitational field </li>
+			<li>Compare gravitational field strength and acceleration due to gravity </li>
+			<li>Predict the weight of objects on different planets </li>
+		</ul>
+		<h2>STS</h2>
+		<ul>
+			<li>Explain that concepts, models, and theories help interpret observations and make predictions. </li>
+		</ul>
+	<br>
+	</div>
+		
+
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P20bg secTitle">4.1  Gravitational Forces due to Earth</h2>
+	Gravitational force is a fundamental force. <br>
+	The 4 fundamental forces are natural and cannot be affected by humans. <br>
+	Gravity, electromagnetic, strong nuclear and weak nuclear. <br>
+ 	 <br>
+	<span class="def">Gravitational force </span> – attractive force between any two objects due to their mass <br>
+	<span class="def">Action-at-a-distance force </span> – force that acts even if the objects involved are not touching <br>
+	<span class="def">Field </span> – three-dimensional region of influence <br>
+	<span class="def">Gravitational field </span> – region of influence surrounding any object that has mass <br>
+	 <br>
+	Earth’s gravity field goes towards the centre of the earth. <br>
+	In a large scale it is spherical. <br>
+	In a small scale the lines are parallel and point down. <br>
+	 <br>
+	<h1>GRAVITY VECTOR FIELDS ANIMATION</h1>
+	 <br>
+	Galileo studied gravity by dropping objects from the top of the leaning tower of Pisa. <br>
+	He discovered mass did not affect the time it took two same sized and shaped objects to fall. <br>
+	 <br>
+	Newton was lying on his back when an apple fell and landed on his stomach.  He started to think about gravity and how it affects objects. <br>
+	Used as evidence of the Copernican model of the solar system. <br>
+	 <br>
+	Einstein said that gravity is bending of space-time <br>
+	 <br>
+	This is often shown as the bending of space-time diagrams. <br>
+	 <br>
+	Imagine the spheres are planets orbiting the Sun. <br>
+	 <br>
+	Light has no mass so it is not directly affected by gravity. <br>
+	 <br>
+	Light always travels in a straight line through space, but if space is bent by gravity, light moves in a curve because space is curved, not because gravity affects light. <br>
+	 <br>
+ 	Gravitational lensing <br>
+	 <br>
+	Warp drive <br>
+	Wormhole <br>
+	 <br>
+	Gravitational field strength is the ratio of gravitational force to mass at a specific location.  <br>
+	 The units of gravitational field strength are:  <br>
+	 <br>
+	<span class="def">Weight </span> – gravitational force exerted on an object by a celestial body <br>
+	 <br>
+	True Weight:  <br>
+	 <br>
+	<span class="ex">Ex. </span> <span class="example">What is the weight of Mr. Montgomery who has a mass of 87 kg? </span> <br>
+	 <br>
+         <div class="review indent">
+            <h3>Review Questions</h3>
+			What is a force field? <button onclick="document.getElementById('4-10').innerHTML = 'A force field is a 3D region that an object experiences a force.'">Answer</button><br>
+                <span id="4-10" class="indent"></span><br>
+	What is weight? <button onclick="document.getElementById('4-11').innerHTML = 'Weight is the force of gravity pulling an object down.'">Answer</button><br>
+                <span id="4-11" class="indent"></span><br>
+	What are the units for the gravitational field? <button onclick="document.getElementById('4-12').innerHTML = 'N/kg or m/s<sup>2</sup>'">Answer</button><br>
+                <span id="4-12" class="indent"></span><br>
+	What does the force of gravity pull on? <button onclick="document.getElementById('4-13').innerHTML = 'The force of gravity pulls on mass.'">Answer</button><br>
+                <span id="4-13" class="indent"></span><br>
+    	</div>
+	 <br>
+     <br>
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="P20bg secTitle">4.2  Newton’s Law of Universal Gravitation </h2>
+	Newton’s law of universal gravitation states that the gravitational force of attraction between any two masses is directly proportional to the product of the masses and inversely proportional to the square of the separation distance between the centres of both masses. <br>
+	 <br>
+	Newton studied gravity and determined that gravity was affected by the mass of the two objects and the distance between them.  However he never developed an experiment to find the values.
+	 <br>
+	<span class="def">Torsion balance </span>– device used to measure very small forces <br>
+	Cavendish’s experiment <br>
+	Henry Cavendish used a torsion balance to determine how the force of gravity is affected by the distance between two objects and the mass of the objects. <br>
+	Graph the following <br>
+	 <br>
+	Newton’s law of gravitation:  <br>
+    <!-- Fg = Gmm/r^2 ^************************************************************* -->
+    <div class="equation"> 
+      <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  &vert;<em>F<sub>g</sub></em>&vert; = &nbsp; 
+              </td>
+              <td nowrap="nowrap">
+                  <em>Gm<sub>1</sub>m<sub>2</sub></em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -6.4em; top : -0.8em; position: relative;">&rarr;</div>
+			  </td>
+          </tr>
+          <tr>
+              <td class="upper_line">
+                  <em>r<sup>2</sup></em>
+              </td>
+          </tr>
+      </table>
+    </div>  
+   <!-- Fg = Gmm/r^2 ^************************************************************* -->
+	F<sub>g</sub> - force of gravity, N <br>
+   	G - gravitational constant of the universe, 6.67&times;10<sup>-11</sup> Nm<sup>2</sup>/kg<sup>2</sup> <br>
+    m<sub>1</sub> - mass of first object, kg <br>
+    m<sub>2</sub> - mass of second object, kg <br>
+    r - radius of orbit, distance between objects, m <br>
+     <br>
+	<span class="ex">Ex. </span> <span class="example">What is the gravitational force between the sun 1.98×10<sup>31</sup> kg and the earth 5.98×10<sup>24</sup> kg when the two are 1.49×10<sup>11</sup>m apart? </span> <br>
+	<button type="button" class="collapsible" style="background-color:orangered;">Answer</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content equation">
+	    <!-- Fg = Gmm/r^2 ^************************************************************* -->
+          
+            <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td rowspan="2" nowrap="nowrap">
+                        <em>F<sub>g</sub></em> = &nbsp; 
+                    </td>
+                    <td nowrap="nowrap">
+                        <em>Gm<sub>1</sub>m<sub>2</sub></em>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="upper_line">
+                        <em>r<sup>2</sup></em>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" nowrap="nowrap">
+                        <em>F<sub>g</sub></em> = &nbsp; 
+                    </td>
+                    <td nowrap="nowrap">
+                        <em>6.67&times;10<sup>-11</sup>Nm<sup>2</sup>/kg<sup>2</sup> &times; 1.98&times;10<sup>31</sup> kg &times; 5.98&times;10<sup>24</sup> kg </em>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="upper_line">
+                        <em>(1.49&times;10<sup>11</sup> m)<sup>2</sup></em>
+                    </td>
+                </tr>
+               <tr>
+                    <td nowrap="nowrap">
+                        <em>F<sub>g</sub></em> = &nbsp; 
+                    </td>
+				    <td>
+				   		<em>3.557293275&times;10<sup>23</sup> N</em>
+				   </td>
+                </tr>
+			    <tr>
+                    <td rowspan="2" nowrap="nowrap">
+                        <em>F<sub>g</sub></em> = &nbsp; 
+                    </td>
+				    <td>
+				   		<em>3.56&times;10<sup>23</sup> N [attractive]</em>
+				   </td>
+                </tr>
+            </table>
+          </div>  
+
+   <!-- Fg = Gmm/r^2 ^************************************************************* -->
+	 <br>
+    <br>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">4.3  Relating Gravitational Field Strength to Gravitational Force</h2>
+	Newton’s law of gravitation can be used to determine the magnitude of gravitational field strength anywhere in the universe.  <br>
+	The magnitude of gravitational field strength at a location is numerically equal to the magnitude of gravitational acceleration.  <br>
+    
+    <!-- g = Gm/r^2 ^************************************************************* -->
+    <div class="equation"> 
+      <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  &vert;<em>g</em>&vert; = &nbsp; 
+              </td>
+              <td nowrap="nowrap">
+                  <em>Gm</em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -4.2em; top : -0.8em; position: relative;">&rarr;</div>
+			  </td>
+          </tr>
+          <tr>
+              <td class="upper_line">
+                  <em>r<sup>2</sup></em>
+              </td>
+          </tr>
+      </table>
+    </div>
+    <!-- g = Gm/r^2 ^************************************************************* -->
+	g - acceleration due to gravity, m/s<sup>2</sup> [down]<br>
+    G - gravitational constant of the universe, 6.67&times;10<sup>-11</sup> Nm<sup>2</sup>/kg<sup>2</sup> <br>
+    m - mass of planetoid, kg <br>
+    r - radius of planetoid, m <br>
+     <br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/FHX6LFI2XUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+	<br>
+	<h1>ACCEL AS A FUNCTION OF DISTANCE ANIMATION</h1>
+	<br>
+	<span class="ex">Ex. </span>  <span class="example">What is the acceleration due to gravity at the surface of the Earth?  Calculate it from Earth’s mass and radius. </span> <br>
+	 <br>
+	    <!-- g = Gm/r^2 ^************************************************************* -->
+	<button type="button" class="collapsible" style="background-color:orangered;">Answer</button>
+	
+		<div class="content equation"> 
+            <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td rowspan="2" nowrap="nowrap">
+                        <em>g</em> = &nbsp; 
+                    </td>
+                    <td nowrap="nowrap">
+                        <em>Gm</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="upper_line">
+                        <em>r<sup>2</sup></em>
+                    </td>
+                </tr>
+		        <tr>
+                    <td rowspan="2" nowrap="nowrap">
+                        <em>g</em> = &nbsp; 
+                    </td>
+                    <td nowrap="nowrap">
+                        <em>Gm</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="upper_line">
+                        <em>r<sup>2</sup></em>
+                    </td>
+                </tr>
+				<tr>
+                    <td rowspan="2" nowrap="nowrap">
+                        <em>g</em> = &nbsp; 
+                    </td>
+                    <td nowrap="nowrap">
+                        <em>6.67&times;10<sup>-11</sup>Nm<sup>2</sup>/kg<sup>2</sup> &times; 5.98&times;10<sup>24</sup> kg </em>
+                    </td>
+                </tr>
+				<tr>
+                    <td class="upper_line">
+                        <em>(6.37&times;10<sup>6</sup> m)<sup>2</sup></em>
+                    </td>
+                </tr>
+				<tr>
+                    <td nowrap="nowrap">
+                        <em>g</em> = &nbsp; 
+                    </td>
+                    <td nowrap="nowrap">
+                        <em>9.81 m/s<sup>2</sup> [down]</em>
+                    </td>
+                </tr>
+            </table>
+          </div>  
+    <!-- g = Gm/r^2 ^************************************************************* -->
+	<br>
+	The value of g at Earth’s surface depends on latitude, altitude which affect the radius at that point and the composition of Earth’s crust which affects the density and mass of Earth under that point, and Earth’s rotation about its axis which introduces circular motion forces. <br>
+	 <br>
+	Free fall is the condition where the only force acting on an object is the gravitational force.  True weightlessness is the condition in which F<sub>g</sub><span style="left : -1.2em; top : -0.8em; position: relative;">&rarr;</span>= 0 N for an object. <br>
+	 <br>
+	The true weight of an object is equal to the gravitational force acting on the mass, and depends on location.   <br>
+	Apparent weight is the negative of the normal force acting on an object.   <br>
+	 <br>
+	Gravitational field strength:  <br>
+	 <br>
+	Apparent weight:  <br>
+	 <br>
+	</div>
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Physics 20 <br>
+			Program of Studies <br>
+		<img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>        
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+		<a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>

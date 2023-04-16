@@ -1,0 +1,884 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P20 UA Ch1 Acceleration</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	
+	
+	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 20</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a class="active" href="P20U1Ch1.html">Chapter 1 Acceleration</a>
+			<a href="P20U1Ch2.html">Chapter 2 Vectors</a>
+			<a href="P20U2Ch3.html">Chapter 3 Forces</a>
+			<a href="P20U2Ch4.html">Chapter 4 Gravity</a>
+			<a href="P20U3Ch5.html">Chapter 5 Circular Motion</a>
+			<a href="P20U3Ch6.html">Chapter 6 Energy</a>
+			<a href="P20U4Ch7.html">Chapter 7 Harmonic Motion</a>
+			<a href="P20U4Ch8.html">Chapter 8 Waves</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P20bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 1: Kinematics</h2></div>
+	   <h2>Unit Themes and Emphases</h2>
+            Change and Systems <br>
+              <br>
+            <h2>Focusing Questions</h2>
+            <ul>
+                <li>How do changes in position, velocity, and acceleration allow us to predict the paths of moving objects and systems?</li>
+                <li>How do the principles of kinematics influence the development of new mechanical technologies?</li>
+            </ul>
+        <br>
+		<br>
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h2> Unit A: Kinematics </h2>
+		<strong>Themes:</strong> Change and Systems <br>
+		<strong>Overview:</strong> In this unit, students investigate changes in the position and velocity of objects and systems in a study of kinematics. <br>
+		This unit builds on: <br>
+		<ul>
+			<li>Grade 7 Science, Unit D: Structures and Forces </li>
+			<li>Grade 8 Science, Unit D: Mechanical Systems </li>
+			<li>Science 10, Unit B: Energy Flow in Technological Systems </li>
+		</ul>
+		This unit prepares students for further study, in subsequent units and physics courses, of dynamics, Newton’s laws and particles in gravitational, electric and magnetic fields. <br>
+		  <br>
+		Unit A will require approximately 15% of the time allotted for Physics 20. <br>
+		Links to Mathematics: Refer to page 20. <br>
+		  <br>
+		<strong> Focusing Questions: </strong>
+		<ul>
+			<li>How do changes in position, velocity and acceleration allow us to predict the paths of moving objects and systems? </li>
+			<li>How do the principles of kinematics influence the development of new mechanical technologies? </li>
+		</ul>
+			<strong>General Outcomes: </strong> <br>
+		There is one major outcome in this unit. <br>
+		Students will: <br>
+		<h2> A1. describe motion in terms of displacement, velocity, acceleration and time. </h2>
+		  <br>
+		<strong>Key Concepts:</strong> The following concepts are developed in this unit and may also be addressed in other units or in other courses. The intended level and scope of treatment is defined by the outcomes. <br>
+		<ul>
+			<li>scalar quantities </li>
+			<li>vector quantities </li>
+			<li>uniform motion </li>
+			<li>uniformly accelerated motion </li>
+			<li>two-dimensional motion </li>
+		</ul>
+
+
+		<h2>General Outcome A1. students will describe motion in terms of displacement, velocity, acceleration and time. </h2>
+
+
+		<strong> Specific Outcomes for Knowledge </strong> <br>
+		Students will: <br>
+		<p class="know-hanging">20–A1.1k define, qualitatively and quantitatively, displacement, velocity and acceleration </p>
+		<p class="know-hanging">20–A1.2k define, operationally, and compare and contrast scalar and vector quantities </p>
+		<p class="know-hanging">20–A1.3k explain, qualitatively and quantitatively, uniform and uniformly accelerated motion when provided with written descriptions and numerical and graphical data </p>
+		<p class="know-hanging">20–A1.4k interpret, quantitatively, the motion of one object relative to another, using displacement and velocity vectors </p>
+		<p class="know-hanging">20–A1.5k explain, quantitatively, two-dimensional motion in a horizontal or vertical plane, using vector components. </p>
+		  <br>
+		<strong> Specific Outcomes for Science, Technology and Society (STS) </strong> (Nature of Science Emphasis) <br>
+		Students will: <br>
+		20–A1.1sts explain that the goal of science is knowledge about the natural world (NS1) <br>
+		<ul>
+			<li><em>identify common applications of kinematics, such as determining the average speed of a run, bike ride or car trip, or the acceleration required to launch an aircraft from a carrier </em> </li>
+		</ul>
+		   <br>
+		20–A1.2sts explain that scientific knowledge is subject to change as new evidence becomes apparent and as laws and theories are tested and subsequently revised, reinforced or rejected (NS4) <br>
+		<ul>
+			<li><em>analyze lunar free fall as illustrated in a video</em> </li>
+		</ul>
+		   <br>
+		20–A1.3sts explain that the process for technological development includes testing and evaluating designs and prototypes on the basis of established criteria (ST5d) [ICT C6–4.5] <br>
+		<ul>
+			<li><em>investigate the application of kinematics principles, such as determining the appropriate length of airport runways, the design of merging lanes or the timing of traffic lights </em></li>
+		</ul>
+		 <br>
+		<strong> Specific Outcomes for Skills </strong> (Nature of Science Emphasis) <br>
+		<strong> Initiating and Planning </strong> <br>
+		Students will: <br>
+		20–A1.1s formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues <br>
+		<ul>
+			<li>identify, define and delimit questions to investigate;  </li>
+			<em> e.g., What are the relationships among displacement, velocity, acceleration and time? (IP–NS1) </em> 
+			<li><em>explain why distances are measured in different units (as the crow flies, days of travel, mileage from city centre to city centre, light years). </em></li>
+		</ul>	
+		 <br>
+		<strong> Performing and Recording </strong> <br>
+		Students will: <br>
+		20–A1.2s conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information <br>
+		<ul>
+			<li>perform an experiment to demonstrate the relationships among displacement, velocity, acceleration and time, using available technologies;  </li>
+			<em> e.g., interval timers, photo gates </em> (PR–NS2, PR–NS3) [ICT C6–4.4] <br>
+			<li>collect information from various print and electronic sources to explain the use of kinematics concepts;  </li>
+			<em> e.g., the synchronization of traffic lights </em> (PR–ST1) [ICT C1–4.1]. <br>
+		</ul> 
+		 <br>
+		<strong> Analyzing and Interpreting </strong> <br>
+		Students will: <br>
+		20–A1.3s analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+		<ul>
+			<li>construct graphs to demonstrate the relationships among displacement, velocity, acceleration and time for uniform and uniformly accelerated motion (AI–NS2)  </li>
+			<li>analyze a graph of empirical data to infer the mathematical relationships among displacement, velocity, acceleration and time for uniform and uniformly accelerated motion (AI–NS2) [ICT C7–4.2] </li>
+			<li>solve, quantitatively, projectile motion problems near Earth’s surface, ignoring air resistance  (AI–NS3)[ICT C6–4.1] </li>
+			<li>relate acceleration to the slope of and displacement to the area under, a velocity-time graph (AI–NS2, AI–NS6) [ICT C7–4.2] </li>
+			<li><em>analyze uniform motion examples, using computer simulations </em>(AI–NS3) [ICT C6–4.4]. </li>
+		</ul>
+		  <br>
+		<strong>Communication and Teamwork</strong> <br>
+		Students will: <br>
+		20–A1.4s work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results <br>
+		<ul>
+			<li>use appropriate <em>Système international</em>(SI) units, fundamental and derived units and significant digits  (CT–NS2) </li>
+			<li>use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate ideas, plans and results (CT–NS2) </li>
+			<li>use delta notation correctly when describing changes in quantities (CT–NS2). </li>
+		</ul>
+		  <br>
+		To be developed throughout the course. <br>
+		 <br>
+		 <br>
+
+
+		<strong> Links to Mathematics </strong> <br>
+		The following mathematics outcomes are related to the content of Unit A but are not considered
+		prerequisites. <br>
+		Concept	- Mathematics Course, Strand and Specific Outcome <br>
+		Data Collection and Analysis
+		<ul>
+			<li>Grade 9 Mathematics, Statistics and Probability (Data Analysis),Specific Outcome 3 </li>
+		</ul>
+		Measurement and Unit Conversions
+		<ul>
+			<li> Mathematics 10C,Measurement,Specific Outcomes 1 and 2; </li>
+			<li> Mathematics 10-3, Measurement, Specific Outcome 1; </li>
+			<li> Mathematics 20-3, Algebra, Specific Outcome 3 </li>
+		</ul>
+		Trigonometry 
+		<ul>
+			<li> Mathematics 10C, Measurement, Specific Outcome 4; </li>
+			<li> Mathematics 10-3, Geometry, Specific Outcomes 2 and 4 </li>
+		</ul>
+		Rate and Proportions
+		<ul>
+			<li> Mathematics 20-2,Measurement,Specific Outcome 1 </li>
+		</ul>
+		Graph Analysis
+		<ul>
+			<li> Mathematics10C, Relations and Functions,Specific Outcomes 1, 4 and 7; </li>
+			<li> Mathematics 20-3, Statistics,Specific Outcome 1 Solving Equations </li>
+			<li> Grade 9 Mathematics, Number, Specific Outcome 6 </li>
+		</ul>
+		Scale Diagrams
+		<ul>
+			<li> Mathematics 20-2,Measurement,Specific Outcome 2; </li>
+			<li> Mathematics 20-3, Geometry, Specific Outcome 2 </li>
+		</ul>
+		Slope
+		<ul>
+			<li> Mathematics10C, Relations and Functions,Specific Outcomes3 and 5; </li>
+			<li> Mathematics 20-3, Algebra, Specific Outcome 2 Area Calculations </li>
+			<li> Mathematics 10-3, Measurement, Specific Outcome 4 </li>
+		</ul>
+		Powers
+		<ul>
+			<li> Mathematics10C, Algebra and Number, Specific Outcome 3 </li>
+		</ul>
+			<strong>Note:</strong> The use of systems of equations, the quadratic formula and trigonometric ratios for angles greaterthan 90º is not required in this unit <br>
+		</div>
+	</div>
+
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P20bg"><h1 class="P20bg secTitle">Chapter 1: Graphs and equations describe motion in one dimension</h1> </div>     
+	<div class="P20c">
+		<h2>Key Concepts</h2>
+			 <ul>
+				 <li>Workplace Hazardous Materials Information System (WHIMIS) and safe practices  </li>
+				 <li>Evidence of chemical change </li>
+				 <li>How chemical substances meet human needs </li>
+			 </ul>
+
+			 <h2>Learning Outcomes</h2>
+				<ul>
+					<li>Illustrate an awareness WHMIS guidelines, and demonstrate safe pracitices guidelines, and demonstrate safe practices in handling, storing, and disposing of chemicals in the laboratory and at home. </li>
+					<li>Provide examples of how early humans worked with chemical substances to meet their basic needs </li>
+					<li>Outline the role of evidence in the development of the atomic model consisting of nucleons (protons and neutrons) and electrons through the work of Dalton, Thomson, Rutherford, and Bohr. </li>
+					<li>Describe evidence for chemical change. </li>
+				</ul>
+		  <br>
+	</div>
+		
+
+	  <br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P20bg secTitle">1.1 The Language of Motion</h2>
+          <span class="def">Kinematics</span> – a branch of physics that describes motion <br>
+             <br>
+            A scalar quantity consists of a magnitude (number) and a unit. <br>
+             <br>
+		  <span class="ex">Ex. </span> <span class="example"> Distance = 10 m; Speed = 20 kph;  Temperature = 298 <sup>o</sup>K </span><br>
+             <br>
+            A vector quantity consists of a magnitude (number), a unit, and a direction. <br>
+             <br>
+            <span class="ex">Ex. </span> <span class="example"> Displacement = 10 m [North];  Velocity = 120 m/s [West] </span><br>
+             <br>
+            Vectors quantities can be identified by the arrow above the symbol. <br>
+             <br>
+		  <span class="ex">Ex. </span> <span class="example"> Displacement </span> <img src="P20Ch1Acceleration/d_vector.gif" width="8" height="14" alt="d with vector arrow above"/> <span class="example">;  Velocity </span> <img src="P20Ch1Acceleration/v_vector.gif" width="7" height="14" alt="v with vector arrow above"/> <br>
+             <br>
+            Not all scalar quantities have vector equivalents.  All vectors have scalar equivalents. <br>
+            <table class="indent">
+                <tr>
+                    <td><b>Scalar</b></td>
+                    <td><b>Vector</b></td>
+                </tr>
+                <tr>
+                    <td>distance</td>
+                    <td>displacement</td>
+                </tr>
+                <tr>
+                    <td>speed</td>
+                    <td>velocity</td>
+                </tr>
+                <tr>
+                    <td>temperature</td>
+                  <td></td>
+                </tr>
+            </table>
+        
+             <br>
+		  <span class="def">Origin </span> – a reference point  <br>
+             <br>
+		  <span class="def">Position </span>– the straight line distance between the origin and an object’s location; includes magnitude and direction <br>
+             <br>
+            <img style="float: left; padding-right: 5%;" src="P20Ch1Acceleration/Distance vs displacement.png" width="350" height="200" alt="displacement vs distance"/> <br>
+        	
+			Distance is the length of the path taken to travel from one position to another. <br>
+             <br>
+            Displacement is the change in position.  <br>
+                 It is measured from where the object starts (point A) to where the object finishes (point B). <br>
+			<div style="clear: both;"></div>
+             <br>
+			<br>
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="P20bg secTitle">1.2  Position-time Graphs and Uniform Motion </h2>
+           velocity <br>
+             <br>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/_x4YXyKryoI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+             <br>
+                        
+        	<table class="example">
+				<th colspan="2" style="color:black;">Example Velocities</th>
+                <tr>
+                    <td align="right">0.3 &times; 10<sup>-9</sup> m/s  </td>
+                    <td>&nbsp;&nbsp; Contental drift </td>
+                </tr>
+                <tr>
+                    <td align="right">0.013 m/s  </td>
+                    <td>&nbsp;&nbsp; Garden snail </td>
+                </tr>
+                <tr>
+                    <td align="right">1.0 m/s  </td>
+                    <td>&nbsp;&nbsp; average human walking speed	</td>	
+                </tr>
+                <tr>
+                    <td align="right">11.8 m/s </td>
+                    <td>&nbsp;&nbsp; Usain Bolt's maximum running speed at 2009 World Championships </td>
+                </tr>
+                <tr>
+                    <td align="right">25 m/s   </td>
+                    <td>&nbsp;&nbsp; peak speed of a galloping horse</td>
+                </tr>
+                <tr>
+                    <td align="right">30 m/s   </td>
+                    <td>&nbsp;&nbsp; cheetah (fasted land animal) or sailfish (fastest fish) </td>
+                </tr>
+                <tr>
+                    <td align="right">36 m/s   </td>
+                    <td>&nbsp;&nbsp; Sam Whittingham in a recumbant bike, fastest human powered vehicle		</td>
+                </tr>
+                <tr>
+                    <td align="right">90 m/s   </td>
+                    <td>&nbsp;&nbsp; Perigrine falcan (fastest bird diving), high speed train </td>		
+                </tr>
+                <tr>
+                    <td align="right">113 m/s   </td>
+                    <td>&nbsp;&nbsp; Bugatti Veyron (fastest production car) </td>		
+                </tr>
+                <tr>
+                    <td align="right">343 m/s   </td>
+                    <td>&nbsp;&nbsp; approximate speed of sound (speed is temperature and pressure dependent)</td>		
+                </tr>
+                <tr>
+                    <td align="right">347 m/s  </td>
+                    <td>&nbsp;&nbsp; Thrust SSC (first car faster than sound)</td>		
+                </tr>
+                <tr>
+                    <td align="right">981 m/s   </td>
+                    <td>&nbsp;&nbsp; SR-71 Blackbird (fastest jet plane) </td>
+                </tr>
+                <tr>
+                    <td align="right">1 815 m/s   </td>
+                    <td>&nbsp;&nbsp; X-15 (fastest airplane, rocket powered)</td> 		
+                </tr>
+                <tr>
+                    <td align="right">3 111 m/s   </td>
+                    <td>&nbsp;&nbsp; X-43 scramjet test (unmanned test drone) 	</td>	
+                </tr>
+                <tr>
+                    <td align="right">9 604 m/s </td>
+                    <td>&nbsp;&nbsp; Space Shuttle		</td>
+                </tr>
+                <tr>
+                    <td align="right">70 220 m/s   </td>
+                    <td>&nbsp;&nbsp; Helio 2 solar probe (fastest man made object)</td>
+                </tr>
+                <tr>
+                    <td align="right">30 000 000 m/s   </td>
+                    <td>&nbsp;&nbsp; speed of an electron in a cathode ray tube (old TV)	</td>	
+                </tr>
+                <tr>
+                    <td align="right">299 792 458 m/s  </td>
+                    <td>&nbsp;&nbsp; speed of light (use 3.00 &times; 10<sup>8</sup> m/s) </td>		
+                </tr>
+            </table>
+             <br>
+            A position-time graph for an object at rest is a straight line with zero slope. <br>
+             <br>
+            A position-time graph for an object moving at a constant velocity is a straight line with non-zero slope.
+             <br>
+            The greater the slope of a position-time graph, the faster the object is moving. <br>
+             <br>
+             <br>
+        
+              <br>
+            What is the equation for velocity? <br>
+            <img src="P20Ch1Acceleration/VelocityEquation.png" width="41" height="32" alt="velocity = displacement / time"/> <br>
+            <!-- d=vt *************************************************************** -->
+		<div class="equation">  
+		  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td rowspan="2" nowrap="nowrap">
+					 <em>v</em> = &nbsp; 
+				  </td>
+				  <td nowrap="nowrap">
+					  <em>&Delta;d</em>
+				  </td>
+				  <td rowspan="2" nowrap="nowrap">
+					  <div style="left : -3.2em; top : 0.5em; position: relative;">&rarr;</div>
+					  <div style="left : -0.8em; top : -2.7em; position: relative;">&rarr;</div>
+				  </td>			
+			  </tr>
+			  <tr>
+				  <td class="upper_line">
+					  <em>&Delta;t</em>
+				  </td>
+			  </tr>
+		  </table>
+		</div>  
+            <!-- d=vt *************************************************************** -->
+		<div style="clear: both;"></div>
+            d - displacement, m <br>
+            v - velocity, m/s <br>
+            t - time, s <br>
+			<br><br>
+		<img src="P20Ch1Acceleration/P20-Displacement-vs-Time-Velocities---animated.gif" width="640" height="480" alt=""/>  <br>
+          	<div class="review indent">
+                <h3>Review Questions</h3>
+
+                What does the slope of a distance vs time graph represent? <button onclick="document.getElementById('1-20').innerHTML = 'The slope of the graph is the velocity.'">Answer</button><br>
+                <span id="1-20" class="indent"></span><br>
+                What does a positive slope on a distance vs time graph represent? <button onclick="document.getElementById('1-21').innerHTML = 'The object is moving forward.'">Answer</button><br>
+                <span id="1-21" class="indent"></span><br>
+                What does a negative slope on a distance vs time graph represent? <button onclick="document.getElementById('1-22').innerHTML = 'The object is moving backward.'">Answer</button><br>
+                <span id="1-22" class="indent"></span><br>
+        	</div> <!-- end Review -->
+        
+        <br>
+		<br>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">1.3  Velocity-time Graphs:  Uniform and Non-uniform Motion </h2>
+ <br>
+		  	<iframe width="560" height="315" src="https://www.youtube.com/embed/2_XMfKIwBjQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <br>
+            A velocity-time graph for an object experiencing uniform motion is a horizontal line. <br>
+             <br>
+            The slope of a velocity-time graph represents acceleration, <img src="P20Ch1Acceleration/a-vector.png" width="10" height="13" alt="a for acceleration"/> , m/s<sup>2</sup><br>
+             <br>
+  <img src="P20Ch1Acceleration/AccelerationEquation.png" width="93" height="32" alt="acceleration = change in velocity / time"/> 
+             <!-- a=v/t *************************************************************** -->
+    <div class="equation"> 
+      <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  <em>a<sub>ave</sub></em> = &nbsp; 
+              </td>
+              <td nowrap="nowrap">
+                  <em>&Delta;v</em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -6.2em; top : 0.2em; position: relative;">&rarr;</div>
+				  <div style="left : -1.2em; top : -2.7em; position: relative;">&rarr;</div>
+			  </td>	
+          </tr>
+          <tr>
+              <td class="upper_line">
+                  <em>&Delta;t</em>
+              </td>
+          </tr>
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  <em>a<sub>ave</sub></em> = &nbsp; 
+              </td>
+              <td nowrap="nowrap">
+                  <em>v<sub>f</sub> - v<sub>i</sub></em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -6.2em; top : 1.3em; position: relative;">&rarr;</div>
+				  <div style="left : -0.8em; top : -2.3em; position: relative;">&rarr;</div>
+				  <div style="left : -2.5em; top : -4.2em; position: relative;">&rarr;</div>
+				  
+			  </td>	
+          </tr>
+          <tr>
+              <td class="upper_line">
+                  <em>&Delta;t</em>
+              </td>
+          </tr>
+      </table>
+    </div> 
+               <!-- a=v/t *************************************************************** -->
+		  
+		   <br> 
+	      <a href="https://youtu.be/M2ZrKk26F8g"><img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/youtubeicon_orig.png" width="60" height="42" alt=""/>Derivation and rearrangement video</a> <br>
+			a - acceleration, m/s<sup>2</sup><br>
+            v - velocity, m/s <br>
+            t - time, s<br>
+            <br>
+            The position-time graph for an object undergoing uniformly accelerated motion is a curve. <br>
+             <br>
+            The corresponding velocity-time graph is a straight line with non-zero slope. <br>
+             <br>
+            The corresponding acceleration-time graph is a horizontal line. <br>
+
+        <br>
+		<br>
+		<div style="background-color: #555;" class="main" id="section14" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section13"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section15"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+
+		</div>
+          <h2 class="P20bg secTitle">1.4  Analyzing Velocity-time Graphs </h2>
+             <br>
+            The area under a velocity-time graph represents displacement; slope represents acceleration. <br>
+             <br>
+            A dog runs at 10 m/s [E] for 30 seconds and then runs at 7.5 m/s [W] for 20 seconds.   <br>
+             <br>
+                a)  What is the dog’s average speed? <br>
+                b)  What is the dog’s average velocity? <br>
+			<br>
+			<div class="answer">
+				<table border="0">
+				  <tbody>
+					<tr>
+					  <td style="text-align: left;">d<sub>1</sub>= v<sub>1</sub>t<sub>1</sub> <br>
+								d<sub>1</sub>= 10 m/s [E] &middot; 30 s <br>
+								d<sub>1</sub>= 300 m [E]</td>
+					  <td style="text-align: left;">d<sub>2</sub>= v<sub>2</sub>t<sub>2</sub> <br>
+								d<sub>2</sub>= 7.5 m/s [W] &middot; 20 s <br>
+								d<sub>2</sub>= 150 m [W]</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><br> <img src="P20Ch1Acceleration/P20-Speed-vs-Velocity.gif" width="640" height="400" alt="speed vs velocity"/> <br></td>
+					</tr>
+					<tr>
+					  <td>speed = distance / time <br>
+								v = d / t <br>
+								v = 300 m + 150 m / 30 + 20 s <br>
+								v = 9.0 m/s&nbsp;</td>
+					  <td>velocity = displacement / time <br>
+								v = d / t <br>
+								v = 300 - 150 m [E] / 30 + 20 s <br>
+								v = 3.0 m/s [E]&nbsp;</td>
+					</tr>
+				  </tbody>
+				</table>
+			</div>
+			<br>
+			<br>
+            A person runs a lap of a 400 m track in 60 seconds.  What is the person’s average velocity? <br>
+             <br>
+            A race car needs to average 90 km/h to qualify for a race.  The race car travels the first 45 km at 55 km/h.  How fast must the car travel the second 45 km in order to average 90 km/h? <br>
+             <br>
+            A police car travelling at 35 m/s is chasing a stolen car travelling at 28 m/s.  The stolen car has a 500 m head start.  How long will it take the police car to catch the stolen car? <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ntrc4uyBsYg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+			<br> <br>
+		  <iframe width="560" height="315" src="https://www.youtube.com/embed/SF9H8Etm11E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br>  
+        <br>
+		<div style="background-color: #555;" class="main" id="section15" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section14"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section16"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+
+		</div>
+		<h2 class="P20bg secTitle">1.5  The Kinematics Equations</h2>
+            <br>
+			<img src="P20Ch1Acceleration/1_5kinematics_equations.png" width="101" height="142" alt=""/> <br>
+            <br>
+        <!-- d= (vf+vi)/t *************************************************************** -->
+		<div class="equation"> 
+		  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td rowspan="2" nowrap="nowrap">
+					  <em>&Delta;d</em> = &nbsp; 
+				  </td>
+				  <td nowrap="nowrap">
+					  <em>(v<sub>f</sub> + v<sub>f</sub> ) &#215; t</em>
+				  </td>
+				  <td rowspan="2" nowrap="nowrap">
+					  <div style="left : -8em; top : 0em; position: relative;">&rarr;</div>
+					  <div style="left : -4.9em; top : -2.7em; position: relative;">&rarr;</div>
+				  </td>	
+				  <td rowspan="2" nowrap="nowrap">
+					  <div style="left : -3.9em; top : -1.7em; position: relative;">&rarr;</div>
+				  </td>
+			  </tr>
+			  <tr>
+				  <td class="upper_line">
+					  2
+				  </td>
+			  </tr>
+			 <tr><td>or</td></tr>
+			  <tr>
+				  <td rowspan="2" nowrap="nowrap">
+					  <em>&Delta;d</em> = &nbsp; 
+				  </td>
+				  <td nowrap="nowrap">
+					  <em>(v<sub>f</sub> + v<sub>f</sub> )</em>
+				  </td>
+				  <td rowspan="2" nowrap="nowrap">
+					  <em>&#215; t</em>
+				  </td>
+				  <td rowspan="2" nowrap="nowrap">
+					  <div style="left : -9em; top : 0em; position: relative;">&rarr;</div>
+					  <div style="left : -5.7em; top : -2.7em; position: relative;">&rarr;</div>
+				  </td>	
+				  <td rowspan="2" nowrap="nowrap">
+					  <div style="left : -4.7em; top : -1.7em; position: relative;">&rarr;</div>
+				  </td>
+			  </tr>
+			  <tr>
+				  <td class="upper_line">
+					  2
+				  </td>
+			  </tr>
+		  </table>
+		</div> 
+	
+	
+	
+		
+            <a href="https://youtu.be/lQcP0v2mzdA"><img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/youtubeicon_orig.png" width="60" height="42" alt=""/> Derivation and rearrangement video</a> <br>
+		  	 <br>
+		  
+          	<!-- d=vt + 0.5at^2 *************************************************************** -->   
+			<div class="equation">  
+			  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td rowspan="2" nowrap="nowrap">
+						  <em>&Delta;d = v<sub>i</sub> &Delta;t + &nbsp;</em>
+					  </td>
+					  <td nowrap="nowrap">
+						  <em>a &Delta;t</em><sup>2</sup>
+					  </td>
+					  <td rowspan="2" nowrap="nowrap">
+						  <div style="left : -8.6em; top : 0em; position: relative;">&rarr;</div>
+						  <div style="left : -6.7em; top : -2em; position: relative;">&rarr;</div>
+					  </td>	
+					  <td rowspan="2" nowrap="nowrap">
+						  <div style="left : -3.7em; top : -1.5em; position: relative;">&rarr;</div>
+					  </td>	
+				  </tr>
+				  <tr>
+					  <td class="upper_line">
+						  2
+					  </td>
+				  </tr>
+			  </table>
+			</div> 
+            <!-- d=vt + 0.5at^2 *************************************************************** -->
+            <a href="https://youtu.be/6jzwyB604J4"><img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/youtubeicon_orig.png" width="60" height="42" alt=""/> Derivation and rearrangement video</a> <br>
+		  	 <br>
+          	<!-- d=vt - 0.5at^2 *************************************************************** -->   
+           <div class="equation">  
+			  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td rowspan="2" nowrap="nowrap">
+						  <em>&Delta;d = v<sub>f</sub> &Delta;t - </em> &nbsp;
+					  </td>
+					  <td nowrap="nowrap">
+						  <em>a &Delta;t</em><sup>2</sup>
+					  </td>
+					  <td rowspan="2" nowrap="nowrap">
+						  <div style="left : -8.1em; top : 0em; position: relative;">&rarr;</div>
+						  <div style="left : -6.2em; top : -2em; position: relative;">&rarr;</div>
+					  </td>	
+					  <td rowspan="2" nowrap="nowrap">
+						  <div style="left : -3.7em; top : -1.5em; position: relative;">&rarr;</div>
+					  </td>	
+				  </tr>
+				  <tr>
+					  <td class="upper_line">
+						  2
+					  </td>
+				  </tr>
+			  </table>
+			</div> 
+            <!-- d=vt - 0.5at^2 *************************************************************** -->
+		  <a href="https://youtu.be/dzKCKonfXc0"><img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/youtubeicon_orig.png" width="60" height="42" alt=""/> Derivation and rearrangement video</a> <br>
+		   <br>
+		  
+	
+		  
+            <!-- V^2 = V^2 + 2ad *************************************************************** -->   
+		<div class="equation">  
+		  <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td rowspan="2" nowrap="nowrap">
+					 <em>v<sub>f</sub><sup>2</sup> = v<sub>i</sub><sup>2</sup> + 2a&Delta;d</em> <br>
+				  </td>
+				  <td>
+					 <span style="left : -7.9em; top : -0.7em; position: relative;">&rarr;</span>
+					  <span style="left : -6.5em; top : -0.7em; position: relative;">&rarr;</span>
+					  <span style="left : -4.5em; top : -0.7em; position: relative;">&rarr;</span>
+				  </td>
+			  </tr>
+			</table>
+		</div>
+           <!-- V^2 = V^2 + 2ad *************************************************************** --> 
+		  <a href="https://youtu.be/zwtp-M4rX0o"><img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/youtubeicon_orig.png" width="60" height="42" alt=""/> Derivation and rearrangement video</a> <br>
+		   <br>
+            
+            d - displacement, m <br>
+            t - time, s <br>
+            v - velocity, m/s <br>
+            a - acceleration, m/s<sup>2</sup> <br>
+            <br> 
+        <br>
+		<div style="background-color: #555;" class="main" id="section16" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section15"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section17"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+
+		</div>
+	<h2 class="P20bg secTitle">1.6  Acceleration due to Gravity</h2>
+    <img src="P20Ch1Acceleration/P20-Ch1-Gravity-D-vs-T-with-V.gif" width="1280" height="720" alt="graph of d vs t for projectile"/>  
+	Gravity is a force that pulls all objects  downward. <br>
+            Acceleration due to gravity is 9.81 m/s<sup>2</sup> [down]<br>
+             <br>
+            This is an average Alberta value for the diploma exam.  The acceleration due to gravity will be different in different locations as we will see later. <br>
+             <br>
+		    <span class="def">Projectile motion </span>– motion in a vertical plane <br>
+             <br>
+		  <span class="def">Projectile </span>– an object released or thrown into the air (no outside forces ie. No wings or engine) <br>
+		  <span class="ex">Ex.</span> Thrown ball, bullet, person jumping <br>
+             <br>
+            At maximum height, a projectile’s vertical velocity is zero. <br>
+             <br>
+            The time taken to reach maximum height equals the time taken to fall back down to the original height.  <br>
+             <br>
+			<br>
+	<div style="clear:left;"></div>
+	
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Physics 20 <br>
+			Program of Studies <br>
+		<img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+	</div><!--   end page -->
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+</body>
+</html>

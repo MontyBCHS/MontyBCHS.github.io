@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>P20 UA Ch2 Vectors</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">PHYSICS 20</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="P20U1Ch1.html">Chapter 1 Acceleration</a>
+			<a class="active" href="P20U1Ch2.html">Chapter 2 Vectors</a>
+			<a href="P20U2Ch3.html">Chapter 3 Forces</a>
+			<a href="P20U2Ch4.html">Chapter 4 Gravity</a>
+			<a href="P20U3Ch5.html">Chapter 5 Circular Motion</a>
+			<a href="P20U3Ch6.html">Chapter 6 Energy</a>
+			<a href="P20U4Ch7.html">Chapter 7 Harmonic Motion</a>
+			<a href="P20U4Ch8.html">Chapter 8 Waves</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 P20bg">
+	<div class="unitTitle"><h2 class="unitTitle">Unit 1: Kinematics</h2></div>
+	   <h2>Unit Themes and Emphases</h2>
+            Change and Systems <br>
+              <br>
+            <h2>Focusing Questions</h2>
+            <ul>
+                <li>How do changes in position, velocity, and acceleration allow us to predict the paths of moving objects and systems?</li>
+                <li>How do the principles of kinematics influence the development of new mechanical technologies?</li>
+            </ul>
+        <br>
+		<br>
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h2> Unit A: Kinematics </h2>
+		<strong>Themes:</strong> Change and Systems <br>
+		<strong>Overview:</strong> In this unit, students investigate changes in the position and velocity of objects and systems in a study of kinematics. <br>
+		This unit builds on: <br>
+		<ul>
+			<li>Grade 7 Science, Unit D: Structures and Forces </li>
+			<li>Grade 8 Science, Unit D: Mechanical Systems </li>
+			<li>Science 10, Unit B: Energy Flow in Technological Systems </li>
+		</ul>
+		This unit prepares students for further study, in subsequent units and physics courses, of dynamics, Newton’s laws and particles in gravitational, electric and magnetic fields. <br>
+		  <br>
+		Unit A will require approximately 15% of the time allotted for Physics 20. <br>
+		Links to Mathematics: Refer to page 20. <br>
+		  <br>
+		<strong> Focusing Questions: </strong>
+		<ul>
+			<li>How do changes in position, velocity and acceleration allow us to predict the paths of moving objects and systems? </li>
+			<li>How do the principles of kinematics influence the development of new mechanical technologies? </li>
+		</ul>
+			<strong>General Outcomes: </strong> <br>
+		There is one major outcome in this unit. <br>
+		Students will: <br>
+		<h2> A1. describe motion in terms of displacement, velocity, acceleration and time. </h2>
+		  <br>
+		<strong>Key Concepts:</strong> The following concepts are developed in this unit and may also be addressed in other units or in other courses. The intended level and scope of treatment is defined by the outcomes. <br>
+		<ul>
+			<li>scalar quantities </li>
+			<li>vector quantities </li>
+			<li>uniform motion </li>
+			<li>uniformly accelerated motion </li>
+			<li>two-dimensional motion </li>
+		</ul>
+
+
+		<h2>General Outcome A1. students will describe motion in terms of displacement, velocity, acceleration and time. </h2>
+
+
+		<strong> Specific Outcomes for Knowledge </strong> <br>
+		Students will: <br>
+		<p class="know-hanging">20–A1.1k define, qualitatively and quantitatively, displacement, velocity and acceleration </p>
+		<p class="know-hanging">20–A1.2k define, operationally, and compare and contrast scalar and vector quantities </p>
+		<p class="know-hanging">20–A1.3k explain, qualitatively and quantitatively, uniform and uniformly accelerated motion when provided with written descriptions and numerical and graphical data </p>
+		<p class="know-hanging">20–A1.4k interpret, quantitatively, the motion of one object relative to another, using displacement and velocity vectors </p>
+		<p class="know-hanging">20–A1.5k explain, quantitatively, two-dimensional motion in a horizontal or vertical plane, using vector components. </p>
+		  <br>
+		<strong> Specific Outcomes for Science, Technology and Society (STS) </strong> (Nature of Science Emphasis) <br>
+		Students will: <br>
+		20–A1.1sts explain that the goal of science is knowledge about the natural world (NS1) <br>
+		<ul>
+			<li><em>identify common applications of kinematics, such as determining the average speed of a run, bike ride or car trip, or the acceleration required to launch an aircraft from a carrier </em> </li>
+		</ul>
+		   <br>
+		20–A1.2sts explain that scientific knowledge is subject to change as new evidence becomes apparent and as laws and theories are tested and subsequently revised, reinforced or rejected (NS4) <br>
+		<ul>
+			<li><em>analyze lunar free fall as illustrated in a video</em> </li>
+		</ul>
+		   <br>
+		20–A1.3sts explain that the process for technological development includes testing and evaluating designs and prototypes on the basis of established criteria (ST5d) [ICT C6–4.5] <br>
+		<ul>
+			<li><em>investigate the application of kinematics principles, such as determining the appropriate length of airport runways, the design of merging lanes or the timing of traffic lights </em></li>
+		</ul>
+		 <br>
+		<strong> Specific Outcomes for Skills </strong> (Nature of Science Emphasis) <br>
+		<strong> Initiating and Planning </strong> <br>
+		Students will: <br>
+		20–A1.1s formulate questions about observed relationships and plan investigations of questions, ideas, problems and issues <br>
+		<ul>
+			<li>identify, define and delimit questions to investigate;  </li>
+			<em> e.g., What are the relationships among displacement, velocity, acceleration and time? (IP–NS1) </em> 
+			<li><em>explain why distances are measured in different units (as the crow flies, days of travel, mileage from city centre to city centre, light years). </em></li>
+		</ul>	
+		 <br>
+		<strong> Performing and Recording </strong> <br>
+		Students will: <br>
+		20–A1.2s conduct investigations into relationships among observable variables and use a broad range of tools and techniques to gather and record data and information <br>
+		<ul>
+			<li>perform an experiment to demonstrate the relationships among displacement, velocity, acceleration and time, using available technologies;  </li>
+			<em> e.g., interval timers, photo gates </em> (PR–NS2, PR–NS3) [ICT C6–4.4] <br>
+			<li>collect information from various print and electronic sources to explain the use of kinematics concepts;  </li>
+			<em> e.g., the synchronization of traffic lights </em> (PR–ST1) [ICT C1–4.1]. <br>
+		</ul> 
+		 <br>
+		<strong> Analyzing and Interpreting </strong> <br>
+		Students will: <br>
+		20–A1.3s analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+		<ul>
+			<li>construct graphs to demonstrate the relationships among displacement, velocity, acceleration and time for uniform and uniformly accelerated motion (AI–NS2)  </li>
+			<li>analyze a graph of empirical data to infer the mathematical relationships among displacement, velocity, acceleration and time for uniform and uniformly accelerated motion (AI–NS2) [ICT C7–4.2] </li>
+			<li>solve, quantitatively, projectile motion problems near Earth’s surface, ignoring air resistance  (AI–NS3)[ICT C6–4.1] </li>
+			<li>relate acceleration to the slope of and displacement to the area under, a velocity-time graph (AI–NS2, AI–NS6) [ICT C7–4.2] </li>
+			<li><em>analyze uniform motion examples, using computer simulations </em>(AI–NS3) [ICT C6–4.4]. </li>
+		</ul>
+		  <br>
+		<strong>Communication and Teamwork</strong> <br>
+		Students will: <br>
+		20–A1.4s work collaboratively in addressing problems and apply the skills and conventions of science in communicating information and ideas and in assessing results <br>
+		<ul>
+			<li>use appropriate <em>Système international</em>(SI) units, fundamental and derived units and significant digits  (CT–NS2) </li>
+			<li>use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate ideas, plans and results (CT–NS2) </li>
+			<li>use delta notation correctly when describing changes in quantities (CT–NS2). </li>
+		</ul>
+		  <br>
+		To be developed throughout the course. <br>
+		 <br>
+		 <br>
+
+
+		<strong> Links to Mathematics </strong> <br>
+		The following mathematics outcomes are related to the content of Unit A but are not considered
+		prerequisites. <br>
+		Concept	- Mathematics Course, Strand and Specific Outcome <br>
+		Data Collection and Analysis
+		<ul>
+			<li>Grade 9 Mathematics, Statistics and Probability (Data Analysis),Specific Outcome 3 </li>
+		</ul>
+		Measurement and Unit Conversions
+		<ul>
+			<li> Mathematics 10C,Measurement,Specific Outcomes 1 and 2; </li>
+			<li> Mathematics 10-3, Measurement, Specific Outcome 1; </li>
+			<li> Mathematics 20-3, Algebra, Specific Outcome 3 </li>
+		</ul>
+		Trigonometry 
+		<ul>
+			<li> Mathematics 10C, Measurement, Specific Outcome 4; </li>
+			<li> Mathematics 10-3, Geometry, Specific Outcomes 2 and 4 </li>
+		</ul>
+		Rate and Proportions
+		<ul>
+			<li> Mathematics 20-2,Measurement,Specific Outcome 1 </li>
+		</ul>
+		Graph Analysis
+		<ul>
+			<li> Mathematics10C, Relations and Functions,Specific Outcomes 1, 4 and 7; </li>
+			<li> Mathematics 20-3, Statistics,Specific Outcome 1 Solving Equations </li>
+			<li> Grade 9 Mathematics, Number, Specific Outcome 6 </li>
+		</ul>
+		Scale Diagrams
+		<ul>
+			<li> Mathematics 20-2,Measurement,Specific Outcome 2; </li>
+			<li> Mathematics 20-3, Geometry, Specific Outcome 2 </li>
+		</ul>
+		Slope
+		<ul>
+			<li> Mathematics10C, Relations and Functions,Specific Outcomes3 and 5; </li>
+			<li> Mathematics 20-3, Algebra, Specific Outcome 2 Area Calculations </li>
+			<li> Mathematics 10-3, Measurement, Specific Outcome 4 </li>
+		</ul>
+		Powers
+		<ul>
+			<li> Mathematics10C, Algebra and Number, Specific Outcome 3 </li>
+		</ul>
+			<strong>Note:</strong> The use of systems of equations, the quadratic formula and trigonometric ratios for angles greaterthan 90º is not required in this unit <br>
+		</div>
+	</div>
+
+<!--  ***********************************************************************************************************   -->
+	<br>
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<br>
+	<div class="P20bg"><h1 class="P20bg secTitle">Chapter 2: Vector Components Describe Motion in Two Dimensions</h1> </div>     
+	<div class="P20c">
+	<h2>Key Concepts</h2>
+		<ul>
+			<li>two-dimensioal motion </li>
+			<li>vector methods </li>
+		</ul>
+		<h2>Knowledge</h2>
+		<ul>
+			<li>Explain two-dimensional motion in a horizontal or vertical plane. </li>
+			<li>Interpret the motion of one object relative to another. </li>
+		</ul>
+		<h2>STS</h2>
+		<ul>
+			<li>Explain that scientific knowledge is subject to change as new evidence comes to light and as laws and theories are tested, restricted, revised or reinforced. </li>
+		</ul>
+		<br>
+		<br>
+	</div> <!-- titleB -->
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="P20bg secTitle">2.1  Vector Methods In One Dimension </h2>
+
+		<span class="def">Collinear </span> – along the same straight line, either in the same or in opposite directions. <br>
+		 <br>
+		<span class="def">Resultant vector </span>– a vector drawn from the tail of the first vector to the tip of the last vector.<br>
+		<img src="P20Ch2 Vectors/Vector-Labeled-Tail-Head.png" width="300" height="100" alt="Vector - Starts at the tail and finishes at the head"/>  <br>
+	How are added vectors drawn? <br>
+	They are drawn tail to head, tail to head. <br>
+
+	What is the resultant vector? <br>
+	The resultant is the sum of the vectors. <br>
+	 <br>
+	Practice Problems # 1 p.73 <br>
+	Practice Problems #1-3 p. 74 <br>
+
+	2.1 Check and Reflect p. 75 <br>
+	Knowledge # 1-4 <br>
+	Applications # 5-9 <br>
+	<br>
+			<br>
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="P20bg secTitle">2.2 Motion in Two Dimensions </h2>
+	All diagonals can be broken into components (X and Y parts) <br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/QRAVQChUnqw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+
+	The X and Y components define the resultant diagonal vector. <br>
+
+	There a two methods used to describe directions. <br>
+
+	<span class="ex">Ex. </span>  <span class="example">A sailor leaves port and travels 5.0 km east and then 9.0 km north.  What is the boat’s displacement? </span> <br>
+
+	Adding Vectors <br>
+	Draw a diagram <br>
+	Determine the X and Y components <br>
+	Add the X components <br>
+	Add the Y components <br>
+	Reassemble the X and Y components into the resultant. <br>
+
+	<span class="ex">Ex. </span>  <span class="example">A bird flies 5.0 km [NW] and then flies 3.0 km [70<sup>o</sup>wouth of west]. What is the bird’s displacement? </span> <br>
+	
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/khn3MJezj3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		 
+	<div class="review indent">
+		<h3>Review Questions</h3>
+
+		Describe the Cartesian (mathematical, polar) method of vectors. <button onclick="document.getElementById('2-20').innerHTML = 'Start at 0<sup>o</sup> (right) and rotate counter clockwise.'">Answer</button><br>
+		<span id="2-20" class="indent"></span><br>
+		Describe the navigator method of vectors <button onclick="document.getElementById('2-21').innerHTML = 'Start at 0<sup>o</sup> (up) and rotate clockwise.'">Answer</button><br>
+		<span id="2-21" class="indent"></span><br>
+		How do you determine the x-components of a vector? <button onclick="document.getElementById('2-22').innerHTML = 'Multiply the diagonal by the cosine of the angle.'">Answer</button><br>
+		<span id="2-22" class="indent"></span><br>
+		How do you determine the y-components of a vector? <button onclick="document.getElementById('2-22').innerHTML = 'Multiply the diagonal by the sine of the angle.'">Answer</button><br>
+	</div> <!-- end Review -->
+		
+
+	Practice Problems # 1-3  p. 88 <br>
+
+	Check and Reflect p. 90 <br>
+	Knowledge # 1-3 <br>
+	Applications # 4-11 <br>
+    <br>
+    <br>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="P20bg secTitle">2.3  Relative Motion </h2>
+		 <span class="def">Relative motion </span>– motion measured with respect to an observer. <br>
+	<br>
+	
+	<br>
+	<span class="ex">Ex. </span> <span class="example">A canoeist paddling 1.5 m/s north is going across a river flowing 2.5 m/s west. </span><br>
+	<span class="example">a.  What is the velocity of the canoeist relative to the shore? </span> <br>
+	  <br>
+	<span class="ex">Ex. </span> <span class="example">	A canoeist paddling 3.5 m/s  is going across a river flowing 2.5 m/s west.  What direction does the canoeist have to paddle to go straight across the river? </span><br>
+	
+	Police car Chase <br>
+	When the frame of reference is parallel to the motion. <br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/ntrc4uyBsYg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+		 
+	Crossing a River <br>
+	When the frame of reference is perpendicular to the motion. <br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Wr4F6A7AiCY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+		 
+	P. 101 <br>
+	Knowledge 1-4 <br>
+	Applications 5-11 <br>
+		
+	<div class="review indent">
+		<h3>Review Questions</h3>
+		What is relative motion? <button onclick="document.getElementById('2-30').innerHTML = 'Relative motion is observed by a moving observer.'">Answer</button><br>
+		<span id="2-30" class="indent"></span><br>
+
+		Why do we use relative motion? <button onclick="document.getElementById('2-31').innerHTML = 'Relative motion can dramatically simplify a solution.'">Answer</button><br>
+        <span id="2-31" class="indent"></span><br>
+	  </div> <!-- end review -->
+    <br>
+    <br>
+		<div style="background-color: #555;" class="main" id="section14" >
+		&nbsp;
+			<div class="col-3">
+				<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png" alt="Top Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section13"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+			</div>
+			<div class="col-4">
+				<a href="#section15"> <button type="button"> <img src="../Images/NextButton.png"alt="Next Button"> </button> </a>
+			</div>
+			<p style="padding-bottom:10px;"> <br> </p>
+
+		</div>
+          <h2 class="P20bg secTitle">2.4  Projectile Motion </h2>
+		<span class ="def">Trajectory </span>– the parabolic path of a projectile. <br>
+		
+
+	Break the initial velocity into X and Y components. <br>
+	Use the Y components to solve for time <br>
+
+	Use the X components to solve for the range (horizontal velocity) <br>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/bmQ3oGP_Q-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+	 <br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/EDhDCmw0NGM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+	 <br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/2CVCbNkMAVs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+		<br>
+	
+	 <br>	
+	<span class="ex">Ex. </span> <span class="example">A ball is hit at 30 m/s at an angle of 60<sup>o</sup>.  How far away will it land? </span> <br>
+	<span class="ex">Ex. </span> <span class="example">A ball is hit at 30 m/s at an angle of 30<sup>o</sup>.  How far away will it land? <br>
+	(keep the 60<sup>o</sup> graph) </span> <br>
+
+	What do you notice about where each lands? <br>
+	What is the pattern about angles and distance? <br>
+
+	What angle gives the best distance? <br>
+
+	45<sup>o</sup> is the best combination of height and distance to get the best distance. <br>
+
+    <div class="review indent">
+    <h3>Review Questions</h3>
+		When does projectile motion apply? <button onclick="document.getElementById('2-40').innerHTML = 'Projectile motion applies when an unpowered object flies through the air.  Only the force of gravity acts on the object.'">Answer</button><br>
+					<span id="2-40" class="indent"></span><br>
+
+		What determines the time of flight? <button onclick="document.getElementById('2-41').innerHTML = 'The vertical velocity and vertical height change determine the time of flight.'">Answer</button><br>
+					<span id="2-41" class="indent"></span><br>
+
+		What equation is used to calculate the time of flight? <button onclick="document.getElementById('2-42').innerHTML = 'd = v<sub>iy</sub>&Delta;t + 0.5a<sub>y</sub>&Delta;t<sup>2</sup>'">Answer</button><br>
+					<span id="2-42" class="indent"></span><br>
+
+		What equation is used to calculate the range? <button onclick="document.getElementById('2-43').innerHTML = 'd = v<sub>ix</sub>&Delta;t'">Answer</button><br>
+					<span id="2-43" class="indent"></span><br>
+                
+	  </div>
+       <br>
+       <br>
+
+	
+	
+	
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Physics 20 <br>
+			Program of Studies <br>
+		<img src="Images/Alberta-Education-Logo.png" width="400" height="200" alt="Alberta Education Logo"/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/">Physics 20 &amp; 20 Textbook (2009) <br>
+	  <img src="Images/PearsonPhysicsTextBook.jpg" width="150" height="200" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+	</div>
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>
