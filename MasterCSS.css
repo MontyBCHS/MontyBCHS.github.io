@@ -1,0 +1,379 @@
+@charset "utf-8";
+/* CSS Document */
+/* Weebly CSS Main Page*/
+
+
+#page{	
+	padding-left:3%;
+	padding-right:3%;
+}	
+	
+.p{	
+	font-family: Arial, Helvetica, sans-serif;
+}	
+
+.chapTitle{	
+	font-size: 200%;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+}	
+
+.customHR {	
+	/* line across to break up sections, color? */
+	width: 95%;
+    	font-size: 1px;
+    	line-height: 2px;
+ }  	
+
+.CourseTitle {	
+	/* course title at the top of the page */
+	color:white;
+	background-color:black;
+	font-family: "Times New Roman", Times, serif;
+	font-size:400%;
+	text-align: center;
+}	
+
+.def{
+	font-weight:bold;
+}
+
+.ex{ 	
+	color: orangered; 
+}	
+
+.footer{	
+	color: white;
+	background-color: black;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+}	
+
+
+.i{	
+	font-style: italic;
+}	
+
+.indent {	
+	padding-left: 50px;
+}	
+
+.main{
+	border-radius: 10px;
+	padding-bottom: 5px;
+}
+
+.pos{ 	
+	color:red;
+}
+
+.review {	
+	color:purple;
+	padding-left:50px;
+}	
+
+.sample{	
+	color:sienna;
+	padding-left:50px;
+}	
+
+.secTitle{	
+	color: white;
+	border-radius: 10px;
+	font-size: 2em;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	text-align: center;
+}	
+
+.unitTitle{ 				
+	/* Unit and chapter Titles - at top of page */			
+	color:white;			
+	font-family: "Times New Roman", Times, serif;			
+	font-size:150%;			
+	text-align:center;			
+}				
+
+	
+
+/*  *****************************************************  */
+/*  Background Colors for each course  */
+.S10Cbg	{background-color: blue;}			
+.S10Abg	{background-color: green;}			
+.S10Bbg	{background-color: orange;}			
+.S10Dbg	{background-color: purple;}			
+.P20bg	{background-color: blue;}			
+.P30bg	{background-color: green;}			
+
+/*  Text Color for course headings  */
+.S10Cc	{color: blue;}
+.S10Ac	{color: green;}
+.S10Bc	{color: orange;}
+.S10Dc	{color: purple;}
+.P20c	{color: blue;}
+.P30c	{color: green;}
+
+/*  *****************************************************  */
+/*  Math Equations  */
+.eqn{		
+	font-style: italic;	
+  	font-weight: bold;	
+	font-size: 125%;	
+  }		
+ 		
+ .fraction {		
+  	text-align: center;	
+	vertical-align: middle;	
+              	margin-top:0.5em;	
+	margin-bottom:0.5em;	
+	line-height: 2em; 	
+}		
+.upper_line {		
+ 	border-top:solid 1px black;	
+  }	
+
+/*  *****************************************************  */  
+
+* {
+  box-sizing: border-box;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+/* Header  Glowing Text course title; Resize Header on scroll */
+/*  ******************************************  */
+/* Glowing text - white text and grey glow */
+.glow {
+  /* color: #fff; */
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+	/* fff-white; e60073-pink */
+  from {
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #888, 0 0 40px #888, 0 0 50px #888;
+	/* text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #555, 0 0 40px #555, 0 0 50px #555, 0 0 60px #555, 0 0 70px #555; */
+  }
+	/* fff-white; ff4da6-ligter-pink; */
+  to {
+    text-shadow: 0 0 20px #000, 0 0 30px #000, 0 0 40px #333, 0 0 50px #333;
+	/* text-shadow: 0 0 20px #000, 0 0 30px #000, 0 0 40px #333, 0 0 50px #666, 0 0 60px #999, 0 0 70px #ddd, 0 0 80px #ddd; */
+  }
+}
+
+/*  ******************************************  */
+/* Resize Header on scroll */
+#header {
+  background-color: grey; /* Grey background */
+  /* padding: 10px 10px; /* Some padding */
+  color: white;
+  text-align: center; /* Centered text */
+  font-size: 30px; /* Big font size */
+  font-weight: bold;
+  position: fixed; /* Fixed position - sit on top of the page */
+  top: 0;
+  width: 94%; /* Full width */
+  transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
+}
+
+/*  ******************************************  */
+
+/*  ******************************************  */
+/*  Left side Column for menu */
+ .row::after {
+  content: "";
+  /* clear: both; */
+  display: table;
+} 
+ /* The side navigation menu */
+.sidebar {
+  background-color: #574463;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: black;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+  font-weight: bold;
+}
+/*  ******************************************  */
+
+/*  ******************************************  */
+/*  Middle Column */
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+/*  ******************************************  */
+
+/*  ******************************************  */
+/*  Footer */
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+/*  ******************************************  */
+
+/*  ******************************************  */
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+/*  ******************************************  */
+
+/*  ******************************************  */
+/*  Collapsable Section  */
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+/*  ******************************************  */
+
+/*  ******************************************  */
+/*  Tooltip Popup for definitions  */
+ /* Tooltip container */
+.tooltip {
+  color: green;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} 
+/*  ******************************************  */
+
+/*  ******************************************  */
