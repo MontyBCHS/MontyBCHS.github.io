@@ -1,0 +1,1616 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>S10 UB Ch1 Test</title>
+<link href="../MasterCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">SCIENCE 10</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="./S10_UA_Ch1.html">Unit A Chemistry - Chapter 1</a>
+			<a href="./S10_UA_Ch2.html">Unit A Chemistry - Chapter 2</a>
+			<a href="./S10_UA_Ch3.html">Unit A Chemistry - Chapter 3</a>
+			<a href="./S10_UA_Ch1.html" class="active">Unit B Physics - Chapter 1</a>
+			<a href="./S10_UB_Ch2.html">Unit B Physics - Chapter 2</a>
+			<a href="./S10_UB_Ch3.html">Unit B Physics - Chapter 3</a>
+			<a href="./S10_UC_Ch1.html">Unit C Biology - Chapter 1</a>
+			<a href="./S10_UC_Ch2.html">Unit C Biology - Chapter 2</a>
+			<a href="./S10_UC_Ch3.html">Unit C Biology - Chapter 3</a>
+			<a href="./S10_UD_Ch1.html">Unit D Climate - Chapter 1</a>
+			<a href="./S10_UD_Ch2.html">Unit D Climate - Chapter 2</a>
+			<a href="./S10_UD_Ch3.html">Unit D Climate - Chapter 3</a>
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 S10Bbg">
+	<div class="unitTitle"><h2 class="unitTitle">UNIT B: ENERGY FLOW IN TECHNOLOGICAL SYSTEMS</h2></div>
+	 
+	<button type="button" class="collapsible">Program of Studies</button>
+	
+<!--  **************************************  -->
+<!--  Colllapsable program of studies  -->
+<div class="content pos">
+  <h1>SCIENCE 10</h1>
+  <h1>Program of Studies</h1>
+  <h1>Unit B:  Energy Flow in Technological Systems (Science and Technology Emphasis) </h1>
+  <strong>Overview:</strong> The first and second laws (conservation and conversion) of thermodynamics have been 		useful in the development of modern and efficient energy conversion devices.  Students investigating mechanical energy conversions and transfers in systems will recognize that while energy is conserved, useful energy diminishes with each conversion.  Students learn that energy can be observed only when it is being transferred, and that mechanical energy can be quantified.  Energy conservation and conversion concepts are applied by students to explain energy conversions in natural and technological systems, and to investigate the design and function of energy conversion technologies. 
+
+  <h2>Links to Science </h2>
+  The following science concepts are related to the content of Unit B. <br>
+  Concepts <br>
+  Science Course and Unit <br>
+  <ul>
+	<li>heat energy needs and technologies, thermal energy, heat transfer, energy conservation - Grade 7 Science, Unit C:  Heat and Temperature </li>
+	<li>forces on and within structures, direction of forces - Grade 7 Science, Unit D:  Structures and Forces </li>
+	<li>transmission of force and motion, simple machines, measurement of work in joules - Grade 8 Science, Unit D:  Mechanical Systems </li>
+	<li>forms of energy, energy transformation, renewable and nonrenewable energy - Grade 9 Science, Unit D:  Electrical Principles and Technologies </li>
+  </ul>
+
+  <strong>Focusing Questions: </strong>
+  <ul>
+	<li>Which came first, science or technology, and is it possible for technological development to take place without help from pure science?  </li>
+	<li>How did efforts to improve the efficiency of heat engines result in the formulation of the first and second laws of thermodynamics?  </li>
+	<li>How can the analysis of moving objects help in the understanding of changes in kinetic energy, force and work?  </li>
+	<li>Why are efficiency and sustainability important considerations in designing energy conversion technologies?</li>
+  </ul>
+
+  <h2>Key Concepts </h2>
+  The following concepts are developed in this unit and may also be addressed in other units at other grade/course levels.  The intended level and scope of treatment is defined by the outcomes below. 
+  <ul>
+	<li>forms and interconversions of energy </li>
+	<li>technological innovations of engines that led to the development of the concept of energy </li>
+	<li>one-dimensional motion </li> 
+	<li>mechanical energy conversions and work  </li>
+	<li>design and function of technological systems and devices involving potential and kinetic energy and thermal energy conversions </li>
+	<li>efficient use of energy, and the environmental impact of inefficient use of energy </li>
+  </ul>
+
+  <h2>Outcomes for Science, Technology and Society (STS) and Knowledge </h2>
+  Students will:
+  <ol>
+    <li>Analyze and illustrate how technologies based on thermodynamic principles were developed before the laws of thermodynamics were formulated </li>
+	<div class="indent">
+	  <ul>
+		<li>illustrate,  by  use  of  examples  from  natural  and  technological  systems,  that  energy  exists  in  a variety of forms 
+			<div class="i indent">(e.g., mechanical, chemical, thermal, nuclear, solar) </div> </li>
+		<li>describe, qualitatively, current and past technologies used to transform energy from one form to another, and that energy transfer technologies produce measurable changes in motion, shape or temperature 
+			<div class="i indent">(e.g., hydroelectric and coal-burning generators, solar heating panels, windmills, fuel cells; describe examples of Aboriginal applications of thermodynamics in tool making, design of structures and heating) </div> </li>
+		<li>identify  the  processes  of  trial  and  error  that  led  to  the  invention  of  the  engine, and  relate  the principles of thermodynamics to the development of more efficient engine designs 
+			<div class="i indent">(e.g., the work of James Watt; improved valve designs in car engines) </div> </li>
+		<li>analyze and illustrate how the concept of energy developed from observation of heat and mechanical devices 
+			<div class="i indent">(e.g., the investigations of Rumford and Joule; the development of pre-contact First Nations and Inuit technologies based on an understanding of thermal energy and transfer) </div> </li>	
+	  </ul>
+	</div>
+
+    <li>Explain and apply concepts used in theoretical and practical measures of energy in mechanical systems </li>
+	  <div class="indent">
+		<ul>
+		  <li>describe evidence for the presence of energy; i.e., observable physical and chemical changes, and changes in motion, shape or temperature </li>
+		  <li>define kinetic energy as energy due to motion, and define potential energy as energy due to relative position or condition </li>
+		  <li>describe chemical energy as a form of potential energy 
+		    <div class="i indent">(e.g., energy stored in glucose, adenosine triphosphate [ATP], gasoline) </div> </li>
+		  <li>define, compare and contrast scalar and vector quantities </li>
+  		  <li>describe displacement and velocity quantitatively </li>
+		  <li>define acceleration, quantitatively, as a change in velocity during a time interval: a = &Delta;v/&Delta;t</li>
+	  	  <li>explain that, in the absence of resistive forces, motion at constant speed requires no energy input </li>
+		  <li>recall, from previous studies, the operational definition for force as a push or a pull, and for work as energy expended when the speed of an object is increased, or when an object is moved against the influence of an opposing force </li>
+		  <li>define gravitational potential energy as the work against gravity </li>
+		  <li>relate gravitational potential energy to work done using E<sub>p</sub> = mgh and W = Fd and show that a change in energy is equal to work done on a system:  W = &Delta;E </li>
+		  <li>quantify kinetic energy using E<sub>k</sub> = 1/2 mv<sup>2</sup> and relate this concept to energy conservation in transformations 
+		    <div class="i indent">(e.g., for an object falling a distance “h” from rest:  mgh = Fd = 1/2 mv<sup>2</sup>) </div> </li>
+		  <li>derive the SI unit of energy and work, the joule, from fundamental units </li> 
+		  <li>investigate and analyze one-dimensional scalar motion and work done on an object or system, using algebraic and graphical techniques 
+			<div class="i indent">(e.g., the relationships among distance, time and velocity; determining the area under the line in a force–distance graph) </div> </li>
+		</ul>
+	</div>
+
+	<li>Apply the principles of energy conservation and thermodynamics to investigate, describe and predict efficiency of energy transformation in technological systems </li>
+	<div class="indent">
+	  <ul>
+		<li>describe, qualitatively and in terms of thermodynamic laws, the energy transformations occurring in devices and systems 
+			<div class="i indent">(e.g., automobile, bicycle coming to a stop, thermal power plant, food chain, refrigerator, heat pump, permafrost storage pits for food) </div> </li>
+		<li>describe how the first and second laws of thermodynamics have changed our understanding of energy conversions 
+			<div class="i indent">(e.g., why heat engines are not 100% efficient) </div> </li>
+		<li>define, operationally, “useful” energy from a technological perspective, and analyze the stages of “useful” energy transformations in technological systems 
+			<div class="i indent">(e.g., hydroelectric dam) </div> </li>
+		<li>recognize that there are limits to the amount of “useful” energy that can be derived from the conversion of potential energy to other forms in a technological device 
+			<div class="i indent">(e.g., when the potential energy of gasoline is converted to kinetic energy in an automobile engine, some is also converted to heat; when electrical energy is converted to light energy in a light bulb, some is also converted to heat) </div> </li>
+		<li>explain, quantitatively, efficiency as a measure of the “useful” work compared to the total energy put into an energy conversion process or device </li>
+		<li>apply concepts related to efficiency of thermal energy conversion to analyze the design of a thermal device 
+			<div class="i indent">(e.g., heat pump, high efficiency furnace, automobile engine) </div> </li>
+		<li>compare the energy content of fuels used in thermal power plants in Alberta, in terms of costs, benefits, efficiency and sustainability </li>
+		<li>explain the need for efficient energy conversions to protect our environment and to make judicious use of natural resources 
+			<div class="i indent">(e.g., advancement in energy efficiency; Aboriginal perspectives on taking care of natural resources) </div> </li>
+	  </ul>
+	</div>
+  </ol>
+
+	<h3>Skill Outcomes </h3>
+	(focus on problem solving) <br>
+	<h3>Initiating and Planning </h3>
+	Students will: <br>
+	Ask questions about observed relationships, and plan investigations of questions, ideas, problems and issues <br>
+	<div class="indent">
+		<ul>
+			<li>design an experiment, identifying and controlling major variables 
+			<div class="i indent">(e.g., design an experiment involving a combustion reaction to demonstrate the conversion of chemical potential energy to thermal energy) </div> </li>
+			<li>formulate operational definitions of major variables 
+			<div class="i indent">(e.g., predict or hypothesize the conversion of energy from potential form to kinetic form, in an experiment using a pendulum or free fall) </div> </li>
+		</ul>
+	 </div>
+
+	<h3>Performing and Recording </h3>
+	Students will: <br>
+	Conduct investigations into relationships between and among observable variables, and use a broad range of tools and techniques to gather and record data and information <br>
+	<div class="indent">
+		<ul>
+			<li>carry out procedures, controlling the major variables and adapting or extending procedures 
+			<div class="i indent">(e.g., perform an experiment to demonstrate the equivalency of work done on an object and the resulting kinetic energy; design a device that converts mechanical energy into thermal energy) </div> </li>
+			<li>compile and organize data, using appropriate formats and data treatments to facilitate  interpretation of the data 
+			<div class="i indent">(e.g., use a computer-based laboratory to compile and organize data from an experiment to demonstrate the equivalency of work done on an object and the resulting kinetic energy) </div> </li>
+			<li>use library and electronic research tools to collect information on a given topic 
+			<div class="i indent">(e.g., compile information on the energy content of fuels used in Alberta power plants; trace the flow of energy from the Sun to the lighting system in the school, identifying what changes are taking place at each stage of the process) </div> </li>
+			<li>select and integrate information from various print and electronic sources or from several parts of the same source 
+			<div class="i indent">(e.g., create electronic documents, containing multiple links, on using alternative energy sources, such as wind or solar, to generate electricity in Alberta; relate the importance of the development of effective and efficient engines to the time of the Industrial Revolution and to present-day first-world economics) </div> </li>
+		</ul>
+	</div>
+
+	<h3>Analyzing and Interpreting </h3>
+	Students will: <br>
+	Analyze data and apply mathematical and conceptual models to develop and assess possible solutions <br>
+	<div class="indent">
+		<ul>
+			<li>compile and display evidence and information, by hand or using technology, in a variety of formats, including diagrams, flow charts, tables, graphs and scatterplots 
+			<div class="i indent">(e.g.,plot distance–time, velocity–time and force–distance graphs; manipulate and present data through the selection of appropriate tools, such as scientific instrumentation, calculators, databases or spreadsheets) </div> </li>
+			<li>identify limitations of data or measurement 
+			<div class="i indent">(e.g., recognize that the measure of the local value of gravity varies globally; use significant digits appropriately) </div> </li>
+			<li>interpret patterns and trends in data, and infer or calculate linear and nonlinear relationships among variables 
+			<div class="i indent">(e.g., interpret a graph of changing kinetic and potential energy from a pendulum during one-half of a period of oscillation; calculate the slope of the line in a distance–time graph; analyze a simple velocity–time graph to describe acceleration; calculate the area under the line in a force–distance graph) </div> </li>
+			<li>compare theoretical and empirical values and account for discrepancies 
+			<div class="i indent">(e.g., determine the efficiency of thermal energy conversion systems) </div> </li>
+			<li>state a conclusion based on experimental data, and explain how evidence gathered supports or refutes the initial hypothesis 
+			<div class="i indent">(e.g., explain the discrepancy between the theoretical and actual efficiency of a thermal energy conversion system) </div> </li>
+			<li>construct and test a prototype of a device or system, and troubleshoot problems as they arise  
+			<div class="i indent">(e.g., design and build an energy conversion device) </div> </li>
+			<li>propose alternative solutions to a given practical problem, identify the potential strengths and weaknesses of each and select one as the basis for a plan 
+			<div class="i indent">(e.g., assess whether coal or natural gas should be used to fuel thermal power plants in Alberta) </div> </li>
+			<li>evaluate a personally designed and constructed device on the basis of self-developed criteria  
+			<div class="i indent">(e.g., evaluate an energy conversion device based on a modern or traditional design)</div> </li>
+	   </ul>
+   </div>
+
+	<h3>Communication and Teamwork </h3>
+	Students will: <br>
+	Work as members of a team in addressing problems, and apply the skills and conventions of science in communicating information and ideas and in assessing results 
+	<div class="indent">
+		<ul>
+			<li>represent large and small numbers using appropriate scientific notation </li>
+			<li>select and use appropriate numeric, symbolic, graphical and linguistic modes of representation to communicate ideas, plans and results 
+			<div class="i indent">(e.g., use appropriate  Système international (SI) units, fundamental and derived units; use advanced menu features within a word processor to accomplish a task and to insert tables, graphs, text and graphics) </div>
+			work cooperatively with team members to develop and carry out a plan and to troubleshoot problems as they arise 
+			<div class="i indent">(e.g., develop a plan to build an energy conversion device, seek feedback, test and review the plan, make revisions, and implement the plan) </div> </li>
+		</ul>
+	</div>
+
+	<h3>Attitude Outcomes</h3>
+	Interest in Science <br>
+	Students will be encouraged to:
+		<div class="indent">Show interest in science-related questions and issues, and pursue personal interests and career possibilities within science-related fields </div>
+		<div class="i indent">(e.g., apply concepts learned in the classroom to everyday phenomena related to energy; show interest in a broad scope of science-related fields in which energy plays a significant role) </div>
+		<br>
+	Mutual Respect <br>
+	Students will be encouraged to:
+		<div class="indent">Appreciate that scientific understanding evolves from the interaction of ideas involving people with different views and backgrounds </div>
+		<div class="i indent">(e.g., appreciate Aboriginal technologies of the past and present that use locally-available materials and apply scientific principles; recognize that science and technology develop in response to global concerns, as well as to local needs) </div>
+		<br>
+	Scientific Inquiry <br>
+	Students will be encouraged to:
+		<div class="indent">Seek and apply evidence when evaluating alternative approaches to investigations, problems and issues </div>
+		<div class="i indent">(e.g., assess problem using a variety of criteria; respect alternative solutions; honestly evaluate limitations of their designs; be persistent in finding the best possible answer or solution to a question or problem) </div>
+		<br>
+	Collaboration <br>
+	Students will be encouraged to:
+		<div class="indent">Work collaboratively in carrying out investigations and in generating and evaluating ideas </div>
+	<div class="indent">(e.g., select a variety of strategies, such as group brainstorming, active listening, paraphrasing and questioning, to find the best possible solution to a problem; work as a team member when assigning and performing tasks; accept responsibility for problems that arise) </div>
+
+	Stewardship <br>
+	Students will be encouraged to:
+	<div class="indent">Demonstrate sensitivity and responsibility in pursuing a balance between the needs of humans and a sustainable environment </div>
+	<div class="i indent">(e.g., recognize that their choices and actions, and the choices and actions that technologists make, can have an impact on others and on the environment) </div>
+
+	Safety <br>
+	Students will be encouraged to:
+	<div class="indent">Show concern for safety in planning, carrying out and reviewing activities </div>
+	<div class="i indent">(e.g., demonstrate concern for self and others in planning and carrying out experimental activities and the design of devices; select safe methods for collecting evidence and solving problems)	</div>
+		<br>
+	<strong>Links to Mathematics </strong>
+	The following mathematics outcomes are related to the content of Unit B  but are not considered prerequisites. 
+	<div class="indent">
+		<ul>
+			<li>Data Collection and Analysis - Grade 9 Mathematics, Statistics and Probability (Data Analysis), Specific Outcome 3 </li>
+			<li>Measurement and Unit Conversions - Mathematics 10C, Measurement,Specific Outcomes 1 and 2; Mathematics 10-3, Measurement, Specific Outcome 1; Mathematics 20-3, Algebra, Specific Outcome 3; Mathematics 30-3, Measurement, Specific Outcome 1 </li>
+			<li>Rate and Proportions - Grade 8 Mathematics, Number, Specific Outcomes 3 and 4; Mathematics 20-2, Measurement, Specific Outcome 1 </li>
+			<li>Graph Analysis - Grade 9 Mathematics, Patterns and Relations (Patterns), Specific Outcome 2; Mathematics10C, Relations and Functions,  Specific Outcomes 1 and 4; Mathematics 20-3, Statistics, Specific Outcome 1 </li>
+			<li>Solving Equations - Grade 9 Mathematics, Patterns and Relations (Variables and Equations), Specific Outcome 3; Grade 9 Mathematics, Number, Specific Outcome 6; </li>
+			<li>Slope - Mathematics10C, Relations and Functions, Specific Outcome 3 and 5; Mathematics 20-3, Algebra, Specific Outcome 2 </li>
+			<li>Powers - Mathematics10C, Algebra and Number, Specific Outcome 3 </li>
+			<li>Scale Diagrams - Mathematics 20-2, Measurement, Specific Outcome 2; Mathematics 20-3, Geometry, Specific Outcome 2 </li>
+		 </ul>
+	 </div>
+
+  </div>  <!--  close program of studies  -->
+	<h2>Unit Focus Questions</h2>
+	<ol>
+		<li>Which came first: science or technology, and is it possible for technological development to take place without help from “pure” science</li>
+		<li>How did effort to improve the efficiency of heat engines result in the formation of the first and second laws of thermodynamics?</li>
+		<li>How can the analysis of moving objects help in the understanding of changes in kinetic energy, force, and work?</li>
+		<li>Why are efficiency and sustainability important considerations in designing energy conversion technologies?</li>
+	</ol>
+	<br>
+</div>
+
+<!--  ***********************************************************************************************************   -->
+
+<!--  **************************************  -->
+<!--  Main section under columns  -->
+<div style="background-color: snow; clear: both;">		
+	<h1 class="S10Bbg secTitle">Chapter B1.0 Investigating the energy flow in technological systems requires and understanding of motion, work, and energy</h1>   
+	<div class="S10Bc">
+		<h2>Key Concepts</h2>
+		<ul>
+			<li>One-dimensional Motion </li>
+			<li>Work</li>
+		</ul>
+
+		<h2>Learning Outcomes</h2>
+		<ul>
+			<li>Define, compare and contrast scalar and vector quantities </li>
+			<li>Describe displacement and velocity quantitatively </li>
+			<li>Define acceleration quantitatively as a change in velocity during a time interval </li>
+			<li>Explain that, in the absence of resistive forces, motion at constant speed requires no energy input. </li>
+			<li>Recall from previous studies the operational definition for force as a push or pull, and work as energy expended when the speed of an object is increased or when an object is moved against the influence of an opposing force. </li>
+			<li>Investigate and analyze one-dimensional scalar motion and work done on an object or system using algebraic and graphical techniques. </li>
+		</ul>
+
+	  <br>
+	</div>
+	
+	<div style="background-color: #555;" class="main" id="section11" >
+	&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:20px;"> <br> </p>
+	</div>
+	
+	<br> <br>
+	 <h2 class="S10Bbg secTitle">B1.1 Motion</h2>
+          <h3 class="S10Bc">Uniform Motion </h3>
+          <span class="def">Reference point </span>– where you measure things from.<br>
+          <span class="def">Motion </span>– the changing in position of an object relative to a reference point; an imaginary line joining the object to the reference point changes in length and direction or both.<br>
+           <br>
+          <div class="sample">
+              How fast are you moving right now? <br>
+              Most would answer you are stationary. <br>
+              Some would say the world is spinning. <br>
+              Some would say you are orbiting around the Sun. <br>
+              Some would say the solar system is orbiting the centre of the galaxy. <br>
+              All are correct, depending on where you measure zero from. <br>
+          </div> <!-- end sample -->
+           <br>
+          <span class="def">Uniform Motion </span>– movement in a straight line at a constant speed.  Does not speed up or slow down. <br>
+          <span class="def">Non-uniform motion </span>– movement that changes direction and/or changes speed. <br>
+          <span class="def">Average Speed </span>– the total distance traveled divided by the total time required to travel the distance <br>
+	<!-- d=vt *************************************************************** -->
+    <div class="equation">  
+      <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td width= "50 px" rowspan="2" nowrap="nowrap">
+                 <em>v</em> = &nbsp; 
+              </td>
+              <td nowrap="nowrap">
+                  <em>&Delta;d</em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -3.8em; top : 0.5em; position: relative;">&rarr;</div>
+				  <div style="left : -0.8em; top : -2.7em; position: relative;">&rarr;</div>
+			  </td>			
+          </tr>
+          <tr>
+              <td class="upper_line">
+                  <em>&Delta;t</em>
+              </td>
+          </tr>
+      </table>
+    </div>  
+	<!-- d=vt *************************************************************** -->
+	
+          <ul>
+			  <li> v - speed , m/s </li>
+			  <li> d - distance, m </li>
+			  <li> t - time, s </li>
+          </ul>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/psdgBXnclKs" frameborder="0" allowfullscreen></iframe>
+           <br>
+          <span class="ex">Ex.</span> A person walks 500 m in 5 min.  What was the person’s average speed? <br>
+          <div class="indent">
+              <div class="example">
+                  v = d/t <br>
+                  v = 500 m / (5 min x 60 s/min) <br>
+                  v = 1.67 m/s <br>
+              </div> <!-- example -->
+           </div>
+           <br> 
+<br>
+<br>
+	
+			<div class="equation">  
+			  <table class="fraction, indent" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td width= "25px" rowspan="2" nowrap="nowrap">
+						 <em>v</em> = &nbsp; 
+					  </td>
+					  <td  nowrap="nowrap" align="center">
+						  <em>&Delta;d</em>
+					  </td>
+					  <td rowspan="2" nowrap="nowrap">
+						  <div style="left : -5.1em; top : 0em; position: relative;">&rarr;</div>
+						  <div style="left : -1.8em; top : -2.3em; position: relative;">&rarr;</div>
+					  </td>			
+				  </tr>
+				  <tr>
+					  <td class="upper_line" align="center">
+						  <em>&Delta;t</em>
+					  </td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td colspan="3" align="center">500 m</td> 
+				  </tr>
+				  <tr>
+				  	<td colspan="3" class="upper_line">(5 min x 60 s/min)</td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td rowspan="2">1.67</td>
+					<td>&nbsp; m</td>
+					 
+				  </tr>
+				  <tr>
+				  	<td class="upper_line" >&nbsp; s &nbsp;</td>
+					  <td style="padding-right:3em;"></td>
+				  </tr>
+			  </table>
+			</div> 
+	
+	
+          <span class="ex">Ex.</span> A horse runs at 15 m/s for 200 s.  How far did the horse go? <br>
+          <div class="indent">
+              <div class="example">
+                  d = vt <br>
+                  d = 15 m/s &times; 200 s <br>
+                  d = 3000 m <br>
+                  d = 3.0 &times; 10<sup>3</sup> m<br>
+              </div> <!-- example -->
+          </div>
+<br>
+<br>	
+			<div class="equation">  
+			  <table class="fraction, indent" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td width= "50 px" nowrap="nowrap"> <em>&Delta; d</em> = &nbsp; </td>
+					  <td  nowrap="nowrap" colspan="3"> <em>v</em> &times; &Delta; <em>t</em>
+					  </td>
+					  <td nowrap="nowrap">
+						  <div style="left : -9.3em; top : -0.3em; position: relative;">&rarr;</div>
+						  <div style="left : -7.3em; top : -1.3em; position: relative;">&rarr;</div>
+					  </td>			
+				  </tr>
+				  <tr>
+				      <td rowspan="2" width= "50 px" nowrap="nowrap"> <em>&Delta; d</em> = &nbsp; </td>
+				  	  <td rowspan="2">15 &nbsp;</td>
+				  	  <td> m</td>
+				      <td rowspan="2">&nbsp; &times; 200 s</td>
+				  </tr>
+				  <tr>
+				  	  <td class="upper_line">s</td>
+				  </tr>
+				  
+				  <tr>
+				      <td width= "50 px" nowrap="nowrap"> <em>&Delta; d</em> = &nbsp; </td>
+				  	  <td colspan="3">3000 m</td>
+				  </tr>
+				  
+				  <tr>
+				      <td width= "50 px" nowrap="nowrap"> <em>&Delta; d</em> = &nbsp; </td>
+				  	  <td colspan="3">3.0 &times; 10<sup>3</sup> m</td>
+				  </tr>
+				</table>
+		</div>
+	
+	
+          <br>
+          
+          <span class="ex">Ex.</span> Convert 100 km/h into m/s. <br>
+          <div class="indent">
+              <div class="example">
+                  100 km/h x 1000 m/ km x 1 h / 60 min x 1 min / 60 s =  27.8 m/s <br>
+                  To change km/h into m/s divide by 3.6 <br>
+                  To change m/s into km/h multiply by 3.6 <br>
+              </div>  <!-- end example -->
+          </div>
+	<br>
+	<br>
+		  <div class="equation">  
+			  <table class="fraction, indent" cellpadding="0" cellspacing="0">
+				  <tr align="center">
+					  <td rowspan="2">100 &nbsp;</td>
+					  <td>km &nbsp;</td>
+					  <td rowspan="2">&nbsp; &times; &nbsp;</td>
+					  <td>1000 m</td>
+					  <td rowspan="2">&nbsp; &times; &nbsp;</td>
+					  <td>1 h</td>
+					  <td rowspan="2">&nbsp; &times; &nbsp;</td>
+					  <td>1 min</td>
+					  <td rowspan="2">&nbsp;= 27.8 &nbsp;</td>
+					  <td>m</td>
+				  </tr>
+				  <tr align="center">
+					  <td class="upper_line">h</td>
+				  	  <td class="upper_line">1 km</td>
+				  	  <td class="upper_line">60 min</td>
+				  	  <td class="upper_line">60 s</td>
+				  	  <td class="upper_line">s</td>
+				  </tr>
+				  
+				  <tr align="center">
+					  <td rowspan="2">100 &nbsp;</td>
+					  <td><span style="text-decoration: line-through; text-decoration-color: green; text-decoration-thickness:3px;"> km </span>&nbsp;</td>
+					  <td rowspan="2">&nbsp; &times; &nbsp;</td>
+					  <td>1000 m</td>
+					  <td rowspan="2">&nbsp; &times; &nbsp;</td>
+					  <td>1 <span style="text-decoration: line-through; text-decoration-color: blue; text-decoration-thickness:3px;"> h </span></td>
+					  <td rowspan="2">&nbsp; &times; &nbsp;</td>
+					  <td>1 <span style="text-decoration: line-through; text-decoration-color: red; text-decoration-thickness:3px;"> min </span></td>
+					  <td rowspan="2">&nbsp;= 27.8 &nbsp;</td>
+					  <td>m</td>
+				  </tr>
+				  <tr align="center">
+					  <td class="upper_line"><span style="text-decoration: line-through; text-decoration-color: blue; text-decoration-thickness:3px;"> h </span></td>
+				  	  <td class="upper_line">1 <span style="text-decoration: line-through; text-decoration-color: green; text-decoration-thickness:3px;"> km </span></td>
+				  	  <td class="upper_line">60 <span style="text-decoration: line-through; text-decoration-color: red; text-decoration-thickness:3px;"> min </span></td>
+				  	  <td class="upper_line">60 s</td>
+				  	  <td class="upper_line">s</td>
+				  </tr>
+			  </table>
+		</div>	
+	
+	
+	
+          <br>
+		<div class="sample">
+          <table border="1" style="border: none;">
+	  <tbody style="border: none;">
+		<tr style="border: none;">
+		  <th scope="col" colspan="4"  style="border: none; text-align: center;">Example Accelerations</th>
+		</tr>
+		<tr style="border: none;">
+		  <td  style="border: none; text-align:right;">0.3<br>
+			0<br>
+			1<br> 
+			2<br>
+			11<br>
+			25<br>
+			30<br>
+			36<br>
+			90<br>
+			113<br>
+			343<br>
+			347<br>
+			981<br>	
+			1 815<br>
+			9 604<br>
+			70 220<br>
+			30 000 000<br>
+			299 792 458<br>
+		  </td>
+		  <td test-align: left  style="border: none;">×10<sup>-9</sup><br>
+			.013<br>
+			.0<br>
+			.9<br>
+			.95<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			&nbsp;<br>
+			</td>
+		  <td  style="border: none;"> m/s &nbsp; &nbsp; <br>
+			m/s &nbsp;&nbsp;&nbsp;<br>
+			m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			  m/s &nbsp;&nbsp;&nbsp;<br>
+			</td>
+		  <td  style="border: none;">Continental drift <br>
+				  garden snail  <br>
+				  average walking speed  <br>
+				  11.95 Usain Bolt in the 2009 Berlin World Championships 43 km/h <br>
+				  peak speed of a galloping horse  <br>
+				  cheetah (fastest land animal) or sailfish (fastest fish)  <br>
+				  fastest human powered vehicle Canadian Sam Whittingham  <br>
+				  high speed train or diving peregrine Falcon (fastest bird)  <br>
+				  Bugatti Veyron SS (fastest production car)  <br>
+				  speed of sound  <br>
+				  Thrust SSC (fastest car)  <br>
+				  SR-71 Blackbird (fastest jet plane)  <br>
+				  X-15 (fastest manned rocket plane)  <br>
+				  X-43 scramjet (fastest plane)  <br>
+				  Space Shuttle  <br>
+				  speed of Helio 2 solar probe (fastest man mad object) <br>
+				  speed of an electron in a cathode ray tube   <br>
+				  speed of light (3.00×108 m/s) speed limit of the universe (as far as we know)  <br>
+			</td>
+		</tr>
+	  </tbody>
+	</table>
+	</div>
+
+           <br>
+          <h3 class="practice"> Practice Problems </h3>
+          Try practice problems 1 to 3 on page 128 <br>
+          <br>
+          
+          <h3 class="S10Bc">Using Graphs to Analyze Average Speed</h3>
+          Graphs are often used to represent the motion of a moving object. <br>
+          Graphs make it easy to interpret the motion. <br>
+          The time is the manipulated variable. <br>
+          The distance is the responding variable. <br> <br>
+
+           
+          Slope is a mathematical measure of the steepness of the line on a graph. <br>
+          It is a ratio of the rise (up) to the run (right). <br>
+           
+          On an graph the slope is the y-axis divided by the x-axis. <br>
+	          <img style="float: left; padding-right: 5%;" src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/dvstgraph_orig.png" alt="Distance as a function of time graph"> <br>
+            <br>
+          <span class="def">Ex. </span>  What is the slope of the graph?<br>
+          <div class="indent">
+              <div class="example">
+                  Use points (1.0 s, 0.5 m) and (4.0, 1.25m) <br>			  
+				  &nbsp;&nbsp;&nbsp; v =  &#916;d / &#916;t<br>
+				  &nbsp;&nbsp;&nbsp; v = (d<sub>2</sub> - d<sub>1</sub>) / (t<sub>2</sub> - t<sub>1</sub>)<br>
+				  &nbsp;&nbsp;&nbsp; v = (1.25 - 0.5 m) / (4.0 - 1.0 s)    <br>
+				  &nbsp;&nbsp;&nbsp; v = 0.25 m/s  <br>
+              The velocity is 0.3 m/s. (rounded to one significant digit)
+              </div>  <!-- close example -->
+          </div>
+<br>
+<br>
+
+	
+		  <div class="equation">  
+			  <table class="fraction, indent" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td width= "25px" rowspan="2" nowrap="nowrap">
+						 <em>v</em> = &nbsp; 
+					  </td>
+					  <td  width="12px" nowrap="nowrap" align="center" colspan="1"><em>&Delta;d</em></td>
+					  <td rowspan="2" nowrap="nowrap">
+						  <div style="left : -4.8em; top : 0em; position: relative;">&rarr;</div>
+						  <div style="left : -1.4em; top : -2.1em; position: relative;">&rarr;</div>
+					  </td>			
+				  </tr>
+				  <tr>
+					  <td class="upper_line" align="center" colspan="1"><em>&Delta;t</em></td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td colspan="3" nowrap="nowrap">&Delta;d<sub>2</sub> - &Delta;d<sub>1</sub></td> 
+					<td width="25px"> </td>
+				  </tr>
+				  <tr>
+				  	<td colspan="3" class="upper_line" nowrap="nowrap">&Delta;t<sub>2</sub> - &Delta;t<sub>1</sub></td>
+					<td width="25px"> </td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td colspan="4" width="50px" nowrap="nowrap" align="center">1.25 - 0.25 m</td> 
+				  </tr>
+				  <tr>
+				  	<td colspan="4" class="upper_line" align="center">4.0 - 1.0 s</td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td rowspan="2">0.25&nbsp; </td>
+					<td align="center">m</td>
+					<td width="25px"> </td>
+				  </tr>
+				  <tr>
+				  	<td colspan="1" class="upper_line" align="center">s</td>
+				  </tr>
+				  
+			  </table>
+			</div> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+            <br>
+		  <div style="clear: both;">
+          The slope is easy to calculate for a perfect straight line graph.  However, most experiments do not give a straight line graph.  Linear regression gives the best possible slope. </div> <br>
+          You will see linear regression and slope in math 10 common.  <br>
+           <br>
+		<img style="float: left; padding-right: 5%;" src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/dvstgraph-2-lines_orig.png" alt="Distance as a funtion of time graph with three lines"> <br>
+			Which object (red, green or blue) is moving fastest? <br>
+           <br>
+			<ul>
+				<li>The red line is the fastest, because it has the steepest slope, is. it travels the most distance (vertical) in the lest time (horizontal).</li>
+				<li>The blue line is the medium speed, because is has a less steep line.</li>
+				<li>The green line is horizontal so its velocity (slope) is zero because it is not moving. It is stationary. </li>
+			</ul>
+			<div style="clear: both;">
+          <br>
+          <h3 class="practice"> Practice Questions </h3>
+          Try practice problem 4 on page 130 <br>
+           <br>
+		   <br>
+		<a href="ToyTrainLab/ToyTrainLab.htm"><h2>Toy Train Velocity Lab Interactive</h2></a>
+          <br>
+		  <br>
+          <h3 class="S10Bc">Plotting a Speed-Time Graph </h3>
+          Time is the manipulated variable, X-axis <br>
+          Speed is the responding variable, Y-axis  <br>
+            <br>
+		We have used <span class="equation">d = vt </span>. <br>
+          On a speed vs time graph the v is the y axis and t is the x axis.  If we multiple the v by t we get the area under the line. <br>
+          
+           <br>
+          <h3 class="practice"> Practice Questions </h3> 
+          Try practice problem 5 on page 133<br>
+          <br>
+          <h3>B1.1  Motion Review</h3>
+          
+          <div class="review">
+              <h3>Review Questions</h3>
+              What is the equation for velocity?   <button onclick="document.getElementById('A0').innerHTML = ' v =  &#916;d / &#916;t'">Answer</button><span id="A0"></span>
+         	  <br>
+              <br>
+              What is the difference between uniform and non uniform motion?   <button onclick="document.getElementById('A1').innerHTML = ' Uniform motion is consistent, whereas with non-uniform motion the speed changes.'">Answer</button><span id="A1"></span>
+          	  <br>
+              <br>
+              What is the manipulated variable on a distance vs time graph? 	<button onclick="document.getElementById('A2').innerHTML = ' Time'">Answer</button><span id="A2"></span>
+	          <br>
+              <br>	
+              What is the responding variable on a distance vs time graph? <button onclick="document.getElementById('A4').innerHTML = ' Distance'">Answer</button><span id="A4"></span>
+    	      <br>
+              <br>	
+              What is the manipulated variable on a speed vs time graph? <button onclick="document.getElementById('A6').innerHTML = ' Time'">Answer</button><span id="A6"></span>
+        	  <br>
+              <br>	
+              What is the responding variable on a speed vs time graph? <button onclick="document.getElementById('A8').innerHTML = ' Speed'">Answer</button><span id="A8"></span>
+          <br>
+          </div>  <!-- end review -->
+          
+          <br>
+          <h3 class="practice"> Practice Questions </h3>
+          B1.1 Check and Reflect page 135<br>
+          <br>
+          
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	
+	<div style="background-color: #555;" class="main" id="section12" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section11"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section13"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+	</div>
+	
+          
+          <h2 class="S10Bbg secTitle">B1.2  Velocity</h2>
+          <span class="def">Scalar </span> -  quantity that indicates magnitude only<br>
+		<span class = "indent"> <span class="ex">Ex. </span> <span class="example">I walked 5.0 km </span> </span> <br>
+          <span class="def">Vector </span>– quantity that indicates magnitude and direction <br>
+			  <span class = "indent"> <span class="ex">Ex.</span> <span class="example">I walked 5.0 km [North]. </span> </span><br>
+           <br>
+          <h3 class="S10Bc">Distance Traveled and Displacement </h3>
+          <span class="def">Distance traveled </span>– scalar quantity that measures how far an object has traveled <br>
+          <span class="def">Displacement </span> – vector quantity that measures the change in distance and the change in direction or position of an object <br>
+           
+          <h3 class="S10Bc">The navigator method </h3>
+          Used by navigators using a compass (boats, planes, orienteering).  They used the north star as their reference point. <br>
+            <center> <img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/navigatordirections_orig.gif
+				" alt="Animated navigator directions"> </center>
+           <br>
+          <span class="ex">Ex.</span> Draw the following vectors using the navigator method: <br>
+            <span class = "indent">  A.  60<sup>o </sup> </span> <br>
+            <span class = "indent">  B.  200<sup>o </sup> </span> <br>
+          <br>
+          <h3 class="S10Bc">The X-axis, polar method </h3>
+          Used by mathematicians who started on the X-axis as zero degrees and rotated counter clockwise.<br>
+            <center><img src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/polarxaxisdirections_orig.gif
+" alt="Animated navigator directions"></center>
+          <span class="ex">Ex.</span> Draw the following vectors using the X-axis method: <br>
+          <span class="indent">  A.  40<sup>o </sup> </span> <br>
+          <span class="indent">   B.  160<sup>o </sup> </span> <br>
+          <br>
+          <h3 class="practice"> Practice Questions </h3> 
+          Do practice problem 7 on page 140 <br>
+           <br>
+          
+          <h3 class="practice"> Practice Questions </h3>
+          Do practice Problem 6 on page 139.<br>
+          <br>
+          
+          <span class="ex">Ex.</span>  A dog runs 50 m [N] and then runs 25 m [S] in 75 seconds. <br>
+          <span class="indent">  A.  What is the dog’s average speed? </span> <br>
+          <span class="indent">  B.  What is the dog’s average velocity? </span> <br>
+			<br>
+              <img  style="float: left; padding-right: 5%;" src="http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/ave-speed-velocity_orig.gif
+" alt="Animation of average speed and velocity"><br>
+          <strong>Average Speed</strong> <br>
+          <div class="indent">
+                <div class="example">
+                    average speed = distance travelled / elapsed time <br>
+                    v =  &#916;d / &#916;t<br>
+                    v = (50 m + 25 m) / 75 s <br>
+                    v = 75 m / 75 s <br>
+                    v = 1.0 m/s  <br>
+                    The average speed is 4.0 m/s.<br>
+                 </div> <!-- closs example -->
+          </div>
+          <br> 
+		  <br>
+
+		  <div class="equation">  
+			  <table class="fraction, indent" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td width= "20px" rowspan="2" nowrap="nowrap">
+						 <em>v</em> = &nbsp; 
+					  </td>
+					  <td  width="12px" nowrap="nowrap" align="center" colspan="1"><em>&Delta;d</em></td>		
+				  </tr>
+				  <tr>
+					  <td class="upper_line" align="center" colspan="1"><em>&Delta;t</em></td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td colspan="3" nowrap="nowrap">50 + 25 m</td> 
+					<td width="25px"> </td>
+				  </tr>
+				  <tr>
+				  	<td colspan="3" class="upper_line" nowrap="nowrap" align="center">75 s</td>
+					<td width="25px"> </td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td colspan="2" width="50px" nowrap="nowrap" align="center">75 m</td> 
+				  </tr>
+				  <tr>
+				  	<td colspan="2" class="upper_line" align="center">75 s</td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td rowspan="2">1.0&nbsp; </td>
+					<td align="center">m</td>
+					<td width="25px"> </td>
+				  </tr>
+				  <tr>
+				  	<td colspan="1" class="upper_line" align="center">s</td>
+				  </tr>
+				  
+			  </table>
+			</div> 		
+				
+				
+				
+				
+          <strong>Average Velocity</strong> <br>
+          <div class="indent">
+              <div class = "example">
+	              average velocity = displacement / elapsed time <br>
+    	          v =  d / &#916;t<br>
+        	      v = (50 m [N] + 25 m [S]) / 75 s <br>
+            	  v = 25 m [N] / 75 s <br>
+	              v = 0.33 m/s [N]
+    	          The average speed is 0.33 m/s [N].<br> <br>
+        	      The dog runs north and then south for 75 seconds or the owner can walk north at 0.33 m/s to meet the dog 25 m [N] 75 seconds later.<br> 
+              </div>  <!-- close example -->
+          </div>
+<br>
+<br>
+				
+	 	<div class="equation">  
+			  <table class="fraction, indent" cellpadding="0" cellspacing="0">
+				  <tr>
+					  <td width= "25px" rowspan="2" nowrap="nowrap">
+						 <em>v</em> = &nbsp; 
+					  </td>
+					  <td  width="12px" nowrap="nowrap" align="center" colspan="1"><em>&Delta;d</em></td>
+					  <td rowspan="2" nowrap="nowrap">
+						  <div style="left : -5.1em; top : 0em; position: relative;">&rarr;</div>
+						  <div style="left : -1.2em; top : -2.1em; position: relative;">&rarr;</div>
+					  </td>			
+				  </tr>
+				  <tr>
+					  <td class="upper_line" align="center" colspan="1"><em>&Delta;t</em></td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td colspan="4" nowrap="nowrap">50 m [N] + 25 m [S]</td> 
+					<td width="25px"> </td>
+				  </tr>
+				  <tr>
+				  	<td colspan="4" class="upper_line" nowrap="nowrap" align="center">75 s</td>
+
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td colspan="3" width="50px" nowrap="nowrap" align="center">50 m [N] - 25 m [N]</td> 
+				  </tr>
+				  <tr>
+				  	<td colspan="3" class="upper_line" align="center">75 s</td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td colspan="2" width="50px" nowrap="nowrap" align="center">25 m [N]</td> 
+				  </tr>
+				  <tr>
+				  	<td colspan="2" class="upper_line" align="center">75 s</td>
+				  </tr>
+				  
+				  <tr>
+				  	<td rowspan="2"><em>v</em> = &nbsp;</td>
+					<td rowspan="2">0.33&nbsp; </td>
+					<td align="center" width="20px">m</td>
+					<td rowspan="2">&nbsp; [N] </td>
+				  </tr>
+				  <tr>
+				  	<td colspan="1" class="upper_line" align="center">s</td>
+				  </tr>
+				  
+			  </table>
+			</div>			
+				
+				
+				
+				
+				
+	<div style="clear: both;"></div>
+          <h3 class="titleB">B1.2  Velocity Review </h3>
+          <div class="review">
+              <h3>Review Questions</h3>
+              Where is the zero angle for the navigator method?   <button onclick="document.getElementById('A10').innerHTML = 'Up or north'">Answer</button>
+	          <br>
+              <br>
+              Where is the zero angle for the X-axis method?   <button onclick="document.getElementById('A12').innerHTML = 'Right, positive x axis.'">Answer</button>
+    	      <br>
+              <br>
+              What is the direction of rotation for the navigator method? 	<button onclick="document.getElementById('A14').innerHTML = 'Clockwise'">Answer</button>
+        	  <br>
+              <br>	
+              What is the direction of rotation for the X-axis method? <button onclick="document.getElementById('A16').innerHTML = 'Counter clockwise.'">Answer</button>
+	          <br>
+              <br>	
+              How can you identify a vector variable?  <button onclick="document.getElementById('A18').innerHTML = 'The arrow above the symbol'">Answer</button>
+         	  <br>
+              <br>	
+              What does &#916; mean? <button onclick="document.getElementById('A20').innerHTML = 'Change in,  final value – initial value'">Answer</button>
+          	  <br>
+          </div>  <!-- close review -->
+          
+           <br>
+          <h3 class="practice"> Practice Questions </h3>
+          Do check and reflect on page 145<br>
+           <br>
+          
+                  <br>
+			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+	<div style="background-color: #555;" class="main" id="section13" >
+		&nbsp;
+		<div class="col-3">
+			<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section12"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+		</div>
+		<div class="col-4">
+			<a href="#section14"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+		</div>
+		<p style="padding-bottom:10px;"> <br> </p>
+
+	</div>
+          <h2 class="S10Bbg secTitle">B1.3  Acceleration</h2>
+		  <h3 class="S10Bc"> Types of Acceleration </h3>
+          <span class="def">Acceleration </span> - change in velocity during a specific time interval <br>
+          <div class="indent">
+ 	<!-- a=v/t *************************************************************** -->
+    <div class="equation"> 
+      <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  <em>a<sub>ave</sub></em> = &nbsp; 
+              </td>
+              <td nowrap="nowrap">
+                  <em>&Delta;v</em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -4.9em; top : 0.2em; position: relative;">&rarr;</div>
+				  <div style="left : -0.8em; top : -2.7em; position: relative;">&rarr;</div>
+			  </td>	
+          </tr>
+          <tr>
+              <td class="upper_line">
+                  <em>&Delta;t</em>
+              </td>
+          </tr>
+      </table>
+    </div> 
+     <!-- a=v/t *************************************************************** -->
+ 	<!-- a=vf - fi/t *************************************************************** -->
+    <div class="equation"> 
+      <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  <em>a<sub>ave</sub></em> = &nbsp; 
+              </td>
+              <td nowrap="nowrap">
+                  <em>v<sub>f</sub> - v<sub>i</sub></em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -6.2em; top : 1.2em; position: relative;">&rarr;</div>
+				  <div style="left : -0.8em; top : -2.3em; position: relative;">&rarr;</div>
+				  <div style="left : -2.5em; top : -4.2em; position: relative;">&rarr;</div>
+				  
+			  </td>	
+          </tr>
+          <tr>
+              <td class="upper_line">
+                  <em>&Delta;t</em>
+              </td>
+          </tr>
+      </table>
+    </div> 
+ 	<!-- a=vf - fi/t *************************************************************** -->
+
+          </div>
+          <ul>
+			  <li>a - acceleration, m/s<sup>2</sup> </li>
+			  <li>v - velocity, m/s </li>
+			  <li>t - time, s </li>
+          </ul>
+           <br>
+          Positive acceleration is forward acceleration <br>
+          Negative acceleration is backwards acceleration <br>
+          Think of a car with no brakes, only forward and reverse gears.  <br>
+           <br>
+          What happens if you are driving forward and accelerate backwards? <br>
+          What happens if you are driving backwards and accelerate forwards? <br>
+          
+          
+           <br>
+           <br>
+          <h3 class="practice"> Practice Questions </h3>
+          Do practice problems 12-15 page 147<br>
+          <br>
+          
+                  Need graph of acceleration over time
+          <br>
+          <h3 class="practice"> Practice Questions </h3>
+          Do Practice Problem 16 page 149 <br>
+           <br>
+          
+          Acceleration Questions
+          
+          
+          
+          What acceleration can people survive? <br>
+          What is a high acceleration? <br>
+          What is a car’s acceleration? <br>
+         <div class="sample">
+			 <table border="1" style="border: none;">
+  <tbody style="border: none;">
+    <tr style="border: none;">
+      <th scope="col" colspan="4" text-align: center; style="border: none;">Example Accelerations</th>
+    </tr>
+    <tr style="border: none;">
+      <td  style="border: none; text-align:right;">0<br>
+		1<br>
+		1<br> 
+		2<br>
+		2<br>
+		3<br>
+		3<br>
+		4<br>
+		4<br>
+		8<br>
+		10<br>
+		9–12<br>	
+		46<br>
+		60<br>
+		80<br>
+		10<sup>6</sup><br>
+	  </td>
+      <td test-align: left  style="border: none;">.1654<br>
+		.0<br>
+		.55<br>
+		.9<br>
+		.5<br>
+		.5<br>
+		.3<br>
+		.1<br>
+		.2<br>
+		.1<br>
+		.1<br>
+		.0<br>
+		.2<br>
+		&nbsp;<br>
+		&nbsp;<br>
+		&nbsp;<br>
+		</td>
+	  <td  style="border: none;">g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>
+		  g &nbsp; &nbsp;<br>		  
+		</td>
+	  <td  style="border: none;">Standing on the Moon at its equator  (1/6 Earth) <br>
+		  Standing on the Earth at sea level–standard <br>
+		  Bugatti Veyron from 0 to 100 km/h in 2.4 s <br>
+		  sneeze <br>
+		  Gravitron amusement ride <br>
+		  cough <br>
+		  High-g roller coasters <br>
+		  slap on back <br>
+		  Top Fuel drag racing world record of 4.4 s over 1/4 mile  <br>
+		  hop off step <br>
+		  plop down in chair <br>
+		  Typical max. turn in an aerobatic plane or fighter jet 	 <br>
+		  Maximum for human on a rocket sled <br> 	
+		  chest acceleration during car crash at 48 km/h with airbag, design limit <br>
+		  limit of sustained human tolerance <br>
+		  bullet in the barrel of a gun <br>
+		</td>
+    </tr>
+  </tbody>
+</table>
+			</div>
+
+          <h3>B1.3  Acceleration Review</h3>
+          <div class="review">
+              <h3>Review Questions</h3>
+              What is the direction of positive acceleration?    <button onclick="document.getElementById('A22').innerHTML = 'Forward, speeding up'">Answer</button>
+	          <br>
+              <br>
+              What is the direction of negative acceleration?   <button onclick="document.getElementById('A24').innerHTML = 'Backwards, slowing down '">Answer</button>
+    	      <br>
+              <br>
+              What is the manipulated variable on a speed vs. time graph?  	<button onclick="document.getElementById('A26').innerHTML = 'Time '">Answer</button>
+        	  <br>
+              <br>	
+              What is the responding variable on a speed vs time graph? <button onclick="document.getElementById('A28').innerHTML = 'Speed '">Answer</button>
+	          <br>
+          </div>  <!-- end review  -->
+          
+                  <br>
+ 			  <div class="S10unitB"><div class="S10TitleB"><div class = "customHR">.</div></div></div>
+                  <!-- *********************************************************************** -->
+<div style="background-color: #555;" class="main" id="section14" >
+	&nbsp;
+	<div class="col-3">
+		<a href="#sectionTop"> <button type="button"> <img src="../Images/TopButton.png"alt="Top Button"> </button> </a>
+	</div>
+	<div class="col-4">
+		<a href="#section13"> <button type="button"> <img src="../Images/PreviousButton.png" alt="Previous Button"> </button> </a>
+	</div>
+	<div class="col-4">
+		<a href="#section15"> <button type="button"> <img src="../Images/NextButton.png" alt="Next Button"> </button> </a>
+	</div>
+	<p style="padding-bottom:10px;"> <br> </p>
+
+</div>
+          <h2 class="S10Bbg secTitle">B1.4  Work and Energy</h2>
+		  <h3 class="S10Bc">Force </h3>
+          <span class="def">Force </span>– any push or pull <br>
+      <!-- a = F/m ^************************************************************* -->
+    <div class="equation"> 
+      <table class="fraction" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  <em>a</em> = &nbsp; 
+              </td>
+              <td nowrap="nowrap">
+                  <em>F<sub>net</sub></em>
+              </td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -4em; top : 0.3em; position: relative;">&rarr;</div>
+				  <div style="left : -1.7em; top : -2.9em; position: relative;">&rarr;</div>
+			  </td>	
+          </tr>
+          <tr>
+              <td class="upper_line">
+                  <em>m</em>
+              </td>
+          </tr>
+      </table>
+    </div>  
+      <!-- a = F/m ^************************************************************* -->
+          <ul>
+              <li> F - force, N </li>
+              <li> m - mass, kg </li>
+              <li> a - acceleration, m/s<sup>2</sup> </li>
+          </ul>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XxyzfG31Lds" frameborder="0" allowfullscreen></iframe>
+           <br>
+          <span class="ex">Ex.</span>  A hare with a mass of 2.0 kg pushes with a force of 9.4 N.  What is the hare's acceleration? <br>
+          <div class="indent">
+              <div class = "example">
+                  a = F / m <br>
+                  a = 9.4 N / 2.0 kg <br>
+                  a = 4.7 m/<sup>2</sup> <br>
+              </div> <!-- close example -->
+           </div>
+           <br>
+<br>
+<br>
+				
+	<div class="equation"> 
+      <table class="fraction" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  <em>a</em> = &nbsp; 
+              </td>
+              <td nowrap="nowrap" colspan="2"><em>F<sub>net</sub></em></td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -5em; top : 0.3em; position: relative;">&rarr;</div>
+				  <div style="left : -1.7em; top : -2.9em; position: relative;">&rarr;</div>
+			  </td>	
+          </tr>
+          <tr>
+              <td class="upper_line" colspan="2">
+                  <em>m</em>
+              </td>
+          </tr>
+		  
+		  <tr>
+              <td rowspan="2" nowrap="nowrap"><em>a</em> = &nbsp;</td>
+              <td nowrap="nowrap" colspan="3">9.4 N</td>
+          </tr>
+          <tr>
+              <td class="upper_line" colspan="3">2.0 kg</td>
+          </tr>
+		  
+		  <tr>
+              <td rowspan="2" nowrap="nowrap"><em>a</em> = </td>
+              <td rowspan="2" nowrap="nowrap">4.7&nbsp; </td>
+			  <td>m</td>
+          </tr>
+          <tr>
+              <td class="upper_line">s<sup>2</sup></td>
+          </tr>
+      </table>
+    </div> 		
+				
+				
+				
+				
+				
+          <span class="ex">Ex.</span>  A Porsche 997 Turbo can accelerate from 0 to 28 m/s [forward] in 3.2 seconds and masses 1443 kg.  How much force is required to accelerate it?
+          <div class="indent">
+              <div class="example">
+                  a = v / t <br>
+                  a = (28 - 0) m/s / 3.2 s <br>
+                  a = 8.75 m/s<sup>2</sup> <br>
+                  <br>
+                  F = m a <br>
+                  F = 1443 kg x 8.75 m/s<sup>2</sup> <br>
+                  F = 1.26 x 10<sup>4</sup> N <br>
+              </div>  <!-- end example -->
+           </div>
+           <br>
+<br>
+	<div class="equation"> 
+      <table class="fraction" cellpadding="0" cellspacing="0">
+          <tr>
+              <td rowspan="2" nowrap="nowrap">
+                  <em>a</em> = &nbsp; 
+              </td>
+              <td nowrap="nowrap" colspan="2"><em>&Delta;v</em></td>
+			  <td rowspan="2" nowrap="nowrap">
+				  <div style="left : -6em; top : 0.3em; position: relative;">&rarr;</div>
+				  <div style="left : -2em; top : -2.9em; position: relative;">&rarr;</div>
+			  </td>	
+          </tr>
+          <tr>
+              <td class="upper_line" colspan="2">
+                  <em>&Delta;t</em>
+              </td>
+          </tr>
+		  
+		  <tr>
+              <td rowspan="2" nowrap="nowrap"><em>a</em> = &nbsp;</td>
+              <td nowrap="nowrap" colspan="3">28 - 0 m/s</td>
+          </tr>
+          <tr>
+              <td class="upper_line" colspan="3">3.2 s</td>
+          </tr>
+		  
+		  <tr>
+              <td rowspan="2" nowrap="nowrap"><em>a</em> = </td>
+              <td rowspan="2" nowrap="nowrap">8.75&nbsp; </td>
+			  <td>m</td>
+          </tr>
+          <tr>
+              <td class="upper_line">s<sup>2</sup></td>
+          </tr>
+      </table>
+    </div> 	
+				
+	<div class="equation"> 
+      <table class="fraction" cellpadding="0" cellspacing="0">
+          <tr>
+              <td nowrap="nowrap"><em>F</em> = &nbsp;</td>
+              <td nowrap="nowrap" colspan="2"><em>m &times; a</em></td>
+			  <td nowrap="nowrap">
+				  <div style="left : -6.6em; top : -0.0em; position: relative;">&rarr;</div>
+				  <div style="left : -1.7em; top : -1.8em; position: relative;">&rarr;</div>
+			  </td>	
+			  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          </tr>
+		  
+		  <tr>
+              <td nowrap="nowrap" rowspan="2"><em>F</em> = &nbsp;</td>
+              <td nowrap="nowrap" rowspan="2" colspan="4">1443 kg &times; 8.75 &nbsp;</td>
+			  <td>m</td>
+          </tr>
+          <tr>
+              <td class="upper_line">s<sup>2</sup></td>
+          </tr>
+		  
+		  <tr>
+              <td nowrap="nowrap" rowspan="2"><em>F</em> = &nbsp;</td>
+              <td rowspan="2" nowrap="nowrap">8.75&nbsp; </td>
+			  <td>m</td>
+          </tr>
+          <tr>
+              <td class="upper_line">s<sup>2</sup></td>
+          </tr>
+      </table>
+    </div> 
+				
+<br>
+          A Newton is not a base SI unit, it is made up of kg, m and seconds. <br>
+          1 N = 1 kg x m / s<sup>2</sup> <br> 
+          We use the Newton because it is easier and more convenient. <br>
+   
+          Force Questions <br>     
+          
+            <br>
+          <h3 class="S10Bc">Work </h3>
+          <span class="def">Work </span>– the energy transferred from one object to another. <br>
+      <!-- W = Fd ^************************************************************* -->
+    <div class="equation"><center> 
+		W = F &sdot; d
+		<div style="left : 0.1em; top : -2.2em; position: relative;">&rarr;</div>
+		<div style="left : 1.8em; top : -3.3em; position: relative;">&rarr;</div>
+		</center>
+    </div>  
+      <!-- a = 4 pi^2 r / T^************************************************************* --> 
+          <ul>
+              <li> W - work, J </li>
+              <li> F - Force, N </li>
+              <li> d - distance, m </li>
+          </ul>
+          There are three conditions for work to be done on an object: <br>
+          <ol>
+              <li>There must be movement </li>
+              <li>There must be a force </li>
+              <li>The force and the displacement must be in the same direction </li>
+          </ol> <br>
+          
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ARGy44ccpKw" frameborder="0" allowfullscreen></iframe>
+          
+           <br>
+          <span class="ex">Ex.</span>  A gardener pushes a wheelbarrow with 800 N [west] as distance of 20 m [west].  How much work did the gardener do? <br>
+		<br>
+          <div class="indent">
+              <div class = "example">
+                  W = F x d <span style="left : -2.8em; top : -0.8em; position: relative;">&rarr;</span>
+				  <span style="left : -2.3em; top : -0.8em; position: relative;">&rarr;</span><br>
+                  W = 800 m [west] x 20 m [west] <br>
+                  W = 16 000 J <br>
+                  W = 1.6 x 10<sup>4</sup> J <br>
+              </div>  <!-- end example -->
+            </div>
+           <br>
+          
+          
+          <span class="ex">Ex.</span>  An airplane with a mass of 50 tonnes uses 6.0 x 10<sup>8</sup> J accelerate over a distance 1.5 km. What is the plane's acceleration? <br>
+          <div class="indent">
+              <div class="example">
+                  F = W /d <br>
+                  F = 6.6 x 10<sup>8</sup> J / 1.5 x 10<sup>3</sup> m <br>
+                  F = 440 000 N <br>
+                  <br>
+                  a = F/m <br>
+                  a = 440 000 N / 50 x 10<sup>3</sup> kg <br>
+                  a = 8.8 m/s<sup>2</sup> <br>
+              </div>  <!-- end example -->
+           </div>
+           <br>
+		<div class="equation"> 
+		  <table class="fraction" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2"><em>F</em> = &nbsp;</td>
+				  <td nowrap="nowrap" width="3em"><em>W</em></td>
+				  <td nowrap="nowrap" rowspan="2" width="2em">
+					  <div style="left : -5.7em; top : -0.0em; position: relative;">&rarr;</div>
+					  <div style="left : -2.7em; top : -0.8em; position: relative;">&rarr;</div>
+				  </td>	
+				  <td>&nbsp;</td>
+			  </tr>
+			  <tr>
+			  	  <td>d</td>
+			  </tr>
+
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2"><em>F</em> = &nbsp;</td>
+				  <td nowrap="nowrap" colspan="4">6.6 &times; 10<sup>8</sup> J</td>
+			  </tr>
+			  <tr>
+				  <td class="upper_line" colspan="4">1.5 &times; 10<sup>3</sup> m</td>
+			  </tr>
+
+			  <tr>
+				  <td nowrap="nowrap"><em>F</em> = &nbsp;</td>
+				  <td nowrap="nowrap" colspan="2">400 000 N </td>
+			  </tr>
+		  </table>
+		</div> 
+<br>
+		<div class="equation"> 
+		  <table class="fraction" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2"><em>a</em> = &nbsp;</td>
+				  <td nowrap="nowrap" width="3em"><em>F</em></td>
+				  <td nowrap="nowrap" rowspan="2" width="2em">
+					  <div style="left : -4.9em; top : -0.0em; position: relative;">&rarr;</div>
+					  <div style="left : -1.7em; top : -3.2em; position: relative;">&rarr;</div>
+				  </td>	
+				  <td>&nbsp;</td>
+			  </tr>
+			  <tr>
+			  	  <td>m</td>
+			  </tr>
+
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2"><em>a</em> = &nbsp;</td>
+				  <td nowrap="nowrap" colspan="3">440 000 N &nbsp;</td>
+			  </tr>
+			  <tr>
+				  <td class="upper_line" colspan="3">50 &times; 10<sup>3</sup> kg</td>
+			  </tr>
+
+			  <tr>
+				  <td nowrap="nowrap" rowspan="2"><em>a</em> = &nbsp;</td>
+				  <td rowspan="2" nowrap="nowrap">8.75&nbsp; </td>
+				  <td>m</td>
+			  </tr>
+			  <tr>
+				  <td class="upper_line">s<sup>2</sup></td>
+			  </tr>
+		  </table>
+		</div> 
+				
+           <br>
+          
+          <h3 class="practice"> Practice Questions </h3>
+          Do Practice Problems 18 to 20 page 160 <br>
+          <br>
+          
+          <h3 class="S10Bc">Energy </h3>
+          <span class="def">Energy </span>– the ability to do work <br>
+          Note that the definition of work uses energy and the definition of energy uses work.  The definitions are circular.  It is almost impossible to describe work and energy without examples. <br>
+          
+          
+          
+          Work Questions
+          
+          
+          
+          <h3 class="S10Bc">B1.4  Work and Energy Review</h3>
+          <div class="review">
+              <h3>Review Questions</h3>
+              What is a force?   <button onclick="document.getElementById('A30').innerHTML = 'A push or pull'">Answer</button>
+	          <br>
+              <br>
+              What is work?  <button onclick="document.getElementById('A32').innerHTML = 'The transfer of energy, or a force applied over a displacement '">Answer</button>
+    	      <br>
+              <br>
+              What are the units for force?  	<button onclick="document.getElementById('A34').innerHTML = 'newtons, kg*m/s<sup>2</sup>'">Answer</button>
+        	  <br>
+              <br>	
+              What are the units for work?  <button onclick="document.getElementById('A36').innerHTML = 'Joules, kg*m<sup>2</sup>/s<sup>2</sup> '">Answer</button>
+	          <br>
+          </div>  <!-- end review  -->
+           <br>
+          <h3 class="practice"> Practice Questions </h3>
+          Unit B1.0  Section Review <br>
+          Linear Regression Example <br>
+      
+<!--  **************************************  -->
+<!--  Footer - Pogram of studies link and Textbook link  -->
+<div class="footer">
+	&nbsp;
+	<!-- Left column Program of Studies -->
+	<div class="col-4">
+		Program of Studies <br>
+		<a href="https://education.alberta.ca/science-10-12/programs-of-study/everyone/external-links/">Alberta Science 10 <br>
+			Program of Studies <br>
+	    <img src="./AlbertaEdLogo.png" width="159" height="75" alt=""/> </a>       
+	</div>
+	<!-- Middle column my email -->
+	<div class="col-4">
+		Contact me:
+		<h2>Steven Montgomery </h2>
+		steven.montgomery@pembinahills.ca <br> <br>
+		BCHS Barrhead AB
+	</div>
+	<!-- Right column Text book publisher -->
+	<div class="col-4">
+	  Textbook <br>
+	  <a href="https://www.pearsoncanadaschool.com/index.cfm?locator=PS38Uw&PMDbSiteId=2621&PMDbSolutionId=25862&PMDbSubSolutionId=&PMDbCategoryId=25879&PMDbSubCategoryId=26225&PMDbSubjectAreaId=&PMDbProgramId=46628&gclid=CjwKCAiAx8KQBhAGEiwAD3EiPyhuOXoPKYfgJY5MIoaVRWwwqvqFDb49cfy6JcYeLKmU2qMp6sio4xoCXfIQAvD_BwE">Addison Wesley Science 10 Textbook <br>
+	  <img src="./Science10Cvr.png" width="169" height="223" alt="Textbook cover"/> </a>
+    </div>
+	<br>
+	&nbsp;
+</div>
+<!--  **************************************  -->
+	
+	</div>
+
+<script>
+// COLLASABLE SECTION - scrolls open the program of studies when clicked
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+
+</div> <!--   end page -->
+</body>
+</html>
