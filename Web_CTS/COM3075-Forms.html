@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Forms</title>
+<link href="COM3075-Forms.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>COM3075 CSS Forms</h1>
+	<p>HTML for forms: <a href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/html/html_forms.asp</a> <br>
+	CSS for forms: <a href="https://www.w3schools.com/css/css_form.asp">https://www.w3schools.com/css/css_form.asp</a> 
+	</p>
+	<hr>
+	<h2>Unformatted Form</h2>
+		
+	<form name="Unformatted">
+		<fieldset>
+		<legend>Student Profile</legend>
+		<fieldset>
+			<legend>Personal Information</legend>	
+				<label for="FName">First Name</label> <br>
+				<input type="text" id="FName" name="FName"><br>
+
+
+				Method of travel to school? <br>
+				<input type="checkbox" id="Bus" name="transport" value="Bus">
+				<label for="vehicle2"> I ride the bus</label><br>
+				<input type="checkbox" id="Car" name="transport" value="Car">
+				<label for="vehicle2"> I have a car</label><br>
+				<input type="checkbox" id="Bike" name="transport" value="Bike">
+				<label for="vehicle1"> I have a bike</label><br>
+				<input type="checkbox" id="Walk" name="transport" value="Walk">
+				<label for="Walk"> I walk</label> <br>
+				  <br>
+		</fieldset>
+		
+		<fieldset>
+			<legend>School Information</legend>
+				What school do you attend? <br>
+				<input type="radio" id="BES" name="school" value="BES">
+				<label for="male">BES</label><br>
+				<input type="radio" id="BCHS" name="school" value="BCHS">
+				<label for="BCHS">BCHS</label><br>
+				<input type="radio" id="OutReach" name="school" value="OutReach">
+				<label for="Outreach">Outreach</label><br>
+				  <br>
+
+
+				<label for="Subject">Favorite subjet:</label>
+				<select id="Subject" name="Subject">
+					<option value="CTS" selected>CTS</option> 
+					<option value="English">English</option>
+					<option value="Math">Math</option>
+					<option value="Science">Science</option>
+					<option value="Social Studies">Social Studies</option>
+				</select> 
+				  <br>
+		</fieldset>
+		<button type="button" onclick="alert('Hello World!')">Click Me!</button> <br>
+		  <br>
+		</fieldset>
+		
+		<label for="favcolor">Select your favorite color:</label>
+  		<input type="color" id="favcolor" name="favcolor" value="#ff0000"> <br>
+		  <br>
+		
+		<label for="birthday">What is today's date:</label>
+  		<input type="date" id="today" name="today">
+		  <br>
+		  <br>		
+		
+		<input type="submit" value="Submit">
+		
+	</form>
+	<hr>
+	<h2>Formatted Form</h2>
+	
+	<div class="Formatted">
+	<form name="Formatted" >
+		<fieldset class="InnerForm">
+		<legend>Student Profile</legend>
+		<fieldset class="InnerForm">
+			<legend>Personal Information</legend>	
+				<label for="FFName">First Name</label> <br>
+				<input type="text" id="FFName" name="FName"><br>
+
+
+				Methods of travel to school? <br>
+				<input type="checkbox" id="FBus" name="transport" value="Bus">
+				<label for="vehicle2"> I ride the bus</label><br>
+				<input type="checkbox" id="FCar" name="transport" value="Car">
+				<label for="vehicle2"> I have a car</label><br>
+				<input type="checkbox" id="FBike" name="transport" value="Bike">
+				<label for="vehicle1"> I have a bike</label><br>
+				<input type="checkbox" id="FWalk" name="transport" value="Walk">
+				<label for="Walk"> I walk</label> <br>
+				  <br>
+		</fieldset>
+		
+		<fieldset class="InnerForm">
+			<legend>School Information</legend>
+				What school do you attend? <br>
+				<input type="radio" id="FBES" name="school" value="BES">
+				<label for="male">BES</label><br>
+				<input type="radio" id="FBCHS" name="school" value="BCHS">
+				<label for="BCHS">BCHS</label><br>
+				<input type="radio" id="FOutReach" name="school" value="OutReach">
+				<label for="Outreach">Outreach</label><br>
+				  <br>
+
+
+				<label for="FSubject">Favorite subjet:</label>
+				<select id="FSubject" name="FSubject">
+					<option value="CTS" selected>CTS</option> 
+					<option value="English">English</option>
+					<option value="Math">Math</option>
+					<option value="Science">Science</option>
+					<option value="Social Studies">Social Studies</option>
+				</select> 
+				  <br>
+		</fieldset>
+		<button type="button" class="btnFormatted" onclick="alert('Hello World!')">Click Me!</button> <br>
+		  <br>
+		</fieldset>
+		
+		<label for="favcolor">Select your favorite color:</label>
+  		<input type="color" id="Ffavcolor" name="favcolor" value="#ff0000"> <br>
+		  <br>
+		
+		<label for="birthday">What is today's date:</label>
+  		<input type="date" id="Ftoday" name="today">
+		  <br>
+		  <br>		
+		
+		<input type="submit" value="Submit">
+		
+	</form>
+	</div>
+	
+	<hr>
+	<h2>Form and Formatting</h2>
+	<p></p>
+	
+</body>
+</html>

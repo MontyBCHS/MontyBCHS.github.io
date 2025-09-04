@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+
+td {
+	text-align: center;
+}
+.htmlCode{
+	color:orange;
+}
+.CSS {}
+/*   *********************************  */
+.evenHighLight tr:nth-child(even){
+	background-color: lightcyan;
+}
+.evenHighLight tr:nth-child(6){
+	background-color: yellow;
+}
+.evenHighLight tr:hover {
+	color: white;
+	background-color: purple;	
+}
+/*   *********************************  */
+.oddHighLight{
+	color: blue;
+	padding: 5px;
+	margin: 10px;
+} 
+.oddHighLight td{
+	color:red;
+	padding: 5px;
+	
+}
+.oddHighLight tr:nth-child(odd){
+	background-color: greenyellow;
+}
+/*   *********************************  */
+.codeSample {
+	background-color: #1A1A1D;
+	color: white;
+	font-family: monospace;
+	font-size:1.3em;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 3px;
+	padding-botton: 3px;
+}
+
+.blue {
+	color:deepskyblue;
+}
+.green {
+	color:yellowgreen;
+}
+.orange {
+	color:orange;
+}
+.purple {
+	color:darkorchid;
+}

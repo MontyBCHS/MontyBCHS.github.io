@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>COM3075-CSS</title>
+<link href="COM3075-Tables.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div style="background-color: ">	
+	<h1>COM3075 - CSS, Cascading Style Sheets</h1>
+	<p>If you look at the code for this page all of the CSS is inline because of the structure of a Weebly website, and I don't want you to access or change the CSS because that will affect my entire site. </p>
+	<p>I have used paragraphs for most of the examples, but recognize that most of the CSS commands work on multiple tags. You can also use <span class="blue"><em>&lt;div&gt; &lt;/div&gt;</em></span> to mark a section (division) of your web page and apply CSS to that section. For text you can use the <span class="blue">&lt;span&gt; &lt;/span&gt;</span> to use CSS on a part of text inside a paragraph. </p>
+	<hr style="border-top: 3px dashed red;">
+	
+	<div style="margin-top:30px;">
+		<h2>Margins</h2>
+		Top margins are difficult to see on a web page because you don't know where they start. This section has a top margin of 30px between the horizontal line and the margins title: <em>style="margin-top:30px;"</em>
+		
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"margin-left:20px;"</span><span class="blue">&gt;</span></div>
+		<p style="margin-left:20px;">This paragraph of text has a left margin of 20px. </p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"margin-left:80px;"</span><span class="blue">&gt;</span></div>
+		<p style="margin-left:80px;">This paragraph of text has a left margin of 80px.</p>
+
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"margin-left:160px;"</span><span class="blue">&gt;</span></div>
+		<p style="margin-left:160px;">This paragraph of text has a left margin of 160px.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"margin-left:240px;"</span><span class="blue">&gt;</span></div>
+		<p style="margin-left:240px;">This paragraph of text has a left margin of 240px. </p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"margin-right:20px;"</span><span class="blue">&gt;</span></div>
+		<p style="margin-right:20px;">This paragraph of text has a right margin of 20px.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"margin-right:80px;"</span><span class="blue">&gt;</span></div>
+		<p style="margin-right:80px;">This paragraph of text has a right margin of 80px. </p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"margin-right:160px;"</span><span class="blue">&gt;</span></div>
+		<p style="margin-right:160px;">This paragraph of text has a right margin of 160px.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"margin-right:240px;"</span><span class="blue">&gt;</span></div>
+		<p style="margin-right:240px;">This paragraph of text has a right margin of 240px.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"margin-right:15%; margin-left:15%"</span><span class="blue">&gt;</span></div>
+		<p style="margin-right:15%; margin-left:15%;">This paragraph of text has a left and right margin of 15%:  <em>style="margin-right:15%; margin-left:15%;"</em></p>
+		<p>To really see the effects of margins on the left and right, shrink the width of this window and you will see the effects.</p>
+	</div>
+	
+	<hr style="border-top: 3px dashed red;">
+	
+	<h2>General CSS</h2>
+	
+	<div>
+		<h3>Background-color</h3>
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"background-color:cyan;"</span><span class="blue">&gt;</span></div>
+		<p style="background-color:cyan;">This paragraph has a background color of cyan.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"background-color:green;"</span><span class="blue">&gt;</span></div>
+		<p style="background-color:green;">This paragraph has a background color of green.</p>
+	</div>
+	<hr style="border-top: 3px dashed red;">
+	<div>
+		<h3>Border</h3>
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border:1px dashed blue;"</span><span class="blue">&gt;</span></div>
+		<p style="border:1px dashed blue;">This paragraph has a border size of 1px is dashed and color of blue.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border:5px dotted brown;"</span><span class="blue">&gt;</span></div>
+		<p style="border:5px dotted brown;">This paragraph has a border size of 4px is 	dotted and color of brown.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border:thin solid purple;"</span><span class="blue">&gt;</span></div>
+		<p style="border:thin solid purple;">This paragraph has a border size of thin is solid and color of purple.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border:medium solid purple;"</span><span class="blue">&gt;</span></div>
+		<p style="border:medium solid purple;">This paragraph has a border size of medium is solid and color of purple.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border:thick solid purple;"</span><span class="blue">&gt;</span></div>
+		<p style="border:thick solid purple;">This paragraph has a border size of thick is solid and color of purple.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border-style:double; border-width:thick;"</span><span class="blue">&gt;</span></div>
+		<p style="border-style:double; border-width:thick;">This paragraph has a border style of double and a border width of thick.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border-style:inset; border-width:thick;"</span><span class="blue">&gt;</span></div>
+		<p style="border-style:inset; border-width:thick;">This paragraph has a border style of inset and a border width of thick.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border-style:groove; border-width:thick;"</span><span class="blue">&gt;</span></div>
+		<p style="border-style:groove; border-width:thick;">This paragraph has a border style of groove and a border width of thick.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border-style:outset; border-width:thick;"</span><span class="blue">&gt;</span></div>
+		<p style="border-style:outset; border-width:thick;">This paragraph has a border style of outset and a border width of thick.</p>
+		
+		<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"border-style:ridge; border-width:thick;"</span><span class="blue">&gt;</span></div>
+		<p style="border-style:ridge; border-width:thick;">This paragraph has a border style of ridge and a border width of thick.</p>
+	</div>	
+	<hr style="border-top: 3px dashed red;">
+	<div>
+		<h2>Lists</h2>
+		<p>Lists are indented and have a bullet point or numbered values.</p>
+		<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"list-style-position: inside;"</span><span class="blue">&gt;</span></div>
+		<p>&lt;ul style="list-style-position: inside"&gt;</p>
+		<ul style="list-style-position: inside">
+			<li>Item one</li>
+			<li>Item two</li>
+			<li>Item three</li>
+		</ul>
+		
+		<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"list-style-position: outside;"</span><span class="blue">&gt;</span></div>
+		<p>&lt;ul style="list-style-position: outside"&gt;</p>
+		<ul style="list-style-position: outside">
+			<li>Item one</li>
+			<li>Item two</li>
+			<li>Item three</li>	
+		</ul>
+		<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"list-style-type: armenian;"</span><span class="blue">&gt;</span></div>
+		<p>&lt;ul style="list-style-type: armenian"&gt;</p>
+		<ul style="list-style-type: armenian">
+			<li>Item one</li>
+			<li>Item two</li>
+			<li>Item three</li>	
+		</ul>
+		
+		<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"list-style-type: square;"</span><span class="blue">&gt;</span></div>
+		<p>&lt;ul style="list-style-type: square" &gt;</p>
+		<ul style="list-style-type: square">
+			<li>Item one</li>
+			<li>Item two</li>
+			<li>Item three</li>
+		</ul>
+		
+		<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"list-style-type: upper-roman;"</span><span class="blue">&gt;</span></div>
+		<p>&lt;ol style="list-style-type: upper-roman" &gt;</p>
+		<ol style="list-style-type: upper-roman">
+			<li>Item one</li>
+			<li>Item two</li>
+			<li>Item three</li>
+		</ol>
+		
+		<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"list-style-type: lower-roman;"</span><span class="blue">&gt;</span></div>
+		<p>&lt;ol style="list-style-type: lower-roman" &gt;</p>
+		<ol style="list-style-type: lower-roman">
+			<li>Item one</li>
+			<li>Item two</li>
+			<li>Item three</li>
+			
+		</ol>
+	</div>
+	<hr style="border-top: 3px dashed red;">
+	<div>
+	<h2>Mouse Cursor</h2>
+	<p>You can change what the mouse cursor looks like when it moves over that section of the page.</p>
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: alias;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: alias;">alias : <em>style="cursor: alias;"</em></p>
+	
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: auto;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: auto;">auto : <em>style="cursor: auto;"</em></p>
+	
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: crosshair;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: crosshair;">crosshair : <em>style="cursor: crosshair;"</em></p>
+	
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: e-resize;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: e-resize;">e-resize : <em>style="cursor: e-resize;"</em></p>
+	
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: help;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: help;">help : <em>style="cursor: help;"</em></p>
+	
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: move;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: move;">move : <em>style="cursor: move;"</em></p>
+		
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: n-resize;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: n-resize;">n-resize : <em>style="cursor: n-resize;"</em></p>
+	
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: ne-resize;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: ne-resize;">ne-resize : <em>style="cursor: ne-resize;"</em></p>
+		
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: nw-resize;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: nw-resize;">nw-resize : <em>style="cursor: nw-resize;"</em></p>
+		
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: pointer;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: pointer;">pointer : <em>style="cursor: pointer;"</em></p>
+		
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: progress;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: progress;">progress : <em>style="cursor: progress;"</em></p>
+		
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: s-resize;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: s-resize;">s-resize : <em>style="cursor: s-resize;"</em></p>
+		
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: se-resize;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: se-resize;">se-resize : <em>style="cursor: se-resize;"</em></p>
+	
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: sw-resize;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: sw-resize;">sw-resize : <em>style="cursor: sw-resize;"</em></p>
+		
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: text;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: text;">text : <em>style="cursor: text;"</em></p>
+		
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: w-resize;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: w-resize;">w-resize : <em>style="cursor: w-resize;"</em></p>
+		
+	<div class="codeSample"><span class="blue">&lt;ul</span> <span class="green">style</span>=<span class="orange">"cursor: wait;"</span><span class="blue">&gt;</span></div>
+	<p style="cursor: s-resize;">wait : <em>style="cursor: wait;"</em></p>
+	</div>
+	<hr style="border-top: 3px dashed red;">
+	<div>
+	<h2>Tables</h2>
+	<p>You can change most of the characteristics of a table to tailor it to your desire and design. <br>
+	The table below is 80% the width of the page with a border of 1.<br>
+	
+	<div class="codeSample"><span class="blue">&lt;table</span> <span class="green">width</span>=<span class="orange">"80%"</span> <span class="green">border</span>=<span class="orange">"1"</span> <span class="green">style</span>=<span class="orange">"border-spacing:10px 20px;"</span><span class="blue">&gt;</span></div>
+	<em>&lt;table width="80%" border="1" style="border-spacing:10px 20px;"&gt;</em></p>
+	<table width="80%" border="1" style="border-spacing:10px 20px;"> 
+	  <tbody>
+		<tr>
+		  <th scope="col">&nbsp;Column 1 Title <br> Row 1 Title</th>
+		  <th scope="col">&nbsp;Column 2 Title <br> Row 1 Title</th>
+		  <th scope="col">&nbsp;Column 3 Title <br> Row 1 Title</th>
+		  <th scope="col">&nbsp;Column 4 Title <br> Row 1 Title</th>
+		</tr>
+		<tr>
+		  <th scope="row">&nbsp;Column 1 Title <br> Row 2 Title</th>
+		  <td>&nbsp;Column 2 <br> Row 2 </td>
+		  <td>&nbsp;Column 3 <br> Row 2 </td>
+		  <td>&nbsp;Column 4 <br> Row 2 </td>
+		</tr>
+		<tr>
+		  <th scope="row">&nbsp;Column 1 Title <br> Row 2 Title</th>
+		  <td>&nbsp;Column 2 <br> Row 3 </td>
+		  <td>&nbsp;Column 3 <br> Row 3 </td>
+		  <td>&nbsp;Column 4 <br> Row 3 </td>
+		</tr>
+	  </tbody>
+	</table>
+	<br>
+	<p>Of course we can change the text and background colors</p>
+	<br>
+	<table width="80%" border="1" style="border-spacing:10px 20px;"> 
+	  <tbody>
+		<tr>
+		  <th scope="col">&nbsp;Column 1 Title <br> Row 1 Title</th>
+		  <th scope="col">&nbsp;Column 2 Title <br> Row 1 Title</th>
+		  <th scope="col">&nbsp;Column 3 Title <br> Row 1 Title</th>
+		  <th scope="col">&nbsp;Column 4 Title <br> Row 1 Title</th>
+		</tr>
+		<tr style="background-color: lightgrey;">
+		  <th scope="row">&nbsp;Column 1 Title <br> Row 2 Title <br><div class="codeSample"><span class="blue">&lt;tr</span> <span class="green">style</span>=<span class="orange">"background-color: lightgrey;"</span><span class="blue">&gt;</span></div>
+		</th>
+		  <td>&nbsp;Column 2 <br> Row 2 </td>
+		  <td>&nbsp;Column 3 <br> Row 2 </td>
+		  <td>&nbsp;Column 4 <br> Row 2 </td>
+		</tr>
+		<tr>
+		  <th scope="row">&nbsp;&lt;th scope="row"&gt;</th>
+		  <td style="background-color: lightcoral;">Column 2<br>
+			  Row 3<br>
+			  &lt;td style="background-color: lightcoral;"&gt;<br>
+			<div class="codeSample"><span class="blue">&lt;td</span> <span class="green">style</span>=<span class="orange">"background-color: ligtcoral;"</span><span class="blue">&gt;</span></div>
+		  </td>
+		  <td style="background-color: blue; color:lightcoral;">Column 3<br> Row 3<br>
+			  &lt;td style="background-color: blue; color:lightcoral;" &gt;
+			<div class="codeSample"><span class="blue">&lt;td</span> <span class="green">style</span>=<span class="orange">"background-color:blue; color:lightcoral;"</span><span class="blue">&gt;</span></div>
+		  </td>
+		  <td>&nbsp;Column 4 <br> Row 3 </td>
+		</tr>
+	  </tbody>
+	</table>
+	<br>
+	<p>Of course we can change simplify the design: <br>
+		By setting the table border to 0, you hide the lines. By setting the border collapse, you remove any space between the cells. <br>
+		
+		<em>&lt;table border="0" style="border-collapse: collapse;"&gt; </em><br>
+		<br>
+		To make it easier for the reader's eyes to scan across, change the background color of some rows to a light grey or other light color. <br>
+		To align the province abbreviations, use text-align to center them. <br>
+
+		<div class="codeSample"><span class="blue">&lt;table</span> <span class="green">border</span>=<span class="orange">"0"</span> <span class="green">style</span>=<span class="orange">"border-collapse: collapse;"</span><span class="blue">&gt;</span> <br>
+		
+			<span class="blue">&lt;tbody&gt;</span> <br>
+			
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;tr&gt;</span> <br>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;th</span> <span class="green">scope</span>=<span class="orange">"col"</span><span class="blue">&gt;</span>Province<span class="blue">&lt;/th&gt;</span> <br>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;th</span> <span class="green">scope</span>=<span class="orange">"col"</span><span class="blue">&gt;</span>Abbreviation<span class="blue">&lt;/th&gt;</span> <br>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;th</span> <span class="green">scope</span>=<span class="orange">"col"</span><span class="blue">&gt;</span>Capital City<span class="blue">&lt;/th&gt;</span> <br>
+			
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;/tr&gt; </span><br>
+			
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;tr</span> <span class="green">style</span>=<span class="orange">"background-color: lightgrey;"</span><span class="blue">&gt; </span><br>
+			
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;td&gt;</span>Alberta<span class="blue">&lt;/td&gt;</span> <br>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;td&gt;</span>AB<span class="blue">&lt;/td&gt;</span> <br>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;td&gt;</span>Edmonton<span class="blue">&lt;/td&gt;</span> <br>
+			
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;/tr&gt; </span><br>
+	</div>
+			
+			
+		<em>&lt;tr style="background-color: lightgrey;"&gt; </em><br>
+		&nbsp;&nbsp;<em>&lt;td&gt;Alberta&lt;/td&gt; </em><br>
+		&nbsp;&nbsp;<em>&lt;td style="text-align: center;"&gt;AB&lt;/td&gt; </em><br>
+		&nbsp;&nbsp;<em>&lt;td&gt;Edmonton&lt;/td&gt; </em><br>
+		<em>&lt;/tr&gt; </em><br>
+	</p>
+	<br>
+	<table border="0" style="border-collapse: collapse;"> 
+	  <tbody>
+		<tr>
+		  <th scope="col">&nbsp;&nbsp;Province&nbsp;</th>
+		  <th scope="col">&nbsp;&nbsp;Abbreviation&nbsp;</th>
+		  <th scope="col">&nbsp;&nbsp;Capital City&nbsp;</th>
+		</tr>
+		<tr style="background-color: lightgrey;">
+		  <td>Alberta</td>
+		  <td style="text-align: center;">AB</td>
+		  <td>Edmonton</td>
+		</tr>
+		<tr>
+		  <td>British Columbia</td>
+		  <td style="text-align: center;">BC</td>
+		  <td>Victoria</td>
+		</tr>
+		<tr>
+		  <td>Manitoba</td>
+		  <td style="text-align: center;">NB</td>
+		  <td>Winnipeg</td>
+		</tr>
+		<tr style="background-color: lightgrey;">
+		  <td>New Brunswick</td>
+		  <td style="text-align: center;">NB</td>
+		  <td>Fredericton</td>
+		</tr>
+		<tr>
+		  <td>Newfoundland and Labrador</td>
+		  <td style="text-align: center;">NL</td>
+		  <td>St. John's</td>
+		</tr>
+		<tr>
+		  <td>Saskatchewan</td>
+		  <td style="text-align: center;">SK</td>
+		  <td>Regina</td>
+		</tr>
+		<tr style="background-color: lightgrey;">
+		  <td>Northwest Territories</td>
+		  <td style="text-align: center;">NT</td>
+		  <td>Yellowknife</td>
+		</tr>
+		<tr>
+		  <td>Nova Scotia</td>
+		  <td style="text-align: center;">NS</td>
+		  <td>Halifax</td>
+		</tr>
+		<tr>
+		  <td>Nunavut</td>
+		  <td style="text-align: center;">NU</td>
+		  <td>Iqaluit</td>
+		</tr>
+		<tr style="background-color: lightgrey;">
+		  <td>Ontario</td>
+		  <td style="text-align: center;">ON</td>
+		  <td>Toronto</td>
+		</tr>
+		<tr>
+		  <td>Prince Edward Island</td>
+		  <td style="text-align: center;">PE</td>
+		  <td>Charlottetown</td>
+		</tr>
+		<tr>
+		  <td>Quebec</td>
+		  <td style="text-align: center;">QC</td>
+		  <td>Quebec City</td>
+		</tr>
+		<tr style="background-color: lightgrey;">
+		  <td>Saskatchewan</td>
+		  <td style="text-align: center;">SK</td>
+		  <td>Regina</td>
+		</tr>
+		<tr>
+		  <td>Yukon</td>
+		  <td style="text-align: center;">YT</td>
+		  <td>Whitehorse</td>
+		</tr>
+	  </tbody>
+	</table>
+	</div>
+	<hr style="border-top: 3px dashed red;">
+	<div>
+	<h2>Text</h2>
+	<p>There are many different characteristics of text that you can control and change.</p>
+	
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"color:blue;"</span><span class="blue">&gt;</span></div>
+	<p style="color:blue;">The text color is blue: <em>&lt;p style="color:blue;"&gt;</em> </p>
+	
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"direction:rtl;"</span><span class="blue">&gt;</span></div>
+	<p style="direction:rtl;">The text direction is right to left: <em>&lt;p style="direction:rtl;"&gt;</em> </p>
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif' ;"</span><span class="blue">&gt;</span></div>
+	<p style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif' ;">The text font is a group of related fonts. If the computer doesn't have the first font it will check the rest of the fonts in the list: <em>&lt;p style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif' ;"&gt;</em> </p>
+	
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"font-size:16px;"</span><span class="blue">&gt;</span></div>	
+	<p style="font-size:16px;">The text size can be changed. Remember standard text is 10, 12, 14px. This is 16px font: <em>&lt;p style="font-size:16px;"&gt;</em> </p>
+	
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"font-size:9px;"</span><span class="blue">&gt;</span></div>
+	<p style="font-size:9px;">The text size can be changed. Remember standard text is 10, 12, 14px. This is 9px font: <em>&lt;p style="font-size:9px;"&gt;</em> </p>
+	
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"font-size:1.5em;"</span><span class="blue">&gt;</span></div>	
+	<p style="font-size:1.5em;">The text size can be changed. Remember standard text is 1 em. This is 16px font: <em>&lt;p style="font-size:1.5em;"&gt;</em> </p>
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"font-size:0.75em;"</span><span class="blue">&gt;</span></div>
+	<p style="font-size:0.75em;">The text size can be changed. Remember standard text is 1 em. This is 0.75em font: <em>&lt;p style="font-size:0.75em;"&gt;</em> </p>
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"font-variant:small-caps;"</span><span class="blue">&gt;</span></div>
+	<p style="font-variant:small-caps;">The text is a variant small capital letters: <em>&lt;p style="font-variant:small-caps;&gt;</em> </p>
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"letter-spacing:0.5em;"</span><span class="blue">&gt;</span></div>
+	<p style="letter-spacing:0.5em;">The text kerning (distance between letters) can be changed. Positive numbers move the letters further apart. This is letter-spacing:0.5em (wider): <em>&lt;p style="letter-spacing:0.5em;"&gt;</em> </p>
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"letter-spacing:-0.1em;"</span><span class="blue">&gt;</span></div>
+	<p style="letter-spacing:-0.1em;">The text kerning (distance between letters) can be changed. Negative numbers move the letters closer together, they can even overlap. This is letter-spacing:-0.1em (closer): <em>&lt;p style="letter-spacing:-0.1em;"&gt;</em> </p>	
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"text-shadow: 2px 2px lightgrey;"</span><span class="blue">&gt;</span></div>	
+	<p style="text-shadow: 2px 2px lightgrey">The text has a light grey shadow 2px down and 2px right: <em>&lt;p style="text-shadow: 2px 2px lightgrey&gt;</em> </p>
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"text-shadow: 5px 5px pink;"</span><span class="blue">&gt;</span></div>	
+	<p style="text-shadow: 5px 5px pink">The text has a light grey shadow 2px down and 2px right: <em>&lt;p style="text-shadow: 5px 5px pink"&gt;</em> </p>
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"word-spacing: 2px;"</span><span class="blue">&gt;</span></div>	
+	<p style="word-spacing: 2px">The distance between words is 2px moving the words further apart: <em>&lt;p style="word-spacing: 2px"&gt;</em> </p>
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"word-spacing: 2px;"</span><span class="blue">&gt;</span></div>	
+	<p style="word-spacing: 0.5px">The distance between words is 0.5px moving the words closer together: <em>&lt;p style="word-spacing: 2px"&gt;</em> </p>	
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"transform: rotat(5deg);"</span><span class="blue">&gt;</span></div>	
+	<br><br>
+	<p style="transform: rotate(5deg);">The text is rotated 5 degrees clockwise: <em>&lt;p style="transform: rotate(5deg);"&gt;</em> </p>
+	<br><br>
+		
+	<div class="codeSample"><span class="blue">&lt;p</span> <span class="green">style</span>=<span class="orange">"transform: rotat(-5deg);"</span><span class="blue">&gt;</span></div>	
+	<p style="transform: rotate(-5deg);">The text is rotated -5 degrees clockwise: <em>&lt;p style="transform: rotate(5deg);"&gt;</em> </p>
+	<br><br>
+
+	<hr style="border-top: 3px dashed red;">
+	<h2>Images</h2>
+	<p>When choosing images there are a couple of file types to choose from:
+	<ul>
+		<li>.jpg - small file size, but no transparent sections, and it can blur small details due to the compression method. Good for small to medium photos.
+		</li>
+		<li>.gif - less color than .jpeg, and no tranparent sections.  Can be animated. Good for logos and short animations.</li>
+		<li>.png - larger file size than .jpg but allows for transparent sections, and has slightly better colors. Good for transparent sections for picture on picture as well has large detailed photos, but has a larger file size.
+		.tiff - very large for raw photographs. Can be very slow to load. Generally only used for photograpers displaying their work.</li>
+	</ul>
+	</p>
+	<img src="https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png" alt="BCHS logo regular size">
+	<div class="codeSample"><span class="blue">&lt;img</span> <span class="green">src</span>=<span class="orange">"file location"</span><span class="blue">&gt;</span></div>	
+	<p><em>&lt;img src="file location"&gt;</em> <br>	
+	This is the Barrhead Composite High School logo.  It is 140 by 140 pixels. <br>
+	We can force the picture to the height and width that we want by using the height and width parameters.  If you don't have the original picture's height to width ratio it will distor your image. </p>
+	
+	<img height="100px" width="180px" src="https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png" alt="BCHS logo regular size"> <br>
+	<div class="codeSample"><span class="blue">&lt;img</span> <span class="green">height</span>=<span class="orange">"100"</span> <span class="green">width</span>=<span class="orange">"180"</span> <span class="green">src</span>=<span class="orange">"file location"</span><span class="blue">&gt;</span></div>
+	<p><em>&lt;img height="100px" width="180px" src="file location"&gt;</em> <br>
+	By decreasing the height from 140 to 100 px, and increasing the width from 140 to 180 px we have distorted the picure and made the text very difficult to read. <br></p>
+	<img height="70px" width="70px" src="https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png" alt="BCHS logo regular size"> <br>
+	
+	<div class="codeSample"><span class="blue">&lt;img</span> <span class="green">height</span>=<span class="orange">"70"</span> <span class="green">width</span>=<span class="orange">"70"</span> <span class="green">src</span>=<span class="orange">"file location"</span><span class="blue">&gt;</span></div>
+	<p><em>&lt;img height="70px" width="70px" src="file location"&gt;</em> <br>
+	By keeping the picture square we can shrink the picture above or enlarge the picture below.  However, there are limits to both if you want a quality image on screen.</p>
+	<img height="400px" width="400px" src="https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png" alt="BCHS logo regular size"> <br>
+	
+	<div class="codeSample"><span class="blue">&lt;img</span> <span class="green">height</span>=<span class="orange">"400"</span> <span class="green">width</span>=<span class="orange">"400"</span> <span class="green">src</span>=<span class="orange">"file location"</span><span class="blue">&gt;</span></div>
+	<em>&lt;img height="400px" width="400px" src="file location"&gt;</em> <br>
+	
+	
+	
+	
+	<div style="background-image: url(https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png); background-color: rgba(256,256,256,1)">
+		<p>This paragraph is written over the background image. The background image also has had its opacity (transparancy, color) faded to 0.5 (50%) which makes it easier to read the text over the image. <br> <br> <br><br> </p>
+	</div>
+	
+	
+	
+	<hr style="clear:both; border-top: 3px dashed red;">
+	<h2>Alignment</h2>
+	<div style="float:right;" >
+		<img src="https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png" alt="BCHS logo regular size">
+		<p><em>style="float:right;"</em></p>
+	</div>
+	<p>For the pictures and text in the images section you will notice that the images have the text below not beside the image. HTML tells the web browser to desiplay everything in order, one item and then the next item goes below and then the next item goes below and so on.<br>
+	To get the text to flow to the left or right of the image we need to use CSS to tell the web browswer how to display the content (image and text).
+	</p>
+	<div style="float:left;" >
+		<img src="https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png" alt="BCHS logo regular size">
+		<p><em>style="float:left;"</em></p>
+	</div>
+	<br>
+	<p>To make this work put the image in your HTML with the float left or right.  Then put the text you want to wrap around the image. It will make a rectangle for the image and wrap the text around the rectangle based on your previous text alignment options.<br>
+	Depending on the width of your browser window the two images above they might be on either side of the screen at the same time.  Adjust the width of your window to see the flow of text around each picutre change. <br>
+	Some designers dictate so much CSS that they severly limit the browser's ability to adjust for different window sizes.  You will notice some websites have a narrow column of text in the middle with very large left and right margins so that it will look identical on computer screens and on cell  phone screens.
+	</p>
+	<h3>Float</h3>
+	<p>The purpose of float is to release an element from its original position in the flow of HTML and move it to the left or right side of the screen. If there are multiple items floated to one side it depends on the browser wether they go vertically or horizontally on the side. <br>
+	
+	<div style="float:left;" >
+		<img src="https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png" alt="BCHS logo regular size">
+		<p><em>style="float:left;"</em></p>
+	</div>
+	<div style="float:left; transform: rotate(45deg);" >
+		<img src="https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png" alt="BCHS logo regular size">
+		<p><em>style="float:left; <br>transform: rotate(45deg);"</em></p>
+	</div>
+	<div style="float:left;" >
+		<img src="https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png" alt="BCHS logo regular size">
+		<p><em>style="float:left;"</em></p>
+	</div>
+	This has three images floated on the left side. Most browsers will arrange them horizontally.
+	</p>
+	<h3 style="clear:both;">Clear</h3>
+	<p>If you want to move elements below an object floating on the left or right even if the web browser could fit part of it in. I didn't want the clear title to be beside the three images above.  I used <em>&lt;style="clear:both;"&gt;</em> to force the title below the three images. You can <em>clear:left</em> or <em>clear:right</em> or <em>clear:both</em> (left and right). That will tell the browser to move all of the following elements below anything that is currently floating on the left or right.
+	</p>	
+	
+	<h3>Position</h3>
+	https://www.w3schools.com/css/css_positioning.asp
+	<p>	We can also move any element by using the position command.  It has four options <em>static</em> (default), <em>relative</em>, <em>fixed</em>, <em>absolute</em> and <em>sticky</em>.  See <a href="https://www.w3schools.com/css/css_positioning.asp">https://www.w3schools.com/css/css_positioning.asp</a> for examples. I don't have them on this page because it interferes will all of the CSS.</p>
+	
+	
+	
+		https://www.barrheadcomposite.ca/
+		https://www.barrheadcomposite.ca/wp-content/uploads/sites/6/assets/BCHS%20Logo%20new.png
+	</div>
+	
+</body>
+</html>
