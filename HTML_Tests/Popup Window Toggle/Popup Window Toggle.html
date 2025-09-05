@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Popup Window Toggle</title>
+<link href="Popup Window Toggle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h2>Popup</h2>
+
+<div class="popup" onclick="myFunction()">Click me to toggle the popup!
+  <span class="popuptext" id="myPopup">A Simple Popup!</span>
+</div>
+<br>
+<br>
+<br>
+Only works for one popup per page due to id command.
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+</body>
+</html>

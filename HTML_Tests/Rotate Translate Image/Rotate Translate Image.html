@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body class="rainbow">
+<style>
+body {
+  accent-color: red;
+  display: flex;
+  flex-direction:column;
+  font-family: sans-serif;
+  accent-colorr-scheme: light;
+}
+
+.RotTrans{
+	width: 100px;
+  	height: 100px;
+    position: relative;
+	animation: RotateTranslate 3s linear;
+	animation-iteration-count: infinite;
+}
+	
+@keyframes RotateTranslate{
+	0% {
+	   left: 0px;
+	}	
+  50% {
+	  transform: rotate(360deg);
+	  left: 300px;
+	  content: url("Apple1.png");
+  }
+  100%{
+	left: 0px;
+  }
+}
+
+
+.RotTrans2{
+	width: 100px;
+  	height: 100px;
+    position: relative;
+	animation: RotateTranslate2 5s linear;
+	animation-iteration-count: infinite;
+}	
+@keyframes RotateTranslate2{
+	0% {
+	   left: 0px;
+	}	
+	25% {
+		left: 150px;
+		
+		opacity: 0;
+	}
+  50% {
+	  transform: rotate(360deg);
+	  left: 300px;
+	  opacity: 1;
+	  content: url("Banana1.png");
+	  /* cross-fade(url(Apple1.png), url(Banana1.png) 100%); */
+  }
+	75% {
+		left: 150px;
+		opacity: 0;
+	}
+  100%{
+	  left: 0px;
+	  /* cross-fade(url(Apple1.png) 100%, url(Banana1.png) 0%); */
+  }
+}
+		
+}
+</style>
+  <h1>css Rotate Translate Image demo</h1>
+	<img class="RotTrans"  alt="Banana" src="Banana1.png">
+	<img class="RotTrans2"  alt="Apple" src="Apple1.png">
+</body>
+</html>

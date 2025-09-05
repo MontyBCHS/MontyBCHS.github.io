@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+#section1 {
+  height: 30px;
+  background-color: pink;
+}
+
+#section2 {
+  height: 30px;
+  background-color: yellow;
+}

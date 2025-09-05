@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body class="rainbow">
+<style>
+body {
+  accent-color: red;
+  display: flex;
+  flex-direction:column;
+  font-family: sans-serif;
+  accent-colorr-scheme: light;
+}
+
+.rainbow{
+		animation: rainbow 6s linear;
+		animation-iteration-count: infinite;
+}
+@keyframes rainbow{
+  0%{
+    accent-color: hsl(0,100%, 75%)
+  }
+  25%{
+    accent-color: hsl(90,100%,75%)
+  }
+  50% {
+    accent-color: hsl(180, 100%,75%)
+  }
+  75%{
+    accent-color: hsl(270,100%,75%)
+  }
+  100%{
+    accent-color: hsl(360,100%, 75%)
+  }
+		
+}
+</style>
+  <h1>css accent-color demo</h1>
+  <label>
+    checkbox
+    <input type="checkbox" checked>
+  </label>
+  <label>
+    range
+    <input type="range" value="50">
+  </label>
+  <label>
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    HTML
+  </label>
+  <label>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    CSS
+  </label>
+  <label>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript" checked>
+    JavaScript
+  </label>
+	
+</body>
+</html>

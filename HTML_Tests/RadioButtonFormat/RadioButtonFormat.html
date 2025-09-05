@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FormatRadioButton</title>
+</head>
+
+<body>
+<style>
+	body {
+		background: lightblue;
+	}
+	
+	input[type="radio"] {
+		border: 2px solid red;
+		border-radius: 4px;
+	}
+	
+	form ul li {
+		border:2px solid grey;
+		border-radius: 8px;
+		padding: 1rem;
+		margin: 1rem;
+	}
+	
+	form ul li input:checked {
+		accent-color: #f806e4;
+	}
+	form ul li:has(input) {
+		border: 2px solid #f806e4;
+	}
+	.Atom {
+		background-image: url('AtomBlue.png');
+	}
+	.Atom:hover {
+    background-image: url('AtomWhite.png'); /* Change on hover */
+	}
+	.Vee {
+		background-image: url('VeeBlue.png');
+	}
+	.Vee:hover {
+    	background-image: url('VeeWhite.png'); /* Change on hover */
+	}
+</style>
+	<form>
+		<h2>Web Progamming Languages</h2>
+		<input type="radio" id="html" name="fav_language" value="HTML"> <label for="html">HTML</label><br>
+		<input type="radio" id="css" name="fav_language" value="CSS"> <label for="css">CSS</label><br>
+		<input type="radio" id="javascript" name="fav_language" value="JavaScript"> <label for="javascript">JavaScript</label> 
+	</form>
+	<img class="Atom" height="200px" width="200px"> <br>
+	<img class="Vee" height="200px" width="200px"> <br>
+</body>
+</html>

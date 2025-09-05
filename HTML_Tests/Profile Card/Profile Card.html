@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Profile Card</title>
+<link href="../../AA Weebly Web/WeeblyCSS.css" rel="stylesheet" type="text/css">
+<link href="Profile Card.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+<script>
+// RESIZE HEADER - When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("header").style.fontSize = "10px";
+  } else {
+    document.getElementById("header").style.fontSize = "30px";
+  }
+} 
+	
+</script>
+	
+<div id="page">  
+  <!--  **************************************  -->
+<!--  Header Section  -->
+	<div class="main" id="sectionTop"></div>
+	<div id="header">
+			<h1 class="glow">SCIENCE 10</h1>
+	</div>
+<!--  **************************************  -->	
+<!--  NAVIGATION Left Side Menu  -->
+<p style="margin-top:150px;">  </p>
+
+<div class="row" style="background-color: lightsalmon;">
+	<div class="col-3 col-s-3 menu">
+		<div class="sidebar">
+			<a href="http://mrstevemontgomery.weebly.com/" class="active">Start</a>
+			<a href="http://mrstevemontgomery.weebly.com/s10-ua-ch2.html">Science 10</a>
+			<a href="http://mrstevemontgomery.weebly.com/s10-ub-ch2.html">Science 20</a>
+			<a href="http://mrstevemontgomery.weebly.com/s10-ua-ch3.html">Physics 20</a>
+			<a href="http://mrstevemontgomery.weebly.com/s10-ub-ch1.html">Physics 30</a>
+			<a href="http://mrstevemontgomery.weebly.com/s10-ub-ch3.html">Unit B Physics - Chapter 3</a>
+
+		</div>
+	</div>
+</div>
+<!--  **************************************  -->
+<!--  MIDDLE COLUMN - Column right of menu  -->
+<div class="col-9 col-s-12 S10Abg">
+	<div class="unitTitle"><h2 class="unitTitle">UNIT A: ENERGY AND MATTER IN CHEMICAL CHANGE</h2></div>
+
+	 <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+  <img src="img.jpg" alt="John" style="width:100%">
+  <h1>John Doe</h1>
+  <p class="title">CEO &amp; Founder, Example</p>
+  <p>Harvard University</p>
+  <a href="#"><i class="fa fa-dribbble"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <p><button>Contact</button></p>
+</div> 
+<br><br><br>	
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+	<br>
+	<br>
+<div style="border: 2px dotted blue; background: #ffffcc; box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.8); max-width: 500px; margin: auto; text-align: center;">
+  <h1>Steven Montgomery</h1>
+  <img src="Steve-Bitmoji.png" width="415" height="610" alt="Mr. Montgomery"/>
+<p style="font-size: 2em;">Science, Computers &amp; Math Teacher</p>
+  <p><a href="http://barrheadcomposite.ca">BCHS Webmaser</a></p>
+  <p>JV boys volleyball coach</p>
+  <a href="#"><i class="fa fa-dribbble"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <p><span style="border: none; outline: 0; display: inline-block; color: white; background-color: blue; text-align: center; cursor: pointer; width: 100%; font-size: 1.5em; padding-top: 10px; padding-bottom: 10px;"><a href="mailto:steven.montgomery@pembinahills.ca">Email Me</a></span></p>
+  <figure style="text-align: center; padding-top: 5px;">
+	<img src="qrcodeSteveContact.png" width="200" height="200" alt=""/>
+	<figcaption>VCard contact info</figcaption>
+</figure>
+</div> 	
+
+	
+</body>
+</html>

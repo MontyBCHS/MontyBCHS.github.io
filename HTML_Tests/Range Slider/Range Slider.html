@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Range Slider</title>
+<link href="Range Slider.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	https://www.w3schools.com/howto/howto_js_rangeslider.asp
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <div id="myRangeOutput"></div>
+</div>
+	
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("myRangeOutput");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+} 
+
+</script>
+</body>
+</html>
