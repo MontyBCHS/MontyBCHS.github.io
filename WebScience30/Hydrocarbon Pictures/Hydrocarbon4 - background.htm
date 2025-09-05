@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hydrocabon Creator</title>
+</head>
+<body>
+<h1>Hydrocarbon Diagrams</h1>
+<canvas id="canvas" width="800" height="500" style="border: 1px solid black"></canvas>
+	<script>
+		var canvas, context;
+		canvas = document.getElementById("canvas");
+  		context = canvas.getContext("2d");
+		// Declare Images
+		var Background = new Image();
+		Background.src = 'Background-500-800.png';
+		var BondSingle = new Image();
+		BondSingle.src = 'BondSingle.png';
+		var CarbonImage = new Image();
+		CarbonImage.src = 'Carbon.png';
+		var HydrogenImage = new Image();
+		HydrogenImage.src = 'Hydrogen.png';
+		
+		// Declare Variables	
+		var CarbonLength = 5;
+		var GraphicIndent = 100;
+		
+		// ***********************************************
+		window.onload = function() {
+  			canvas = document.getElementById("canvas");
+  			context = canvas.getContext("2d");
+			_DrawImage();
+			_MouseEvents();
+		}
+	
+		// *******************************************
+		function _MouseEvents() {
+		  canvas.onmousedown = function(e) {
+
+			var mouseX = e.pageX - this.offsetLeft;
+			var mouseY = e.pageY - this.offsetTop;
+
+			// If click on ruler than the ruler is draggable
+			if (mouseX >= (0) &&
+				mouseX <= (HydrogenImage.width) &&
+				mouseY >= (250-HydrogenImage.height/2) &&
+				mouseY <= (250+HydrogenImage.height/2)) {
+			  		CarbonLength++;
+					if(CarbonLength>10){
+						CarbonLength=1;
+					}
+			  		console.log('Hydrogen clicked');	
+				}
+			  	_DrawImage();
+
+			}
+		};
+		
+	function _DrawImage() {
+		// Draw background
+		context.drawImage(Background,0,0);
+		// Draw main chain bonds
+			for (var i=0; i < CarbonLength+1; i++){
+				context.drawImage(BondSingle,i*BondSingle.width+BondSingle.width/2, 250-BondSingle.height/2);
+			}
+			
+			// Draw hydrogens
+			for (var i=0; i < CarbonLength+2; i++){
+				context.drawImage(HydrogenImage, i*HydrogenImage.width, 250-HydrogenImage.height/2);
+			}
+
+			// Draw main chain carbons
+			for (var i=0; i < CarbonLength; i++){
+				// Draw up bond
+				context.save();
+				context.translate(i*CarbonImage.width+HydrogenImage.width*2, 250-BondSingle.height);
+				context.rotate(90 * Math.PI / 180);
+				context.drawImage(BondSingle, 0, 0);
+				context.restore;
+				context.setTransform(1, 0, 0, 1, 0, 0);
+				
+				// Draw down bond 
+				context.save();
+				context.translate(i*100+200, 250);
+				context.rotate(90 * Math.PI / 180);
+				context.drawImage(BondSingle, 0, 0);
+				context.restore;
+				context.setTransform(1, 0, 0, 1, 0, 0);
+				
+				// Draw up bond
+				context.drawImage(HydrogenImage, i*HydrogenImage.width+GraphicIndent, 250+BondSingle.height/2);
+				context.drawImage(HydrogenImage, i*HydrogenImage.width+GraphicIndent, 250-BondSingle.height-HydrogenImage.height/2);
+
+				context.setTransform(1, 0, 0, 1, 0, 0);
+				
+				context.drawImage(CarbonImage, i*CarbonImage.width+GraphicIndent, 250-CarbonImage.height/2);
+				console.log("Carbon "+i);
+			}
+	}
+	</script>
+</body>
+</html>

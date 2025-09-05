@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hydrocabon Creator</title>
+</head>
+<body>
+<h1>Constant Velocity Lab</h1>
+<canvas id="canvas" width="800" height="300" style="border: 1px solid black"></canvas>
+	<script>
+		var canvas, context;
+		canvas = document.getElementById("canvas");
+  		context = canvas.getContext("2d");
+		var CarbonImage = new Image();
+		CarbonImage.src = 'Carbon.png';
+		var HydrogenImage = new Image();
+		HydrogenImage.src = 'Hydrogen.png';
+		var BondSingle = new Image();
+		BondSingle.src = 'BondSingle.png';
+		
+		var CarbonLength = 3
+		
+		window.onload = function() {
+  			canvas = document.getElementById("canvas");
+  			context = canvas.getContext("2d");
+			// Draw main chain bonds
+			for (var i=0; i < CarbonLength+1; i++){
+				context.drawImage(BondSingle,i*100+50, 100-BondSingle.height/2);
+			}
+			
+			// Draw hydrogens
+			for (var i=0; i < CarbonLength+2; i++){
+				context.drawImage(HydrogenImage, i*100, 100-HydrogenImage.height/2);
+			}
+			
+			// Draw main chain carbons
+			for (var i=0; i < CarbonLength; i++){
+				context.drawImage(CarbonImage, i*100+100, 100-CarbonImage.height/2);
+				console.log("Carbon "+i);
+			}
+		}
+	
+		//function _DrawImage() {
+		// Draw carbon chain
+		//for (var i=0; i < 5; i++){
+			//context.drawImage(CarbonImage, i*100-CarbonImage.width/2, 20);
+			//console.log("carbon: "+i);
+		//}
+	</script>
+</body>
+</html>

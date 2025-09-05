@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hydrocabon Creator</title>
+</head>
+<body>
+<h1>Hydrocarbon Diagrams</h1>
+<canvas id="canvas" width="800" height="500" style="border: 1px solid black"></canvas>
+	<script>
+	// right carbon to hydrogen bond needs work
+	// double bonds/ triple hydrogen up down needs work
+	// ***********************************************
+	// Set up Canvas
+	var canvas, context;
+	canvas = document.getElementById("canvas");
+	context = canvas.getContext("2d");
+	// Declare Images
+	var Background = new Image();
+	Background.src = 'Background-500-800.png';
+	var BondDouble = new Image();
+	BondDouble.src = 'BondDouble.png';
+	var BondSingle = new Image();
+	BondSingle.src = 'BondSingle.png';
+	var BondTriple = new Image();
+	BondTriple.src = 'BondTriple.png';
+	var CarbonImage = new Image();
+	CarbonImage.src = 'Carbon.png';
+	var HydrogenImage = new Image();
+	HydrogenImage.src = 'Hydrogen.png';
+
+	// Declare Variables	
+	var CarbonLength = 5;
+	var CarbonBonds=[1,2,3,1,4,1,2,3,1,1];
+	var UpBonds=[1,1,1,1,1,1,1,1,1,1];
+	var DownBonds=[1,1,1,1,1,1,1,1,1,1];
+	var GraphicIndent = 100;
+	var GraphicMiddle = 250;
+
+	// ***********************************************
+	window.onload = function() {
+		canvas = document.getElementById("canvas");
+		context = canvas.getContext("2d");
+		_DrawImage();
+		_MouseEvents();
+	}
+	
+	// *******************************************
+	function _MouseEvents() {
+	  canvas.onmousedown = function(e) {
+
+		var mouseX = e.pageX - this.offsetLeft;
+		var mouseY = e.pageY - this.offsetTop;
+
+		// If click on left hydrogen then change the length of the chain
+		if (mouseX >= (GraphicIndent) &&
+			mouseX <= (GraphicIndent+CarbonImage.width) &&
+			mouseY >= (GraphicMiddle-HydrogenImage.height/2) &&
+			mouseY <= (GraphicMiddle+HydrogenImage.height/2)) {
+				CarbonLength++;
+				if(CarbonLength>10){
+					CarbonLength=1;
+				}
+				console.log('Hydrogen clicked');	
+			}
+			_DrawImage();
+
+		}
+	}
+		
+	// *******************************************
+	function _DrawVertBond(Bond_X, Bond_Y, Image){
+		context.save();
+		context.translate(Bond_X, Bond_Y);
+		context.rotate(90 * Math.PI / 180);
+		context.drawImage(Image, 0, 0);
+		context.restore;
+		context.setTransform(1, 0, 0, 1, 0, 0);
+	}
+		
+	// *******************************************	
+	function _DrawImage() {
+		// Draw background
+		context.drawImage(Background,0,0);
+		// Draw main chain bonds
+		for (var i=0; i < CarbonLength+1; i++){
+			if (CarbonBonds[i] == 1){
+				// If single bond
+				context.drawImage(BondSingle, i*BondSingle.width+BondSingle.width/2, GraphicMiddle-BondSingle.height/2);
+			} else if (CarbonBonds[i] == 2 | CarbonBonds[i] == 3){
+				// If double bond, 2 no up hydrogen, 3 no up hydrogen
+				context.drawImage(BondDouble, i*BondDouble.width+BondDouble.width/2, GraphicMiddle-BondDouble.height/2);
+			} else if (CarbonBonds[i] == 4){
+				// If triple bond
+				UpBonds[i]=0;
+				UpBonds[i-1]=0;
+				DownBonds[i]=0;
+				DownBonds[i-1]=0;
+				context.drawImage(BondTriple, i*BondTriple.width+BondTriple.width/2, GraphicMiddle-BondTriple.height/2);
+			}
+			
+		}
+
+		// Draw hydrogens
+		for (var i=0; i < CarbonLength+2; i++){
+				context.drawImage(HydrogenImage, i*HydrogenImage.width, GraphicMiddle-HydrogenImage.height/2);
+		}
+
+		// Draw up and down hydrogens
+		for (var i=0; i < CarbonLength; i++){
+			// Draw up bonds
+			if (CarbonBonds[i]==1 | CarbonBonds[i]==2 && (CarbonBonds[i-1]!=2 && CarbonBonds[i-1]!=3)){
+				_DrawVertBond(i*CarbonImage.width+HydrogenImage.width*2, GraphicMiddle-BondSingle.height,BondSingle);
+				// Draw up hydrogens
+				context.drawImage(HydrogenImage, i*HydrogenImage.width + GraphicIndent, GraphicMiddle-BondSingle.height-HydrogenImage.height/2);
+			}
+			// Draw down bonds 
+			if(CarbonBonds[i]==3 | CarbonBonds[i]==3){
+				_DrawVertBond(i*CarbonImage.width + HydrogenImage.width + GraphicIndent,GraphicMiddle, BondSingle);
+				// Draw down hydrogens
+				context.drawImage(HydrogenImage, i*HydrogenImage.width + GraphicIndent, GraphicMiddle+BondSingle.height/2);
+			}
+
+
+			// Draw main carbons
+			context.drawImage(CarbonImage, i*CarbonImage.width+GraphicIndent, GraphicMiddle-CarbonImage.height/2);
+			console.log("Carbon "+i);
+		}
+	}
+	</script>
+</body>
+</html>

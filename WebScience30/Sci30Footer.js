@@ -1,0 +1,3 @@
+// JavaScript Document
+let mySciFooterCode = ' <div style="background-color: black; color: white; border-radius: 10px; padding: 20px; box-shadow: 5px 5px #888888;"><center>Curriculum from Alberta Education: <a style="color: lightskyblue;" href="https://education.alberta.ca/media/3069385/pos_science_20_30.pdf">education.alberta.ca/media/3069385/pos_science_20_30.pdf</a> <br> Textbook: Science 30, search for online pdf versions. <br> Page by: S. Montgomery </center></div>';
+document.getElementById("Sci30Footer").innerHTML = mySciFooterCode;// JavaScript Document
