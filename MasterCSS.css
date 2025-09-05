@@ -7,8 +7,11 @@
 	padding-left:3%;
 	padding-right:3%;
 }	
-	
-.p{	
+button{
+	border: 2px solid black;
+	border-radius: 10px;	
+}	
+p{	
 	font-family: Arial, Helvetica, sans-serif;
 }	
 
@@ -21,8 +24,8 @@
 .customHR {	
 	/* line across to break up sections, color? */
 	width: 95%;
-    	font-size: 1px;
-    	line-height: 2px;
+    font-size: 1px;
+    line-height: 2px;
  }  	
 
 .CourseTitle {	
@@ -32,15 +35,34 @@
 	font-family: "Times New Roman", Times, serif;
 	font-size:400%;
 	text-align: center;
+	border-radius: 10px;
+	box-shadow: 5px 5px #888888;
 }	
 
 .def{
 	font-weight:bold;
 }
 
+.definition{
+	background-color:yellow;
+	border: 5px, yellow;
+	margin-left: 5%;
+	margin-right: 30%;
+	padding-top: 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-botton: 20px;
+	border-radius: 10px;
+  }
+
 .ex{ 	
 	color: orangered; 
 }	
+
+.focusOn{
+	color: green;
+	font-style:italic;
+}
 
 .footer{	
 	color: white;
@@ -60,9 +82,14 @@
 	padding-left: 50px;
 }	
 
+.narrow5 {
+  margin: 0 5% 0 5%; 
+}
+
 .main{
 	border-radius: 10px;
 	padding-bottom: 5px;
+	border: 2px solid black;
 }
 
 .pos{ 	
@@ -87,32 +114,64 @@
 	font-weight: bold;
 	text-align: center;
 }	
+.hide{
+	display: none;
+}
 
 .unitTitle{ 				
 	/* Unit and chapter Titles - at top of page */			
 	color:white;			
 	font-family: "Times New Roman", Times, serif;			
 	font-size:150%;			
-	text-align:center;			
+	text-align:center;
 }				
 
 	
 
 /*  *****************************************************  */
 /*  Background Colors for each course  */
-.S10Cbg	{background-color: blue;}			
-.S10Abg	{background-color: green;}			
-.S10Bbg	{background-color: orange;}			
-.S10Dbg	{background-color: purple;}			
-.P20bg	{background-color: blue;}			
-.P30bg	{background-color: green;}			
-
-/*  Text Color for course headings  */
+/*  *********************************  */
+.M8bg {background-color: blueviolet;  border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}
+.M10Cbg	{background-color: blue; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}	
+.M10Cc {color: blue;}
+.S24 {color: blue;}
+	
+/*  *********************************  */
+.S10Cbg	{background-color: blue;border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}				
+.S10Abg	{background-color: green;border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}			
+.S10Bbg	{background-color: orange; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}				
+.S10Dbg	{background-color: purple; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}
 .S10Cc	{color: blue;}
 .S10Ac	{color: green;}
 .S10Bc	{color: orange;}
 .S10Dc	{color: purple;}
+.S24bg {background-color: black;}
+.S24Grad {
+  color: white;
+  text-align: center;
+  background-color: #ff6600; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #ff6600, #0099ff);
+  margin: 0 5% 0 5%;
+  border-radius: 10px;
+}
+
+/*  *********************************  */
+.S30Abg	{background-color: darkred; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}			
+.S30Bbg	{background-color: darkblue; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}			
+.S30Cbg	{background-color: orangered; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}			
+.S30Dbg	{background-color: darkgreen; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}
+.S30Ac	{color: darkred;}
+.S30Bc	{color: darkblue;}
+.S30Cc	{color: orange;}
+.S30Dc	{color: darkgreen;}
+.S30Title {background-color: black; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black; padding:10px;}
+
+/*  *********************************  */
+.P20bg	{background-color: blue; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}		
 .P20c	{color: blue;}
+
+/*  *********************************  */
+.P30bg	{background-color: green; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}
 .P30c	{color: green;}
 
 /*  *****************************************************  */
@@ -199,8 +258,10 @@ html {
 } 
  /* The side navigation menu */
 .sidebar {
-  background-color: #574463;
+  background-color: #e6e0ea;
   overflow: auto;
+  border-radius: 10px;
+  border: 5px solid black;
 }
 
 /* Sidebar links */
@@ -298,6 +359,7 @@ html {
   text-align: left;
   outline: none;
   font-size: 15px;
+	border-radius: 10px;
 }
 
 .active, .collapsible:hover {
@@ -375,5 +437,46 @@ html {
   opacity: 1;
 } 
 /*  ******************************************  */
+/*  ******************************************  */
+/*  MATH drop down button menu at the top of the page  */
+.dropbtn {
+	 color: white;
+	  padding: 16px;
+	  font-size: 16px;
+	  border: none;
+	  cursor: pointer;
+	  border-radius: 12px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: grey;
+}
+
 
 /*  ******************************************  */
