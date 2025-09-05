@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Converging Mirror</title>
+</head>
+<body>
+
+<h2>Click and drag the candle to see the image size, orientation and location of the candle's image.</h2>
+<canvas id="canvas" width="800" height="400" style="border: 1px solid black"></canvas>
+<p>When doing a light ray diagram there are generally two light rays. <br>
+	<ol>
+    <li>The green light ray goes from the top of the candle parallel to the principle axis to the mirror, then it reflects and goes through the focal point on the same side.</li>
+    <li>The red light ray goes from the top of the candle through the focal point on the same side of the mirror, when it intersects the mirror it then it reflects parallel to the principle axis. </li>
+	</ol>
+Where the two light rays cross marks the location of the image. If the image is on the same side of the mirror than the object (candle) than it is a real image because you can put a screen there and get an object. <br>
+<br>
+If the image is on the opposite side of the mirror as the object than it is a virtual image because you can not put a screen there because the image is behind the mirror. This is indicated by the dotted light ray lines. <br>
+<br>
+	<strong>Remember images on the left of the mirror are virtual images. </strong>
+<script>
+
+/* Explanations at junerockwell.com */
+var canvas, context;
+  canvas = document.getElementById("canvas");
+  context = canvas.getContext("2d");
+
+//Background  ***************************************************************
+	var BackgroundImage = new Image();
+	BackgroundImage.src = 'Background1.png';
+	
+// Candle Object Variables ***************************************************	
+	var isDraggable = false;
+	var ObjectImage = new Image;
+	ObjectImage.src='Candle.png';
+	var ObjectImage_X = 0;
+	var ObjectImage_Y = canvas.height/2;
+	var ObjectImage_Height = 100;
+	var ObjectImage_Width = 50;
+	var ObjectImage_Scale = 1;
+	var ObjectisDraggable = false;	
+	var ObjectImage_XMax = canvas.width - ObjectImage_Width * ObjectImage_Scale;
+
+// Candle Image Variables  *******************************************************
+	var ImageImage = new Image();
+	ImageImage.src = 'Candle.png';
+	var ImageImage_X = 0;
+	var ImageImage_Y = canvas.height/2;
+	var ImageImage_Height = 100;
+	var ImageImage_Width = 50;
+	var ImageImage_Scale = 1;
+//  Focal Point Variable  *********************************************************
+	var FocalPointImage = new Image();
+	FocalPointImage.src = 'Point.png';
+	var FocalPoint_X = 0;
+	var FocalPoint_Y = canvas.height/2;
+//  Centre of Curvature Variable  *************************************************
+	var CentreCurvatureImage = new Image();
+	CentreCurvatureImage.src = 'Point.png';
+	var CentreCurvature_X = 0;
+	var CentreCurvature_Y = canvas.height/2;
+//  Vertex Variable  **************************************************************
+	var VertexPointImage = new Image();
+	VertexPointImage.src = 'Point.png';	
+	var VertexPoint_X = 200;
+	var VertexPoint_Y = canvas.height/2;
+	var RadiusofCurvature = 400;
+	
+//  Starting function ***************************************************************
+window.onload = function() {
+	FocalPoint_X = VertexPoint_X + RadiusofCurvature/2;
+	CentreCurvature_X = VertexPoint_X + RadiusofCurvature;
+	ObjectImage_X = (CentreCurvature_X + canvas.width)/2 ;
+    _Go();
+  // };
+ 
+
+};
+// Gets things going
+function _Go() {
+	_MouseEvents();
+  	console.log("_Go");
+  	setInterval(function() {
+		_DrawImage();
+  	}, 1000/30);
+}
+
+// Calculates the image height  *******************************************
+function _CalculateImage_Scale(){
+	//  console.log("_CalculateImage_Scale");
+	var magnification = (ImageImage_X - VertexPoint_X) / (ObjectImage_X - VertexPoint_X);
+	//  console.log("Magnification = " + magnification);
+	ImageImage_Scale = ObjectImage_Scale * magnification;
+}
+	
+	
+	
+// Calculates the position of the image  **********************************
+function _CalculateImage_X (){
+	var FocalLength = _FocalLength();
+	var ObjectDistance = (ObjectImage_X - VertexPoint_X);
+	// console.log("Focal Length: " + FocalLength); 
+	ImageImage_X = 1/(1/FocalLength - 1/ObjectDistance) + VertexPoint_X;
+	// console.log("Image X: " + ImageImage_X + " Focal Length: " + FocalLength + " Object Distance: " + (ObjectImage_X - VertexPoint_X));
+}	
+		
+	
+// Returns the focal length  *********************************************
+function _FocalLength() {
+	// console.log("Focal Length = " + (FocalPoint_X - VertexPoint_X) );
+	return (FocalPoint_X - VertexPoint_X);
+}
+
+// Returns the radius of curvature  **************************************
+function _RadiusCurvature () {
+	//  console.log("Radius of Curvature = " + CentreCurvature_X - VertexPoint_X );
+	return (CentreCurvature_X - VertexPoint_X);
+}
+	
+
+//  All of the Mouseevents  ***********************************************	
+function _MouseEvents() {
+	
+	canvas.onmousedown = function(e) {
+
+		var mouseX = e.pageX - this.offsetLeft;
+		var mouseY = e.pageY - this.offsetTop;
+
+		console.log("mouseX: "+mouseX+" mouseY: "+mouseY);
+		console.log("Object X: "+ObjectImage_X+" , "+(ObjectImage_X - ObjectImage.width * ObjectImage_Scale/2)+" , "+(ObjectImage_X + ObjectImage.width * ObjectImage_Scale/2));
+		console.log(ObjectImage_Width);
+		if (mouseX >= (ObjectImage_X - ObjectImage.width * ObjectImage_Scale/2) && mouseX <= (ObjectImage_X + ObjectImage.width * ObjectImage_Scale/2) && mouseY >= (ObjectImage_Y - ObjectImage.height * ObjectImage_Scale) && mouseY <= (ObjectImage_Y)) {
+				console.log("Inside Inside");	
+				isDraggable = true;
+
+		}
+  	};  // end onmousedown
+	
+	// Drag only in the X-axis
+  	canvas.onmousemove = function(e) {
+		if (isDraggable && e.pageX > (VertexPoint_X + ObjectImage.width * ObjectImage_Scale/2) && e.pageX < ObjectImage_XMax) {
+			ObjectImage_X = e.pageX - this.offsetLeft;
+			_DrawImage();
+		  // ObjectImage_Y = e.pageY - this.offsetTop;
+		}
+  	};
+ 	
+	// Stop when the mouse is released
+	canvas.onmouseup = function(e) {
+    	isDraggable = false;
+  	};
+	
+	// Stop when the mouse hits the edge of the canvas
+  	canvas.onmouseout = function(e) {
+    	isDraggable = false;
+  	};
+}
+	
+// function to rotate the image 180 degrees *************************************************
+	function _rotateImage() {
+		// rotate the the image candle
+		if (ObjectImage_X > FocalPoint_X){
+			context.save();
+			context.translate(ImageImage_X, ImageImage_Y);
+
+			context.rotate(Math.PI);
+			context.globalAlpha = 0.5 ;
+			context.drawImage(ImageImage, (-ImageImage_Width * ImageImage_Scale / 2), (-ImageImage_Height * ImageImage_Scale), (ImageImage_Width * ImageImage_Scale), (ImageImage_Height * ImageImage_Scale));
+
+			context.restore();
+		}
+		else {
+			context.globalAlpha = 0.5;
+
+			ImageImage.height = ImageImage_Height * - ImageImage_Scale;
+	
+			context.drawImage(ImageImage, ImageImage_X - ImageImage_Width, ImageImage_Y + ImageImage_Height * ImageImage_Scale, ImageImage_Width *-1*ImageImage_Scale, ImageImage_Height * -1 * ImageImage_Scale);
+
+			context.globalAlpha = 1;
+		}
+		
+	}	
+	
+	
+//  Funciton to draw light ray one  **********************************************************
+function _DrawRay1(){
+
+	// Draw line from the top of the object parallel to PA to the mirror
+	context.beginPath();
+	context.strokeStyle = "green"
+	context.lineWidth = 3;
+	context.setLineDash([]);
+	context.moveTo(ObjectImage_X, ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale) );
+	context.lineTo(VertexPoint_X, ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale) );
+	context.stroke(); 
+	
+	// If the object is right of the focal point
+	if(ObjectImage_X > FocalPoint_X){
+		//  Draw solid line from the mirror through the focal point to the right
+		context.beginPath();
+		context.strokeStyle = "green"
+		context.lineWidth = 3;
+		context.setLineDash([]);
+		context.moveTo(VertexPoint_X, ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale) );
+		var LineSlope = (ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale) - FocalPoint_Y) / (VertexPoint_X - FocalPoint_X);
+		context.lineTo((canvas.height - (ObjectImage_Y - ObjectImage_Height * ObjectImage_Scale))/ LineSlope + VertexPoint_X , canvas.height);
+		context.stroke(); 
+	}
+	else{ // if the object is left of the focal point
+		//  Draw line from focal point through the top of the object to the mirror
+		context.beginPath();
+		context.strokeStyle = "green"
+		context.lineWidth = 3;
+		context.setLineDash([]);
+		context.moveTo(FocalPoint_X, FocalPoint_Y);
+		var LineSlope = (ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale) - FocalPoint_Y) / (VertexPoint_X - FocalPoint_X);
+		context.lineTo(VertexPoint_X, ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale) );
+		context.stroke(); 
+		//  draw dotted line on left side of the mirror
+		context.beginPath();
+		context.setLineDash([5,5]);
+		context.moveTo(VertexPoint_X, ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale) );
+		context.lineTo(VertexPoint_X - (ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale))/ LineSlope, 0);
+		context.stroke();
+	}
+}
+
+//  Function to draw ray 2 	
+function _DrawRay2(){
+	if(ObjectImage_X > FocalPoint_X){
+		// Draw line 2a through the focal point to the mirror
+		context.beginPath();
+		context.strokeStyle = "red";
+		context.lineWidth = 3;
+		context.setLineDash([]);
+		context.moveTo(ObjectImage_X, ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale) );
+		// var LineSlope = (ObjectImage_Height * ObjectImage_Scale - FocalPoint_X) / (ObjectImage_X - FocalPoint_X)
+		context.lineTo(VertexPoint_X, ImageImage_Y + ImageImage_Height * ImageImage_Scale);	
+		context.stroke(); 
+		//  Draw line 1b from Mirror through F
+		context.beginPath();
+		context.moveTo(VertexPoint_X, ImageImage_Y + ImageImage_Height * ImageImage_Scale);
+		// var End_X = (ObjectImage_X , canvas.height);
+		context.lineTo(canvas.width , ImageImage_Y + ImageImage_Height * ImageImage_Scale);
+		context.stroke(); 
+	}
+
+	else{
+		//  Draw solid line from focal point through the object to the mirror
+		context.beginPath();
+		context.strokeStyle = "red";
+		context.setLineDash([]);
+		context.moveTo(VertexPoint_X, ImageImage_Y + ImageImage_Height * ImageImage_Scale);
+		var LineSlope = (ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale) - FocalPoint_Y) / (ObjectImage_X - FocalPoint_X);
+		context.lineTo(FocalPoint_X , FocalPoint_Y);
+		context.stroke();
+	
+		//  Draw dotted line horizontal to left of the mirror
+		context.beginPath();
+		context.strokeStyle = "red";
+		context.setLineDash([5,5]);
+		context.moveTo(VertexPoint_X, ImageImage_Y + ImageImage_Height * ImageImage_Scale);
+		context.lineTo(0, ImageImage_Y + ImageImage_Height * ImageImage_Scale);
+		context.stroke();
+	}
+}
+
+//  Draw the mirror at the vertex ************************************************************
+function _DrawMirror(){
+		// context.beginPath();
+		// context.strokeStyle = "blue";
+		// context.lineWidth = 5;
+		// context.setLineDash([]);
+		// context.moveTo(VertexPoint_X, 0);
+		// context.lineTo(VertexPoint_X, canvas.height);
+		// context.stroke();
+	
+}
+
+// function to draw the principle axis  *******************************************************
+function _DrawPrincipleAxis(){
+		context.beginPath();
+		context.strokeStyle = "black";
+		context.lineWidth = 3;
+		context.setLineDash([]);
+		context.moveTo(0, VertexPoint_Y);
+		context.lineTo(canvas.width, VertexPoint_Y);
+		context.stroke();
+	
+}	
+// function to draw everything on the screen  *************************************************
+function _DrawImage() {
+	// console.log("_DrawImage");
+	// Draw background image and points
+	context.fillStyle = 'lightGrey';
+  	context.fillRect(0,0, canvas.width, canvas.height);
+	context.drawImage(BackgroundImage, 0, 0);
+	_DrawMirror();
+	_DrawPrincipleAxis();
+	context.drawImage(CentreCurvatureImage, CentreCurvature_X - CentreCurvatureImage.width/2, CentreCurvature_Y - CentreCurvatureImage.height/2);
+	context.drawImage(FocalPointImage, FocalPoint_X - FocalPointImage.width/2, FocalPoint_Y - FocalPointImage.height/2);
+	context.drawImage(VertexPointImage, VertexPoint_X - VertexPointImage.width/2, VertexPoint_Y - VertexPointImage.height/2);
+	
+	// Draw Object	
+	context.drawImage(ObjectImage, ObjectImage_X - (ObjectImage_Width * ObjectImage_Scale)/2, ObjectImage_Y - (ObjectImage_Height * ObjectImage_Scale), (ObjectImage_Width * ObjectImage_Scale), (ObjectImage_Height * ObjectImage_Scale));
+	
+	// function to draw the rotated image
+	_CalculateImage_X();
+	_CalculateImage_Scale()
+	_rotateImage();
+
+	// Ray 1 is parallel to the principle axis then through the focal point
+	_DrawRay1 ();
+	// Ray 2 is through the focal point and then parallel to the principle axis
+	_DrawRay2 ();
+
+	
+
+}
+	
+</script>
+</body>
+</html>

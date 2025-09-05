@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Diverging lens</title>
+</head>
+<body>
+
+<h2>Click and drag the candle on the right to see the image size, orientation and location of the candle's image.</h2>
+<canvas id="canvas" width="800" height="400" style="border: 1px solid black"></canvas>
+<p>When doing a light ray diagram there are generally two light rays.
+<ol>
+	<li>The green light ray goes from the top of the candle parallel to the principle axis to the lens, then it goes through the focal point on the same side.</li>
+	<li>The red light ray goes from the top of the candle through the focal point on the other side of the lens, when it intersects the lens it then it goes parallel to the principle axis.</li>
+</ol>
+<p>Where the two light rays cross marks the location of the image. If the image is on the opposite side of the lens than the object (candle) than it is a real image because you can put a screen there and get an object. </p>
+<p>If the image is on the same side of the lens as the object than it is a virtual image because you can not put a screen there because the light hasn't gone through the lens.  This is indicated by the dotted light ray lines.</p>
+<p><strong>Remeber diverging lenses have negative focal lengths.</strong></p>
+	
+<script>
+
+/* Explanations at junerockwell.com */
+var canvas, context;
+  canvas = document.getElementById("canvas");
+  context = canvas.getContext("2d");
+
+//Background  ***************************************************************
+	var BackgroundImage = new Image();
+	BackgroundImage.src = 'http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/background_orig.jpg';
+	
+// Candle Object Variables ***************************************************	
+	var isDraggable = false;
+	var ObjectImage = new Image;
+	ObjectImage.src='http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/candle_orig.png';
+	var ObjectImage_X = 100;
+	var ObjectImage_Y = canvas.height/2;
+	var ObjectImage_Height = 100;
+	var ObjectImage_Width = 50;
+	var ObjectImage_Scale = 0.5;
+	var ObjectisDraggable = false;	
+	var ObjectImage_XMax = canvas.width - ObjectImage_Width * ObjectImage_Scale+200;
+
+// Candle Image Variables  *******************************************************
+	var ImageImage = new Image();
+	ImageImage.src = 'http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/candle_orig.png';
+	var ImageImage_X = 0;
+	var ImageImage_Y = canvas.height/2;
+	var ImageImage_Height = 100;
+	var ImageImage_Width = 50;
+	var ImageImage_Scale = 1;
+//  Focal Point Variable  *********************************************************
+	var FocalPointImage = new Image();
+	FocalPointImage.src = 'http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/pointf_orig.png';
+	var FocalPoint_X = 0;
+	var FocalPoint_Y = canvas.height/2;
+//  Centre of Curvature Variable  *************************************************
+	var CentreCurvatureImage = new Image();
+	CentreCurvatureImage.src = 'http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/pointc_orig.png';
+	var CentreCurvature_X = 0;
+	var CentreCurvature_Y = canvas.height/2;
+//  Vertex Variable  **************************************************************
+	var VertexPointImage = new Image();
+	VertexPointImage.src = 'http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/point_orig.png';	
+	var VertexPoint_X = canvas.width/4;
+	var VertexPoint_Y = canvas.height/2;
+	var RadiusofCurvature = 300;
+//  Lens Variable  ****************************************************************
+	var LensDivergingImage = new Image();
+	LensDivergingImage.src = 'http://mrstevemontgomery.weebly.com/uploads/8/3/8/6/83860664/lensdiverging_orig.png';
+	LensDivergingImage.height = canvas.height;
+	var LensDiverging_X = VertexPoint_X;
+	
+	
+//  Starting function ***************************************************************
+window.onload = function() {
+	FocalPoint_X = VertexPoint_X + RadiusofCurvature/2;
+	CentreCurvature_X = VertexPoint_X + RadiusofCurvature;
+	ObjectImage_X = (CentreCurvature_X + canvas.width)/2 ;
+    _Go();
+  // };
+ 
+
+};
+
+
+	
+	
+	
+// Gets things going
+function _Go() {
+	_MouseEvents();
+  	console.log("_Go");
+	_DrawImage();
+
+}
+
+
+
+//  All of the Mouseevents  ***********************************************	
+function _MouseEvents() {
+	
+	canvas.onmousedown = function(e) {
+
+		var mouseX = e.pageX - this.offsetLeft;
+		var mouseY = e.pageY - this.offsetTop;
+
+		console.log("mouseX: "+mouseX+" mouseY: "+mouseY);
+		console.log("Object X: "+ObjectImage_X+" , "+(ObjectImage_X - ObjectImage.width * ObjectImage_Scale/2)+" , "+(ObjectImage_X + ObjectImage.width * ObjectImage_Scale/2));
+		console.log(ObjectImage_Width);
+		
+		if (mouseX >= (ObjectImage_X - ObjectImage.width * ObjectImage_Scale/2) && mouseX <= (ObjectImage_X + ObjectImage.width * ObjectImage_Scale/2) && mouseY >= (ObjectImage_Y - ObjectImage.height * ObjectImage_Scale) && mouseY <= (ObjectImage_Y)) {
+				console.log("Inside Inside");	
+				isDraggable = true;
+
+		}
+  	};  // end onmousedown
+	
+	// Drag only in the X-axis
+  	canvas.onmousemove = function(e) {
+		if (isDraggable && e.pageX > (VertexPoint_X + ObjectImage.width * ObjectImage_Scale/2) && e.pageX < ObjectImage_XMax) {
+			ObjectImage_X = e.pageX - this.offsetLeft;
+			_DrawImage();
+		  // ObjectImage_Y = e.pageY - this.offsetTop;
+		}
+  	};
+ 	
+	// Stop when the mouse is released
+	canvas.onmouseup = function(e) {
+    	isDraggable = false;
+  	};
+	
+	// Stop when the mouse hits the edge of the canvas
+  	canvas.onmouseout = function(e) {
+    	isDraggable = false;
+  	};
+}
+	
+	
+	
+function _DrawDrawImage (ShowImage, ShowImage_X, ShowImage_Y, ShowImage_Magnification, ShowImage_Alpha) {
+	context.globalAlpha = ShowImage_Alpha;
+	context.drawImage(ShowImage, ShowImage_X - ShowImage.width/2 * ShowImage_Magnification, ShowImage_Y - ShowImage.height * ShowImage_Magnification, ShowImage.width*ShowImage_Magnification, ShowImage.height*ShowImage_Magnification);
+	context.globalAlpha = 1;
+}
+function _DrawDrawLineDotted (X1, Y1, X2, Y2, color){
+	context.beginPath();
+	context.strokeStyle = color;
+	context.lineWidth = 3;
+	context.setLineDash([5,5]);
+	context.moveTo(X1, Y1);
+	context.lineTo(X2, Y2);
+	context.stroke();
+}
+function _DrawDrawLineSolid (X1, Y1, X2, Y2, color){
+	context.beginPath();
+	context.strokeStyle = color;
+	context.lineWidth = 3;
+	context.setLineDash([]);
+	context.moveTo(X1, Y1);
+	context.lineTo(X2, Y2);
+	context.stroke();
+}
+
+function _DrawRotatedImage(ShowImage, ShowImage_X, ShowImage_Y, ShowImage_Scale, Angle, Alpha){
+	context.save();
+	context.translate(ShowImage_X, ShowImage_Y);
+	context.globalAlpha = Alpha;
+	context.rotate(Angle * Math.PI/180);
+	context.drawImage(ShowImage, 0 - ShowImage.width/2 * ShowImage_Scale, 0 - ShowImage.height * ShowImage_Scale , ShowImage.width * ShowImage_Scale, ShowImage.height * ShowImage_Scale );
+	
+	context.restore();
+}
+	
+function _Slope(X1, Y1, X2, Y2){
+	return ((Y2 - Y1)/(X2-X1));
+}
+
+//  Determines the x location of the Image
+function _ImageLocation(){
+	//  var ImageLocation_X = ((1 / (RadiusofCurvature/2) - 1 / (ObjectImage_X - VertexPoint_X))^(-1)) ;
+	var ImageLocation_X = 1 / ((1 / (RadiusofCurvature/2)) + 1 / (ObjectImage_X - VertexPoint_X)) ;
+	ImageLocation_X = VertexPoint_X + ImageLocation_X ;
+	console.log("Radius of C: " + RadiusofCurvature + " Object X: " + ObjectImage_X + " Vertext X: " + VertexPoint_X);
+	console.log("ImageLocation_X = " + ImageLocation_X);
+	return ImageLocation_X;
+}
+	
+// Determine the magnificaiton of the Image
+function _ImageScale (){
+	var ImageScale = (VertexPoint_X - ImageImage_X) / (ObjectImage_X - VertexPoint_X);
+	console.log("Magnification: " + ImageScale);
+	return (ImageScale);	
+}
+
+// Draw the Screen	
+function _DrawImage(){
+	context.drawImage (BackgroundImage, 0, 0);
+	// Draw PA and lens
+	_DrawDrawLineSolid(0, canvas.height/2, canvas.width, canvas.height/2, "black");
+	_DrawDrawLineSolid(VertexPoint_X, 0, VertexPoint_X, canvas.height, "blue");
+	_DrawDrawImage (LensDivergingImage, VertexPoint_X, canvas.height/2 + LensDivergingImage.height/2, 1, 1);
+	
+	//  Draw C and F points left to right
+
+	_DrawDrawImage (CentreCurvatureImage, VertexPoint_X - RadiusofCurvature, canvas.height/2 + CentreCurvatureImage.height/2, 1, 1);	
+	_DrawDrawImage (CentreCurvatureImage, VertexPoint_X + RadiusofCurvature, canvas.height/2 + CentreCurvatureImage.height/2, 1, 1);
+	_DrawDrawImage (FocalPointImage, VertexPoint_X - RadiusofCurvature/2, canvas.height/2 + FocalPointImage.height/2, 1, 1);
+	_DrawDrawImage (FocalPointImage, VertexPoint_X + RadiusofCurvature/2, canvas.height/2 + FocalPointImage.height/2, 1, 1);
+	
+	
+
+	//  Draw the Object and the rays
+	_DrawDrawImage (ObjectImage, ObjectImage_X, VertexPoint_Y, ObjectImage_Scale, 1);
+	
+	//  Draw ray1 green parallel to principle axis
+	_DrawDrawLineSolid (VertexPoint_X, VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, ObjectImage_X, VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, "green");
+	//  Draw ray1 green through right focal point
+	var Slope = _Slope(VertexPoint_X, VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, VertexPoint_X + RadiusofCurvature/2, VertexPoint_Y);
+
+	_DrawDrawLineSolid(VertexPoint_X, VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, 0, (0-VertexPoint_X)*Slope + (VertexPoint_Y - ObjectImage.height * ObjectImage_Scale), "green" );
+	
+	_DrawDrawLineDotted(VertexPoint_X, VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, canvas.width, VertexPoint_Y - ObjectImage.height * ObjectImage_Scale + (canvas.width - VertexPoint_X)* Slope, "green");
+	
+	//  Draw ray 2 red through left focal point to lens
+	var Slope = _Slope(ObjectImage_X, VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, VertexPoint_X - RadiusofCurvature/2, VertexPoint_Y);
+	//  console.log("Slope = " + Slope);
+	_DrawDrawLineSolid(ObjectImage_X, VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, VertexPoint_X, - (ObjectImage_X - VertexPoint_X)*Slope + VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, "red" );
+	
+	_DrawDrawLineDotted(VertexPoint_X, - (ObjectImage_X - VertexPoint_X)*Slope + VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, VertexPoint_X - RadiusofCurvature/2, VertexPoint_Y, "red" );
+	
+	// Draw ray 2 red parallel to principle axis
+	_DrawDrawLineSolid(VertexPoint_X, - (ObjectImage_X - VertexPoint_X)*Slope + VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, 0,- (ObjectImage_X - VertexPoint_X)*Slope + VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, "red" );
+	_DrawDrawLineDotted(VertexPoint_X, - (ObjectImage_X - VertexPoint_X)*Slope + VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, canvas.width, - (ObjectImage_X - VertexPoint_X)*Slope + VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, "red");
+
+	//  Draw Image
+	// _DrawRotatedImage(ImageImage,ImageImage_X, ImageImage_Y, ImageImage_Scale, 180, 0.5);
+	ImageImage_X = _ImageLocation();
+
+	ImageImage_Scale = ObjectImage_Scale * _ImageScale();
+	//  Draw the image, if Scale is positive real image inverted, negative virtual image erect
+	_DrawDrawImage(ImageImage, ImageImage_X + ImageImage_Width/2 * - ImageImage_Scale , VertexPoint_Y, -ImageImage_Scale, 0.5);
+	
+	//if (ImageImage_Scale > 0){
+		//_DrawRotatedImage(ImageImage, ImageImage_X , ImageImage_Y, ImageImage_Scale, 180, 0.5);
+	//}
+	//else {
+		//  Draw erect image
+		//_DrawDrawImage(ImageImage, ImageImage_X + ImageImage_Width/2 * - ImageImage_Scale , VertexPoint_Y, -ImageImage_Scale, 0.5);
+		
+		//  red dotted line for virtual image
+		// _DrawDrawLineDotted(VertexPoint_X, - (ObjectImage_X - VertexPoint_X)*Slope + VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, canvas.width, - (ObjectImage_X - VertexPoint_X)*Slope + VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, "red");
+		//  green dotted line for virtual image
+		// var Slope = _Slope(VertexPoint_X, VertexPoint_Y - ObjectImage.height * ObjectImage_Scale, VertexPoint_X - RadiusofCurvature/2, VertexPoint_Y);
+		// _DrawDrawLineDotted(VertexPoint_X, ObjectImage_Height * ObjectImage_Scale, canvas.width, VertexPoint_Y + canvas.width/2 * Slope, "green");
+	// }
+}
+	
+</script>
+</body>
+</html>
