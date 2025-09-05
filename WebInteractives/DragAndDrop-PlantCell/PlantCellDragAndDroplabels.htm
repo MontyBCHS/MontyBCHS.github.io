@@ -1,0 +1,236 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+
+#BackPicture{
+    position:absolute;
+    width: 600px;
+    height: 600px;
+    top: 30px;
+    left: 100px;
+}
+
+#blank1{
+    position: relative;
+    top: 405px;
+    left: 551px;
+    background-color: green;
+}
+#blank2{
+    position: relative;
+    top: 50px;
+    left: 510px;
+    background-color: green;
+}
+#blank3{
+    position: relative;
+    top: -33px;
+    left: 400px;
+    background-color: green;
+}
+#blank4{
+    position: relative;
+    top: 75px;
+    left: 615px;
+    background-color: green;
+}
+#blank5{
+    position: relative;
+    top: 460px;
+    left: 300px;
+    background-color: green;
+}
+#blank6{
+    position: relative;
+    top: 415px;
+    left: 470px;
+    background-color: green;
+}
+#blank7{
+    position: relative;
+    top: -80px;
+    left: 75px;
+    background-color: green;
+}
+#blank8{
+    position: relative;
+    top: -130px;
+    left: 175px;
+    background-color: green;
+}
+#blank9{
+    position: relative;
+    top: -10px;
+    left: 0px;
+    background-color: green;
+}
+#blank10{
+    position: relative;
+    top: -90px;
+    left: 20px;
+    background-color: green;
+}
+#blank11{
+    position: relative;
+    top: 180px;
+    left: 13px;
+    background-color: green;
+}
+#blank12{
+    position: relative;
+    top: -165px;
+    left: 540px;
+    background-color: green;
+}
+.creditss {
+	position: relative;
+	top: -30px;
+	font-size: 130%;
+}
+.div1 {
+
+	width: 164px;
+	height: 24px;
+	border: 1px solid #55aaaa;
+	background-color: blue;
+}
+#LeftSide{
+    min-width: 800px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+.options {
+    position: relative;
+    top: -200px;
+    left: 700px;
+}
+
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop1(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag1") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop2(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag2") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop3(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag3") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop4(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag4") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop5(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag5") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop6(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag6") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop7(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag7") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop8(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag8") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop9(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag9") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop10(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag10") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop11(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag11") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop12(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag12") {ev.target.appendChild(document.getElementById(data))};
+}
+</script>
+</head>
+<body>
+
+<div id="LeftSide">
+
+    <img id="BackPicture" src="PlCell.jpg" draggable="false">
+    With the following plant cell, drag the yellow labels onto the approriate green blanks. They will stick only when they are in the correct location.
+</div>
+    <div class="div1" id="blank1" ondrop="drop1(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank2" ondrop="drop2(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank3" ondrop="drop3(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank4" ondrop="drop4(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank5" ondrop="drop5(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank6" ondrop="drop6(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank7" ondrop="drop7(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank8" ondrop="drop8(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank9" ondrop="drop9(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank10" ondrop="drop10(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank11" ondrop="drop11(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank12" ondrop="drop12(event)" ondragover="allowDrop(event)"></div>    
+
+
+<div class="options">
+        <img id="drag1" src="Chloro.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag2" src="CMem.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>
+        <img id="drag3" src="CWall.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag4" src="Cyto.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>
+        <img id="drag5" src="Golgi.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>
+        <img id="drag6" src="Mito.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>        
+	<img id="drag7" src="Nucle.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+	<img id="drag8" src="NuEnve.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>        
+        <img id="drag9" src="Ribo.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag10" src="RoER.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag11" src="SmER.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag12" src="Vacu.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+</div>
+<div class="creditss">
+	<p>Reload the page to reset the labels. Use the back button to go back to the lesson.<br>
+	By S. Montgomery </p>
+</div>
+</body>
+</html>

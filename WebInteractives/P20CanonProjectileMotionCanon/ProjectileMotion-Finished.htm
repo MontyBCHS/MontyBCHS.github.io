@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+
+
+
+</style>
+
+
+</head>
+<body>
+
+
+<h1>Canon</h1>
+<p>Drag the sliders to change the angle and speed.  Press the fire button to see the results.  Once you have hit the target, move it and try again.</p>
+
+<canvas id="canvas" width="800" height="400" style="border: 1px solid black"></canvas>
+	<br>
+
+<button id="button-fire">Fire Canon</button>  <button id="button-Target">Move Target</button>
+
+	
+<div class="slidecontainer">
+  <input type="range" min="0" max="90" value="45" class="slider" id="myAngle">
+  <p>Angle: <span id="angle">45</span></p>
+</div>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="90" value="45" class="slider" id="mySpeed">
+  <p>Speed: <span id="speed">45</span></p>
+</div>	
+	
+
+
+<script>
+	// Declaring Variables *********************************************************
+	var canvas, context;
+		canvas = document.getElementById("canvas");
+		context = canvas.getContext("2d");
+	//angleTheta
+		var angleTheta = 45;
+	//Background
+		var BackgroundImage = new Image();
+		BackgroundImage.src = 'canonBackground.jpg';
+
+
+	//Canon Cart
+		var CanonCartImage = new Image();
+		CanonCartImage.src = 'CanonCart.png';
+		CanonCart_X = 20;
+		CanonCart_Y = 255;
+	
+	//Canon Barrel
+		var CanonBarrelImage = new Image();
+		CanonBarrelImage.src = 'CanonBarrel.png';
+		CanonBarrel_X = 35;
+		CanonBarrel_Y = CanonCart_Y - 10;
+	
+	//Canon Ball
+		var CanonBall = new Image();
+		CanonBall.src = 'CanonBall.png';
+		var CanonBall_DX = -10;
+		var CanonBall_DY = -10;
+		var CanonBall_VX = 0;
+		var CanonBall_VY = 0;
+		var CanonBall_AY = .5;
+	
+
+	
+	// Dot trail
+		var dotImage = new Image();
+		dotImage.src = 'dot.png';
+		var dotData = [];
+		var dotData1 = [];
+	
+	// Interval
+		var Interval ;
+	
+	// Fire Button
+		var buttonFire = document.getElementById('button-fire');
+		var CanonFired = false;
+		var BallSpeed = 45;
+	
+	// Move Target Button
+		var buttonTarget = document.getElementById('button-Target');
+	
+	// Speed scale, increase to slow down
+		var SpeedScale = 10;
+	
+	//Target
+		var TargetImage = new Image();
+		TargetImage.src = 'Target.png';
+		var Target_X = 600;
+		var Target_Y = CanonCart_Y - 15;
+	
+	// Angle slider  ******************************************************************
+	var slider1 = document.getElementById("myAngle");
+	var output1 = document.getElementById("angle");
+	// output1.innerHTML = slider1.value;
+
+	slider1.oninput = function() {
+		// change value and rotate canon barrel
+  		output1.innerHTML = this.value;
+		angleTheta = this.value;
+		_rotateImage(angleTheta);
+		_DrawImage();	
+	}
+	
+	// Speed Slider  ********************************************************************
+	var slider2 = document.getElementById("mySpeed");
+	var output2 = document.getElementById("speed");
+	output2.innerHTML = slider2.value;
+
+	slider2.oninput = function() {
+		// change value
+  		output2.innerHTML = this.value;
+		BallSpeed = this.value;
+	}
+
+
+	// Move Target button function *************************************************
+	buttonTarget.onclick = function(){
+		Target_X = 300 * Math.random() + 200;
+		console.log("Target " + Target_X);
+		_DrawImage();
+	}
+	
+	//  Fire button function  *******************************************************
+	buttonFire.onclick = function() {
+		//console.log("Fire button pressed")
+		//disable the sliders
+		document.getElementById("button-Target").disabled = true; 
+		document.getElementById("myAngle").disabled = true;
+		document.getElementById("angle").style.color = "red";
+		// document.getElementById("myAngle").innerHTML = 
+		document.getElementById("mySpeed").disabled = true;
+		document.getElementById("speed").style.color = "red";
+		// clear the old dot data
+		dotData1 = [];
+		// assign the latest dot data to the old dot data so new can be tracked
+		for (var i = 0; i < dotData.length; i++){
+			dotData1[i] = dotData[i];
+		}
+		dotData = [];
+		CanonFired = true;
+		_CanonballStart();
+		
+		window.setInterval(_DrawImage,50);
+		
+		// while (CanonFired) {
+			// _Canonball();
+			// console.log(CanonFired + " CanonFired")
+			//_DrawImage();
+			
+			// window.setTimeout(_DrawImage, 1000);
+			// var myTimer = window.setInterval(function(){}, 10);
+		// }
+		console.log("finished firing loop");
+	}
+	
+	
+	
+	// Set the initial values for the canonball based on the speed and angle of the canonbarrel
+	_CanonballStart = function() {	
+		// control the canonball through the air
+		
+		// Set the X position of the ball
+		CanonBall_DX = CanonBarrel_X + CanonBarrelImage.width/2 + parseInt(CanonBarrelImage.width/2 * Math.cos(parseInt(angleTheta) * Math.PI / 180));  
+		
+		// console.log("Canon Ball Start x Coord: " + CanonBarrel_X + " ," + CanonBarrelImage.width + " ," + parseInt(CanonBarrelImage.width/2 * Math.cos(parseInt(angleTheta) * Math.PI / 180)));
+		
+		// Set the Y position of the ball
+		CanonBall_DY = CanonBarrel_Y  - CanonBarrelImage.width/2 * (Math.sin(parseInt(angleTheta) * Math.PI / 180));
+		
+		// console.log("Canon Ball start y Coord: " + CanonBarrel_Y + " ," + CanonBarrelImage.width + " ," +   (Math.sin(parseInt(angleTheta) * Math.PI / 180)));
+		
+		// Set the X and Y speed
+		CanonBall_VX = BallSpeed * Math.cos(angleTheta * Math.PI / 180)/SpeedScale;  
+		CanonBall_VY = BallSpeed * Math.sin(angleTheta * Math.PI / 180)/SpeedScale;
+		
+		// console.log(angleTheta,Math.sin(parseInt(angleTheta) * Math.PI / 180) + "fired, " + CanonBall_DX +", "+ CanonBall_DY);
+		console.log("loc: " + CanonBall_DX + " , " + CanonBall_DY + "  Vel: " + CanonBall_VX + " , " + CanonBall_VY);
+		context.drawImage(CanonBall,CanonBall_DX,CanonBall_DY);
+	}
+	
+	// function that starts onload  **************************************************
+	window.onload = function() {
+		// draw screen
+		// console.log("window.onload");
+	  	_DrawImage();
+
+	};
+	
+	// function to rotate the barrel of the canon ************************************************
+	function _rotateImage(angleTheta) {
+		// rotate the the canon barrel
+				
+		// console.log("rotate function");
+		context.save();
+		context.translate(CanonBarrel_X + CanonBarrelImage.width/2, CanonBarrel_Y + CanonBarrelImage.height/2);
+		context.rotate(-angleTheta * Math.PI / 180);
+		context.drawImage(CanonBarrelImage,-50,-10);
+		context.rotate(Math.Pi/3);
+		context.restore();
+    }
+
+	// Drawing Images Function ****************************************
+	function _DrawImage() {
+	// Draw background, canonbarrel, canon cart, target
+			context.drawImage(BackgroundImage,0,0);
+			// console.log("_Draw image function, CanonFired: " + CanonFired);
+
+			_rotateImage(angleTheta);
+
+			context.drawImage(CanonCartImage, CanonCart_X, CanonCart_Y);
+			context.drawImage(TargetImage,Target_X, Target_Y);
+			// context.drawImage(CanonBall,parseInt(CanonBall_DX),parseInt(CanonBall_DY));
+
+			// 	Loop to draw all of the dots
+			for (var i = 0; i < dotData.length; i++){
+				context.drawImage(dotData[i].image, dotData[i].x, dotData[i].y)
+			}
+		
+			// Loop to draw all of the old dots
+			for (var i = 0; i < dotData1.length; i++){
+				context.drawImage(dotData1[i].image, dotData1[i].x, dotData1[i].y)
+			}
+		
+			//adjust the canonball position
+			if(CanonFired){
+				dotData.push({
+					x: CanonBall_DX,
+					y: CanonBall_DY,
+					image: dotImage
+				});
+				console.log("loc: " + CanonBall_DX + " , " + CanonBall_DY + "  Vel: " + CanonBall_VX + " , " + CanonBall_VY);
+				CanonBall_DX += CanonBall_VX ;
+				CanonBall_DY -= CanonBall_VY ;
+				CanonBall_VY -= CanonBall_AY / SpeedScale ;
+				
+				context.drawImage(CanonBall,parseInt(CanonBall_DX),parseInt(CanonBall_DY));
+				
+				// if the canon ball hits the ground or goes off the right side
+				if((CanonBall_DY > 300) || (CanonBall_DX > document.getElementById("canvas").width) || (CanonBall_DX - CanonBall_DX < CanonBall.src.width) && (CanonBall_DX + CanonBall_DX < CanonBall.src.height)){
+				console.log = ("X: "+(CanonBall_DX - CanonBall_DX < CanonBall.src.width) && (CanonBall_DX + CanonBall_DX < CanonBall.src.height));
+					CanonFired = false;
+					
+					window.clearInterval;
+					
+					if (CanonBall_DY > 300) {CanonBall_DY = 300;}
+					if (CanonBall_DX > document.getElementById("canvas").width) {CanonBall_DX = document.getElementById("canvas").width;}
+					// turn on the button and sliders
+					document.getElementById("button-Target").disabled = false; 
+					document.getElementById("myAngle").disabled = false;
+					document.getElementById("angle").style.color = "black";
+					document.getElementById("mySpeed").disabled = false;
+					document.getElementById("speed").style.color = "black";
+				}
+			}
+			
+
+	}
+
+
+
+</script>
+	
+
+
+
+
+</body>
+</html>

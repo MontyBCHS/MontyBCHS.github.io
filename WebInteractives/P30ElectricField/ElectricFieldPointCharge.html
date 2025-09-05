@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Electric Field 15</title>
+</head>
+<body>
+	<h2>Electric Field</h2>
+	Charge
+	<select id="Charge0" onchange="_changeCharge(0)">
+		<option value="0" > no charge</option>
+		<option value="1" selected>positive</option>
+		<option value="-1" >negative</option>
+	</select>
+	<select id="Charge1" onchange="_changeCharge(1)">
+		<option value="0" selected>no charge</option>
+		<option value="1" >positive</option>
+		<option value="-1" >negative</option>
+	</select>
+	<select id="Charge2" onchange="_changeCharge(2)">
+		<option value="0" selected>no charge</option>
+		<option value="1" >positive</option>
+		<option value="-1" >negative</option>
+	</select>
+	<select id="Charge3" onchange="_changeCharge(3)">
+		<option value="0" selected>no charge</option>
+		<option value="1" >positive</option>
+		<option value="-1" >negative</option>
+	</select>
+	 <br>
+	<canvas id="canvas" width="800" height="600" style="border: 1px solid black"></canvas>
+
+	
+	<script>	
+		// Variables  ***************************************************************
+		var canvas, context;
+		canvas = document.getElementById("canvas");
+		context = canvas.getContext("2d");
+
+		//Arrows  ***************************************************************
+		var arrowArray = [];
+		
+		var ArrowImage = new Image();
+		ArrowImage.src = "FieldArrow.png";
+		
+		// charges  *****************************************************************
+		var chargeArray = [];
+		
+		var PositiveImage = new Image();
+		PositiveImage.src = "positive.png";
+		
+		var NegativeImage = new Image();
+		NegativeImage.src = "negative.png";
+		
+
+		var arrowArray_X = context.width/ArrowImage.width;
+		var arrowArray_Y = context.height/ArrowImage.height;
+
+		// make empty array of the arrows
+		var arrowArray = [];
+	
+		// isDraggable true for dragging, false for not dragging
+		var isDraggable = false;
+		var isDraggableNumber = -1;
+		
+		// Images for positive and negative charges
+		var PositiveImage = new Image();
+		PositiveImage.src = "positive.png";
+		var NegativeImage = new Image();
+		NegativeImage.src = "negative.png";
+		
+		var mouse_X = context.width/2;
+		var mouse_Y = context.height/2;
+		
+
+		
+		// Change charges from the drop down menus
+		function _changeCharge(num) {
+			// assigne each of the charges to the selected value
+			chargeArray[0].charge = parseInt(document.getElementById('Charge0').value);
+			chargeArray[1].charge = parseFloat(document.getElementById('Charge1').value);
+			chargeArray[2].charge = parseFloat(document.getElementById('Charge2').value);
+			chargeArray[3].charge = parseFloat(document.getElementById('Charge3').value);
+			
+			for (var i = 0; i < chargeArray.length; i++){
+				// change the image source based on the charge value number
+				if (chargeArray[i].charge === 0){
+					chargeArray[i].visible = false;
+				} else {
+					chargeArray[i].visible = true;
+				}
+console.log("Charge["+i+"] = "+chargeArray[i].charge+" x: "+chargeArray[i].x + " y: " +chargeArray[i].y+ " visible: "+chargeArray[i].visible);
+			}
+			_drawImages();			
+		}
+		
+	
+		//  Starting function ***************************************************************
+		window.onload = function() {
+			_createArrays();
+			_changeCharge(0);
+			_drawImages();
+			_MouseEvents();
+		}
+
+
+		// ******************************************************************************************
+		// determine the angles 
+		// x1, y1 = arrow
+		// x2, y2 = charge
+		function _angles(x1, y1, x2, y2, charge){
+			var angle = Math.atan((y2 - y1)/(x2 - x1));
+//console.log("angle1 ="+angle);
+				if ((x2 - x1) > 0){
+					angle = angle + Math.PI;
+					//console.log("angle 2 = "+angle);
+				}
+				if (charge < 0){
+					angle = angle + Math.PI;
+				}
+			return angle;
+		}
+		
+		
+		// ******************************************************************************************
+		// determine the distance for the forces, will be a decimal number
+		function _distance(x1, y1, x2, y2){
+			var diagonal = ((canvas.width)^2 + (canvas.height)^2)^0.5 ;
+			var distance = Math.sqrt( Math.pow( (x2 - x1), 2) + Math.pow( (y2 - y1), 2 ) ) ;
+// console.log("3distance = "+distance);
+			return Math.abs(distance);
+		}
+		
+		// ******************************************************************************************
+		// determine the angles for the arrows
+		function _arrowAngles(){
+			var angles = [];
+			var distance = [];
+			var diagonal = _distance(0, 0, canvas.width, canvas.height);
+			// cycle through all of the arrows
+			for (var i = 0; i < arrowArray.length; i++){
+				// cycle through all of the charges
+				var SumX = 0;
+				var SumY = 0;
+				for (var j = 0; j < chargeArray.length; j++){
+					// determine the angle and distance if the charge is not zero (not showing)
+					if (!(chargeArray[j].charge === 0)){
+						// determine the angle between the charge and arrow
+						angles[j] = _angles(arrowArray[i].x, arrowArray[i].y, chargeArray[j].x, chargeArray[j].y, chargeArray[j].charge);
+						
+						// determine the distance between the charge and arrow
+						distance[j] = _distance( arrowArray[i].x, arrowArray[i].y, chargeArray[j].x, chargeArray[j].y);
+						
+						SumX += Math.abs( diagonal*100 / distance[j]^2 ) * Math.cos( angles[j]);
+						SumY += Math.abs( diagonal*100 / distance[j]^2 ) * Math.sin( angles[j]);	
+	console.log(i,",",j," Sum X = ",SumX," Sum Y = ",SumY," diag = ",diagonal," distance[j] = ",distance[j]," a0 = ",angles[0]," ",canvas.width," ",canvas.height);
+						
+					} 
+					//else {
+					//	angles[j] = 0;
+					//}
+						
+
+					// arrowArray[i].angle = angles[0];
+
+					//SumX += diagonal / distance[j]^2 * Math.cos( angles[j]);
+					//SumY += diagonal / distance[j]^2 * Math.sin( angles[j]);	
+
+				}
+				
+				arrowArray[i].angle = Math.atan(SumY/SumX);
+				if (SumX < 0){
+					arrowArray[i].angle += Math.PI;
+				}
+
+			}
+		}
+		
+		
+		
+		
+		
+		
+		// ******************************************************************************************
+		// create the arrow array objects and charge objects
+		function _createArrays() {
+console.log("Create Arrays");
+			var sizeFactor = 0.6 ;
+			// Loop through the arrows
+			for (var y = 0; y < canvas.height/ArrowImage.height / sizeFactor; y++){
+				for (var x = 0; x < canvas.width/ArrowImage.width / sizeFactor; x++) {
+					// make an arrow array for the X, Y, Size, and Angle
+					var arrowObject ={
+						charge: 0,
+						x: ((x+0.5)*ArrowImage.width * sizeFactor),
+						y: ((y+0.5)*ArrowImage.height * sizeFactor),
+						size: 0.5 * sizeFactor,
+						angle: 0
+					};
+					arrowArray.push (arrowObject);
+				}
+			}
+// display the values for the arrows
+for (var i = 0; i < arrowArray.length; i++){
+//	console.log(i+" Arrow: "+arrowArray[i].charge+" x: " + arrowArray[i].x +" y: "+arrowArray[i].y+"  "+arrowArray[i].size+"  "+arrowArray[i].angle);
+}
+			// loop through the charges
+			for (var i = 0; i < 4; i++){
+				var chargeObject ={
+					charge : 0,
+					draggable : false,
+					visible : false,
+					x : i*100 + 100,
+					y : 200
+				};
+				chargeArray.push (chargeObject);
+			}
+		}
+		
+		// ******************************************************************************************
+		// draw the arrows, by looping through the arrows
+		function _drawArrowLoop(){
+			for (var i = 0; i < arrowArray.length; i++){
+				context.save();
+				context.translate(arrowArray[i].x, arrowArray[i].y);
+				context.rotate(arrowArray[i].angle);
+				context.drawImage(ArrowImage, -ArrowImage.width*arrowArray[i].size/2, -ArrowImage.height*arrowArray[i].size/2, ArrowImage.width*arrowArray[i].size, ArrowImage.height*arrowArray[i].size);
+				context.restore();
+			}
+		}
+		
+		
+		// ******************************************************************************************
+		// draw the charges if they are visible
+		function _drawCharges(){
+			for (var i = 0; i < chargeArray.length; i++){
+				if (chargeArray[i].charge === 1){
+					context.drawImage(PositiveImage, chargeArray[i].x-PositiveImage.width/2, chargeArray[i].y-PositiveImage.height/2);
+				}
+				if (chargeArray[i].charge === -1){
+					context.drawImage(NegativeImage, chargeArray[i].x-PositiveImage.width/2, chargeArray[i].y-PositiveImage.height/2);
+				}
+			}
+		}
+		
+		
+		// ******************************************************************************************
+		// call the different functions to draw things
+		function _drawImages(){
+			// Draw Background an ivory colored rectangle
+			context.fillStyle = "ivory";
+			context.fillRect(0,0, canvas.width, canvas.height);
+			// determine the angles for the arrows
+			_arrowAngles();
+			
+			// Call a function to draw the arrows
+			_drawArrowLoop();
+			
+			// Call a function to draw the charges
+			_drawCharges();
+			
+		}
+		
+				//  All of the Mouseevents  ***********************************************	
+		function _MouseEvents() {
+			//  when you press the mouse button
+			canvas.onmousedown = function(e) {
+				mouse_X = e.pageX - this.offsetLeft;
+				mouse_Y = e.pageY - this.offsetTop;
+//console.log("mouseX: "+mouse_X+" mouseY: "+mouse_Y+" chargeHeight= "+PositiveImage.height);	
+				
+				// see if the mouse is on the charge
+				for (var i = 0; i < chargeArray.length; i++){
+					
+					// check the x value
+					if (mouse_X >= chargeArray[i].x-PositiveImage.width/2 && mouse_X <= chargeArray[i].x+PositiveImage.width/2){
+console.log("mouseX: "+mouse_X+" mouseY: "+mouse_Y+" Charge x: "+chargeArray[i].x+" Charge y : "+chargeArray[i].y+"chargeHeight= "+PositiveImage.height);	
+						// check the y value
+						if (mouse_Y >= chargeArray[i].y-PositiveImage.height/2 && mouse_Y <= chargeArray[i].y+PositiveImage.height/2){
+							// the mouse is over charge i, store the value of i
+							isDraggable = true;
+							isDraggableNumber = i;
+console.log("Charge " + isDraggableNumber +" is draggable: "+isDraggable,chargeArray[i].draggable);
+						} 
+					} 
+				}
+// console.log(isDraggableNumber+" Number Draggable");				
+			};  // end onmousedown
+
+			
+			// Drag in both axis
+			canvas.onmousemove = function(e) {
+				console.log("mouseDown");
+				if (isDraggable) {
+console.log("Draggable "+isDraggableNumber);
+					chargeArray[isDraggableNumber].x = e.pageX - this.offsetLeft;
+      				chargeArray[isDraggableNumber].y = e.pageY - this.offsetTop;
+					_drawImages();
+    			}
+			};
+
+			// Stop when the mouse is released
+			canvas.onmouseup = function(e) {
+				if(isDraggable){
+					isDraggable = false;
+					chargeArray[isDraggableNumber].draggable = false;
+console.log('mouse up');
+					_drawImages();
+				}
+			};
+
+			// Stop when the mouse hits the edge of the canvas
+			canvas.onmouseout = function(e) {
+				isDraggable = false;
+			};
+		}
+		
+		
+	
+	</script>	
+</body>
+</html>

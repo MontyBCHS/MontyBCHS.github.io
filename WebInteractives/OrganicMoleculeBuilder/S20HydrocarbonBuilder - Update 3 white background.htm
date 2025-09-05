@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+<h1>Hydrocarbon Diagrams</h1>
+
+<canvas id="canvas" width="1000" height="600" style="border: 1px solid black"></canvas>
+	<script>
+	// right carbon to hydrogen bond needs work
+	// double bonds/ triple hydrogen up down needs work
+	// ***********************************************
+	// Set up Canvas
+	var canvas, context;
+	canvas = document.getElementById("canvas");
+	context = canvas.getContext("2d");
+	
+	// Declare Variables	
+	var CarbonBonds=[1,1,1,1,1,1,1,1,1,1];
+	var CarbonLength = 1;
+	var CarbonMax = 8;	
+	// var CarbonMax = 6;
+	var DownHydrogenBonds=[1,1,1,1,1,1,1,1,1,1];
+	
+	var GraphicIndent = 100;
+	var GraphicMiddle = 300;
+	var UpHydrogenBonds=[1,1,1,1,1,1,1,1,1,1];	
+	
+	var LeftImageMax = 6;
+	var RightImageMax = 7;
+	var TopImageMax = 8;
+	var BottomImageMax = 8;
+	var CarbonBondMax = 4;
+		
+		// Declare Images
+	var Background = new Image();
+	Background.src = 'background-600-by-1000.png';
+	var BondDouble = new Image();
+	BondDouble.src = 'bonddouble_orig.png';
+	var BondSingle = new Image();
+	BondSingle.src = 'bondsingle_orig.png';
+	var BondTriple = new Image();
+	BondTriple.src = 'bondtriple_orig.png';
+	var BromineImage = new Image();
+	BromineImage.src = 'bromine_orig.png';
+	var CarbonImage = new Image();
+	CarbonImage.src = 'carbon_orig.png';
+	var ChlorineImage = new Image();
+	ChlorineImage.src = 'chlorine_orig.png';
+	var FlourineImage = new Image();
+	FlourineImage.src = 'flourine_orig.png';
+	var HydrogenImage = new Image();
+	HydrogenImage.src = 'hydrogen_orig.png';
+	var IodineImage = new Image();
+	IodineImage.src = 'iodine_orig.png';	
+	var DownMethylImage = new Image();
+	DownMethylImage.src = 'downmethyl_orig.png';
+	var DownEthylImage = new Image();
+	DownEthylImage.src = 'downethyl_orig.png';
+	var DownButylImage = new Image();
+	DownButylImage.src = 'downbutyl_orig.png';
+	var UpMethylImage = new Image();
+	UpMethylImage.src = 'upmethyl_orig.png';
+	var UpEthylImage = new Image();
+	UpEthylImage.src = 'upethyl_orig.png';
+	var UpButylImage = new Image();
+	UpButylImage.src = 'upbutyl_orig.png';
+	var AcidImage = new Image();
+	AcidImage.src = 'acid_orig.png';
+	var AlcoholImage= new Image();
+	AlcoholImage.src = 'alcohol_orig.png';
+		
+
+	
+
+	// ***********************************************
+	window.onload = function() {
+		canvas = document.getElementById("canvas");
+		context = canvas.getContext("2d");
+		_DrawImage();
+		_MouseEvents();
+	}
+	
+	// *******************************************
+	function _MouseEvents() {
+		canvas.onmousedown = function(e) {
+			var mouseX = e.pageX - this.offsetLeft;
+			var mouseY = e.pageY - this.offsetTop;
+			
+			// console.log('x, y: ' + mouseX + ', '+ mouseY);
+			// If click on left carbon then change the length of the chain
+			// If to check if the mouse click was on the carbon Y-coord
+			if (mouseY >= (GraphicMiddle-HydrogenImage.height/2) && mouseY <= (GraphicMiddle+HydrogenImage.height/2)) {
+				// If to determine number of carbon clicked, count left to right, if first carbon increase the chain length
+				if (mouseX >= (GraphicIndent) && mouseX <= (GraphicIndent + CarbonImage.width)) {
+					// If the left carbon is clicked increase the number of carbons in the main chain
+					CarbonLength++;
+					if(CarbonLength>CarbonMax){
+						CarbonLength=1;
+					}	
+				}
+				// If to determine which carbon was clicked
+				var CurrentCarbon = (Math.floor((mouseX-GraphicIndent)/CarbonImage.width+1));
+	// console.log("C = " + CurrentCarbon);
+				if(CurrentCarbon <= CarbonLength && CurrentCarbon > 1){
+	//console.log("C2 = " + CurrentCarbon +' Bond: '+CarbonBonds[CurrentCarbon-1]);
+					// change the bond to the left +1
+					if (CarbonBonds[CurrentCarbon-1] <= 3){
+						CarbonBonds[CurrentCarbon-1]++;
+						// console.log('Carbon bond '+(CurrentCarbon-1)+'changed');
+					}
+					// if bonds > 4 CarbonBondMax cycle back to single
+					if (CarbonBonds[CurrentCarbon-1] > CarbonBondMax - 1){
+						CarbonBonds[CurrentCarbon-1] = 1;
+					}
+					//*****************************************
+					// change hydrogen bonds
+				} else if (CurrentCarbon == 0){
+					//  If left most carbon chain, ie. left hydrogen
+					CarbonBonds[0]++;
+					// console.log('Carbon bonds [0] = '+CarbonBonds[0]);
+					if (CarbonBonds[0] > LeftImageMax - 1){
+						CarbonBonds[0] = 0;
+					}
+				} else if (CurrentCarbon == CarbonLength+1){
+					// If CarbonLength+1 change CarbonMax+1, right hydrogen
+					CarbonBonds[CarbonMax+1]++;
+					// Cycle the right hydrogen back to zero
+					if (CarbonBonds[CarbonMax+1]>RightImageMax){
+						CarbonBonds[CarbonMax+1]=0;
+					}
+				}
+				// *******************************************
+			}
+			// Change top hydrogen to different atoms
+			if ((mouseY >= GraphicMiddle - BondSingle.height - HydrogenImage.height/2) && (mouseY <= GraphicMiddle - BondSingle.height + HydrogenImage.height/2)) {
+				
+				var CurrentHydrogen = (Math.floor((mouseX-GraphicIndent)/HydrogenImage.width));
+				if(CurrentHydrogen <= CarbonLength){
+					// console.log('click top hydrogen ' + CurrentHydrogen + " VAlue: "+UpHydrogenBonds[CurrentHydrogen]);
+					UpHydrogenBonds[CurrentHydrogen]++;
+					if (UpHydrogenBonds[CurrentHydrogen] > (TopImageMax) ){
+					// if (UpHydrogenBonds[CurrentHydrogen] > (CarbonMax) ){
+						UpHydrogenBonds[CurrentHydrogen]=0;
+					}
+				}
+			}
+			// Change bottom hydrogen to different atoms
+			if ((mouseY >= GraphicMiddle + BondSingle.height - HydrogenImage.height/2) && (mouseY <= GraphicMiddle + BondSingle.height + HydrogenImage.height/2)) {
+				
+				var CurrentHydrogen = (Math.floor((mouseX-GraphicIndent)/HydrogenImage.width));
+				if(CurrentHydrogen <= CarbonLength){
+					// console.log('click bottom hydrogen ' + CurrentHydrogen + " Value: "+DownHydrogenBonds[CurrentHydrogen]);
+					DownHydrogenBonds[CurrentHydrogen]++;
+					if (DownHydrogenBonds[CurrentHydrogen] > (BottomImageMax) ){
+						// if (DownHydrogenBonds[CurrentHydrogen] > (CarbonMax) ){
+						DownHydrogenBonds[CurrentHydrogen]=0;
+					}
+				}
+			}
+		_DrawImage();
+		}
+	}
+		
+	// *******************************************
+	function _DrawVertBond(Bond_X, Bond_Y, Image){
+		// Rotate the single bond and draw it vertically
+		context.save();
+		context.translate(Bond_X, Bond_Y);
+		context.rotate(90 * Math.PI / 180);
+		context.drawImage(Image, 0, 0);
+		context.restore;
+		context.setTransform(1, 0, 0, 1, 0, 0);
+	}
+	// *******************************************		
+	function _FindBranchUpImage(i){
+		var TempImage = new Image();
+		switch (i){
+			case(1):
+				TempImage = HydrogenImage;
+			break;
+			case(2):
+				TempImage = BromineImage;
+			break;
+			case(3):
+				TempImage = ChlorineImage;
+			break;
+			case(4):
+				TempImage = FlourineImage;
+			break;
+			case(5):
+				TempImage = IodineImage;
+			break;
+			case(6):
+				TempImage = UpMethylImage;
+			break;
+			case(7):
+				TempImage = UpEthylImage;
+			break;
+			case(8):
+				TempImage = UpButylImage;
+			break;
+		}
+		return(TempImage);
+	}
+	
+	// *******************************************		
+	function _FindBranchDownImage(i){
+		var TempImage = new Image();
+		switch (i){
+			case(1):
+				TempImage = HydrogenImage;
+			break;
+			case(2):
+				TempImage = BromineImage;
+			break;
+			case(3):
+				TempImage = ChlorineImage;
+			break;
+			case(4):
+				TempImage = FlourineImage;
+			break;
+			case(5):
+				TempImage = IodineImage;
+			break;
+			case(6):
+				TempImage = DownMethylImage;
+			break;
+			case(7):
+				TempImage = DownEthylImage;
+			break;
+			case(8):
+				TempImage = DownButylImage;
+			break;
+		}
+		return(TempImage);
+	}
+		
+	// *******************************************	
+				
+	function _FindRightImage(i){
+		var TempImage = new Image();
+		switch (i){
+			case(1):
+				TempImage = HydrogenImage;
+			break;
+			case(2):
+				TempImage = BromineImage;
+			break;
+			case(3):
+				TempImage = ChlorineImage;
+			break;
+			case(4):
+				TempImage = FlourineImage;
+			break;
+			case(5):
+				TempImage = IodineImage;
+			break;
+			case(6):
+				TempImage = AlcoholImage;
+			break;
+			case(7):
+				TempImage = AcidImage;
+			break;
+		}
+		return(TempImage);
+	}	
+		
+	// *******************************************	
+		
+	function _DrawImage() {
+		// Draw background
+		context.drawImage(Background,0,0);
+		context.fillStyle = "white";
+		context.fillRect(0, 0, canvas.width, canvas.height);
+		// Draw main chain bonds
+		for (var i=1; i < CarbonLength; i++){
+			if (CarbonBonds[i] == 1){
+				// If single bond
+				context.drawImage(BondSingle, i*BondSingle.width+BondSingle.width/2, GraphicMiddle-BondSingle.height/2);
+			} else if (CarbonBonds[i] == 2){
+				// If triple bond draw triple bond
+				context.drawImage(BondDouble, i*BondTriple.width+BondTriple.width/2, GraphicMiddle-BondTriple.height/2);
+			} else if (CarbonBonds[i] == 3){
+				// If triple bond draw triple bond
+				context.drawImage(BondTriple, i*BondTriple.width+BondTriple.width/2, GraphicMiddle-BondTriple.height/2);
+			}
+		}
+
+		
+		// Draw hydrogens
+		// draw the first (left) hydrogen
+		if (CarbonBonds[0]!=0){
+			// Draw the left most bond for hydrogen
+			//context.drawImage(BondSingle, (CarbonLength)*BondSingle.width+BondSingle.width/2, GraphicMiddle-BondSingle.height/2);
+			context.drawImage(BondSingle, BondSingle.width/2, GraphicMiddle-BondSingle.height/2);
+			var TempImage = new Image();
+			TempImage = _FindBranchUpImage(CarbonBonds[0]);
+			
+			// console.log('Draw CarbonBonds[0]= '+CarbonBonds[0]+' Image: '+TempImage.src);
+			context.drawImage(TempImage, 0, GraphicMiddle-HydrogenImage.height/2);
+		}
+		// **********************************************
+		// draw the last right(last) hydrogen
+		if (CarbonBonds[CarbonMax+1]!=0){
+			
+			// Determine the right most picture
+			var TempImage = new Image();
+			TempImage = _FindRightImage(CarbonBonds[CarbonMax+1]);
+			// console.log('Draw right side hydrogen ',TempImage);
+			// If not acide draw the right most bond for hydrogen
+			if (CarbonBonds[CarbonMax+1] < RightImageMax){
+				// If not acid draw the right most bond and atom, hydrogen
+				// console.log('2 Draw right atom ',TempImage);
+				context.drawImage(BondSingle, (CarbonLength)*BondSingle.width+BondSingle.width/2, GraphicMiddle-BondSingle.height/2);
+				context.drawImage(TempImage, (CarbonLength+1)*HydrogenImage.width, GraphicMiddle-HydrogenImage.height/2);
+			} else {
+				// console.log('3 Draw right atom ',TempImage);
+				context.drawImage(TempImage, (CarbonLength+1)*HydrogenImage.width-AcidImage.width/4, GraphicMiddle-AcidImage.height/2);
+			}
+
+		}
+
+		// Draw up and down hydrogens
+		for (var i=0; i < CarbonLength; i++){
+			// Draw up bonds
+			// if the carbonbond = 1 single bond; carbonbond = 2 double bond  draw the up bond and then draw the hydrogen
+	
+			if (UpHydrogenBonds[i]!=0){
+				_DrawVertBond(i*CarbonImage.width+HydrogenImage.width*2, GraphicMiddle-BondSingle.height,BondSingle);
+				// Draw up hydrogens
+				var TempImage = new Image();
+				
+				TempImage = _FindBranchUpImage(UpHydrogenBonds[i]);
+				if (UpHydrogenBonds[i]>5){
+					context.drawImage(TempImage, i*HydrogenImage.width + GraphicIndent - 12, GraphicMiddle - BondSingle.height-HydrogenImage.height-100);
+				} else{
+				    context.drawImage(TempImage, i*HydrogenImage.width + GraphicIndent, GraphicMiddle-BondSingle.height-HydrogenImage.height/2);
+				}
+			}
+			// Draw down bonds 
+
+			if (DownHydrogenBonds[i]!=0){
+				_DrawVertBond(i*CarbonImage.width + HydrogenImage.width + GraphicIndent,GraphicMiddle, BondSingle);
+				// Draw down hydrogens
+				// Draw up hydrogens
+				var TempImage = new Image();
+				TempImage = _FindBranchDownImage(DownHydrogenBonds[i]);
+				//context.drawImage(TempImage, i*HydrogenImage.width + GraphicIndent, GraphicMiddle+BondSingle.height/2);	
+				if (DownHydrogenBonds[i]>5){
+					context.drawImage(TempImage, i*HydrogenImage.width + GraphicIndent - 12, GraphicMiddle + BondSingle.height-HydrogenImage.height+60);
+				} else{
+				    context.drawImage(TempImage, i*HydrogenImage.width + GraphicIndent, GraphicMiddle+BondSingle.height-HydrogenImage.height/2);
+				}
+			}
+
+			// Draw main carbons
+			context.drawImage(CarbonImage, i*CarbonImage.width+GraphicIndent, GraphicMiddle-CarbonImage.height/2);
+			// console.log("Carbon "+i);
+		}
+	}
+	</script>
+
+	<h2>Instructions</h2>
+	<p>Use this to draw different organic molecules. This will not limit 
+you to allowable molecules, you must adjust everything yourself. To save
+ your work press ctrl+Print Screen. To reset you must reload the page.
+		</p><ul>
+			<li>Click on the left-most carbon atom to change the length of the main carbon chain.</li>
+			<li>Click on each carbon atom to change the carbon bond to the left (single, double, triple).</li>
+			<li>Click on each hydrogen atom to cycle throught the halogons, and alkyl branches.</li>
+			<li>Click on the right-most hydrogen atom to cycle through the halogens, and organic ends.</li>
+		</ul>
+
+
+</body></html>

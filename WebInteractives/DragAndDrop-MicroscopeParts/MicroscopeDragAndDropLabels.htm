@@ -1,0 +1,237 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+
+#BackPicture{
+    position:absolute;
+    width: 600px;
+    height: 600px;
+}
+
+#blank1{
+    position: relative;
+    top: 0px;
+    left: 280px;
+    background-color: orange;
+}
+#blank2{
+    position: relative;
+    top: 25px;
+    left: 360px;
+    background-color: orange;
+}
+#blank3{
+    position: relative;
+    top: 100px;
+    left: 0px;
+    background-color: orange;
+}
+#blank4{
+    position: relative;
+    top: 90px;
+    left: 500px;
+    background-color: orange;
+}
+#blank5{
+    position: relative;
+    top: 100px;
+    left: 0px;
+    background-color: orange;
+}
+#blank6{
+    position: relative;
+    top: 110px;
+    left: 0px;
+    background-color: orange;
+}
+#blank7{
+    position: relative;
+    top: 75px;
+    left: 500px;
+    background-color: orange;
+}
+#blank8{
+    position: relative;
+    top: 160px;
+	left: 500;
+    background-color: orange;
+}
+#blank9{
+    position: relative;
+    top: 100px;
+    left: 550px;
+    background-color: orange;
+}
+#blank10{
+    position: relative;
+    top: 100px;
+    left: 570px;
+    background-color: orange;
+}
+#blank11{
+    position: relative;
+    top: 130px;
+    left: 20px;
+    background-color: orange;
+}
+#blank12{
+    position: relative;
+    top: 110px;
+    left: 550px;
+    background-color: orange;
+}
+.creditss {
+	position: relative;
+	top: -80px;
+	font-size: 130%;
+}	
+.div1 {
+
+	width: 164px;
+	height: 24px;
+	border: 1px solid #55aaaa;
+	background-color: blue;
+}
+#LeftSide{
+    min-width: 800px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+.options {
+    position: relative;
+    top: -200px;
+    left: 700px;
+}
+
+
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop1(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag1") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop2(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag2") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop3(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag3") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop4(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag4") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop5(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag5") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop6(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag6") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop7(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag7") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop8(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag8") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop9(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag9") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop10(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag10") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop11(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag11") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop12(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag12") {ev.target.appendChild(document.getElementById(data))};
+}
+</script>
+</head>
+<body>
+<div id="LeftSide">
+
+    <img id="BackPicture" src="MicroS.jpg" draggable="false">
+
+</div>
+    <div class="div1" id="blank1" ondrop="drop1(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank2" ondrop="drop2(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank3" ondrop="drop3(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank4" ondrop="drop4(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank5" ondrop="drop5(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank6" ondrop="drop6(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank7" ondrop="drop7(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank8" ondrop="drop8(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank9" ondrop="drop9(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank10" ondrop="drop10(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank11" ondrop="drop11(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank12" ondrop="drop12(event)" ondragover="allowDrop(event)"></div>    
+
+
+<div class="options">
+        <img id="drag4" src="Arm.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag12" src="Base.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>
+        <img id="drag2" src="BodyT.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag9" src="CoarseFK.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>
+        <img id="drag8" src="Diaphr.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>
+        <img id="drag1" src="EyeP.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>        
+	<img id="drag10" src="FineFK.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+	<img id="drag11" src="Lamp.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>        
+        <img id="drag5" src="ObjLen.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag3" src="RevNos.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag6" src="Stage.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag7" src="StageC.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+</div>
+<div class="creditss">
+	<p>Drag the yellow labels onto the appropriate orange blanks. They will stick only when they are in the correct location.</p>
+	<p>Reload the page to reset the labels</p>
+	<p>Use the back button to go back to the lesson.</p>
+	<p>By S. Montgomery </p>
+</div>
+
+</body>
+</html>
