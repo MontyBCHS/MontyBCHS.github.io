@@ -1,0 +1,469 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bohr Model</title>
+</head>
+
+<body>
+	
+<h2>Bohr Model of the Atom</h2>
+<canvas id="canvas" width="920" height="700" style="border: 1px solid black"></canvas>
+<script>
+
+/* Explanations at junerockwell.com */
+var canvas, context;
+  canvas = document.getElementById("canvas");
+  context = canvas.getContext("2d");
+  
+  	// Images
+  var BackgroundImage = new Image;
+  BackgroundImage.src = 'Background.png'
+  var ButtonCheck = new Image;
+  ButtonCheck.src = 'ButtonCheck.png';
+  var ButtonMinus = new Image;
+  ButtonMinus.src = 'ButtonMinus.png';
+  var ButtonPlus = new Image;
+  ButtonPlus.src = 'ButtonPlus.png';
+  var ButtonReset = new Image;
+  ButtonReset.src = 'ButtonReset.png';
+  var ElectronImage = new Image
+  ElectronImage.src='Electron.png';
+  var NeutronImage = new Image;
+  NeutronImage.src = 'Neutron.png';
+  var ProtonImage = new Image;
+  ProtonImage.src = 'Proton.png';
+		// orbitals
+  var Energy1Image = new Image();
+  Energy1Image.src = 'Energy1.png';
+  var Energy2Image = new Image();
+  Energy2Image.src = 'Energy2.png';
+  var Energy3Image = new Image();
+  Energy3Image.src = 'Energy3.png';
+  var Energy4Image = new Image();
+  Energy4Image.src = 'Energy4.png';
+
+	// Variables
+  const BackgroundIndent = 220;
+  var Correct = false;
+  var ElectronNumber = 0;
+  var ElectronArray = [];
+  var ElementArray = [];
+  var MaxNucleons = 50;
+  var NeutronNumber = 0;
+  var NeutronArray = [];
+  var NucleusRadius = 100;
+  var NucleonRecord = {
+	xPos : 0,
+	yPos : 0
+  };
+  var ProtonNumber = 0;
+  var ProtonArray = [];
+  var SelectElement = 0;
+	
+  context.font = "50px Arial";
+
+
+	
+	
+// ***********************************************
+	window.onload = function() {
+		//canvas = document.getElementById("canvas");
+		//context = canvas.getContext("2d");
+		
+		_CreateProtonArray();
+		_CreateElectronArray();
+		_CreateElementArray();
+		_SelectElement();
+		
+		_DrawImage();
+		
+	setInterval(function() {
+			_DrawImage();
+			_MouseEvents();
+		}, 1000/30);
+	}
+	
+	// *********************************************
+	function _CheckElementValues(){
+		if (ProtonNumber == ElementArray[SelectElement].protons){
+			if (NeutronNumber == ElementArray[SelectElement].neutrons){
+				var ElectronElementNumber = ElementArray[SelectElement].protons - ElementArray[SelectElement].charge;
+				if (ElectronNumber == ElectronElementNumber){
+					console.log("Correct");
+					Correct = true;
+				} else {
+					console.log("check Electrons: " + ElectronElementNumber);
+				}
+			} else {
+				console.log(" check Neutrons: " + ElementArray[SelectElement].neutrons);
+			}
+		} else {
+			console.log("check Protons: " + ElementArray[SelectElement].protons);
+		}
+	}
+	
+	// *********************************************
+	function _CreateElementArray(){
+		ElementArray.push({symbol: "H", protons: 1, neutrons: 0, charge: 0});
+		ElementArray.push({symbol: "H", protons: 1, neutrons: 1, charge: 0});
+		ElementArray.push({symbol: "H", protons: 1, neutrons: 2, charge: 0});
+		ElementArray.push({symbol: "H", protons: 1, neutrons: 1, charge: 1});
+		ElementArray.push({symbol: "He", protons: 2, neutrons: 1, charge: 0});
+		ElementArray.push({symbol: "He", protons: 2, neutrons: 2, charge: 0});
+		ElementArray.push({symbol: "Li", protons: 3, neutrons: 3, charge: 0});
+		ElementArray.push({symbol: "Li", protons: 3, neutrons: 3, charge: 1});
+		ElementArray.push({symbol: "Li", protons: 3, neutrons: 4, charge: 0});
+		ElementArray.push({symbol: "Li", protons: 3, neutrons: 4, charge: 1});
+		ElementArray.push({symbol: "Be", protons: 4, neutrons: 3, charge: 0});
+		ElementArray.push({symbol: "Be", protons: 4, neutrons: 3, charge: 2});
+		ElementArray.push({symbol: "Be", protons: 4, neutrons: 5, charge: 0});
+		ElementArray.push({symbol: "Be", protons: 4, neutrons: 5, charge: 2});
+		ElementArray.push({symbol: "Be", protons: 4, neutrons: 6, charge: 2});
+		ElementArray.push({symbol: "Be", protons: 4, neutrons: 6, charge: 0});
+		ElementArray.push({symbol: "B", protons: 5, neutrons: 5, charge: 0});
+		ElementArray.push({symbol: "B", protons: 5, neutrons: 6, charge: 0});
+		ElementArray.push({symbol: "C", protons: 6, neutrons: 6, charge: 0});
+		ElementArray.push({symbol: "C", protons: 6, neutrons: 7, charge: 0});
+		ElementArray.push({symbol: "N", protons: 7, neutrons: 7, charge: 0});		
+		ElementArray.push({symbol: "N", protons: 7, neutrons: 7, charge: -3});
+		ElementArray.push({symbol: "N", protons: 7, neutrons: 8, charge: 0});
+		ElementArray.push({symbol: "N", protons: 7, neutrons: 8, charge: -3});
+		ElementArray.push({symbol: "O", protons: 8, neutrons: 8, charge: 0});
+		ElementArray.push({symbol: "O", protons: 8, neutrons: 8, charge: -2});
+		ElementArray.push({symbol: "O", protons: 8, neutrons: 9, charge: 0});
+		ElementArray.push({symbol: "O", protons: 8, neutrons: 9, charge: -2});
+		ElementArray.push({symbol: "O", protons: 8, neutrons: 10, charge: 0});
+		ElementArray.push({symbol: "O", protons: 8, neutrons: 10, charge: -2});
+		ElementArray.push({symbol: "F", protons: 9, neutrons: 9, charge: 0});
+		ElementArray.push({symbol: "F", protons: 9, neutrons: 9, charge: -1});
+		ElementArray.push({symbol: "F", protons: 9, neutrons: 10, charge: 0});
+		ElementArray.push({symbol: "F", protons: 9, neutrons: 10, charge: -1});
+		ElementArray.push({symbol: "Ne", protons: 10, neutrons: 10, charge: 0});
+		ElementArray.push({symbol: "Ne", protons: 10, neutrons: 11, charge: 0});
+		ElementArray.push({symbol: "Ne", protons: 10, neutrons: 12, charge: 0});
+		ElementArray.push({symbol: "Na", protons: 11, neutrons: 11, charge: 0});
+		ElementArray.push({symbol: "Na", protons: 11, neutrons: 11, charge: 1});
+		ElementArray.push({symbol: "Na", protons: 11, neutrons: 12, charge: 0});
+		ElementArray.push({symbol: "Na", protons: 11, neutrons: 12, charge: 1});
+		ElementArray.push({symbol: "Na", protons: 11, neutrons: 13, charge: 0});
+		ElementArray.push({symbol: "Na", protons: 11, neutrons: 13, charge: 1});
+		ElementArray.push({symbol: "Mg", protons: 12, neutrons: 12, charge: 0});
+		ElementArray.push({symbol: "Mg", protons: 12, neutrons: 12, charge: 2});
+		ElementArray.push({symbol: "Mg", protons: 12, neutrons: 13, charge: 0});
+		ElementArray.push({symbol: "Mg", protons: 12, neutrons: 13, charge: 2});
+		ElementArray.push({symbol: "Mg", protons: 12, neutrons: 14, charge: 0});
+		ElementArray.push({symbol: "Mg", protons: 12, neutrons: 14, charge: 2});
+		ElementArray.push({symbol: "Al", protons: 13, neutrons: 13, charge: 0});
+		ElementArray.push({symbol: "Al", protons: 13, neutrons: 13, charge: 3});
+		ElementArray.push({symbol: "Al", protons: 13, neutrons: 14, charge: 0});
+		ElementArray.push({symbol: "Al", protons: 13, neutrons: 14, charge: 3});		
+		ElementArray.push({symbol: "Si", protons: 14, neutrons: 14, charge: 0});
+		ElementArray.push({symbol: "Si", protons: 14, neutrons: 20, charge: 0});		
+		ElementArray.push({symbol: "P", protons: 15, neutrons: 16, charge: 0});
+		ElementArray.push({symbol: "P", protons: 15, neutrons: 16, charge: -3});
+		ElementArray.push({symbol: "P", protons: 15, neutrons: 17, charge: 0});
+		ElementArray.push({symbol: "P", protons: 15, neutrons: 17, charge: -3});
+		
+		ElementArray.push({symbol: "S", protons: 16, neutrons: 16, charge: 0});
+		ElementArray.push({symbol: "S", protons: 16, neutrons: 16, charge: -2});
+		ElementArray.push({symbol: "S", protons: 16, neutrons: 17, charge: 0});
+		ElementArray.push({symbol: "S", protons: 16, neutrons: 17, charge: -2});
+		ElementArray.push({symbol: "S", protons: 16, neutrons: 20, charge: 0});
+		ElementArray.push({symbol: "S", protons: 16, neutrons: 20, charge: -2});
+		ElementArray.push({symbol: "Cl", protons: 17, neutrons: 18, charge: 0});
+		ElementArray.push({symbol: "Cl", protons: 17, neutrons: 18, charge: -1});
+		ElementArray.push({symbol: "Cl", protons: 17, neutrons: 20, charge: 0});
+		ElementArray.push({symbol: "Cl", protons: 17, neutrons: 20, charge: -1});
+		
+		ElementArray.push({symbol: "Ar", protons: 18, neutrons: 18, charge: 0});
+		ElementArray.push({symbol: "Ar", protons: 18, neutrons: 22, charge: 0});		
+		ElementArray.push({symbol: "K", protons: 19, neutrons: 20, charge: 0});
+		ElementArray.push({symbol: "K", protons: 19, neutrons: 20, charge: 1});
+		ElementArray.push({symbol: "K", protons: 19, neutrons: 21, charge: 0});
+		ElementArray.push({symbol: "K", protons: 19, neutrons: 21, charge: 1});
+		ElementArray.push({symbol: "K", protons: 19, neutrons: 22, charge: 0});
+		ElementArray.push({symbol: "K", protons: 19, neutrons: 22, charge: 1});
+		ElementArray.push({symbol: "Ca", protons: 20, neutrons: 20, charge: 0});
+		ElementArray.push({symbol: "Ca", protons: 20, neutrons: 20, charge: 2});
+		ElementArray.push({symbol: "Ca", protons: 20, neutrons: 24, charge: 0});
+		ElementArray.push({symbol: "Ca", protons: 20, neutrons: 24, charge: 2});
+		ElementArray.push({symbol: "Ca", protons: 20, neutrons: 28, charge: 0});
+		ElementArray.push({symbol: "Ca", protons: 20, neutrons: 28, charge: 2});		
+		
+	}
+
+	// *********************************************
+	function _CreateElectronArray(){
+		// Level 1
+		ElectronArray.push({ xPos : 515, yPos : 185});
+		ElectronArray.push({ xPos : 575, yPos : 185});
+		// Level 2
+		ElectronArray.push({ xPos : 515, yPos : 125});
+		ElectronArray.push({ xPos : 745, yPos : 295});
+		ElectronArray.push({ xPos : 515, yPos : 525});
+		ElectronArray.push({ xPos : 345, yPos : 295});
+		
+		ElectronArray.push({ xPos : 575, yPos : 125});
+		ElectronArray.push({ xPos : 745, yPos : 355});		
+		ElectronArray.push({ xPos : 575, yPos : 525});
+		ElectronArray.push({ xPos : 345, yPos : 355});
+		// Level 3
+		ElectronArray.push({ xPos : 515, yPos : 70});
+		ElectronArray.push({ xPos : 800, yPos : 295});
+		ElectronArray.push({ xPos : 515, yPos : 580});
+		ElectronArray.push({ xPos : 290, yPos : 295});
+		
+		ElectronArray.push({ xPos : 575, yPos : 70});
+		ElectronArray.push({ xPos : 800, yPos : 355});		
+		ElectronArray.push({ xPos : 575, yPos : 580});
+		ElectronArray.push({ xPos : 290, yPos : 355});
+		// Level 4
+		ElectronArray.push({ xPos : 515, yPos : 15});
+		ElectronArray.push({ xPos : 855, yPos : 295});
+		ElectronArray.push({ xPos : 515, yPos : 635});
+		ElectronArray.push({ xPos : 235, yPos : 295});
+		
+		ElectronArray.push({ xPos : 575, yPos : 15});
+		ElectronArray.push({ xPos : 855, yPos : 355});		
+		ElectronArray.push({ xPos : 575, yPos : 635});
+		ElectronArray.push({ xPos : 235, yPos : 355});
+	}
+	
+	// *********************************************
+	function _CreateProtonArray(){
+		//Creates random position Protons and Neutrons
+		for(var i = 0; i < MaxNucleons; i++ ){
+			ProtonArray.push({
+				xPos : Math.floor(Math.random() * NucleusRadius) + BackgroundIndent + BackgroundImage.width/2 - NucleusRadius/2 -30,
+				yPos : Math.floor(Math.random() * NucleusRadius) + BackgroundImage.height/2 - NucleusRadius/2 -30 
+			});
+			NeutronArray.push({
+				xPos : Math.floor(Math.random() * NucleusRadius) + BackgroundIndent + BackgroundImage.width/2 - NucleusRadius/2 -30,
+				yPos : Math.floor(Math.random() * NucleusRadius) + BackgroundImage.height/2 - NucleusRadius/2 -30 
+			});
+			
+		}
+		
+	 }
+	// **********************************************
+	function _MouseEvents() {
+		canvas.onmousedown = function(e) {
+			// find the x and y value of the mouse position
+			mouseX = e.pageX - this.offsetLeft;
+			mouseY = e.pageY - this.offsetTop;
+
+			// minus buttons
+			if (mouseX > 70 && mouseX < 125){
+				if (mouseY > 15 && mouseY < 65) {
+					if (ProtonNumber > 0){
+						ProtonNumber+= -1;
+					}
+				}
+				else {
+					if (mouseY > 75 && mouseY < 125){
+						if (NeutronNumber > 0){
+							NeutronNumber+= -1;
+						}
+					}
+					else {
+						if (mouseY > 135 && mouseY < 185){
+							if (ElectronNumber > 0){
+								ElectronNumber+= -1;
+							}
+						}
+					}
+				}
+			}
+			else {
+				// Plus buttons
+				if (mouseX > 170 && mouseX < 220){
+					if (mouseY > 15 && mouseY < 65){
+						ProtonNumber+= 1;
+					}
+					else {
+						if (mouseY > 75 && mouseY < 125){
+							NeutronNumber+= 1;
+						}
+						else {
+							if (mouseY > 135 && mouseY < 185){
+								ElectronNumber+= 1;
+							}
+						}
+					}
+				}
+			}	
+			if (mouseX > 50 && mouseX < 160 && mouseY > 350 && mouseY < 395){
+				if (Correct) {
+					console.log("Clicked Check button");
+					Correct = false;
+					_SelectElement();
+				} else {
+					_CheckElementValues();
+				}
+			}
+		
+		} // end on mouse down
+
+		canvas.onmousemove = function(e) { // move the particle to follow the moving mouse
+ 
+		} // end on moue move
+		
+		
+	 	canvas.onmouseup = function(e) { // when you release the mouse
+			mouseX = e.pageX - this.offsetLeft;
+			mouseY = e.pageY - this.offsetTop;
+// console.log("Mouse Coord: x: "+mouseX+" y: "+mouseY);
+  		};  // end mouse up
+		
+		
+  		canvas.onmouseout = function(e) {
+		};
+	}
+
+	
+// ***********************************************
+	function _SelectElement(){
+		SelectElement = Math.floor(Math.random() * ElementArray.length);
+	}
+	
+// ***********************************************
+	// Adds a space in front of single digit numbers for alignment
+ 	function _NumberToString(NumberToChange){
+		if (NumberToChange < 10){
+			return("  "+NumberToChange.toString());
+		}
+		else{
+			return(NumberToChange.toString());;
+		}
+	}
+
+// ***********************************************
+	function _DrawCheckButton(){
+		if (Correct) {
+			context.drawImage(ButtonReset, 50, 350, 110, 45);
+		} else {
+			context.drawImage(ButtonCheck, 50, 350, 110, 45);
+		}
+	}
+
+// ***********************************************
+	function _DrawControls(){
+			// Proton Controls
+		context.drawImage(ButtonMinus,70,15);
+		context.drawImage(ButtonPlus,170,15);
+		context.strokeText(_NumberToString(ProtonNumber),10,52)
+		context.drawImage(ProtonImage,115,10);
+			// Neutron Controls
+		context.drawImage(ButtonMinus,70,75);
+		context.drawImage(ButtonPlus,170,75);
+		context.strokeText(_NumberToString(NeutronNumber),10,112)
+		context.drawImage(NeutronImage,115,68);
+			// Electron Controls
+		context.drawImage(ButtonMinus,70,135);
+		context.drawImage(ButtonPlus,170,135);
+		context.strokeText(_NumberToString(ElectronNumber),10,175)
+		context.drawImage(ElectronImage,115,127);	
+		
+	}
+// **********************************************
+	function _DrawElectrons(){
+		context.drawImage(Energy1Image, BackgroundIndent + BackgroundImage.width/2 - Energy1Image.width/2 ,0);
+		if (ElectronNumber > 2){
+			context.drawImage(Energy2Image, BackgroundIndent + BackgroundImage.width/2 - Energy1Image.width/2 ,0);
+		}
+		if (ElectronNumber > 10){
+			context.drawImage(Energy3Image, BackgroundIndent + BackgroundImage.width/2 - Energy1Image.width/2 ,0);
+		}
+		if (ElectronNumber > 18) {
+			context.drawImage(Energy4Image, BackgroundIndent + BackgroundImage.width/2 - Energy1Image.width/2 ,0);
+		}
+		
+		for (var i = 0; i < ElectronNumber; i++){
+			context.drawImage(ElectronImage, ElectronArray[i].xPos, ElectronArray[i].yPos);
+		}
+		
+	}
+
+// **********************************************
+	function _DrawElement(){
+		context.strokeText(ElementArray[SelectElement].symbol,  100, 500);
+		  // change font for subscript superscript
+		context.font = "35px Arial";
+		  // Write element mass
+		var ElementMass = ElementArray[SelectElement].protons + ElementArray[SelectElement].neutrons;
+		if (ElementMass > 9){
+			context.strokeText(ElementMass, 60, 470);
+		} else{
+			context.strokeText(ElementMass, 75, 470);
+		}
+		  // Write element protons, atomic number
+		if (ElementArray[SelectElement].protons > 9){
+			context.strokeText(ElementArray[SelectElement].protons,  60, 515);
+		} else {
+			context.strokeText(ElementArray[SelectElement].protons,  75, 515);
+		}
+		  // Write ion charge if not atom
+		if (!(ElementArray[SelectElement].charge == 0)){
+			var xLoc = 135;
+			// if element symbol has two letters change xLoc
+			if (ElementArray[SelectElement].symbol.length > 1){
+				xLoc += 15;
+			}
+			if (ElementArray[SelectElement].charge > 0){
+				context.strokeText(Math.abs(ElementArray[SelectElement].charge) + "+", xLoc, 470);
+			} else {
+				context.strokeText(Math.abs(ElementArray[SelectElement].charge) + "-", xLoc, 470);	
+			}
+
+		}
+		// reset font
+		context.font = "50px Arial";
+	}
+	
+	
+// **********************************************
+	function _DrawNucleons(index) {
+		for (var i = 0; i < MaxNucleons; i++){
+			if (i+1 <= ProtonNumber){
+				context.drawImage(ProtonImage, ProtonArray[i].xPos, ProtonArray[i].yPos);
+			}
+			if (i+1 <= NeutronNumber){
+				context.drawImage(NeutronImage,  NeutronArray[i].xPos, ProtonArray[i].yPos);
+			}
+		}
+	}
+	
+// **********************************************
+	function _DrawImage() {
+		// Clear screen
+		context.fillStyle = "white";
+		context.fillRect(0,0,canvas.width,canvas.height);
+		// Draw background
+		context.drawImage(BackgroundImage,BackgroundIndent,0);
+		
+		// Draw Controls
+		_DrawControls();
+		// Draw Nucleons: Protons and Neutrons
+		_DrawNucleons();
+		_DrawElectrons();
+		
+		_DrawElement();
+		_DrawCheckButton();
+
+
+		// Draw Nucleons
+
+		
+		//Draw Electrons
+
+	}
+		
+		
+		
+</script>
+	
+	
+	
+</body>
+</html>
