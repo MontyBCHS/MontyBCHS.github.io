@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 601.88 249.64">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: RockstarExtraBold, Rockstar;
+        font-size: 58px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #ed1c24;
+      }
+
+      .cls-2 {
+        font-family: BasementGrotesque-Black, 'Basement Grotesque';
+        font-size: 160px;
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(37.12 142.4)"><tspan x="0" y="0">BCHS</tspan></text>
+  <text class="cls-1" transform="translate(32.67 190.87)"><tspan x="0" y="0">BARRHEAD COMPOSITE</tspan><tspan x="113.01" y="51">HIGH SCHOOL</tspan></text>
+  <rect class="cls-3" x="32.42" y="199.79" width="99.12" height="42.08"/>
+  <rect class="cls-3" x="469.42" y="198.79" width="99.12" height="42.08"/>
+</svg>

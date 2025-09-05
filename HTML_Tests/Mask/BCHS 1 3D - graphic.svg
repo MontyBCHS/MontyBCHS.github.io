@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        font-family: AcademyFilled3D-Regular, 'Academy Filled 3D';
+        font-size: 200px;
+      }
+
+      .cls-3 {
+        font-family: RockstarExtraBold, Rockstar;
+        font-size: 58px;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(53.8 145.58)"><tspan class="cls-1" x="0" y="0">BCH</tspan><tspan x="372.2" y="0">S</tspan></text>
+  <text class="cls-3" transform="translate(32.67 202.25)"><tspan x="0" y="0">BARRHEAD COMPOSITE</tspan><tspan x="113.01" y="51">HIGH SCHOOL</tspan></text>
+  <rect x="32.42" y="211.16" width="99.12" height="42.08"/>
+  <rect x="469.42" y="211.16" width="99.12" height="42.08"/>
+</svg>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Masking Pictures</title>
+	
+</head>
+
+<body>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #8f7a66;
+}
+
+.el {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+
+  background-image: url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg);
+  /* mask-image: url(Test-Shape2.svg);  */
+  mask-size: 100vmin;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+</style>
+	
+
+<div class="el"></div>
+
+
+	<br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br> <br>
+		<img class="mask1" src="CSE1110 Google Classroom 1000-250.png" width="1280" height="320" alt=""/>
+
+	Mask <br>
+	<img src="Test-Shape2.svg" width="600" height="400" alt=""/> <br>
+	Image <br>
+	<img src="CSE1110 Google Classroom 1000-250.png" width="1280" height="320" alt=""/>
+</body>
+</html>
