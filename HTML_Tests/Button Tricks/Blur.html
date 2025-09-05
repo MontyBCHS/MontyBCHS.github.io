@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Blur</title>
+</head>
+
+<body>
+
+<style>
+
+
+@keyframes blur {
+  50% {
+    filter: blur(20px);
+    transform: skew(45deg);
+  }
+}
+
+[anim="blur"]:not(.toggled) {
+  animation: blur cubic-bezier(.5,-0.25,.75,1) 1s infinite alternate;
+}
+
+
+button {
+  all: unset;
+  background-color: darkgoldenrod;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid hsl(12, 90%, 63%);
+  box-shadow: 0 0 4px hsl(12, 100%, 60%);
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+</style>	
+	
+
+      <div>
+        <h2>Blur</h2>
+        <p>Censoring</p>
+      </div>
+      <div>
+        <button anim="blur">CLICK ME</button>
+      </div>
+  
+	
+	
+</body>
+</html>
+

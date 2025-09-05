@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sheen</title>
+</head>
+
+<body>
+
+	
+<style>
+
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
+
+
+[anim="sheen"]:not(.toggled)::after {
+  animation: sheen cubic-bezier(.5,-0.25,.75,1) 1s infinite;
+}
+
+
+[anim="sheen"]::after {
+  content: "";
+  position: absolute;
+	transform: rotateZ(60deg);
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(
+    to bottom,
+    hsl(12, 90%, 43%),
+    hsla(12, 40%, 70%, 0.5) 50%,
+    hsl(12, 93%, 23%));
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+
+.sheenButton {
+  all: unset;
+  background-color: darkslategrey;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid red;
+  box-shadow: 0 0 4px red;
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+</style>	
+
+      <div>
+        <h2>Sheen</h2>
+        <p>Shining</p>
+      </div>
+      <div>
+        <button class="sheenButton" anim="sheen">Click me</button>
+      </div>
+	
+	
+</body>
+</html>

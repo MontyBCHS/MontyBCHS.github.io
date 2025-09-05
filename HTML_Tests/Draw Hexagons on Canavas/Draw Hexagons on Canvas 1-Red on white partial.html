@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Draw Hex</title>
+</head>
+
+<body>
+	
+	<h2>Draw a Hexagon Pattern</h2>
+<canvas id="canvas" width="920" height="700" style="border: 1px solid black"></canvas>
+
+<script>
+	
+	/* Explanations at junerockwell.com */
+var canvas, context;
+  canvas = document.getElementById("canvas");
+  ctx = canvas.getContext("2d");
+
+  var LineLength = 20;
+  var Diagonal = Math.floor(LineLength * Math.sin(60 * Math.PI / 180));
+  console.log("Length: "+LineLength+", Diagonal:"+Diagonal);
+
+  window.onload = function() {
+	  _DrawHexagons();
+  }	
+  
+// ****************************************************** //
+  function _DrawHorizontals(){
+	  console.log("Draw Horizontals");
+	ctx.beginPath();
+	for(var row = 0; row < 20*Diagonal; row+= 2*Diagonal){
+			for(var hex = 0; hex < 500 / LineLength; hex++){
+				// Horizontal
+				ctx.moveTo(hex*(2*LineLength + 2*Diagonal), row); //Left side of horizontal
+				ctx.lineTo(hex*(2*LineLength + 2*Diagonal)+LineLength, row); //Right side of horizontal
+				ctx.strokeStyle = "red";
+				ctx.stroke();
+				
+				// Diagonal top right corner down to right
+				ctx.moveTo(hex*(2*LineLength + 2*Diagonal)+LineLength, row);  // Top Right corner
+				ctx.lineTo(hex*(2*LineLength + 2*Diagonal)+LineLength+Diagonal, row + Diagonal); //Right side of horizontal
+				ctx.stroke(); 
+				
+				// Diagonl bottom right
+				ctx.moveTo(hex*(2*LineLength + 2*Diagonal)+LineLength+Diagonal, row + Diagonal);  // Top Right corner
+				ctx.lineTo(hex*(2*LineLength + 2*Diagonal)+LineLength, row + 2*Diagonal); //Right side of horizontal
+				ctx.stroke(); 
+
+				// Diagonl top left
+				ctx.moveTo(hex*(2*LineLength + 2*Diagonal), row); //Left side of horizontal 
+				ctx.lineTo(hex*(2*LineLength + 2*Diagonal) - Diagonal, row + Diagonal); //Right side of horizontal
+				ctx.stroke();
+				
+				// Diagonl bottom left
+				ctx.moveTo(hex*(2*LineLength + 2*Diagonal) - Diagonal, row + Diagonal); 
+				ctx.lineTo(hex*(2*LineLength + 2*Diagonal), row + 2*Diagonal); 
+				ctx.stroke();
+				
+				// Diagonal top right corner down to right
+				ctx.moveTo(hex*(2*LineLength + 2*Diagonal)+LineLength+Diagonal, row + Diagonal);  // Top Right corner
+				ctx.lineTo(hex*(2*LineLength + 2*Diagonal)+2*LineLength+Diagonal, row + Diagonal); //Right side of horizontal
+				ctx.stroke(); 
+				
+				// console.log("Row: "+1row+" Hex:"+hex+" Draw line: "+row * hex+", "+row * hex + LineLength);
+				console.log(" Hex:"+hex+" Draw line: "+hex*(2*LineLength + 2*Diagonal)+", "+(hex +1 )*(2*LineLength + 2*Diagonal));
+			}
+	}
+  }
+
+  
+  // ****************************************************** //
+  function _DrawHexagons(){
+	  _DrawHorizontals();
+  }
+	
+</script>
+
+	
+</body>
+</html>

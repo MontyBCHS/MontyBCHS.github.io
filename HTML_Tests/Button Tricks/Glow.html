@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Emphasize</title>
+</head>
+
+<body>
+<script>
+	let anims = [...document.querySelectorAll("[anim]")];
+	console.log(anims);
+	let click = (el, cb) => el.addEventListener("click", cb);
+	let toggle = (el) => el.classList.toggle("toggled");
+	let clickTog = (el) => click(el, () => toggle(el));
+	anims.map(clickTog);
+</script>
+<style>
+
+
+@keyframes glow {
+  50% {
+    box-shadow: 0 0 40px hsl(12, 100%, 60%);
+  }
+}
+
+
+
+[anim="glow"]:not(.toggled) {
+  animation: glow cubic-bezier(.5,-0.25,.75,1) 600ms infinite alternate;
+}
+
+
+
+</style>	
+	
+
+      <div>
+        <h2>Emphasize</h2>
+        <p>Glowing</p>
+      </div>
+      <div>
+        <button anim="glow">Click me</button>
+      </div>
+
+	
+	
+</body>
+</html>

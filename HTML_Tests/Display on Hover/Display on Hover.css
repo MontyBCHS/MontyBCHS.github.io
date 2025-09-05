@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}

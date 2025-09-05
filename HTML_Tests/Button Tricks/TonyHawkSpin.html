@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tony Hawk Spin</title>
+</head>
+
+<body>
+
+<style>
+
+
+
+
+@keyframes tonyhawk {
+  50%,
+  100% {
+    transform: rotate(900deg);
+  }
+}
+
+
+[anim="tonyhawk"]:not(.toggled) {
+  animation: tonyhawk cubic-bezier(.5,-0.25,.75,1) 600ms infinite;
+}
+
+
+
+
+
+</style>	
+	
+
+      <div>
+        <h2>Tony Hawk</h2>
+        <p>900-ing</p>
+      </div>
+      <div>
+        <button anim="tonyhawk">CLICK ME</button>
+      </div>
+  
+	
+</body>
+</html>
+

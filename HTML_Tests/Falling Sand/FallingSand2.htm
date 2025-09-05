@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Falling Sand</title>
+</head>
+
+<body>
+	<h1>Falling Sand</h1>
+	<canvas id="canvas" width="800" height="350" style="border: 1px solid black"></canvas>
+	<button id="Move">Move sand</button>
+	
+<script>
+	
+	// Need to make sand fall under control
+	
+	var canvas, context;
+  	canvas = document.getElementById("canvas");
+  	context = canvas.getContext("2d");
+	const CANVAS_WIDTH = 800;
+	const SAND_MAX = 40;
+	const HEIGHT_MAX = 300;
+	
+	var SandGreenImage = new Image;
+	SandGreenImage.src = "SandGreen.png";
+	
+	var sandArray = [];
+	var heightMax = [];
+	
+	const btnMove = document.getElementById("Move");
+	btnMove.addEventListener("click", _SandFall);
+	
+	class ClassSand{
+		constructor(X){
+			this.velY = -3;
+			this.X = X;
+			this.Y = 0;
+			this.image = SandGreenImage;
+		}
+		move(){
+			this.Y = this.Y - this.velY;
+			if (this.Y > HEIGHT_MAX){
+				this.velY = 0;
+			}
+		}
+	}
+	
+	window.onload = function() {
+		const moveButton = document.getElementById("Move")
+		_SetUp();
+
+		for (let i = 0; i < HEIGHT_MAX; i++){
+ 			console.log(`Running for ${i} seconds`);
+			setInterval(_SandFall, 500);
+		}
+	}
+
+	
+	
+	function _SetUp(){
+		for (let j = 0; j < CANVAS_WIDTH; j++){
+			// set the lowest point in each column, down is positive
+			heightMax[j] = HEIGHT_MAX;
+		}
+		console.log("Start");
+		for (let i = 0; i < SAND_MAX; i++){
+			// scatter the sand randomly across the width of the screen
+			sandArray[i] = new ClassSand(5*Math.floor(Math.random()*30) + 100)
+			console.log("i: "+i+" X: "+sandArray[i].X);
+			for (let l = 0; l < i-1; l++){
+				if (sandArray[i].x = sandArray[l].x) {
+					sandArray[i].y += 5;
+					heightMax[i] -= 5;
+				}
+			}
+			_SandFall();
+		}
+	}
+	
+	function _SandFall(){
+		// Move each piece of sand down by its velocity
+		console.log("SandFall - move all sand down");
+		for ( let k = 0; k < sandArray.length; k++){
+			console.log("SandFall, X: "+sandArray[k].X+" Y: "+sandArray[k].Y);
+			sandArray[k].move();
+			_DrawImage();
+		}
+		_DrawImage();
+	}
+	
+
+	function _DrawImage(){
+		// Redraw the screen
+		console.log("Draw");
+		context.fillStyle = 'lightGrey';
+		context.fillRect(0,0, canvas.width, canvas.height);
+		for (let m=0; m < sandArray.length - 1; m++){
+  			context.drawImage(SandGreenImage, sandArray[m].X, sandArray[m].Y);
+		}
+	}
+	
+</script>
+</body>
+</html>

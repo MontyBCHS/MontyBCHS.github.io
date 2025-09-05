@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Draw Hex</title>
+</head>
+
+<body>
+	
+	<h2>Draw a Hexagon Pattern</h2>
+	<p>Draws each hexagon based on the center coordinates. t</p>
+<canvas id="canvas" width="1200" height="700" style="border: 1px solid black"></canvas>
+
+<script>
+	
+	/* Explanations at junerockwell.com */
+var canvas, context;
+  canvas = document.getElementById("canvas");
+  ctx = canvas.getContext("2d");
+
+  var LineLength = 30;
+	
+  var DiagonalX = Math.floor(LineLength * Math.cos(60 * Math.PI / 180));
+  var DiagonalY = Math.floor(LineLength * Math.sin(60 * Math.PI / 180));
+  const CanvasHeight = 700;
+  const CanvasWidth = 1200;
+	
+
+  console.log("Length: "+LineLength+", DiagonalX:"+DiagonalX+", DiagonalY:"+DiagonalY);
+
+  window.onload = function() {
+	  _DrawHexagonsOnScreen();
+  }	
+
+  function _DrawBackGround(){
+	  ctx.beginPath();
+	  ctx.fillStyle = "grey";
+	  ctx.fillRect(0, 0, CanvasWidth, CanvasHeight);
+	  ctx.fill();
+  }
+  
+  
+// ****************************************************** //
+  function _DrawHexagons(){
+	  console.log("Draw Horizontals Width: "+canvas.width);
+	  // Declare line color
+	  ctx.strokeStyle = "red";
+		//for(var row = 0; row < 10*Diagonal; row += 2*Diagonal)
+	  	// set gap between hexs
+		var gap = 0;
+	  	// x is the number of hex to the right
+	  	var x = -2*(2 * LineLength + 2 * DiagonalX + gap);
+	    var Line = -1;
+	  	// loop to keep track of hexagon coordinates. Y is the number of hex down
+	    for(var y = gap + DiagonalY; y < 7 *(2 * DiagonalY) ; y+= DiagonalY + gap){
+			Line += 1;
+			if (Math.floor(Line % 2) == 0) { 
+				x = -1*(2*LineLength + DiagonalX + gap/2); 
+			} else { 
+				x = -LineLength;
+			}
+			for(var hex = 0; hex < (canvas.width / (2 * LineLength + 2* DiagonalX)) ; hex++){
+				x += 2 * LineLength + 2 * DiagonalX + gap;
+				_DrawIndividualHexagon(x, y);
+				ctx.font = "12px Arial";
+				ctx.strokeText(x+", "+y, x-15, y+5);
+				// console.log("Row: "+1row+" Hex:"+hex+" Draw line: "+row * hex+", "+row * hex + LineLength);
+				console.log("hex: "+hex+" Xx:"+x+" Draw line: "+hex*(2*LineLength + 2*DiagonalX)+", "+(hex +1 )*(2*LineLength + 2*DiagonalX));
+			}
+		}
+	//}
+
+  }
+
+  function _DrawIndividualHexagon(x, y){
+	  // Whole shape based on center coordintaes (x, y)	
+	  	ctx.strokeStyle = "red";
+	  	ctx.fillStyle = "blue";
+	  // Reference point is the center of the hexagon
+		ctx.beginPath();
+		ctx.moveTo(x - LineLength / 2 , y - DiagonalY );
+		ctx.lineTo(x + LineLength / 2, y - DiagonalY );
+		ctx.lineTo(x + LineLength / 2 + DiagonalX, y );
+		ctx.lineTo(x + LineLength / 2, y + DiagonalY );
+		ctx.lineTo (x - LineLength/2, y + DiagonalY );
+		ctx.lineTo(x - LineLength / 2 - DiagonalX,  y );
+		ctx.lineTo(x -LineLength / 2 , y - DiagonalY );
+	  	ctx.fill();  // draw in the background color
+		ctx.stroke();  // draw in the outline color
+
+  }
+  // ****************************************************** //
+  function _DrawHexagonsOnScreen(){
+	  _DrawBackGround();
+	  _DrawHexagons();
+	  ctx.fillText("Hello World", 310, 450);
+	  ctx.font = "50px Arial";
+	  ctx.fillText("Hello World",310,400);
+	  ctx.strokeText("Hello world", 310, 350);
+	  ctx.fillText("Hello World", 310, 450);
+  }
+	
+</script>
+
+	
+</body>
+</html>

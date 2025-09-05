@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shake</title>
+</head>
+
+<body>
+
+<style>
+
+
+@keyframes shake {
+  50% {
+    transform: translate3d(20px, 0, 0);
+  }
+}
+
+[anim="shake"]:not(.toggled) {
+  animation: shake cubic-bezier(.5,-0.25,.75,1) 300ms infinite alternate;
+}
+
+
+
+button {
+  all: unset;
+  background-color: darkslategrey;
+  padding: 6px 12px;
+  border-radius: 6px;	
+  border: 1px solid orange;
+  box-shadow: 0 0 4px black;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+</style>	
+	
+
+      <div>
+        <h2>Shakes</h2>
+        <p>Rejecting</p>
+      </div>
+      <div>
+        <button anim="shake">CLICK ME</button>
+      </div>
+
+
+	
+</body>
+</html>

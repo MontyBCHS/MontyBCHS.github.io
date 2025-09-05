@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<style>
+	:root {
+  --black: hsl(0, 0%, 13%);
+  --dark: hsl(12, 32%, 2%);
+  --gray: hsl(0, 0%, 70%);
+  --white: hsl(0, 0%, 96%);
+  --red: hsl(12, 90%, 63%);
+  --red-shadow: hsl(12, 100%, 60%);
+  --red-sheen: linear-gradient(
+    to bottom,
+    hsl(12, 90%, 43%),
+    hsla(12, 40%, 70%, 0.5) 50%,
+    hsl(12, 93%, 23%)
+  );
+}
+
+html,
+body {
+  background-color: var(--black);
+}
+
+div:has(h2 + p) {
+  display: grid;
+  gap: 8px;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h2 + p {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  position: relative;
+  padding-block: 32px;
+
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    background-image: linear-gradient(45deg, var(--red), transparent 70%);
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-basis: 180px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  color: var(--white);
+  font-family: "aglet-mono-variable", sans-serif;
+  font-variation-settings: "wght" 400;
+}
+
+* {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+  background-color: var(--black);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--red);
+  box-shadow: 0 0 4px var(--red-shadow);
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+	</style>
+<script>
+let anims = [...document.querySelectorAll("[anim]")];
+console.log(anims);
+let click = (el, cb) => el.addEventListener("click", cb);
+let toggle = (el) => el.classList.toggle("toggled");
+let clickTog = (el) => click(el, () => toggle(el));
+anims.map(clickTog);
+</script>
+	
+	<h1>Button Tricks</h1>
+    <h2>Pulse</h2>
+    <p>Partying</p>
+    <button anim="pulse">CLICK ME</button>
+<style>
+[anim="pulse"]:not(.toggled) {
+  animation: pulse var(--ease-elastic-in-1) 1400ms infinite alternate;
+}
+@keyframes pulse {
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+</style>
+**********************************************
+	
+</body>
+</html>

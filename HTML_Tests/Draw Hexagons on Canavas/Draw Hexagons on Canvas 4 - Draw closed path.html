@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Draw Hex</title>
+</head>
+
+<body>
+	
+	<h2>Draw a Hexagon Pattern</h2>
+	<p>Draws each hexagon based on the center coordinates. t</p>
+<canvas id="canvas" width="920" height="700" style="border: 1px solid black"></canvas>
+
+<script>
+	
+	/* Explanations at junerockwell.com */
+var canvas, context;
+  canvas = document.getElementById("canvas");
+  ctx = canvas.getContext("2d");
+
+  var LineLength = 20;
+  var DiagonalX = Math.floor(LineLength * Math.sin(60 * Math.PI / 180));
+  var DiagonalY = Math.floor(LineLength * Math.cos(60 * Math.PI / 180));
+  console.log("Length: "+LineLength+", DiagonalX:"+DiagonalX+", DiagonalY:"+DiagonalY);
+
+  window.onload = function() {
+	  _DrawHexagonsOnScreen();
+  }	
+
+  function _DrawBackGround(){
+	  ctx.beginPath();
+	  ctx.fillStyle = "grey";
+	  ctx.fillRect(0, 0, 920, 700);
+	  ctx.fill();
+  }
+  
+  
+// ****************************************************** //
+  function _DrawHexagons(){
+	  console.log("Draw Horizontals Width: "+canvas.width);
+	  ctx.strokeStyle = "red";
+	//for(var row = 0; row < 10*Diagonal; row += 2*Diagonal)
+		var gap = 5
+	  	var x = -2*(2 * LineLength + 2 * DiagonalX + gap);
+	    var Line = -1;
+	    for(var y = gap + DiagonalY; y < 6 *(2 * DiagonalY) ; y+= DiagonalY + gap){
+			Line += 1;
+			if (Math.floor(Line % 2) == 0) { 
+				x = -1*(LineLength + DiagonalX + gap/2); 
+			} else { 
+				x = 0;
+			}
+			for(var hex = 0; hex < (canvas.width / (2 * LineLength + 2* DiagonalX)) - 1; hex++){
+				
+				x += 2 * LineLength + 2 * DiagonalX + gap;
+				// Whole shape based on center coordintaes (x, y)	
+				ctx.beginPath();
+				ctx.moveTo(x - LineLength / 2 , y - DiagonalY );
+				ctx.lineTo(x + LineLength / 2, y - DiagonalY );
+				ctx.lineTo(x + LineLength / 2 + DiagonalX, y );
+				ctx.lineTo(x + LineLength / 2, y + DiagonalY );
+				ctx.lineTo (x - LineLength/2, y + DiagonalY );
+				ctx.lineTo(x - LineLength / 2 - DiagonalX,  y );
+				ctx.lineTo(x -LineLength / 2 , y - DiagonalY );
+				ctx.stroke();
+				// console.log("Row: "+1row+" Hex:"+hex+" Draw line: "+row * hex+", "+row * hex + LineLength);
+				console.log("hex: "+hex+" Xx:"+x+" Draw line: "+hex*(2*LineLength + 2*DiagonalX)+", "+(hex +1 )*(2*LineLength + 2*DiagonalX));
+			}
+		}
+	//}
+
+  }
+
+  
+  // ****************************************************** //
+  function _DrawHexagonsOnScreen(){
+	  _DrawBackGround();
+	  _DrawHexagons();
+	  ctx.fillText("Hello World", 310, 450);
+	  ctx.font = "50px Arial";
+	  ctx.fillText("Hello World",310,400);
+	  ctx.strokeText("Hello world", 310, 350);
+	  ctx.fillText("Hello World", 310, 450);
+  }
+	
+</script>
+
+	
+</body>
+</html>

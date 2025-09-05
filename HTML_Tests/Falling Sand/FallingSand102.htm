@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Falling Sand</title>
+</head>
+
+<body>
+	<h1>Falling Sand</h1>
+	<canvas id="canvas" width="800" height="300" style="border: 1px solid black"></canvas><br>
+	<button id="start">Start</button>
+	
+<script>
+	var canvas, context;
+  	canvas = document.getElementById("canvas");
+  	context = canvas.getContext("2d");
+	
+	const SAND_MAX = 40;
+	const Height_Max = 200;
+	
+	var RunProgram = false;
+	
+	var SandGreenImage = new Image;
+	SandGreenImage.src = "SandGreen.png";
+	
+	var sandArray = [];
+	
+	class ClassSand{
+		constructor(X,Y){
+			this.velY = 3;
+			this.X = X;
+			this.Y = Y;
+			this.image = SandGreenImage;
+		}
+		move(){
+			this.Y = this.Y + this.velY;
+			if (this.Y > Height_Max){
+				this.velY = 0;
+			}
+		}
+	}
+	
+	// Set up the start button
+	const btnStart = document.getElementById("start");
+	btnStart.addEventListener("click", _Start);
+	
+	window.onload = function() {
+		console.log("Start");
+		for ( let i = 0; i < SAND_MAX; i++){
+			sandArray[i] = new ClassSand(5*Math.floor(Math.random()*30) + 100, -2*i);
+			// console.log("i: "+i+" X: "+sandArray[i].X);
+			console.log(`i: ${i} s: ${sandArray[i].X} t: ${sandArray[i].Y}`);
+		}
+		// Set the timer
+		setInterval(function() {
+    				_DrawImage();
+  			}, 1000/30);
+	}
+	
+	// Function when button is pressed
+	function _Start(){
+		console.log("Start button pushed. RunProgram is true.")
+		RunProgram = !RunProgram;
+	}
+	
+	// Function to move sand
+	function _Move(){
+		if (RunProgram) {
+			// Move each piece of sand once.
+			for (let i = 0; i < SAND_MAX; i++) {
+				sandArray[i].move();
+			}
+			console.log("Move ");
+			// function to draw the screen
+		} else {console.log("RunProgram is false.")}
+	}
+	
+	
+	// Function to draw the sand
+	function _DrawImage(){
+		_Move();
+		console.log("Draw");
+		// Draw the grey background
+		context.fillStyle = 'lightGrey';
+		context.fillRect(0,0, canvas.width, canvas.height);
+		// Loop to drwa all of the sand
+		for (let i=0; i < sandArray.length - 1; i++){
+  			context.drawImage(SandGreenImage, sandArray[i].X, sandArray[i].Y);
+		}
+	}
+	
+</script>
+</body>
+</html>
