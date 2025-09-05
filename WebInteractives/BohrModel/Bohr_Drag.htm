@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bohr Model</title>
+</head>
+
+<body>
+<h5>Bohr Model of the Atom</h5>
+<p>Electons: <span id="ElectronCount">0</span> <br> Protons: <span id="ProtonCount"></span> <br> Neutrons: <span id="NeutronCount"></span></p>
+<canvas id="canvas" width="700" height="700" style="border: 1px solid black"></canvas>
+  <br>
+<p><strong>Note: </strong>Diagram is not to scale.</p>
+<script>
+	// ***********************************************
+	// Set up Canvas
+	let canvas, context;
+	canvas = document.getElementById("canvas");
+	context = canvas.getContext("2d");
+	
+	// **********************************************
+	// Declare Images
+	let BackgroundImage = new Image();
+	BackgroundImage.src = 'background.png';
+	let ElectronImage = new Image();
+	ElectronImage.src = 'electron.png';
+	ParticleRadius = ElectronImage.width/2;
+	var NeutronImage = new Image();
+	NeutronImage.src = 'neutron.png';
+	var ProtonImage = new Image();
+	ProtonImage.src = 'proton.png';
+		// orbitals
+	var Energy1Image = new Image();
+	Energy1Image.src = 'Energy1.png';
+	var Energy2Image = new Image();
+	Energy2Image.src = 'Energy2.png';
+	var Energy3Image = new Image();
+	Energy3Image.src = 'Energy3.png';
+	var Energy4Image = new Image();
+	Energy4Image.src = 'Energy4.png';
+	
+	
+	// **********************************************************
+	//Set Up Variables
+	let ElectronArray = [];
+	var ElectronCount = document.getElementById("ElectronCount");
+	let ElectronNumber = 0;
+	ElectronCount.innerHTML = ElectronNumber;
+	let NeutronArray = [];
+	var NeutronCount = document.getElementById("NeutronCount");
+	var NeutronNumber = 0;
+	NeutronCount.innerHTML = NeutronNumber;
+	var ParticleArray = [];
+	let ProtonArray = [];
+	var ProtonCount = document.getElementById("ProtonCount");
+	var ProtonNumber = 0;
+	ProtonCount.innerHTML = ProtonNumber;
+	
+	let ParticleRecord = {x : 0, y : 0, image : ElectronImage};
+	_ParticleArrayAddElectron();
+	_ParticleArrayAddNeutron();
+	_ParticleArrayAddProton();
+
+	
+	let mouseX = 0;
+	let mouseY = 0;
+
+	let ParticleDrag = -1;
+	
+	
+	
+	
+	
+
+	
+	
+    // ***********************************************
+	window.onload = function() {
+		canvas = document.getElementById("canvas");
+		context = canvas.getContext("2d");
+
+		_DrawImage();
+		
+		setInterval(function() {
+
+			_DrawImage();
+			_MouseEvents();
+		}, 1000/30);
+	}
+	
+	// **********************************************
+	function _CheckAngle(dx,dy){
+		let angle = 180 / Math.PI * Math.atan(dy / dx);
+//  console.log("PreAngle = ",angle);
+		if (dx < 0){  // left of centre quad 2 & 3
+			if (dy > 0){ // below centre quad 3 bottom left
+				angle = 180 + angle;
+			}
+			else{ // quad 2 top left
+				angle = 180 + angle;
+			}
+		}
+		else {  //quad 4 lower right
+			if (dy < 0){
+				angle = 360 + angle;
+			}
+		}
+// console.log("Angle = ",angle," , dx = ",-1*(canvas.width/2 - mouseX)," , dy = ",(canvas.height/2 - mouseY)," x= ",mouseX," y= ",mouseY);
+		return angle
+	}
+	// **********************************************
+	function _CheckElectron(){ 
+		// Checks to see if there is an electron in the start position (0,0)
+		let electronAppend = true;
+		for (let i = 0; i < ParticleArray.length; i++) {  
+			if (ParticleArray[i].image == ElectronImage && ParticleArray[i].x == 0 && ParticleArray[i].y == 0){
+					electronAppend = false;
+			}
+		}
+		if (electronAppend){
+			ParticleRecord = {x : 0, y : 0, image : ElectronImage};
+			ParticleArray.push(ParticleRecord);
+	
+		}
+	}
+	
+	// **********************************************
+	function _CheckRadius(){
+		let radius = Math.sqrt((mouseX - canvas.width/2)**2 + (mouseY - canvas.height/2)**2);  // calculate radius from centre
+		let angle = _CheckAngle(-1*(canvas.width/2 - mouseX),(canvas.height/2 - mouseY));  //calculat the angle using inverse tan
+// angle = 180 / Math.PI * Math.atan((canvas.height/2 - mouseY) / (-1*(canvas.width/2 - mouseX)));
+//  console.log("Angle = ",angle," , dx = ",-1*(canvas.width/2 - mouseX)," , dy = ",(canvas.height/2 - mouseY)," x= ",mouseX," y= ",mouseY);
+		if (ParticleArray[ParticleDrag].image == ElectronImage){  // This if is only for electrons
+			if (radius < 163 && radius > 133){  // radius of first energy level
+// console.log("First energy level");
+				// moves the particle to centre on the energy level
+				_ElectronOrbit(150,angle);		
+				_ParticleArrayAddElectron();
+			} else {
+				if (radius < 212 && radius > 186){  // radius of second energy level
+					_ElectronOrbit(200,angle);	// moves the particle to centre on the energy level	
+					_ParticleArrayAddElectron();
+				} else {
+					if (radius < 263 && radius > 237){  // radius of third energy level
+						_ElectronOrbit(250,angle);	// moves the particle to centre on the energy level
+						_ParticleArrayAddElectron();
+					} else {
+						if (radius < 325 && radius > 300){  // radius of fourth energy level
+							// moves the particle to centre on the energy level
+							_ElectronOrbit(312,angle); // moves the particle to centre on the energy level
+							_ParticleArrayAddElectron();
+						} else {
+							_CheckElectron();
+							_ResetParticle(); // move the particle to the top left corner if not released in the right area
+
+						}
+					}
+				}
+			}
+		} else {
+			// dealing with neutrons and protons
+			if (radius > 80){
+
+				_ResetParticle();
+			} else{
+				if (ParticleArray[ParticleDrag].image == NeutronImage) {
+					_ParticleArrayAddNeutron();
+console.log("Add Neutron");
+				}
+				if (ParticleArray[ParticleDrag].image == ProtonImage) {
+					_ParticleArrayAddProton();
+console.log("Add Proton");
+				}
+			}
+
+		}
+		
+	}
+	
+	// **********************************************
+	function _CountParticle(Particle) {
+		// send it the image and it counts how many there are -1 for that one displayed in the top left
+		var Count = 0;
+		for (var i = 0; i < ParticleArray.length; i++){
+			if (ParticleArray[i].image == Particle) { 
+				Count ++;
+			}
+		}
+		return(Count);
+	}
+	
+	// **********************************************
+	function _ElectronOrbit(radius, angle){
+			ParticleArray[ParticleDrag].x = canvas.width/2 + radius * Math.cos(angle * Math.PI / 180) - ParticleRadius; 
+			ParticleArray[ParticleDrag].y = canvas.height/2 - radius * Math.sin(angle * Math.PI / 180) - ParticleRadius;
+	}
+	
+	// **********************************************
+	function _MouseEvents() {
+		canvas.onmousedown = function(e) {
+			// find the x and y value of the mouse position
+			mouseX = e.pageX - this.offsetLeft;
+			mouseY = e.pageY - this.offsetTop;
+			var radius = Math.sqrt((mouseX - canvas.width/2)**2 + (mouseY - canvas.height/2)**2); // calculate the radius, distance from centre
+console.log("X: ",mouseX," Y: ",mouseY," Radius: ",radius);
+
+			for (let i = 0; i < ParticleArray.length; i++) { // loop through the particle array
+				if (_MouseOverParticle(mouseX, mouseY, i)){
+//  console.log("Mouse over particle: ",i);
+//  console.log("Dragging particle");
+					ParticleDrag = i; // if the mouse if over the particle Particle drag is the index in the array, otherwise ParticleDrag stays at -1
+				}
+			}
+			if (ParticleDrag > -1){  // if the mouse is over the particle it moves the particle to the mouse position
+				ParticleArray[ParticleDrag].x = mouseX - ParticleRadius;
+				ParticleArray[ParticleDrag].y = mouseY - ParticleRadius;
+			}
+		} // end on mouse over
+
+		canvas.onmousemove = function(e) { // move the particle to follow the moving mouse
+    		if (ParticleDrag > -1) {
+				mouseX = e.pageX - this.offsetLeft;
+				mouseY = e.pageY - this.offsetTop;
+      			ParticleArray[ParticleDrag].x = e.pageX - this.offsetLeft - ParticleRadius;
+      			ParticleArray[ParticleDrag].y = e.pageY - this.offsetTop - ParticleRadius;
+// console.log("Mouse: X= ",mouseX," , Y= ",mouseY,"Drag: ",ParticleArray[ParticleDrag].x," , ",ParticleArray[ParticleDrag].y);
+    		}
+		} // end on moue move
+		
+		
+	 	canvas.onmouseup = function(e) { // when you release the mouse
+			if (ParticleDrag > -1){
+//if (ParticleArray[ParticleDrag].x < 0) {ParticleArray[ParticleDrag].x = 0; }
+//var radius = Math.sqrt((mouseX - canvas.width/2)**2 + (mouseY - canvas.height/2)**2);
+				_CheckRadius();
+			}
+			ParticleDrag = -1;
+  		};  // end mouse up
+		
+		
+  		canvas.onmouseout = function(e) {
+			if (ParticleDrag > -1){
+				if (ParticleArray[ParticleDrag].x < 0) {ParticleArray[ParticleDrag].x = 0; }
+				_CheckRadius();
+			}
+    		ParticleDrag = -1;
+  		};
+	}
+
+	// **********************************************
+	function _MouseOverParticle(MouseX, MouseY, i){
+// console.log("Particle: (", ParticleArray[i].x," , ",ParticleArray[i].x + ParticleRadius * 2," , ",ParticleArray[i].y," , ",ParticleArray[i].y + ParticleRadius * 2,")  Mouse: (",MouseX," , ",MouseY,")");
+		if ((MouseX > ParticleArray[i].x) && (MouseX < ParticleArray[i].x + ParticleRadius * 2)){
+// console.log("X on electron: ",MouseX);
+			if ((MouseY > ParticleArray[i].y) && (MouseY < ParticleArray[i].y + ParticleRadius * 2)){
+				console.log("Mouse over: ",i," , ",ParticleArray[i].image);
+				return true;
+			} 
+		} 
+		else {
+			return false;
+		}
+	}
+	
+	// **********************************************
+	//  Add an electron in the top left
+	function _ParticleArrayAddElectron() {
+		ParticleRecord = {x : 0, y : 0, image : ElectronImage};
+		ParticleArray.push(ParticleRecord);
+	}
+
+	// **********************************************
+	//  Add a neutron in the top left
+	function _ParticleArrayAddNeutron() {
+		ParticleRecord = {x : 100, y : 0, image : NeutronImage};
+		ParticleArray.push(ParticleRecord);	
+	}
+	// **********************************************
+	//  Add a proton in the top left
+	function _ParticleArrayAddProton() {
+		ParticleRecord = {x: 50, y : 0, image : ProtonImage};
+		ParticleArray.push(ParticleRecord);
+	}
+	
+	// **********************************************
+	function _ResetParticle(){
+console.log("Reset particle",ParticleDrag," , ",ParticleArray[ParticleDrag].image);
+		if (ParticleArray[ParticleDrag].image == ElectronImage) {  
+			// reset the electron
+console.log("Reset electron",ParticleArray[ParticleDrag].image," , ",ElectronImage," , Length: ",ParticleArray.length);
+			let RemoveParticle = ParticleArray.splice(ParticleDrag,1);
+console.log("Remove electron: ",ParticleArray.length);
+			_CheckElectron();
+		} else 	{
+			if (ParticleArray[ParticleDrag].image == ProtonImage) {  // reset the proton
+				console.log("Reset proton");
+				ParticleArray[ParticleDrag].x = 50;
+				ParticleArray[ParticleDrag].y = 0;
+			} else {	
+				if (ParticleArray[ParticleDrag].image == NeutronImage) { // reset the neutron
+					ParticleArray[ParticleDrag].x = 100;
+					ParticleArray[ParticleDrag].y = 0;
+				} else {
+					console.log("Particle not reset, image not identified.")
+				}
+			} 
+		} 
+		ParticleDrag = -1;
+	}
+	
+	// *********************************************
+	function _StartParticleCheck(){
+		var electronCheck = false;
+		var neutronCheck = false;
+		var protonCheck = false;
+		for (var i = 0; i < ParticleArray.length; i++){
+			
+			if (ParticleArray[i].image == ElectronImage){
+				// check electrons for duplicates
+				if (ParticleArray[i].x == 0 && ParticleArray[i].y == 0){
+					if (electronCheck){
+						var Garbage = ParticleArray.splice(i,1);
+					}else{
+						electronCheck = true;
+					}
+				}
+			} 
+			else{  // check neutrons for duplicates
+				if (ParticleArray[i].image == NeutronImage){
+					if (ParticleArray[i].x == 100 && ParticleArray[i].y == 0){
+						if (neutronCheck){
+							var Garbage = ParticleArray.splice(i,1);
+						}else{
+							neutronCheck = true;
+						}	
+					}
+				
+				
+				}
+				else{  // check protons for duplicates
+					if (ParticleArray[i].image == ProtonImage){
+						if (ParticleArray[i].x == 50 && ParticleArray[i].y == 0){
+							if (protonCheck){
+								var Garbage = ParticleArray.splice(i,1);
+							}else{
+								protonCheck = true;
+							}	
+						}
+					}
+				
+				}
+			}
+		}
+	}
+
+	
+	// **********************************************  End Reset Particle
+	
+	function _drawElectronLevel(){
+		// Uses the number of electrons to draw the different energy levels
+		ElectronNumber = _CountParticle(ElectronImage);
+		context.drawImage(Energy1Image,0,0);
+		if(ElectronNumber > 2) {
+			context.drawImage(Energy2Image,0,0);
+		}
+		if(ElectronNumber >10) {
+			context.drawImage(Energy3Image,0,0);
+		}
+		if(ElectronNumber > 18) {
+			context.drawImage(Energy4Image,0,0);
+		}
+		if(ElectronNumber > 26){
+			console.log("Over 26 electrons, check code.");
+		}
+
+	}
+	
+
+	
+	// **********************************************
+	function _DrawImage() {
+		// Check particle array for multiple starting particles
+		_StartParticleCheck();
+		
+		// Draw background
+		context.drawImage(BackgroundImage,0,0);
+		
+		// Draw electron energy levels
+		_drawElectronLevel();
+
+		// Display how many of each particle there is
+		ElectronNumber = _CountParticle(ElectronImage);
+//console.log("Electrons: "+ElectronNumber);
+		ElectronCount.innerHTML = _CountParticle(ElectronImage)-1;
+		
+		NeutronNumber = _CountParticle(NeutronImage);
+//console.log("Neutrons: "+NeutronNumber);
+		NeutronCount.innerHTML = _CountParticle(NeutronImage)-1;
+		
+		ProtonNumber = _CountParticle(ProtonImage);
+//console.log("Protons: "+ProtonNumber);
+		ProtonCount.innerHTML = _CountParticle(ProtonImage)-1;
+	
+		// Loop to draw all particles
+		for (let i = 0; i < ParticleArray.length; i++)  {
+			context.drawImage(ParticleArray[i].image, ParticleArray[i].x, ParticleArray[i].y);
+		}
+	}
+	
+</script>
+	
+	
+	
+	
+	
+</body>
+</html>

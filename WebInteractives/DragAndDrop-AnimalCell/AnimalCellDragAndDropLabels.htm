@@ -1,0 +1,224 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+
+#BackPicture{
+    position:absolute;
+    width: 600px;
+    height: 600px;
+    top: 20px;
+}
+
+#blank1{
+    position: relative;
+    top: 20px;
+    left: 90px;
+    background-color: blue;
+}
+#blank2{
+    position: relative;
+    top: 10px;
+    left: 400px;
+    background-color: blue;
+}
+#blank3{
+    position: relative;
+    top: 30px;
+    left: 500px;
+    background-color: blue;
+}
+#blank4{
+    position: relative;
+    top: 40px;
+    left: 0px;
+    background-color: blue;
+}
+#blank5{
+    position: relative;
+    top: 55px;
+    left: 0px;
+    background-color: blue;
+}
+#blank6{
+    position: relative;
+    top: 70px;
+    left: 0px;
+    background-color: blue;
+}
+#blank7{
+    position: relative;
+    top: 110px;
+    left: 0px;
+    background-color: blue;
+}
+#blank8{
+    position: relative;
+    top: 70px;
+    left: 550px;
+    background-color: blue;
+}
+#blank9{
+    position: relative;
+    top: 130px;
+    left: 550px;
+    background-color: blue;
+}
+#blank10{
+    position: relative;
+    top: 190px;
+    left: 500px;
+    background-color: blue;
+}
+#blank11{
+    position: relative;
+    top: 270px;
+    left: 13px;
+    background-color: blue;
+}
+.creditss{
+	position: relative;
+	top: -20px;
+	font-size: 130%;
+}
+
+.div1 {
+	width: 164px;
+	height: 24px;
+	border: 1px solid #55aaaa;
+	background-color: blue;
+}
+#LeftSide{
+    min-width: 800px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+.options {
+    position: relative;
+    top: -200px;
+    left: 700px;
+}
+
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop1(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag1") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop2(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag2") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop3(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag3") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop4(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag4") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop5(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag5") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop6(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag6") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop7(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag7") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop8(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag8") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop9(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag9") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop10(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag10") {ev.target.appendChild(document.getElementById(data))};
+}
+function drop11(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "drag11") {ev.target.appendChild(document.getElementById(data))};
+}
+
+</script>
+</head>
+<body>
+
+<div id="LeftSide">
+
+    <img id="BackPicture" src="ACell2.jpg" draggable="false">
+    With the following animal cell, drag the yellow labels onto the appropriate blue blanks. They will stick only when they are in the correct location.
+</div>
+    <div class="div1" id="blank1" ondrop="drop8(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank2" ondrop="drop11(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank3" ondrop="drop5(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank4" ondrop="drop7(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank5" ondrop="drop10(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank6" ondrop="drop9(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank7" ondrop="drop1(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank8" ondrop="drop4(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank9" ondrop="drop2(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank10" ondrop="drop3(event)" ondragover="allowDrop(event)"></div>
+    <div class="div1" id="blank11" ondrop="drop6(event)" ondragover="allowDrop(event)"></div>
+
+
+<div class="options">
+        <img id="drag1" src="Cent.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag2" src="CMem.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>
+        <img id="drag3" src="Cyto.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag4" src="Golgi.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>
+        <img id="drag5" src="Lyso.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>
+        <img id="drag6" src="Mito.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+	<br>        
+	<img id="drag7" src="Nucle.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+	<img id="drag8" src="NuEnve.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>        
+        <img id="drag9" src="Ribo.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag10" src="RoER.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+        <br>
+        <img id="drag11" src="SmER.jpg" draggable="true" ondragstart="drag(event)" width="164" height="24">
+
+
+</div>
+<div class="creditss">
+	<p>Reload the page to reset the labels<br>
+	Use the back button to go back to the lesson.<br>
+	By S. Montgomery </p>
+</div>
+</body>
+</html>
