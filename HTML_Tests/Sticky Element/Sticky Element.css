@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
+}

@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Engine Development Timeline</title>
+</head>
+
+<body>
+
+<style>
+* {
+ box-sizing: border-box;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  /* box-sizing: border-box; */
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+</style>
+	
+	<div class="timeline">
+	  <div class="container left">
+		<div class="content">
+		  <h2>Gunpowder Engines 1680</h2>
+		  <p>1680 - Christian Huygens experimented with a piston that was moved by gunpowder.  Obviously it was very dangerous and the piston had to be physically moved back to the start position. <br>
+		  Most Steam engines were first used to pump water out of coal mines.</p>
+		</div>
+	  </div>
+		
+	  <div class="container right">
+		<div class="content">
+		  <h2>Heat Engines 1654 - 1690</h2>
+		  <p><li>1654 - Otto von Guericke demonstrated the power of vacuums and air pressure.  </li>
+			<li>1690 - Denis Papin used heat to create stem that did the work.  Metal working technology did not allow for the construction of high quality cylinders the engine needed. </li></p>
+		</div>
+	  </div>
+		
+	  <div class="container left">
+		<div class="content">
+		  <h2>Savery Engine 1698</h2>
+		  <p>1698 - Thomas Savery invented the first steam powered pump.  It was used to pump water out of coal mines.  The pump could only lift water 6 m (otherwise the boiler would explode) which was not an improvement over animal powered pumps.</p>
+		</div>
+	  </div>
+		
+	  <div class="container right">
+		<div class="content">
+		  <h2>Newcomen Engine 1712</h2>
+		  <p>1712 - Thomas Newcomen also used steam to drive the piston in the cylinder.  Cold water was sprayed into the cylinder to condense (cool) the steam and move the cylinder back down.  Although it allowed water to be pumped higher than animal powered engines, it was very inefficient and required a huge amount of heat and fuel to function. </p>
+		</div>
+	  </div>
+	  
+	   <div class="container left">
+		<div class="content">
+		  <h2>Watt Engine 1763</h2>
+		  <p>1763 - James Watt added a second cylinder in which the steam was condensed.  This way the main cylinder remained hot and dramatically increased the engine’s efficiency.  This engine dominated industry for almost 200 years.  It was large, dirty and inefficient but better then animal or human power.</p>
+		</div>
+	  </div>
+		
+	  <div class="container right">
+		<div class="content">
+		  <h2>Internal Combustion Engine 1794 - 1880</h2>
+		  <p>1794 - Robert Steele revived Huygen’s idea of trapping an explosion but used gases produced by oil and tar instead of gunpowder.  <br>
+			1801 - Phillippe Lebon invented the first internal combustion engine powered by coal gas.  The explosion of the gas, caused by an electrical spark, would expand and push the piston.   <br>
+			1867 - N.A. Otto and Eugen Langen improved the efficiency by compressing the coal gas-air mixture before ignition to improve efficiency (four stroke engine).  <br>
+			1880 - Gottlieb  Daimler developed an engine that ran on liquid petroleum products (gasoline) instead of coal gas.</p>
+		</div>
+	  </div>
+	</div> 
+</body>
+</html>
