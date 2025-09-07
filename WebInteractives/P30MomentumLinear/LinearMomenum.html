@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Momentum</title>
+</head>
+
+<body>
+	<h1>Linear Momentum lab</h1>
+	Mass of moving ball: <select id="MoveBall" onchange="_changeMoveMass(value)">
+		<option value="10" selected>10 kg</option>
+		<option value="20" >20 kg</option>
+		<option value="30" >30 kg</option>
+	</select>
+	Mass of target ball <select id="TargetBall" onchange="_changeTargetMass(value)">
+		<option value="10" selected>10 kg</option>
+		<option value="20" >20 kg</option>
+		<option value="30" >30 kg</option>
+	</select><br>
+	Initial velocity of moving ball <span class="slidecontainer">   <input type="range" min="1" max="10" value="5" class="slider" id="mySpeed"> 	</span> <p>Speed:  <span id="Speed">5</span> </p>
+	<button id="button-start">Start</button> <button id="button-stop">Stop</button><br>
+<canvas id="canvas" width="800" height="400" style="border: 1px solid black"></canvas>
+<h3>Instructions</h3>
+<ol>
+	<li>Choose the mass of the moving ball (green) and the target ball (blue).</li>	
+	<li>Choose an initial velocity of the moving ball.</li>
+	<li>Click the start button and the balls will move.</li>
+	<li>The balls will leave little dot markers every second.</li>
+	<li>Click and drag the ruler so you can measure the distance between dots (velocity).</li>
+	<li>Calculat the momentum before and after the collision.</li>
+</ol>
+<p><em>Note:</em> to reset the simulation relaod the page.</p>
+<script>
+	
+// Declare variables 
+	var canvas, context;
+	
+	var backgroundImage = new Image();
+	backgroundImage.src = 'background.png'
+	
+	var dotImage = new Image();
+	dotImage.src = 'dot.png'
+
+// Set up Ruler
+	var rulerImage = new Image();
+	rulerImage.src = 'Ruler.png';
+	isDraggable = false;
+	var rulerX = 100;
+	var rulerY = 300;
+	var rulerXOffset;
+	
+// Mouse coordinates
+	var mouseX, mouseY;
+	
+//Initial placement of the train
+	var targetBallImage = new Image();
+	targetBallImage.src = 'BallT10.png';
+	var targetBallMass = 10;
+	var targetBallX = 400;
+	var targetBallY = 200;
+	var targetBallVelX = 0;
+	var targetBallVelY = 0;
+	var targetBallRadius = 20;
+	
+	var moveBallImage = new Image();
+	moveBallImage.src = 'BallM10.png';
+	var moveBallMass = 10;
+	var moveBallX = 20;
+	var moveBallY = 200;
+	var moveBallVelX = 0;
+	var moveBallVelY = 0;
+	var moveBallRadius = 20;
+	
+	var buttonStart = document.getElementById('button-start');
+	var buttonStop = document.getElementById('button-stop');
+	
+	// set 30 frames per second (1000 milliseconds)
+	var framesPerSecond = 1000/30;
+
+	// var interval;
+	// variable check so only one collision
+	var collisionTest = true;
+	
+	// Dot trail
+	var dotBImage = new Image();
+	dotBImage.src = 'dotB.png';
+	var dotGImage = new Image();
+	dotGImage.src = 'dotG.png';
+	var dotData = [];
+	var dotData1 = [];
+	var dotTime = 0;
+	var dotRadius = 3;
+	
+	// Speed slider  ******************************************************************
+	var slider1 = document.getElementById("mySpeed");
+	var output1 = document.getElementById("Speed");
+	// output1.innerHTML = slider1.value;
+
+	slider1.oninput = function() {
+		// change value and rotate canon barrel
+  		output1.innerHTML = this.value;
+		_DrawImage();	
+	}
+		
+	// **********************************************************
+	// draw the background and the balls when the window is loaded
+	window.onload = function() {
+  		canvas = document.getElementById("canvas");
+  		context = canvas.getContext("2d");
+		document.getElementById("mySpeed").value = 5; 
+		context.drawImage(backgroundImage, 0, 0);
+		_MouseEvents();
+		_DrawImage();
+		
+	}
+	
+	// ************************************************************
+	// Change the mass of the Move ball
+	function _changeMoveMass(num) {
+	console.log('Change Move Mass: ',num);
+		if (num == 10){
+			moveBallImage.src = 'BallM10.png';
+			moveBallMass = 10;
+		}
+		if (num == 20){
+			moveBallImage.src = 'BallM20.png';
+			moveBallMass = 20;
+		}
+		if (num == 30){
+			moveBallImage.src = 'BallM30.png';
+			moveBallMass = 30;
+		}
+		_DrawImage();
+		_DrawImage();
+	}
+	
+	// ************************************************************
+	// Change the mass of the Target ball
+	function _changeTargetMass(num) {
+	console.log('Change Target Mass: ',num);
+		if (num == 10){
+			targetBallImage.src = 'BallT10.png';
+			targetBallMass = 10;
+		}
+		if (num == 20){
+			targetBallImage.src = 'BallT20.png';
+			targetBallMass = 20;
+		}
+		if (num == 30){
+			targetBallImage.src = 'BallT30.png';
+			targetBallMass = 30;
+		}
+		_DrawImage();
+	}
+	
+	// ************************************************************
+	// Determine the energy before and after
+	function _Energy(M,Vx,Vy){
+		return (M * ((Vx^2 + Vy^2)^0.5)^2 / 2)
+	}
+	
+	// ************************************************************
+	// Determine the velocity of each ball
+	function _MomentumCheck(){
+		var EnergyRatio = 1;
+		var M1 = moveBallMass;
+		var V1xi = moveBallVelX;
+		var V1yi = moveBallVelY;
+		var V1xf, V1yf;
+		var M2 = targetBallMass;
+		var V2xi = targetBallVelX;
+		var V2yi = targetBallVelY;
+		var V2xf, V2yf;
+		
+		
+		while (collisionTest){
+			EnergyRatio = EnergyRatio * Math.random() * 0.6;
+			
+			V1xf = (M1 * V1xi + M2 * V2xi) / M1 * EnergyRatio;
+			V2xf = (M1 * V1xi + M2 * V2xi - M1 * V1xf) / M2;
+			
+			if (EnergyRatio < 0.1){
+				V2xf = V2xf * 0.8;
+			}
+			
+			// Determine the angle from 
+			var angle = Math.atan((moveBallY - targetBallY) / (moveBallX - targetBallX));
+// console.log('angle: ',angle);
+			V2yf = V2xf * Math.sin(angle);
+			V1yf = -1 * M2 * V2yf / M1;
+			
+console.log('Ratio: ',EnergyRatio,'  Collision X: ',V1xi,', ',V1xf,',',M1,' 2: ',V2xi,', ',V2xf,' , M2 ',M2);
+// console.log('Collision Y: ',V1yi,', ',V1yf,', 2: ',V2yi,', ',V2yf);	
+
+			// Make sure the moving ball is going slower after the collision
+			// Make sure the target ball is going slowing that the target ball
+			if (V1xi > V1xf && V1xf < V2xf) {
+console.log('Velocity after is less');
+				// Make sure the energy after is less than the energy before
+				
+				if ((_Energy(M1, V1xi, V1yi) + _Energy(M2, V2xi, V2yi))
+				> (_Energy(M1, V1xf, V1yf) + _Energy(M2, V2xf, V2yf))){
+console.log('Energy after is less')					
+					collisionTest = false;
+					moveBallVelX = V1xf;
+					moveBallVelY = V1yf;
+					targetBallVelX = V2xf;
+					targetBallVelY = V2yf;
+					
+				} else {console.log('Energy not conserved');}
+			} else {console.log('V1xf > V2xi');}
+			// if it doesn't work slow down V1f
+			EnergyRatio -= 0.1
+			if (EnergyRatio < 0){
+				EnergyRatio = 0.05;
+			}
+
+		}
+console.log('Move Speed: ',moveBallVelX,' , Target Speed: ',targetBallVelX);
+	}
+	
+	// ************************************************************
+	// Determine the velocity of each ball X-axis
+	function _VelocityCalc(){
+		if (collisionTest){
+			
+			// if both balls are off the canvas stop the animation moving balls
+			if ((moveBallX > canvas.width + 10) || (moveBallY > canvas.height + 10)) {
+				if ((targetBallX > canvas.width + 10) || (targetBallY > canvas.height + 10)){
+					window.clearInterval(interval);
+console.log('Stopped');
+				}
+			}
+
+			// if the balls collide
+			var distance = Math.abs((moveBallX - targetBallX)^2 + (moveBallY - targetBallY)^2)^0.5
+			if (distance < (moveBallRadius + targetBallRadius)){
+				// console.log('Collision, distance: ',distance);
+				if (collisionTest){
+					// console.log('collisionTest');
+					_MomentumCheck();
+				}
+			}
+		}
+		
+		// move the balls based on their velocities
+		console.log('Move X: ',moveBallX,' , vel: ',moveBallVelX);
+		moveBallX += moveBallVelX;
+		moveBallY += moveBallVelY;
+		targetBallX += targetBallVelX;
+		targetBallY += targetBallVelY;
+		
+		dotTime +=1;
+		if (dotTime > 15){
+				console.log('Adding dot');
+				dotData.push({
+					x: moveBallX - dotRadius,
+					y: moveBallY - 2*dotRadius,
+					image: dotGImage
+				});
+				dotData.push({
+					x: targetBallX - dotRadius,
+					y: targetBallY - 2*dotRadius,
+					image: dotBImage
+				})
+			dotTime = 0;
+		}
+console.log('Target Vel: ',targetBallVelX,' , ',targetBallVelY,'|| Move Vel: ',moveBallVelX,' , ',moveBallVelY);
+console.log('Target Pos: ',targetBallX,' , ',targetBallY,'|| Move Pos: ',moveBallX,' , ',moveBallY);
+	}
+	
+	// ***********************************************************************
+	// When button is pushed start the repeating timer to move the balls
+	buttonStart.onclick = function() {
+		moveBallVelX = parseInt(slider1.value);	
+		console.log("Move ball speed: ",moveBallVelX)
+		document.getElementById("MoveBall").disabled = true;
+		document.getElementById("TargetBall").disabled = true;
+		document.getElementById("mySpeed").disabled = true;		
+		document.getElementById("button-start").disabled = true;
+		interval = setInterval(_DrawImage,framesPerSecond);
+// console.log('moveBallX: ', moveBallX);
+	}
+	
+	// ***********************************************************************
+	// When button is pushed stop the repeating timer to move the balls
+	buttonStop.onclick = function() {
+		moveBallVelX = parseInt(slider1.value);	
+		console.log("Move ball speed: ",moveBallVelX)
+		document.getElementById("MoveBall").disabled = true;
+		document.getElementById("TargetBall").disabled = true;
+		// document.getElementById("mySpeed").disabled = true;		
+		document.getElementById("button-start").disabled = true;
+		clearInterval(interval);
+		targetBallVelX = 0;
+		targetBallVelY = 0;
+		moveBallVelX = 0;
+		moveBallVelY = 0;
+		
+	}
+	
+	//  ************************************************************************// Functions to drag the ruler
+	function _MouseEvents() {
+	  canvas.onmousedown = function(e) {
+
+		var mouseX = e.pageX - this.offsetLeft;
+		var mouseY = e.pageY - this.offsetTop;
+
+		// If click on ruler than the ruler is draggable
+		if (mouseX >= (rulerX) && mouseX <= (rulerX + rulerImage.width) && mouseY >= (rulerY) &&
+			mouseY <= (rulerY + rulerImage.height)) {
+		  rulerXOffset = mouseX - rulerX;	
+		  isDraggable = true;
+		  console.log('ruler clicked');	
+		}
+
+	  };
+	  canvas.onmousemove = function(e) {
+
+		if (isDraggable) {
+			console.log('2nd drag');
+		  rulerX = e.pageX - this.offsetLeft-rulerXOffset;
+		  rulerY = e.pageY - this.offsetTop-rulerImage.height/2;
+			_DrawImage();
+		}
+	  };
+	  canvas.onmouseup = function(e) {
+		isDraggable = false;
+	  };
+	  canvas.onmouseout = function(e) {
+		isDraggable = false;
+	  };
+	}
+	
+	
+
+	// ************************************************************************
+	// Draw the screen and objects
+	function _DrawImage(){
+// console.log('_startTimer');
+		context.drawImage(backgroundImage, 0, 0);
+		
+		_VelocityCalc();  // function to determine ball's positions
+		// 	Loop to draw all of the dots
+			for (var i = 0; i < dotData.length; i++){
+				context.drawImage(dotData[i].image, dotData[i].x, dotData[i].y)
+			}
+		
+		context.drawImage(rulerImage, rulerX, rulerY);
+		context.drawImage(moveBallImage, moveBallX - moveBallRadius, moveBallY - moveBallRadius);
+		context.drawImage(targetBallImage,targetBallX - targetBallRadius,targetBallY - targetBallRadius);
+	}
+	</script>
+</body>
+</html>
