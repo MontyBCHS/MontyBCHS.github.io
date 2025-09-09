@@ -167,12 +167,12 @@ p{
 .S30Title {background-color: black; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black; padding:10px;}
 
 /*  *********************************  */
-.P20bg	{background-color: blue; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}		
-.P20c	{color: blue;}
+.P20bg	{background-color: green; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}		
+.P20c	{color: green;}
 
 /*  *********************************  */
-.P30bg	{background-color: green; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}
-.P30c	{color: green;}
+.P30bg	{background-color: blue; border-radius: 10px; box-shadow: 5px 5px #888888; border: 2px solid black;}
+.P30c	{color: blue;}
 
 /*  *****************************************************  */
 /*  Math Equations  */
@@ -480,3 +480,4 @@ html {
 
 
 /*  ******************************************  */
+
